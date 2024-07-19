@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import '../../base/v1beta1/coin.pb.dart' as $53;
-import 'bank.pb.dart' as $54;
+import '../../base/query/v1beta1/pagination.pb.dart' as $4;
+import '../../base/v1beta1/coin.pb.dart' as $2;
+import 'bank.pb.dart' as $3;
 
 /// QueryBalanceRequest is the request type for the Query/Balance RPC method.
 class QueryBalanceRequest extends $pb.GeneratedMessage {
@@ -87,7 +87,7 @@ class QueryBalanceRequest extends $pb.GeneratedMessage {
 /// QueryBalanceResponse is the response type for the Query/Balance RPC method.
 class QueryBalanceResponse extends $pb.GeneratedMessage {
   factory QueryBalanceResponse({
-    $53.Coin? balance,
+    $2.Coin? balance,
   }) {
     final $result = create();
     if (balance != null) {
@@ -100,7 +100,7 @@ class QueryBalanceResponse extends $pb.GeneratedMessage {
   factory QueryBalanceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryBalanceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$53.Coin>(1, _omitFieldNames ? '' : 'balance', subBuilder: $53.Coin.create)
+    ..aOM<$2.Coin>(1, _omitFieldNames ? '' : 'balance', subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -127,22 +127,22 @@ class QueryBalanceResponse extends $pb.GeneratedMessage {
 
   /// balance is the balance of the coin.
   @$pb.TagNumber(1)
-  $53.Coin get balance => $_getN(0);
+  $2.Coin get balance => $_getN(0);
   @$pb.TagNumber(1)
-  set balance($53.Coin v) { setField(1, v); }
+  set balance($2.Coin v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBalance() => $_has(0);
   @$pb.TagNumber(1)
   void clearBalance() => clearField(1);
   @$pb.TagNumber(1)
-  $53.Coin ensureBalance() => $_ensure(0);
+  $2.Coin ensureBalance() => $_ensure(0);
 }
 
 /// QueryBalanceRequest is the request type for the Query/AllBalances RPC method.
 class QueryAllBalancesRequest extends $pb.GeneratedMessage {
   factory QueryAllBalancesRequest({
     $core.String? address,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
     $core.bool? resolveDenom,
   }) {
     final $result = create();
@@ -163,7 +163,7 @@ class QueryAllBalancesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllBalancesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..aOB(3, _omitFieldNames ? '' : 'resolveDenom')
     ..hasRequiredFields = false
   ;
@@ -201,15 +201,15 @@ class QueryAllBalancesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $4.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($4.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $4.PageRequest ensurePagination() => $_ensure(1);
 
   ///  resolve_denom is the flag to resolve the denom into a human-readable form from the metadata.
   ///
@@ -228,8 +228,8 @@ class QueryAllBalancesRequest extends $pb.GeneratedMessage {
 /// method.
 class QueryAllBalancesResponse extends $pb.GeneratedMessage {
   factory QueryAllBalancesResponse({
-    $core.Iterable<$53.Coin>? balances,
-    $49.PageResponse? pagination,
+    $core.Iterable<$2.Coin>? balances,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (balances != null) {
@@ -245,8 +245,8 @@ class QueryAllBalancesResponse extends $pb.GeneratedMessage {
   factory QueryAllBalancesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllBalancesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'balances', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'balances', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -273,19 +273,19 @@ class QueryAllBalancesResponse extends $pb.GeneratedMessage {
 
   /// balances is the balances of all the coins.
   @$pb.TagNumber(1)
-  $core.List<$53.Coin> get balances => $_getList(0);
+  $core.List<$2.Coin> get balances => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 ///  QuerySpendableBalancesRequest defines the gRPC request structure for querying
@@ -295,7 +295,7 @@ class QueryAllBalancesResponse extends $pb.GeneratedMessage {
 class QuerySpendableBalancesRequest extends $pb.GeneratedMessage {
   factory QuerySpendableBalancesRequest({
     $core.String? address,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (address != null) {
@@ -312,7 +312,7 @@ class QuerySpendableBalancesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySpendableBalancesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -349,15 +349,15 @@ class QuerySpendableBalancesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $4.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($4.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $4.PageRequest ensurePagination() => $_ensure(1);
 }
 
 ///  QuerySpendableBalancesResponse defines the gRPC response structure for querying
@@ -366,8 +366,8 @@ class QuerySpendableBalancesRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.46
 class QuerySpendableBalancesResponse extends $pb.GeneratedMessage {
   factory QuerySpendableBalancesResponse({
-    $core.Iterable<$53.Coin>? balances,
-    $49.PageResponse? pagination,
+    $core.Iterable<$2.Coin>? balances,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (balances != null) {
@@ -383,8 +383,8 @@ class QuerySpendableBalancesResponse extends $pb.GeneratedMessage {
   factory QuerySpendableBalancesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySpendableBalancesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'balances', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'balances', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -411,19 +411,19 @@ class QuerySpendableBalancesResponse extends $pb.GeneratedMessage {
 
   /// balances is the spendable balances of all the coins.
   @$pb.TagNumber(1)
-  $core.List<$53.Coin> get balances => $_getList(0);
+  $core.List<$2.Coin> get balances => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 ///  QuerySpendableBalanceByDenomRequest defines the gRPC request structure for
@@ -502,7 +502,7 @@ class QuerySpendableBalanceByDenomRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47
 class QuerySpendableBalanceByDenomResponse extends $pb.GeneratedMessage {
   factory QuerySpendableBalanceByDenomResponse({
-    $53.Coin? balance,
+    $2.Coin? balance,
   }) {
     final $result = create();
     if (balance != null) {
@@ -515,7 +515,7 @@ class QuerySpendableBalanceByDenomResponse extends $pb.GeneratedMessage {
   factory QuerySpendableBalanceByDenomResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySpendableBalanceByDenomResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$53.Coin>(1, _omitFieldNames ? '' : 'balance', subBuilder: $53.Coin.create)
+    ..aOM<$2.Coin>(1, _omitFieldNames ? '' : 'balance', subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -542,22 +542,22 @@ class QuerySpendableBalanceByDenomResponse extends $pb.GeneratedMessage {
 
   /// balance is the balance of the coin.
   @$pb.TagNumber(1)
-  $53.Coin get balance => $_getN(0);
+  $2.Coin get balance => $_getN(0);
   @$pb.TagNumber(1)
-  set balance($53.Coin v) { setField(1, v); }
+  set balance($2.Coin v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBalance() => $_has(0);
   @$pb.TagNumber(1)
   void clearBalance() => clearField(1);
   @$pb.TagNumber(1)
-  $53.Coin ensureBalance() => $_ensure(0);
+  $2.Coin ensureBalance() => $_ensure(0);
 }
 
 /// QueryTotalSupplyRequest is the request type for the Query/TotalSupply RPC
 /// method.
 class QueryTotalSupplyRequest extends $pb.GeneratedMessage {
   factory QueryTotalSupplyRequest({
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -570,7 +570,7 @@ class QueryTotalSupplyRequest extends $pb.GeneratedMessage {
   factory QueryTotalSupplyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalSupplyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -599,23 +599,23 @@ class QueryTotalSupplyRequest extends $pb.GeneratedMessage {
   ///
   ///  Since: cosmos-sdk 0.43
   @$pb.TagNumber(1)
-  $49.PageRequest get pagination => $_getN(0);
+  $4.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($49.PageRequest v) { setField(1, v); }
+  set pagination($4.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $49.PageRequest ensurePagination() => $_ensure(0);
+  $4.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryTotalSupplyResponse is the response type for the Query/TotalSupply RPC
 /// method
 class QueryTotalSupplyResponse extends $pb.GeneratedMessage {
   factory QueryTotalSupplyResponse({
-    $core.Iterable<$53.Coin>? supply,
-    $49.PageResponse? pagination,
+    $core.Iterable<$2.Coin>? supply,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (supply != null) {
@@ -631,8 +631,8 @@ class QueryTotalSupplyResponse extends $pb.GeneratedMessage {
   factory QueryTotalSupplyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalSupplyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'supply', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'supply', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -659,21 +659,21 @@ class QueryTotalSupplyResponse extends $pb.GeneratedMessage {
 
   /// supply is the supply of the coins
   @$pb.TagNumber(1)
-  $core.List<$53.Coin> get supply => $_getList(0);
+  $core.List<$2.Coin> get supply => $_getList(0);
 
   ///  pagination defines the pagination in the response.
   ///
   ///  Since: cosmos-sdk 0.43
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QuerySupplyOfRequest is the request type for the Query/SupplyOf RPC method.
@@ -731,7 +731,7 @@ class QuerySupplyOfRequest extends $pb.GeneratedMessage {
 /// QuerySupplyOfResponse is the response type for the Query/SupplyOf RPC method.
 class QuerySupplyOfResponse extends $pb.GeneratedMessage {
   factory QuerySupplyOfResponse({
-    $53.Coin? amount,
+    $2.Coin? amount,
   }) {
     final $result = create();
     if (amount != null) {
@@ -744,7 +744,7 @@ class QuerySupplyOfResponse extends $pb.GeneratedMessage {
   factory QuerySupplyOfResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySupplyOfResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$53.Coin>(1, _omitFieldNames ? '' : 'amount', subBuilder: $53.Coin.create)
+    ..aOM<$2.Coin>(1, _omitFieldNames ? '' : 'amount', subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -771,15 +771,15 @@ class QuerySupplyOfResponse extends $pb.GeneratedMessage {
 
   /// amount is the supply of the coin.
   @$pb.TagNumber(1)
-  $53.Coin get amount => $_getN(0);
+  $2.Coin get amount => $_getN(0);
   @$pb.TagNumber(1)
-  set amount($53.Coin v) { setField(1, v); }
+  set amount($2.Coin v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAmount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAmount() => clearField(1);
   @$pb.TagNumber(1)
-  $53.Coin ensureAmount() => $_ensure(0);
+  $2.Coin ensureAmount() => $_ensure(0);
 }
 
 /// QueryParamsRequest defines the request type for querying x/bank parameters.
@@ -818,7 +818,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse defines the response type for querying x/bank parameters.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $54.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -831,7 +831,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$54.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $54.Params.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -858,21 +858,21 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params provides the parameters of the bank module.
   @$pb.TagNumber(1)
-  $54.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($54.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $54.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 }
 
 /// QueryDenomsMetadataRequest is the request type for the Query/DenomsMetadata RPC method.
 class QueryDenomsMetadataRequest extends $pb.GeneratedMessage {
   factory QueryDenomsMetadataRequest({
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -885,7 +885,7 @@ class QueryDenomsMetadataRequest extends $pb.GeneratedMessage {
   factory QueryDenomsMetadataRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomsMetadataRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -912,23 +912,23 @@ class QueryDenomsMetadataRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $49.PageRequest get pagination => $_getN(0);
+  $4.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($49.PageRequest v) { setField(1, v); }
+  set pagination($4.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $49.PageRequest ensurePagination() => $_ensure(0);
+  $4.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryDenomsMetadataResponse is the response type for the Query/DenomsMetadata RPC
 /// method.
 class QueryDenomsMetadataResponse extends $pb.GeneratedMessage {
   factory QueryDenomsMetadataResponse({
-    $core.Iterable<$54.Metadata>? metadatas,
-    $49.PageResponse? pagination,
+    $core.Iterable<$3.Metadata>? metadatas,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (metadatas != null) {
@@ -944,8 +944,8 @@ class QueryDenomsMetadataResponse extends $pb.GeneratedMessage {
   factory QueryDenomsMetadataResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomsMetadataResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$54.Metadata>(1, _omitFieldNames ? '' : 'metadatas', $pb.PbFieldType.PM, subBuilder: $54.Metadata.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$3.Metadata>(1, _omitFieldNames ? '' : 'metadatas', $pb.PbFieldType.PM, subBuilder: $3.Metadata.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -972,19 +972,19 @@ class QueryDenomsMetadataResponse extends $pb.GeneratedMessage {
 
   /// metadata provides the client information for all the registered tokens.
   @$pb.TagNumber(1)
-  $core.List<$54.Metadata> get metadatas => $_getList(0);
+  $core.List<$3.Metadata> get metadatas => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDenomMetadataRequest is the request type for the Query/DenomMetadata RPC method.
@@ -1043,7 +1043,7 @@ class QueryDenomMetadataRequest extends $pb.GeneratedMessage {
 /// method.
 class QueryDenomMetadataResponse extends $pb.GeneratedMessage {
   factory QueryDenomMetadataResponse({
-    $54.Metadata? metadata,
+    $3.Metadata? metadata,
   }) {
     final $result = create();
     if (metadata != null) {
@@ -1056,7 +1056,7 @@ class QueryDenomMetadataResponse extends $pb.GeneratedMessage {
   factory QueryDenomMetadataResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomMetadataResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$54.Metadata>(1, _omitFieldNames ? '' : 'metadata', subBuilder: $54.Metadata.create)
+    ..aOM<$3.Metadata>(1, _omitFieldNames ? '' : 'metadata', subBuilder: $3.Metadata.create)
     ..hasRequiredFields = false
   ;
 
@@ -1083,15 +1083,15 @@ class QueryDenomMetadataResponse extends $pb.GeneratedMessage {
 
   /// metadata describes and provides all the client information for the requested token.
   @$pb.TagNumber(1)
-  $54.Metadata get metadata => $_getN(0);
+  $3.Metadata get metadata => $_getN(0);
   @$pb.TagNumber(1)
-  set metadata($54.Metadata v) { setField(1, v); }
+  set metadata($3.Metadata v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMetadata() => $_has(0);
   @$pb.TagNumber(1)
   void clearMetadata() => clearField(1);
   @$pb.TagNumber(1)
-  $54.Metadata ensureMetadata() => $_ensure(0);
+  $3.Metadata ensureMetadata() => $_ensure(0);
 }
 
 /// QueryDenomMetadataByQueryStringRequest is the request type for the Query/DenomMetadata RPC method.
@@ -1151,7 +1151,7 @@ class QueryDenomMetadataByQueryStringRequest extends $pb.GeneratedMessage {
 /// method. Identical with QueryDenomMetadataResponse but receives denom as query string in request.
 class QueryDenomMetadataByQueryStringResponse extends $pb.GeneratedMessage {
   factory QueryDenomMetadataByQueryStringResponse({
-    $54.Metadata? metadata,
+    $3.Metadata? metadata,
   }) {
     final $result = create();
     if (metadata != null) {
@@ -1164,7 +1164,7 @@ class QueryDenomMetadataByQueryStringResponse extends $pb.GeneratedMessage {
   factory QueryDenomMetadataByQueryStringResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomMetadataByQueryStringResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$54.Metadata>(1, _omitFieldNames ? '' : 'metadata', subBuilder: $54.Metadata.create)
+    ..aOM<$3.Metadata>(1, _omitFieldNames ? '' : 'metadata', subBuilder: $3.Metadata.create)
     ..hasRequiredFields = false
   ;
 
@@ -1191,15 +1191,15 @@ class QueryDenomMetadataByQueryStringResponse extends $pb.GeneratedMessage {
 
   /// metadata describes and provides all the client information for the requested token.
   @$pb.TagNumber(1)
-  $54.Metadata get metadata => $_getN(0);
+  $3.Metadata get metadata => $_getN(0);
   @$pb.TagNumber(1)
-  set metadata($54.Metadata v) { setField(1, v); }
+  set metadata($3.Metadata v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMetadata() => $_has(0);
   @$pb.TagNumber(1)
   void clearMetadata() => clearField(1);
   @$pb.TagNumber(1)
-  $54.Metadata ensureMetadata() => $_ensure(0);
+  $3.Metadata ensureMetadata() => $_ensure(0);
 }
 
 /// QueryDenomOwnersRequest defines the request type for the DenomOwners RPC query,
@@ -1208,7 +1208,7 @@ class QueryDenomMetadataByQueryStringResponse extends $pb.GeneratedMessage {
 class QueryDenomOwnersRequest extends $pb.GeneratedMessage {
   factory QueryDenomOwnersRequest({
     $core.String? denom,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (denom != null) {
@@ -1225,7 +1225,7 @@ class QueryDenomOwnersRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomOwnersRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'denom')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1262,15 +1262,15 @@ class QueryDenomOwnersRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $4.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($4.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $4.PageRequest ensurePagination() => $_ensure(1);
 }
 
 ///  DenomOwner defines structure representing an account that owns or holds a
@@ -1281,7 +1281,7 @@ class QueryDenomOwnersRequest extends $pb.GeneratedMessage {
 class DenomOwner extends $pb.GeneratedMessage {
   factory DenomOwner({
     $core.String? address,
-    $53.Coin? balance,
+    $2.Coin? balance,
   }) {
     final $result = create();
     if (address != null) {
@@ -1298,7 +1298,7 @@ class DenomOwner extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DenomOwner', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$53.Coin>(2, _omitFieldNames ? '' : 'balance', subBuilder: $53.Coin.create)
+    ..aOM<$2.Coin>(2, _omitFieldNames ? '' : 'balance', subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -1335,15 +1335,15 @@ class DenomOwner extends $pb.GeneratedMessage {
 
   /// balance is the balance of the denominated coin for an account.
   @$pb.TagNumber(2)
-  $53.Coin get balance => $_getN(1);
+  $2.Coin get balance => $_getN(1);
   @$pb.TagNumber(2)
-  set balance($53.Coin v) { setField(2, v); }
+  set balance($2.Coin v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBalance() => $_has(1);
   @$pb.TagNumber(2)
   void clearBalance() => clearField(2);
   @$pb.TagNumber(2)
-  $53.Coin ensureBalance() => $_ensure(1);
+  $2.Coin ensureBalance() => $_ensure(1);
 }
 
 ///  QueryDenomOwnersResponse defines the RPC response of a DenomOwners RPC query.
@@ -1352,7 +1352,7 @@ class DenomOwner extends $pb.GeneratedMessage {
 class QueryDenomOwnersResponse extends $pb.GeneratedMessage {
   factory QueryDenomOwnersResponse({
     $core.Iterable<DenomOwner>? denomOwners,
-    $49.PageResponse? pagination,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (denomOwners != null) {
@@ -1369,7 +1369,7 @@ class QueryDenomOwnersResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomOwnersResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..pc<DenomOwner>(1, _omitFieldNames ? '' : 'denomOwners', $pb.PbFieldType.PM, subBuilder: DenomOwner.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1399,15 +1399,15 @@ class QueryDenomOwnersResponse extends $pb.GeneratedMessage {
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 ///  QueryDenomOwnersByQueryRequest defines the request type for the DenomOwnersByQuery RPC query,
@@ -1418,7 +1418,7 @@ class QueryDenomOwnersResponse extends $pb.GeneratedMessage {
 class QueryDenomOwnersByQueryRequest extends $pb.GeneratedMessage {
   factory QueryDenomOwnersByQueryRequest({
     $core.String? denom,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (denom != null) {
@@ -1435,7 +1435,7 @@ class QueryDenomOwnersByQueryRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomOwnersByQueryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'denom')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1472,15 +1472,15 @@ class QueryDenomOwnersByQueryRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $4.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($4.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $4.PageRequest ensurePagination() => $_ensure(1);
 }
 
 ///  QueryDenomOwnersByQueryResponse defines the RPC response of a DenomOwnersByQuery RPC query.
@@ -1489,7 +1489,7 @@ class QueryDenomOwnersByQueryRequest extends $pb.GeneratedMessage {
 class QueryDenomOwnersByQueryResponse extends $pb.GeneratedMessage {
   factory QueryDenomOwnersByQueryResponse({
     $core.Iterable<DenomOwner>? denomOwners,
-    $49.PageResponse? pagination,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (denomOwners != null) {
@@ -1506,7 +1506,7 @@ class QueryDenomOwnersByQueryResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomOwnersByQueryResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..pc<DenomOwner>(1, _omitFieldNames ? '' : 'denomOwners', $pb.PbFieldType.PM, subBuilder: DenomOwner.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1536,15 +1536,15 @@ class QueryDenomOwnersByQueryResponse extends $pb.GeneratedMessage {
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 ///  QuerySendEnabledRequest defines the RPC request for looking up SendEnabled entries.
@@ -1553,7 +1553,7 @@ class QueryDenomOwnersByQueryResponse extends $pb.GeneratedMessage {
 class QuerySendEnabledRequest extends $pb.GeneratedMessage {
   factory QuerySendEnabledRequest({
     $core.Iterable<$core.String>? denoms,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (denoms != null) {
@@ -1570,7 +1570,7 @@ class QuerySendEnabledRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySendEnabledRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'denoms')
-    ..aOM<$49.PageRequest>(99, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(99, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1602,15 +1602,15 @@ class QuerySendEnabledRequest extends $pb.GeneratedMessage {
   /// pagination defines an optional pagination for the request. This field is
   /// only read if the denoms field is empty.
   @$pb.TagNumber(99)
-  $49.PageRequest get pagination => $_getN(1);
+  $4.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(99)
-  set pagination($49.PageRequest v) { setField(99, v); }
+  set pagination($4.PageRequest v) { setField(99, v); }
   @$pb.TagNumber(99)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(99)
   void clearPagination() => clearField(99);
   @$pb.TagNumber(99)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $4.PageRequest ensurePagination() => $_ensure(1);
 }
 
 ///  QuerySendEnabledResponse defines the RPC response of a SendEnable query.
@@ -1618,8 +1618,8 @@ class QuerySendEnabledRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47
 class QuerySendEnabledResponse extends $pb.GeneratedMessage {
   factory QuerySendEnabledResponse({
-    $core.Iterable<$54.SendEnabled>? sendEnabled,
-    $49.PageResponse? pagination,
+    $core.Iterable<$3.SendEnabled>? sendEnabled,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (sendEnabled != null) {
@@ -1635,8 +1635,8 @@ class QuerySendEnabledResponse extends $pb.GeneratedMessage {
   factory QuerySendEnabledResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySendEnabledResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$54.SendEnabled>(1, _omitFieldNames ? '' : 'sendEnabled', $pb.PbFieldType.PM, subBuilder: $54.SendEnabled.create)
-    ..aOM<$49.PageResponse>(99, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$3.SendEnabled>(1, _omitFieldNames ? '' : 'sendEnabled', $pb.PbFieldType.PM, subBuilder: $3.SendEnabled.create)
+    ..aOM<$4.PageResponse>(99, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1662,20 +1662,20 @@ class QuerySendEnabledResponse extends $pb.GeneratedMessage {
   static QuerySendEnabledResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$54.SendEnabled> get sendEnabled => $_getList(0);
+  $core.List<$3.SendEnabled> get sendEnabled => $_getList(0);
 
   /// pagination defines the pagination in the response. This field is only
   /// populated if the denoms field in the request is empty.
   @$pb.TagNumber(99)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(99)
-  set pagination($49.PageResponse v) { setField(99, v); }
+  set pagination($4.PageResponse v) { setField(99, v); }
   @$pb.TagNumber(99)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(99)
   void clearPagination() => clearField(99);
   @$pb.TagNumber(99)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

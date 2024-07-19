@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $20;
-import '../../../core/channel/v1/channel.pb.dart' as $21;
+import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $2;
+import '../../../core/channel/v1/channel.pb.dart' as $3;
 
 /// Fee defines the ICS29 receive, acknowledgement and timeout fees
 class Fee extends $pb.GeneratedMessage {
   factory Fee({
-    $core.Iterable<$20.Coin>? recvFee,
-    $core.Iterable<$20.Coin>? ackFee,
-    $core.Iterable<$20.Coin>? timeoutFee,
+    $core.Iterable<$2.Coin>? recvFee,
+    $core.Iterable<$2.Coin>? ackFee,
+    $core.Iterable<$2.Coin>? timeoutFee,
   }) {
     final $result = create();
     if (recvFee != null) {
@@ -40,9 +40,9 @@ class Fee extends $pb.GeneratedMessage {
   factory Fee.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Fee', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$20.Coin>(1, _omitFieldNames ? '' : 'recvFee', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
-    ..pc<$20.Coin>(2, _omitFieldNames ? '' : 'ackFee', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
-    ..pc<$20.Coin>(3, _omitFieldNames ? '' : 'timeoutFee', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'recvFee', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..pc<$2.Coin>(2, _omitFieldNames ? '' : 'ackFee', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..pc<$2.Coin>(3, _omitFieldNames ? '' : 'timeoutFee', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -69,15 +69,15 @@ class Fee extends $pb.GeneratedMessage {
 
   /// the packet receive fee
   @$pb.TagNumber(1)
-  $core.List<$20.Coin> get recvFee => $_getList(0);
+  $core.List<$2.Coin> get recvFee => $_getList(0);
 
   /// the packet acknowledgement fee
   @$pb.TagNumber(2)
-  $core.List<$20.Coin> get ackFee => $_getList(1);
+  $core.List<$2.Coin> get ackFee => $_getList(1);
 
   /// the packet timeout fee
   @$pb.TagNumber(3)
-  $core.List<$20.Coin> get timeoutFee => $_getList(2);
+  $core.List<$2.Coin> get timeoutFee => $_getList(2);
 }
 
 /// PacketFee contains ICS29 relayer fees, refund address and optional list of permitted relayers
@@ -207,7 +207,7 @@ class PacketFees extends $pb.GeneratedMessage {
 /// IdentifiedPacketFees contains a list of type PacketFee and associated PacketId
 class IdentifiedPacketFees extends $pb.GeneratedMessage {
   factory IdentifiedPacketFees({
-    $21.PacketId? packetId,
+    $3.PacketId? packetId,
     $core.Iterable<PacketFee>? packetFees,
   }) {
     final $result = create();
@@ -224,7 +224,7 @@ class IdentifiedPacketFees extends $pb.GeneratedMessage {
   factory IdentifiedPacketFees.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IdentifiedPacketFees', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$21.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
+    ..aOM<$3.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
     ..pc<PacketFee>(2, _omitFieldNames ? '' : 'packetFees', $pb.PbFieldType.PM, subBuilder: PacketFee.create)
     ..hasRequiredFields = false
   ;
@@ -252,15 +252,15 @@ class IdentifiedPacketFees extends $pb.GeneratedMessage {
 
   /// unique packet identifier comprised of the channel ID, port ID and sequence
   @$pb.TagNumber(1)
-  $21.PacketId get packetId => $_getN(0);
+  $3.PacketId get packetId => $_getN(0);
   @$pb.TagNumber(1)
-  set packetId($21.PacketId v) { setField(1, v); }
+  set packetId($3.PacketId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacketId() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacketId() => clearField(1);
   @$pb.TagNumber(1)
-  $21.PacketId ensurePacketId() => $_ensure(0);
+  $3.PacketId ensurePacketId() => $_ensure(0);
 
   /// list of packet fees
   @$pb.TagNumber(2)

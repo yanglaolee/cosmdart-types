@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import '../../base/v1beta1/coin.pb.dart' as $53;
-import 'distribution.pb.dart' as $68;
+import '../../base/query/v1beta1/pagination.pb.dart' as $4;
+import '../../base/v1beta1/coin.pb.dart' as $2;
+import 'distribution.pb.dart' as $3;
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
 class QueryParamsRequest extends $pb.GeneratedMessage {
@@ -54,7 +54,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $68.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -67,7 +67,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..aOM<$68.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $68.Params.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -94,15 +94,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $68.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($68.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $68.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 }
 
 /// QueryValidatorDistributionInfoRequest is the request type for the Query/ValidatorDistributionInfo RPC method.
@@ -161,8 +161,8 @@ class QueryValidatorDistributionInfoRequest extends $pb.GeneratedMessage {
 class QueryValidatorDistributionInfoResponse extends $pb.GeneratedMessage {
   factory QueryValidatorDistributionInfoResponse({
     $core.String? operatorAddress,
-    $core.Iterable<$53.DecCoin>? selfBondRewards,
-    $core.Iterable<$53.DecCoin>? commission,
+    $core.Iterable<$2.DecCoin>? selfBondRewards,
+    $core.Iterable<$2.DecCoin>? commission,
   }) {
     final $result = create();
     if (operatorAddress != null) {
@@ -182,8 +182,8 @@ class QueryValidatorDistributionInfoResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorDistributionInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'operatorAddress')
-    ..pc<$53.DecCoin>(2, _omitFieldNames ? '' : 'selfBondRewards', $pb.PbFieldType.PM, subBuilder: $53.DecCoin.create)
-    ..pc<$53.DecCoin>(3, _omitFieldNames ? '' : 'commission', $pb.PbFieldType.PM, subBuilder: $53.DecCoin.create)
+    ..pc<$2.DecCoin>(2, _omitFieldNames ? '' : 'selfBondRewards', $pb.PbFieldType.PM, subBuilder: $2.DecCoin.create)
+    ..pc<$2.DecCoin>(3, _omitFieldNames ? '' : 'commission', $pb.PbFieldType.PM, subBuilder: $2.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -220,11 +220,11 @@ class QueryValidatorDistributionInfoResponse extends $pb.GeneratedMessage {
 
   /// self_bond_rewards defines the self delegations rewards.
   @$pb.TagNumber(2)
-  $core.List<$53.DecCoin> get selfBondRewards => $_getList(1);
+  $core.List<$2.DecCoin> get selfBondRewards => $_getList(1);
 
   /// commission defines the commission the validator received.
   @$pb.TagNumber(3)
-  $core.List<$53.DecCoin> get commission => $_getList(2);
+  $core.List<$2.DecCoin> get commission => $_getList(2);
 }
 
 /// QueryValidatorOutstandingRewardsRequest is the request type for the
@@ -284,7 +284,7 @@ class QueryValidatorOutstandingRewardsRequest extends $pb.GeneratedMessage {
 /// Query/ValidatorOutstandingRewards RPC method.
 class QueryValidatorOutstandingRewardsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorOutstandingRewardsResponse({
-    $68.ValidatorOutstandingRewards? rewards,
+    $3.ValidatorOutstandingRewards? rewards,
   }) {
     final $result = create();
     if (rewards != null) {
@@ -297,7 +297,7 @@ class QueryValidatorOutstandingRewardsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorOutstandingRewardsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorOutstandingRewardsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..aOM<$68.ValidatorOutstandingRewards>(1, _omitFieldNames ? '' : 'rewards', subBuilder: $68.ValidatorOutstandingRewards.create)
+    ..aOM<$3.ValidatorOutstandingRewards>(1, _omitFieldNames ? '' : 'rewards', subBuilder: $3.ValidatorOutstandingRewards.create)
     ..hasRequiredFields = false
   ;
 
@@ -323,15 +323,15 @@ class QueryValidatorOutstandingRewardsResponse extends $pb.GeneratedMessage {
   static QueryValidatorOutstandingRewardsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $68.ValidatorOutstandingRewards get rewards => $_getN(0);
+  $3.ValidatorOutstandingRewards get rewards => $_getN(0);
   @$pb.TagNumber(1)
-  set rewards($68.ValidatorOutstandingRewards v) { setField(1, v); }
+  set rewards($3.ValidatorOutstandingRewards v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRewards() => $_has(0);
   @$pb.TagNumber(1)
   void clearRewards() => clearField(1);
   @$pb.TagNumber(1)
-  $68.ValidatorOutstandingRewards ensureRewards() => $_ensure(0);
+  $3.ValidatorOutstandingRewards ensureRewards() => $_ensure(0);
 }
 
 /// QueryValidatorCommissionRequest is the request type for the
@@ -391,7 +391,7 @@ class QueryValidatorCommissionRequest extends $pb.GeneratedMessage {
 /// Query/ValidatorCommission RPC method
 class QueryValidatorCommissionResponse extends $pb.GeneratedMessage {
   factory QueryValidatorCommissionResponse({
-    $68.ValidatorAccumulatedCommission? commission,
+    $3.ValidatorAccumulatedCommission? commission,
   }) {
     final $result = create();
     if (commission != null) {
@@ -404,7 +404,7 @@ class QueryValidatorCommissionResponse extends $pb.GeneratedMessage {
   factory QueryValidatorCommissionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorCommissionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..aOM<$68.ValidatorAccumulatedCommission>(1, _omitFieldNames ? '' : 'commission', subBuilder: $68.ValidatorAccumulatedCommission.create)
+    ..aOM<$3.ValidatorAccumulatedCommission>(1, _omitFieldNames ? '' : 'commission', subBuilder: $3.ValidatorAccumulatedCommission.create)
     ..hasRequiredFields = false
   ;
 
@@ -431,15 +431,15 @@ class QueryValidatorCommissionResponse extends $pb.GeneratedMessage {
 
   /// commission defines the commission the validator received.
   @$pb.TagNumber(1)
-  $68.ValidatorAccumulatedCommission get commission => $_getN(0);
+  $3.ValidatorAccumulatedCommission get commission => $_getN(0);
   @$pb.TagNumber(1)
-  set commission($68.ValidatorAccumulatedCommission v) { setField(1, v); }
+  set commission($3.ValidatorAccumulatedCommission v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCommission() => $_has(0);
   @$pb.TagNumber(1)
   void clearCommission() => clearField(1);
   @$pb.TagNumber(1)
-  $68.ValidatorAccumulatedCommission ensureCommission() => $_ensure(0);
+  $3.ValidatorAccumulatedCommission ensureCommission() => $_ensure(0);
 }
 
 /// QueryValidatorSlashesRequest is the request type for the
@@ -449,7 +449,7 @@ class QueryValidatorSlashesRequest extends $pb.GeneratedMessage {
     $core.String? validatorAddress,
     $fixnum.Int64? startingHeight,
     $fixnum.Int64? endingHeight,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -474,7 +474,7 @@ class QueryValidatorSlashesRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'startingHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'endingHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$49.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -531,23 +531,23 @@ class QueryValidatorSlashesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(4)
-  $49.PageRequest get pagination => $_getN(3);
+  $4.PageRequest get pagination => $_getN(3);
   @$pb.TagNumber(4)
-  set pagination($49.PageRequest v) { setField(4, v); }
+  set pagination($4.PageRequest v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasPagination() => $_has(3);
   @$pb.TagNumber(4)
   void clearPagination() => clearField(4);
   @$pb.TagNumber(4)
-  $49.PageRequest ensurePagination() => $_ensure(3);
+  $4.PageRequest ensurePagination() => $_ensure(3);
 }
 
 /// QueryValidatorSlashesResponse is the response type for the
 /// Query/ValidatorSlashes RPC method.
 class QueryValidatorSlashesResponse extends $pb.GeneratedMessage {
   factory QueryValidatorSlashesResponse({
-    $core.Iterable<$68.ValidatorSlashEvent>? slashes,
-    $49.PageResponse? pagination,
+    $core.Iterable<$3.ValidatorSlashEvent>? slashes,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (slashes != null) {
@@ -563,8 +563,8 @@ class QueryValidatorSlashesResponse extends $pb.GeneratedMessage {
   factory QueryValidatorSlashesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorSlashesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$68.ValidatorSlashEvent>(1, _omitFieldNames ? '' : 'slashes', $pb.PbFieldType.PM, subBuilder: $68.ValidatorSlashEvent.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$3.ValidatorSlashEvent>(1, _omitFieldNames ? '' : 'slashes', $pb.PbFieldType.PM, subBuilder: $3.ValidatorSlashEvent.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -591,19 +591,19 @@ class QueryValidatorSlashesResponse extends $pb.GeneratedMessage {
 
   /// slashes defines the slashes the validator received.
   @$pb.TagNumber(1)
-  $core.List<$68.ValidatorSlashEvent> get slashes => $_getList(0);
+  $core.List<$3.ValidatorSlashEvent> get slashes => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegationRewardsRequest is the request type for the
@@ -678,7 +678,7 @@ class QueryDelegationRewardsRequest extends $pb.GeneratedMessage {
 /// Query/DelegationRewards RPC method.
 class QueryDelegationRewardsResponse extends $pb.GeneratedMessage {
   factory QueryDelegationRewardsResponse({
-    $core.Iterable<$53.DecCoin>? rewards,
+    $core.Iterable<$2.DecCoin>? rewards,
   }) {
     final $result = create();
     if (rewards != null) {
@@ -691,7 +691,7 @@ class QueryDelegationRewardsResponse extends $pb.GeneratedMessage {
   factory QueryDelegationRewardsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegationRewardsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.DecCoin>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $53.DecCoin.create)
+    ..pc<$2.DecCoin>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $2.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -718,7 +718,7 @@ class QueryDelegationRewardsResponse extends $pb.GeneratedMessage {
 
   /// rewards defines the rewards accrued by a delegation.
   @$pb.TagNumber(1)
-  $core.List<$53.DecCoin> get rewards => $_getList(0);
+  $core.List<$2.DecCoin> get rewards => $_getList(0);
 }
 
 /// QueryDelegationTotalRewardsRequest is the request type for the
@@ -778,8 +778,8 @@ class QueryDelegationTotalRewardsRequest extends $pb.GeneratedMessage {
 /// Query/DelegationTotalRewards RPC method.
 class QueryDelegationTotalRewardsResponse extends $pb.GeneratedMessage {
   factory QueryDelegationTotalRewardsResponse({
-    $core.Iterable<$68.DelegationDelegatorReward>? rewards,
-    $core.Iterable<$53.DecCoin>? total,
+    $core.Iterable<$3.DelegationDelegatorReward>? rewards,
+    $core.Iterable<$2.DecCoin>? total,
   }) {
     final $result = create();
     if (rewards != null) {
@@ -795,8 +795,8 @@ class QueryDelegationTotalRewardsResponse extends $pb.GeneratedMessage {
   factory QueryDelegationTotalRewardsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegationTotalRewardsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$68.DelegationDelegatorReward>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $68.DelegationDelegatorReward.create)
-    ..pc<$53.DecCoin>(2, _omitFieldNames ? '' : 'total', $pb.PbFieldType.PM, subBuilder: $53.DecCoin.create)
+    ..pc<$3.DelegationDelegatorReward>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $3.DelegationDelegatorReward.create)
+    ..pc<$2.DecCoin>(2, _omitFieldNames ? '' : 'total', $pb.PbFieldType.PM, subBuilder: $2.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -823,11 +823,11 @@ class QueryDelegationTotalRewardsResponse extends $pb.GeneratedMessage {
 
   /// rewards defines all the rewards accrued by a delegator.
   @$pb.TagNumber(1)
-  $core.List<$68.DelegationDelegatorReward> get rewards => $_getList(0);
+  $core.List<$3.DelegationDelegatorReward> get rewards => $_getList(0);
 
   /// total defines the sum of all the rewards.
   @$pb.TagNumber(2)
-  $core.List<$53.DecCoin> get total => $_getList(1);
+  $core.List<$2.DecCoin> get total => $_getList(1);
 }
 
 /// QueryDelegatorValidatorsRequest is the request type for the
@@ -1074,7 +1074,7 @@ class QueryCommunityPoolRequest extends $pb.GeneratedMessage {
 /// RPC method.
 class QueryCommunityPoolResponse extends $pb.GeneratedMessage {
   factory QueryCommunityPoolResponse({
-    $core.Iterable<$53.DecCoin>? pool,
+    $core.Iterable<$2.DecCoin>? pool,
   }) {
     final $result = create();
     if (pool != null) {
@@ -1087,7 +1087,7 @@ class QueryCommunityPoolResponse extends $pb.GeneratedMessage {
   factory QueryCommunityPoolResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryCommunityPoolResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.DecCoin>(1, _omitFieldNames ? '' : 'pool', $pb.PbFieldType.PM, subBuilder: $53.DecCoin.create)
+    ..pc<$2.DecCoin>(1, _omitFieldNames ? '' : 'pool', $pb.PbFieldType.PM, subBuilder: $2.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -1114,7 +1114,7 @@ class QueryCommunityPoolResponse extends $pb.GeneratedMessage {
 
   /// pool defines community pool's coins.
   @$pb.TagNumber(1)
-  $core.List<$53.DecCoin> get pool => $_getList(0);
+  $core.List<$2.DecCoin> get pool => $_getList(0);
 }
 
 

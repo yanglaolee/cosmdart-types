@@ -14,12 +14,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $46;
-import '../../../google/protobuf/duration.pb.dart' as $55;
-import '../../../google/protobuf/timestamp.pb.dart' as $50;
-import '../../../tendermint/abci/types.pb.dart' as $8;
-import '../../../tendermint/types/types.pb.dart' as $61;
-import '../../base/v1beta1/coin.pb.dart' as $53;
+import '../../../google/protobuf/any.pb.dart' as $6;
+import '../../../google/protobuf/duration.pb.dart' as $7;
+import '../../../google/protobuf/timestamp.pb.dart' as $5;
+import '../../../tendermint/abci/types.pb.dart' as $0;
+import '../../../tendermint/types/types.pb.dart' as $4;
+import '../../base/v1beta1/coin.pb.dart' as $3;
 import 'staking.pbenum.dart';
 
 export 'staking.pbenum.dart';
@@ -30,7 +30,7 @@ export 'staking.pbenum.dart';
 /// (`n` is set by the staking module's `historical_entries` parameter).
 class HistoricalInfo extends $pb.GeneratedMessage {
   factory HistoricalInfo({
-    $61.Header? header,
+    $4.Header? header,
     $core.Iterable<Validator>? valset,
   }) {
     final $result = create();
@@ -47,7 +47,7 @@ class HistoricalInfo extends $pb.GeneratedMessage {
   factory HistoricalInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HistoricalInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$61.Header>(1, _omitFieldNames ? '' : 'header', subBuilder: $61.Header.create)
+    ..aOM<$4.Header>(1, _omitFieldNames ? '' : 'header', subBuilder: $4.Header.create)
     ..pc<Validator>(2, _omitFieldNames ? '' : 'valset', $pb.PbFieldType.PM, subBuilder: Validator.create)
     ..hasRequiredFields = false
   ;
@@ -74,15 +74,15 @@ class HistoricalInfo extends $pb.GeneratedMessage {
   static HistoricalInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $61.Header get header => $_getN(0);
+  $4.Header get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($61.Header v) { setField(1, v); }
+  set header($4.Header v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasHeader() => $_has(0);
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $61.Header ensureHeader() => $_ensure(0);
+  $4.Header ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<Validator> get valset => $_getList(1);
@@ -175,7 +175,7 @@ class CommissionRates extends $pb.GeneratedMessage {
 class Commission extends $pb.GeneratedMessage {
   factory Commission({
     CommissionRates? commissionRates,
-    $50.Timestamp? updateTime,
+    $5.Timestamp? updateTime,
   }) {
     final $result = create();
     if (commissionRates != null) {
@@ -192,7 +192,7 @@ class Commission extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Commission', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOM<CommissionRates>(1, _omitFieldNames ? '' : 'commissionRates', subBuilder: CommissionRates.create)
-    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'updateTime', subBuilder: $50.Timestamp.create)
+    ..aOM<$5.Timestamp>(2, _omitFieldNames ? '' : 'updateTime', subBuilder: $5.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -231,15 +231,15 @@ class Commission extends $pb.GeneratedMessage {
 
   /// update_time is the last time the commission rate was changed.
   @$pb.TagNumber(2)
-  $50.Timestamp get updateTime => $_getN(1);
+  $5.Timestamp get updateTime => $_getN(1);
   @$pb.TagNumber(2)
-  set updateTime($50.Timestamp v) { setField(2, v); }
+  set updateTime($5.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUpdateTime() => $_has(1);
   @$pb.TagNumber(2)
   void clearUpdateTime() => clearField(2);
   @$pb.TagNumber(2)
-  $50.Timestamp ensureUpdateTime() => $_ensure(1);
+  $5.Timestamp ensureUpdateTime() => $_ensure(1);
 }
 
 /// Description defines a validator description.
@@ -365,14 +365,14 @@ class Description extends $pb.GeneratedMessage {
 class Validator extends $pb.GeneratedMessage {
   factory Validator({
     $core.String? operatorAddress,
-    $46.Any? consensusPubkey,
+    $6.Any? consensusPubkey,
     $core.bool? jailed,
     BondStatus? status,
     $core.String? tokens,
     $core.String? delegatorShares,
     Description? description,
     $fixnum.Int64? unbondingHeight,
-    $50.Timestamp? unbondingTime,
+    $5.Timestamp? unbondingTime,
     Commission? commission,
     $core.String? minSelfDelegation,
     $fixnum.Int64? unbondingOnHoldRefCount,
@@ -426,14 +426,14 @@ class Validator extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Validator', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'operatorAddress')
-    ..aOM<$46.Any>(2, _omitFieldNames ? '' : 'consensusPubkey', subBuilder: $46.Any.create)
+    ..aOM<$6.Any>(2, _omitFieldNames ? '' : 'consensusPubkey', subBuilder: $6.Any.create)
     ..aOB(3, _omitFieldNames ? '' : 'jailed')
     ..e<BondStatus>(4, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: BondStatus.BOND_STATUS_UNSPECIFIED, valueOf: BondStatus.valueOf, enumValues: BondStatus.values)
     ..aOS(5, _omitFieldNames ? '' : 'tokens')
     ..aOS(6, _omitFieldNames ? '' : 'delegatorShares')
     ..aOM<Description>(7, _omitFieldNames ? '' : 'description', subBuilder: Description.create)
     ..aInt64(8, _omitFieldNames ? '' : 'unbondingHeight')
-    ..aOM<$50.Timestamp>(9, _omitFieldNames ? '' : 'unbondingTime', subBuilder: $50.Timestamp.create)
+    ..aOM<$5.Timestamp>(9, _omitFieldNames ? '' : 'unbondingTime', subBuilder: $5.Timestamp.create)
     ..aOM<Commission>(10, _omitFieldNames ? '' : 'commission', subBuilder: Commission.create)
     ..aOS(11, _omitFieldNames ? '' : 'minSelfDelegation')
     ..aInt64(12, _omitFieldNames ? '' : 'unbondingOnHoldRefCount')
@@ -474,15 +474,15 @@ class Validator extends $pb.GeneratedMessage {
 
   /// consensus_pubkey is the consensus public key of the validator, as a Protobuf Any.
   @$pb.TagNumber(2)
-  $46.Any get consensusPubkey => $_getN(1);
+  $6.Any get consensusPubkey => $_getN(1);
   @$pb.TagNumber(2)
-  set consensusPubkey($46.Any v) { setField(2, v); }
+  set consensusPubkey($6.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConsensusPubkey() => $_has(1);
   @$pb.TagNumber(2)
   void clearConsensusPubkey() => clearField(2);
   @$pb.TagNumber(2)
-  $46.Any ensureConsensusPubkey() => $_ensure(1);
+  $6.Any ensureConsensusPubkey() => $_ensure(1);
 
   /// jailed defined whether the validator has been jailed from bonded status or not.
   @$pb.TagNumber(3)
@@ -548,15 +548,15 @@ class Validator extends $pb.GeneratedMessage {
 
   /// unbonding_time defines, if unbonding, the min time for the validator to complete unbonding.
   @$pb.TagNumber(9)
-  $50.Timestamp get unbondingTime => $_getN(8);
+  $5.Timestamp get unbondingTime => $_getN(8);
   @$pb.TagNumber(9)
-  set unbondingTime($50.Timestamp v) { setField(9, v); }
+  set unbondingTime($5.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasUnbondingTime() => $_has(8);
   @$pb.TagNumber(9)
   void clearUnbondingTime() => clearField(9);
   @$pb.TagNumber(9)
-  $50.Timestamp ensureUnbondingTime() => $_ensure(8);
+  $5.Timestamp ensureUnbondingTime() => $_ensure(8);
 
   /// commission defines the commission parameters.
   @$pb.TagNumber(10)
@@ -1046,7 +1046,7 @@ class UnbondingDelegation extends $pb.GeneratedMessage {
 class UnbondingDelegationEntry extends $pb.GeneratedMessage {
   factory UnbondingDelegationEntry({
     $fixnum.Int64? creationHeight,
-    $50.Timestamp? completionTime,
+    $5.Timestamp? completionTime,
     $core.String? initialBalance,
     $core.String? balance,
     $fixnum.Int64? unbondingId,
@@ -1079,7 +1079,7 @@ class UnbondingDelegationEntry extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnbondingDelegationEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'creationHeight')
-    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'completionTime', subBuilder: $50.Timestamp.create)
+    ..aOM<$5.Timestamp>(2, _omitFieldNames ? '' : 'completionTime', subBuilder: $5.Timestamp.create)
     ..aOS(3, _omitFieldNames ? '' : 'initialBalance')
     ..aOS(4, _omitFieldNames ? '' : 'balance')
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'unbondingId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1120,15 +1120,15 @@ class UnbondingDelegationEntry extends $pb.GeneratedMessage {
 
   /// completion_time is the unix time for unbonding completion.
   @$pb.TagNumber(2)
-  $50.Timestamp get completionTime => $_getN(1);
+  $5.Timestamp get completionTime => $_getN(1);
   @$pb.TagNumber(2)
-  set completionTime($50.Timestamp v) { setField(2, v); }
+  set completionTime($5.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompletionTime() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompletionTime() => clearField(2);
   @$pb.TagNumber(2)
-  $50.Timestamp ensureCompletionTime() => $_ensure(1);
+  $5.Timestamp ensureCompletionTime() => $_ensure(1);
 
   /// initial_balance defines the tokens initially scheduled to receive at completion.
   @$pb.TagNumber(3)
@@ -1175,7 +1175,7 @@ class UnbondingDelegationEntry extends $pb.GeneratedMessage {
 class RedelegationEntry extends $pb.GeneratedMessage {
   factory RedelegationEntry({
     $fixnum.Int64? creationHeight,
-    $50.Timestamp? completionTime,
+    $5.Timestamp? completionTime,
     $core.String? initialBalance,
     $core.String? sharesDst,
     $fixnum.Int64? unbondingId,
@@ -1208,7 +1208,7 @@ class RedelegationEntry extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RedelegationEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'creationHeight')
-    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'completionTime', subBuilder: $50.Timestamp.create)
+    ..aOM<$5.Timestamp>(2, _omitFieldNames ? '' : 'completionTime', subBuilder: $5.Timestamp.create)
     ..aOS(3, _omitFieldNames ? '' : 'initialBalance')
     ..aOS(4, _omitFieldNames ? '' : 'sharesDst')
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'unbondingId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1249,15 +1249,15 @@ class RedelegationEntry extends $pb.GeneratedMessage {
 
   /// completion_time defines the unix time for redelegation completion.
   @$pb.TagNumber(2)
-  $50.Timestamp get completionTime => $_getN(1);
+  $5.Timestamp get completionTime => $_getN(1);
   @$pb.TagNumber(2)
-  set completionTime($50.Timestamp v) { setField(2, v); }
+  set completionTime($5.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompletionTime() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompletionTime() => clearField(2);
   @$pb.TagNumber(2)
-  $50.Timestamp ensureCompletionTime() => $_ensure(1);
+  $5.Timestamp ensureCompletionTime() => $_ensure(1);
 
   /// initial_balance defines the initial balance when redelegation started.
   @$pb.TagNumber(3)
@@ -1395,7 +1395,7 @@ class Redelegation extends $pb.GeneratedMessage {
 /// Params defines the parameters for the x/staking module.
 class Params extends $pb.GeneratedMessage {
   factory Params({
-    $55.Duration? unbondingTime,
+    $7.Duration? unbondingTime,
     $core.int? maxValidators,
     $core.int? maxEntries,
     $core.int? historicalEntries,
@@ -1428,7 +1428,7 @@ class Params extends $pb.GeneratedMessage {
   factory Params.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Params', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$55.Duration>(1, _omitFieldNames ? '' : 'unbondingTime', subBuilder: $55.Duration.create)
+    ..aOM<$7.Duration>(1, _omitFieldNames ? '' : 'unbondingTime', subBuilder: $7.Duration.create)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'maxValidators', $pb.PbFieldType.OU3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'maxEntries', $pb.PbFieldType.OU3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'historicalEntries', $pb.PbFieldType.OU3)
@@ -1460,15 +1460,15 @@ class Params extends $pb.GeneratedMessage {
 
   /// unbonding_time is the time duration of unbonding.
   @$pb.TagNumber(1)
-  $55.Duration get unbondingTime => $_getN(0);
+  $7.Duration get unbondingTime => $_getN(0);
   @$pb.TagNumber(1)
-  set unbondingTime($55.Duration v) { setField(1, v); }
+  set unbondingTime($7.Duration v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUnbondingTime() => $_has(0);
   @$pb.TagNumber(1)
   void clearUnbondingTime() => clearField(1);
   @$pb.TagNumber(1)
-  $55.Duration ensureUnbondingTime() => $_ensure(0);
+  $7.Duration ensureUnbondingTime() => $_ensure(0);
 
   /// max_validators is the maximum number of validators.
   @$pb.TagNumber(2)
@@ -1526,7 +1526,7 @@ class Params extends $pb.GeneratedMessage {
 class DelegationResponse extends $pb.GeneratedMessage {
   factory DelegationResponse({
     Delegation? delegation,
-    $53.Coin? balance,
+    $3.Coin? balance,
   }) {
     final $result = create();
     if (delegation != null) {
@@ -1543,7 +1543,7 @@ class DelegationResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DelegationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOM<Delegation>(1, _omitFieldNames ? '' : 'delegation', subBuilder: Delegation.create)
-    ..aOM<$53.Coin>(2, _omitFieldNames ? '' : 'balance', subBuilder: $53.Coin.create)
+    ..aOM<$3.Coin>(2, _omitFieldNames ? '' : 'balance', subBuilder: $3.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -1580,15 +1580,15 @@ class DelegationResponse extends $pb.GeneratedMessage {
   Delegation ensureDelegation() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $53.Coin get balance => $_getN(1);
+  $3.Coin get balance => $_getN(1);
   @$pb.TagNumber(2)
-  set balance($53.Coin v) { setField(2, v); }
+  set balance($3.Coin v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBalance() => $_has(1);
   @$pb.TagNumber(2)
   void clearBalance() => clearField(2);
   @$pb.TagNumber(2)
-  $53.Coin ensureBalance() => $_ensure(1);
+  $3.Coin ensureBalance() => $_ensure(1);
 }
 
 /// RedelegationEntryResponse is equivalent to a RedelegationEntry except that it
@@ -1793,7 +1793,7 @@ class Pool extends $pb.GeneratedMessage {
 /// TODO: explore moving this to proto/cosmos/base to separate modules from tendermint dependence
 class ValidatorUpdates extends $pb.GeneratedMessage {
   factory ValidatorUpdates({
-    $core.Iterable<$8.ValidatorUpdate>? updates,
+    $core.Iterable<$0.ValidatorUpdate>? updates,
   }) {
     final $result = create();
     if (updates != null) {
@@ -1806,7 +1806,7 @@ class ValidatorUpdates extends $pb.GeneratedMessage {
   factory ValidatorUpdates.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorUpdates', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$8.ValidatorUpdate>(1, _omitFieldNames ? '' : 'updates', $pb.PbFieldType.PM, subBuilder: $8.ValidatorUpdate.create)
+    ..pc<$0.ValidatorUpdate>(1, _omitFieldNames ? '' : 'updates', $pb.PbFieldType.PM, subBuilder: $0.ValidatorUpdate.create)
     ..hasRequiredFields = false
   ;
 
@@ -1832,7 +1832,7 @@ class ValidatorUpdates extends $pb.GeneratedMessage {
   static ValidatorUpdates? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$8.ValidatorUpdate> get updates => $_getList(0);
+  $core.List<$0.ValidatorUpdate> get updates => $_getList(0);
 }
 
 

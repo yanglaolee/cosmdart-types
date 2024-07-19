@@ -14,11 +14,11 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../client/v1/client.pb.dart' as $19;
-import 'channel.pb.dart' as $21;
-import 'channel.pbenum.dart' as $21;
+import '../../client/v1/client.pb.dart' as $2;
+import 'channel.pb.dart' as $3;
+import 'channel.pbenum.dart' as $3;
 import 'tx.pbenum.dart';
-import 'upgrade.pb.dart' as $30;
+import 'upgrade.pb.dart' as $6;
 
 export 'tx.pbenum.dart';
 
@@ -27,7 +27,7 @@ export 'tx.pbenum.dart';
 class MsgChannelOpenInit extends $pb.GeneratedMessage {
   factory MsgChannelOpenInit({
     $core.String? portId,
-    $21.Channel? channel,
+    $3.Channel? channel,
     $core.String? signer,
   }) {
     final $result = create();
@@ -48,7 +48,7 @@ class MsgChannelOpenInit extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelOpenInit', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
-    ..aOM<$21.Channel>(2, _omitFieldNames ? '' : 'channel', subBuilder: $21.Channel.create)
+    ..aOM<$3.Channel>(2, _omitFieldNames ? '' : 'channel', subBuilder: $3.Channel.create)
     ..aOS(3, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -84,15 +84,15 @@ class MsgChannelOpenInit extends $pb.GeneratedMessage {
   void clearPortId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $21.Channel get channel => $_getN(1);
+  $3.Channel get channel => $_getN(1);
   @$pb.TagNumber(2)
-  set channel($21.Channel v) { setField(2, v); }
+  set channel($3.Channel v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasChannel() => $_has(1);
   @$pb.TagNumber(2)
   void clearChannel() => clearField(2);
   @$pb.TagNumber(2)
-  $21.Channel ensureChannel() => $_ensure(1);
+  $3.Channel ensureChannel() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get signer => $_getSZ(2);
@@ -177,10 +177,10 @@ class MsgChannelOpenTry extends $pb.GeneratedMessage {
     $core.String? portId,
   @$core.Deprecated('This field is deprecated.')
     $core.String? previousChannelId,
-    $21.Channel? channel,
+    $3.Channel? channel,
     $core.String? counterpartyVersion,
     $core.List<$core.int>? proofInit,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -215,10 +215,10 @@ class MsgChannelOpenTry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelOpenTry', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'previousChannelId')
-    ..aOM<$21.Channel>(3, _omitFieldNames ? '' : 'channel', subBuilder: $21.Channel.create)
+    ..aOM<$3.Channel>(3, _omitFieldNames ? '' : 'channel', subBuilder: $3.Channel.create)
     ..aOS(4, _omitFieldNames ? '' : 'counterpartyVersion')
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'proofInit', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(7, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -269,15 +269,15 @@ class MsgChannelOpenTry extends $pb.GeneratedMessage {
 
   /// NOTE: the version field within the channel has been deprecated. Its value will be ignored by core IBC.
   @$pb.TagNumber(3)
-  $21.Channel get channel => $_getN(2);
+  $3.Channel get channel => $_getN(2);
   @$pb.TagNumber(3)
-  set channel($21.Channel v) { setField(3, v); }
+  set channel($3.Channel v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasChannel() => $_has(2);
   @$pb.TagNumber(3)
   void clearChannel() => clearField(3);
   @$pb.TagNumber(3)
-  $21.Channel ensureChannel() => $_ensure(2);
+  $3.Channel ensureChannel() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get counterpartyVersion => $_getSZ(3);
@@ -298,15 +298,15 @@ class MsgChannelOpenTry extends $pb.GeneratedMessage {
   void clearProofInit() => clearField(5);
 
   @$pb.TagNumber(6)
-  $19.Height get proofHeight => $_getN(5);
+  $2.Height get proofHeight => $_getN(5);
   @$pb.TagNumber(6)
-  set proofHeight($19.Height v) { setField(6, v); }
+  set proofHeight($2.Height v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasProofHeight() => $_has(5);
   @$pb.TagNumber(6)
   void clearProofHeight() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Height ensureProofHeight() => $_ensure(5);
+  $2.Height ensureProofHeight() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.String get signer => $_getSZ(6);
@@ -395,7 +395,7 @@ class MsgChannelOpenAck extends $pb.GeneratedMessage {
     $core.String? counterpartyChannelId,
     $core.String? counterpartyVersion,
     $core.List<$core.int>? proofTry,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -432,7 +432,7 @@ class MsgChannelOpenAck extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'counterpartyChannelId')
     ..aOS(4, _omitFieldNames ? '' : 'counterpartyVersion')
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'proofTry', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(7, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -504,15 +504,15 @@ class MsgChannelOpenAck extends $pb.GeneratedMessage {
   void clearProofTry() => clearField(5);
 
   @$pb.TagNumber(6)
-  $19.Height get proofHeight => $_getN(5);
+  $2.Height get proofHeight => $_getN(5);
   @$pb.TagNumber(6)
-  set proofHeight($19.Height v) { setField(6, v); }
+  set proofHeight($2.Height v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasProofHeight() => $_has(5);
   @$pb.TagNumber(6)
   void clearProofHeight() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Height ensureProofHeight() => $_ensure(5);
+  $2.Height ensureProofHeight() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.String get signer => $_getSZ(6);
@@ -564,7 +564,7 @@ class MsgChannelOpenConfirm extends $pb.GeneratedMessage {
     $core.String? portId,
     $core.String? channelId,
     $core.List<$core.int>? proofAck,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -593,7 +593,7 @@ class MsgChannelOpenConfirm extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proofAck', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(5, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -647,15 +647,15 @@ class MsgChannelOpenConfirm extends $pb.GeneratedMessage {
   void clearProofAck() => clearField(3);
 
   @$pb.TagNumber(4)
-  $19.Height get proofHeight => $_getN(3);
+  $2.Height get proofHeight => $_getN(3);
   @$pb.TagNumber(4)
-  set proofHeight($19.Height v) { setField(4, v); }
+  set proofHeight($2.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(3);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $19.Height ensureProofHeight() => $_ensure(3);
+  $2.Height ensureProofHeight() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get signer => $_getSZ(4);
@@ -821,7 +821,7 @@ class MsgChannelCloseConfirm extends $pb.GeneratedMessage {
     $core.String? portId,
     $core.String? channelId,
     $core.List<$core.int>? proofInit,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
     $fixnum.Int64? counterpartyUpgradeSequence,
   }) {
@@ -854,7 +854,7 @@ class MsgChannelCloseConfirm extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proofInit', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(5, _omitFieldNames ? '' : 'signer')
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'counterpartyUpgradeSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -909,15 +909,15 @@ class MsgChannelCloseConfirm extends $pb.GeneratedMessage {
   void clearProofInit() => clearField(3);
 
   @$pb.TagNumber(4)
-  $19.Height get proofHeight => $_getN(3);
+  $2.Height get proofHeight => $_getN(3);
   @$pb.TagNumber(4)
-  set proofHeight($19.Height v) { setField(4, v); }
+  set proofHeight($2.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(3);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $19.Height ensureProofHeight() => $_ensure(3);
+  $2.Height ensureProofHeight() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get signer => $_getSZ(4);
@@ -975,9 +975,9 @@ class MsgChannelCloseConfirmResponse extends $pb.GeneratedMessage {
 /// MsgRecvPacket receives incoming IBC packet
 class MsgRecvPacket extends $pb.GeneratedMessage {
   factory MsgRecvPacket({
-    $21.Packet? packet,
+    $3.Packet? packet,
     $core.List<$core.int>? proofCommitment,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -1000,9 +1000,9 @@ class MsgRecvPacket extends $pb.GeneratedMessage {
   factory MsgRecvPacket.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgRecvPacket', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$21.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $21.Packet.create)
+    ..aOM<$3.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $3.Packet.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proofCommitment', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(4, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -1029,15 +1029,15 @@ class MsgRecvPacket extends $pb.GeneratedMessage {
   static MsgRecvPacket? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $21.Packet get packet => $_getN(0);
+  $3.Packet get packet => $_getN(0);
   @$pb.TagNumber(1)
-  set packet($21.Packet v) { setField(1, v); }
+  set packet($3.Packet v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacket() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacket() => clearField(1);
   @$pb.TagNumber(1)
-  $21.Packet ensurePacket() => $_ensure(0);
+  $3.Packet ensurePacket() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get proofCommitment => $_getN(1);
@@ -1049,15 +1049,15 @@ class MsgRecvPacket extends $pb.GeneratedMessage {
   void clearProofCommitment() => clearField(2);
 
   @$pb.TagNumber(3)
-  $19.Height get proofHeight => $_getN(2);
+  $2.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($19.Height v) { setField(3, v); }
+  set proofHeight($2.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $19.Height ensureProofHeight() => $_ensure(2);
+  $2.Height ensureProofHeight() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get signer => $_getSZ(3);
@@ -1123,9 +1123,9 @@ class MsgRecvPacketResponse extends $pb.GeneratedMessage {
 /// MsgTimeout receives timed-out packet
 class MsgTimeout extends $pb.GeneratedMessage {
   factory MsgTimeout({
-    $21.Packet? packet,
+    $3.Packet? packet,
     $core.List<$core.int>? proofUnreceived,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $fixnum.Int64? nextSequenceRecv,
     $core.String? signer,
   }) {
@@ -1152,9 +1152,9 @@ class MsgTimeout extends $pb.GeneratedMessage {
   factory MsgTimeout.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgTimeout', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$21.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $21.Packet.create)
+    ..aOM<$3.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $3.Packet.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proofUnreceived', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nextSequenceRecv', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(5, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
@@ -1182,15 +1182,15 @@ class MsgTimeout extends $pb.GeneratedMessage {
   static MsgTimeout? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $21.Packet get packet => $_getN(0);
+  $3.Packet get packet => $_getN(0);
   @$pb.TagNumber(1)
-  set packet($21.Packet v) { setField(1, v); }
+  set packet($3.Packet v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacket() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacket() => clearField(1);
   @$pb.TagNumber(1)
-  $21.Packet ensurePacket() => $_ensure(0);
+  $3.Packet ensurePacket() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get proofUnreceived => $_getN(1);
@@ -1202,15 +1202,15 @@ class MsgTimeout extends $pb.GeneratedMessage {
   void clearProofUnreceived() => clearField(2);
 
   @$pb.TagNumber(3)
-  $19.Height get proofHeight => $_getN(2);
+  $2.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($19.Height v) { setField(3, v); }
+  set proofHeight($2.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $19.Height ensureProofHeight() => $_ensure(2);
+  $2.Height ensureProofHeight() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $fixnum.Int64 get nextSequenceRecv => $_getI64(3);
@@ -1285,10 +1285,10 @@ class MsgTimeoutResponse extends $pb.GeneratedMessage {
 /// MsgTimeoutOnClose timed-out packet upon counterparty channel closure.
 class MsgTimeoutOnClose extends $pb.GeneratedMessage {
   factory MsgTimeoutOnClose({
-    $21.Packet? packet,
+    $3.Packet? packet,
     $core.List<$core.int>? proofUnreceived,
     $core.List<$core.int>? proofClose,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $fixnum.Int64? nextSequenceRecv,
     $core.String? signer,
     $fixnum.Int64? counterpartyUpgradeSequence,
@@ -1322,10 +1322,10 @@ class MsgTimeoutOnClose extends $pb.GeneratedMessage {
   factory MsgTimeoutOnClose.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgTimeoutOnClose', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$21.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $21.Packet.create)
+    ..aOM<$3.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $3.Packet.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proofUnreceived', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proofClose', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'nextSequenceRecv', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(6, _omitFieldNames ? '' : 'signer')
     ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'counterpartyUpgradeSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1354,15 +1354,15 @@ class MsgTimeoutOnClose extends $pb.GeneratedMessage {
   static MsgTimeoutOnClose? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $21.Packet get packet => $_getN(0);
+  $3.Packet get packet => $_getN(0);
   @$pb.TagNumber(1)
-  set packet($21.Packet v) { setField(1, v); }
+  set packet($3.Packet v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacket() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacket() => clearField(1);
   @$pb.TagNumber(1)
-  $21.Packet ensurePacket() => $_ensure(0);
+  $3.Packet ensurePacket() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get proofUnreceived => $_getN(1);
@@ -1383,15 +1383,15 @@ class MsgTimeoutOnClose extends $pb.GeneratedMessage {
   void clearProofClose() => clearField(3);
 
   @$pb.TagNumber(4)
-  $19.Height get proofHeight => $_getN(3);
+  $2.Height get proofHeight => $_getN(3);
   @$pb.TagNumber(4)
-  set proofHeight($19.Height v) { setField(4, v); }
+  set proofHeight($2.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(3);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $19.Height ensureProofHeight() => $_ensure(3);
+  $2.Height ensureProofHeight() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $fixnum.Int64 get nextSequenceRecv => $_getI64(4);
@@ -1475,10 +1475,10 @@ class MsgTimeoutOnCloseResponse extends $pb.GeneratedMessage {
 /// MsgAcknowledgement receives incoming IBC acknowledgement
 class MsgAcknowledgement extends $pb.GeneratedMessage {
   factory MsgAcknowledgement({
-    $21.Packet? packet,
+    $3.Packet? packet,
     $core.List<$core.int>? acknowledgement,
     $core.List<$core.int>? proofAcked,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -1504,10 +1504,10 @@ class MsgAcknowledgement extends $pb.GeneratedMessage {
   factory MsgAcknowledgement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgAcknowledgement', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$21.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $21.Packet.create)
+    ..aOM<$3.Packet>(1, _omitFieldNames ? '' : 'packet', subBuilder: $3.Packet.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'acknowledgement', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proofAcked', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(5, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -1534,15 +1534,15 @@ class MsgAcknowledgement extends $pb.GeneratedMessage {
   static MsgAcknowledgement? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $21.Packet get packet => $_getN(0);
+  $3.Packet get packet => $_getN(0);
   @$pb.TagNumber(1)
-  set packet($21.Packet v) { setField(1, v); }
+  set packet($3.Packet v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacket() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacket() => clearField(1);
   @$pb.TagNumber(1)
-  $21.Packet ensurePacket() => $_ensure(0);
+  $3.Packet ensurePacket() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get acknowledgement => $_getN(1);
@@ -1563,15 +1563,15 @@ class MsgAcknowledgement extends $pb.GeneratedMessage {
   void clearProofAcked() => clearField(3);
 
   @$pb.TagNumber(4)
-  $19.Height get proofHeight => $_getN(3);
+  $2.Height get proofHeight => $_getN(3);
   @$pb.TagNumber(4)
-  set proofHeight($19.Height v) { setField(4, v); }
+  set proofHeight($2.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(3);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $19.Height ensureProofHeight() => $_ensure(3);
+  $2.Height ensureProofHeight() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get signer => $_getSZ(4);
@@ -1641,7 +1641,7 @@ class MsgChannelUpgradeInit extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeInit({
     $core.String? portId,
     $core.String? channelId,
-    $30.UpgradeFields? fields,
+    $6.UpgradeFields? fields,
     $core.String? signer,
   }) {
     final $result = create();
@@ -1666,7 +1666,7 @@ class MsgChannelUpgradeInit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeInit', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..aOM<$30.UpgradeFields>(3, _omitFieldNames ? '' : 'fields', subBuilder: $30.UpgradeFields.create)
+    ..aOM<$6.UpgradeFields>(3, _omitFieldNames ? '' : 'fields', subBuilder: $6.UpgradeFields.create)
     ..aOS(4, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -1711,15 +1711,15 @@ class MsgChannelUpgradeInit extends $pb.GeneratedMessage {
   void clearChannelId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $30.UpgradeFields get fields => $_getN(2);
+  $6.UpgradeFields get fields => $_getN(2);
   @$pb.TagNumber(3)
-  set fields($30.UpgradeFields v) { setField(3, v); }
+  set fields($6.UpgradeFields v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasFields() => $_has(2);
   @$pb.TagNumber(3)
   void clearFields() => clearField(3);
   @$pb.TagNumber(3)
-  $30.UpgradeFields ensureFields() => $_ensure(2);
+  $6.UpgradeFields ensureFields() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get signer => $_getSZ(3);
@@ -1734,7 +1734,7 @@ class MsgChannelUpgradeInit extends $pb.GeneratedMessage {
 /// MsgChannelUpgradeInitResponse defines the MsgChannelUpgradeInit response type
 class MsgChannelUpgradeInitResponse extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeInitResponse({
-    $30.Upgrade? upgrade,
+    $6.Upgrade? upgrade,
     $fixnum.Int64? upgradeSequence,
   }) {
     final $result = create();
@@ -1751,7 +1751,7 @@ class MsgChannelUpgradeInitResponse extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeInitResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeInitResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$30.Upgrade>(1, _omitFieldNames ? '' : 'upgrade', subBuilder: $30.Upgrade.create)
+    ..aOM<$6.Upgrade>(1, _omitFieldNames ? '' : 'upgrade', subBuilder: $6.Upgrade.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'upgradeSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -1778,15 +1778,15 @@ class MsgChannelUpgradeInitResponse extends $pb.GeneratedMessage {
   static MsgChannelUpgradeInitResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $30.Upgrade get upgrade => $_getN(0);
+  $6.Upgrade get upgrade => $_getN(0);
   @$pb.TagNumber(1)
-  set upgrade($30.Upgrade v) { setField(1, v); }
+  set upgrade($6.Upgrade v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUpgrade() => $_has(0);
   @$pb.TagNumber(1)
   void clearUpgrade() => clearField(1);
   @$pb.TagNumber(1)
-  $30.Upgrade ensureUpgrade() => $_ensure(0);
+  $6.Upgrade ensureUpgrade() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get upgradeSequence => $_getI64(1);
@@ -1804,11 +1804,11 @@ class MsgChannelUpgradeTry extends $pb.GeneratedMessage {
     $core.String? portId,
     $core.String? channelId,
     $core.Iterable<$core.String>? proposedUpgradeConnectionHops,
-    $30.UpgradeFields? counterpartyUpgradeFields,
+    $6.UpgradeFields? counterpartyUpgradeFields,
     $fixnum.Int64? counterpartyUpgradeSequence,
     $core.List<$core.int>? proofChannel,
     $core.List<$core.int>? proofUpgrade,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -1849,11 +1849,11 @@ class MsgChannelUpgradeTry extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..pPS(3, _omitFieldNames ? '' : 'proposedUpgradeConnectionHops')
-    ..aOM<$30.UpgradeFields>(4, _omitFieldNames ? '' : 'counterpartyUpgradeFields', subBuilder: $30.UpgradeFields.create)
+    ..aOM<$6.UpgradeFields>(4, _omitFieldNames ? '' : 'counterpartyUpgradeFields', subBuilder: $6.UpgradeFields.create)
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'counterpartyUpgradeSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'proofChannel', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'proofUpgrade', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(8, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(8, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(9, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -1901,15 +1901,15 @@ class MsgChannelUpgradeTry extends $pb.GeneratedMessage {
   $core.List<$core.String> get proposedUpgradeConnectionHops => $_getList(2);
 
   @$pb.TagNumber(4)
-  $30.UpgradeFields get counterpartyUpgradeFields => $_getN(3);
+  $6.UpgradeFields get counterpartyUpgradeFields => $_getN(3);
   @$pb.TagNumber(4)
-  set counterpartyUpgradeFields($30.UpgradeFields v) { setField(4, v); }
+  set counterpartyUpgradeFields($6.UpgradeFields v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCounterpartyUpgradeFields() => $_has(3);
   @$pb.TagNumber(4)
   void clearCounterpartyUpgradeFields() => clearField(4);
   @$pb.TagNumber(4)
-  $30.UpgradeFields ensureCounterpartyUpgradeFields() => $_ensure(3);
+  $6.UpgradeFields ensureCounterpartyUpgradeFields() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $fixnum.Int64 get counterpartyUpgradeSequence => $_getI64(4);
@@ -1939,15 +1939,15 @@ class MsgChannelUpgradeTry extends $pb.GeneratedMessage {
   void clearProofUpgrade() => clearField(7);
 
   @$pb.TagNumber(8)
-  $19.Height get proofHeight => $_getN(7);
+  $2.Height get proofHeight => $_getN(7);
   @$pb.TagNumber(8)
-  set proofHeight($19.Height v) { setField(8, v); }
+  set proofHeight($2.Height v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasProofHeight() => $_has(7);
   @$pb.TagNumber(8)
   void clearProofHeight() => clearField(8);
   @$pb.TagNumber(8)
-  $19.Height ensureProofHeight() => $_ensure(7);
+  $2.Height ensureProofHeight() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.String get signer => $_getSZ(8);
@@ -1962,7 +1962,7 @@ class MsgChannelUpgradeTry extends $pb.GeneratedMessage {
 /// MsgChannelUpgradeTryResponse defines the MsgChannelUpgradeTry response type
 class MsgChannelUpgradeTryResponse extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeTryResponse({
-    $30.Upgrade? upgrade,
+    $6.Upgrade? upgrade,
     $fixnum.Int64? upgradeSequence,
     ResponseResultType? result,
   }) {
@@ -1983,7 +1983,7 @@ class MsgChannelUpgradeTryResponse extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeTryResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeTryResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$30.Upgrade>(1, _omitFieldNames ? '' : 'upgrade', subBuilder: $30.Upgrade.create)
+    ..aOM<$6.Upgrade>(1, _omitFieldNames ? '' : 'upgrade', subBuilder: $6.Upgrade.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'upgradeSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<ResponseResultType>(3, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: ResponseResultType.RESPONSE_RESULT_TYPE_UNSPECIFIED, valueOf: ResponseResultType.valueOf, enumValues: ResponseResultType.values)
     ..hasRequiredFields = false
@@ -2011,15 +2011,15 @@ class MsgChannelUpgradeTryResponse extends $pb.GeneratedMessage {
   static MsgChannelUpgradeTryResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $30.Upgrade get upgrade => $_getN(0);
+  $6.Upgrade get upgrade => $_getN(0);
   @$pb.TagNumber(1)
-  set upgrade($30.Upgrade v) { setField(1, v); }
+  set upgrade($6.Upgrade v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUpgrade() => $_has(0);
   @$pb.TagNumber(1)
   void clearUpgrade() => clearField(1);
   @$pb.TagNumber(1)
-  $30.Upgrade ensureUpgrade() => $_ensure(0);
+  $6.Upgrade ensureUpgrade() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get upgradeSequence => $_getI64(1);
@@ -2045,10 +2045,10 @@ class MsgChannelUpgradeAck extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeAck({
     $core.String? portId,
     $core.String? channelId,
-    $30.Upgrade? counterpartyUpgrade,
+    $6.Upgrade? counterpartyUpgrade,
     $core.List<$core.int>? proofChannel,
     $core.List<$core.int>? proofUpgrade,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -2082,10 +2082,10 @@ class MsgChannelUpgradeAck extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeAck', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..aOM<$30.Upgrade>(3, _omitFieldNames ? '' : 'counterpartyUpgrade', subBuilder: $30.Upgrade.create)
+    ..aOM<$6.Upgrade>(3, _omitFieldNames ? '' : 'counterpartyUpgrade', subBuilder: $6.Upgrade.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'proofChannel', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'proofUpgrade', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(7, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -2130,15 +2130,15 @@ class MsgChannelUpgradeAck extends $pb.GeneratedMessage {
   void clearChannelId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $30.Upgrade get counterpartyUpgrade => $_getN(2);
+  $6.Upgrade get counterpartyUpgrade => $_getN(2);
   @$pb.TagNumber(3)
-  set counterpartyUpgrade($30.Upgrade v) { setField(3, v); }
+  set counterpartyUpgrade($6.Upgrade v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCounterpartyUpgrade() => $_has(2);
   @$pb.TagNumber(3)
   void clearCounterpartyUpgrade() => clearField(3);
   @$pb.TagNumber(3)
-  $30.Upgrade ensureCounterpartyUpgrade() => $_ensure(2);
+  $6.Upgrade ensureCounterpartyUpgrade() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get proofChannel => $_getN(3);
@@ -2159,15 +2159,15 @@ class MsgChannelUpgradeAck extends $pb.GeneratedMessage {
   void clearProofUpgrade() => clearField(5);
 
   @$pb.TagNumber(6)
-  $19.Height get proofHeight => $_getN(5);
+  $2.Height get proofHeight => $_getN(5);
   @$pb.TagNumber(6)
-  set proofHeight($19.Height v) { setField(6, v); }
+  set proofHeight($2.Height v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasProofHeight() => $_has(5);
   @$pb.TagNumber(6)
   void clearProofHeight() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Height ensureProofHeight() => $_ensure(5);
+  $2.Height ensureProofHeight() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.String get signer => $_getSZ(6);
@@ -2235,11 +2235,11 @@ class MsgChannelUpgradeConfirm extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeConfirm({
     $core.String? portId,
     $core.String? channelId,
-    $21.State? counterpartyChannelState,
-    $30.Upgrade? counterpartyUpgrade,
+    $3.State? counterpartyChannelState,
+    $6.Upgrade? counterpartyUpgrade,
     $core.List<$core.int>? proofChannel,
     $core.List<$core.int>? proofUpgrade,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -2276,11 +2276,11 @@ class MsgChannelUpgradeConfirm extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeConfirm', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..e<$21.State>(3, _omitFieldNames ? '' : 'counterpartyChannelState', $pb.PbFieldType.OE, defaultOrMaker: $21.State.STATE_UNINITIALIZED_UNSPECIFIED, valueOf: $21.State.valueOf, enumValues: $21.State.values)
-    ..aOM<$30.Upgrade>(4, _omitFieldNames ? '' : 'counterpartyUpgrade', subBuilder: $30.Upgrade.create)
+    ..e<$3.State>(3, _omitFieldNames ? '' : 'counterpartyChannelState', $pb.PbFieldType.OE, defaultOrMaker: $3.State.STATE_UNINITIALIZED_UNSPECIFIED, valueOf: $3.State.valueOf, enumValues: $3.State.values)
+    ..aOM<$6.Upgrade>(4, _omitFieldNames ? '' : 'counterpartyUpgrade', subBuilder: $6.Upgrade.create)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'proofChannel', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'proofUpgrade', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(7, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(7, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(8, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -2325,24 +2325,24 @@ class MsgChannelUpgradeConfirm extends $pb.GeneratedMessage {
   void clearChannelId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $21.State get counterpartyChannelState => $_getN(2);
+  $3.State get counterpartyChannelState => $_getN(2);
   @$pb.TagNumber(3)
-  set counterpartyChannelState($21.State v) { setField(3, v); }
+  set counterpartyChannelState($3.State v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCounterpartyChannelState() => $_has(2);
   @$pb.TagNumber(3)
   void clearCounterpartyChannelState() => clearField(3);
 
   @$pb.TagNumber(4)
-  $30.Upgrade get counterpartyUpgrade => $_getN(3);
+  $6.Upgrade get counterpartyUpgrade => $_getN(3);
   @$pb.TagNumber(4)
-  set counterpartyUpgrade($30.Upgrade v) { setField(4, v); }
+  set counterpartyUpgrade($6.Upgrade v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCounterpartyUpgrade() => $_has(3);
   @$pb.TagNumber(4)
   void clearCounterpartyUpgrade() => clearField(4);
   @$pb.TagNumber(4)
-  $30.Upgrade ensureCounterpartyUpgrade() => $_ensure(3);
+  $6.Upgrade ensureCounterpartyUpgrade() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.List<$core.int> get proofChannel => $_getN(4);
@@ -2363,15 +2363,15 @@ class MsgChannelUpgradeConfirm extends $pb.GeneratedMessage {
   void clearProofUpgrade() => clearField(6);
 
   @$pb.TagNumber(7)
-  $19.Height get proofHeight => $_getN(6);
+  $2.Height get proofHeight => $_getN(6);
   @$pb.TagNumber(7)
-  set proofHeight($19.Height v) { setField(7, v); }
+  set proofHeight($2.Height v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasProofHeight() => $_has(6);
   @$pb.TagNumber(7)
   void clearProofHeight() => clearField(7);
   @$pb.TagNumber(7)
-  $19.Height ensureProofHeight() => $_ensure(6);
+  $2.Height ensureProofHeight() => $_ensure(6);
 
   @$pb.TagNumber(8)
   $core.String get signer => $_getSZ(7);
@@ -2439,10 +2439,10 @@ class MsgChannelUpgradeOpen extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeOpen({
     $core.String? portId,
     $core.String? channelId,
-    $21.State? counterpartyChannelState,
+    $3.State? counterpartyChannelState,
     $fixnum.Int64? counterpartyUpgradeSequence,
     $core.List<$core.int>? proofChannel,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -2476,10 +2476,10 @@ class MsgChannelUpgradeOpen extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeOpen', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..e<$21.State>(3, _omitFieldNames ? '' : 'counterpartyChannelState', $pb.PbFieldType.OE, defaultOrMaker: $21.State.STATE_UNINITIALIZED_UNSPECIFIED, valueOf: $21.State.valueOf, enumValues: $21.State.values)
+    ..e<$3.State>(3, _omitFieldNames ? '' : 'counterpartyChannelState', $pb.PbFieldType.OE, defaultOrMaker: $3.State.STATE_UNINITIALIZED_UNSPECIFIED, valueOf: $3.State.valueOf, enumValues: $3.State.values)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'counterpartyUpgradeSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'proofChannel', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(6, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(7, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -2524,9 +2524,9 @@ class MsgChannelUpgradeOpen extends $pb.GeneratedMessage {
   void clearChannelId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $21.State get counterpartyChannelState => $_getN(2);
+  $3.State get counterpartyChannelState => $_getN(2);
   @$pb.TagNumber(3)
-  set counterpartyChannelState($21.State v) { setField(3, v); }
+  set counterpartyChannelState($3.State v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCounterpartyChannelState() => $_has(2);
   @$pb.TagNumber(3)
@@ -2551,15 +2551,15 @@ class MsgChannelUpgradeOpen extends $pb.GeneratedMessage {
   void clearProofChannel() => clearField(5);
 
   @$pb.TagNumber(6)
-  $19.Height get proofHeight => $_getN(5);
+  $2.Height get proofHeight => $_getN(5);
   @$pb.TagNumber(6)
-  set proofHeight($19.Height v) { setField(6, v); }
+  set proofHeight($2.Height v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasProofHeight() => $_has(5);
   @$pb.TagNumber(6)
   void clearProofHeight() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Height ensureProofHeight() => $_ensure(5);
+  $2.Height ensureProofHeight() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.String get signer => $_getSZ(6);
@@ -2609,9 +2609,9 @@ class MsgChannelUpgradeTimeout extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeTimeout({
     $core.String? portId,
     $core.String? channelId,
-    $21.Channel? counterpartyChannel,
+    $3.Channel? counterpartyChannel,
     $core.List<$core.int>? proofChannel,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -2642,9 +2642,9 @@ class MsgChannelUpgradeTimeout extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeTimeout', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..aOM<$21.Channel>(3, _omitFieldNames ? '' : 'counterpartyChannel', subBuilder: $21.Channel.create)
+    ..aOM<$3.Channel>(3, _omitFieldNames ? '' : 'counterpartyChannel', subBuilder: $3.Channel.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'proofChannel', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(5, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(5, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(6, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -2689,15 +2689,15 @@ class MsgChannelUpgradeTimeout extends $pb.GeneratedMessage {
   void clearChannelId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $21.Channel get counterpartyChannel => $_getN(2);
+  $3.Channel get counterpartyChannel => $_getN(2);
   @$pb.TagNumber(3)
-  set counterpartyChannel($21.Channel v) { setField(3, v); }
+  set counterpartyChannel($3.Channel v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCounterpartyChannel() => $_has(2);
   @$pb.TagNumber(3)
   void clearCounterpartyChannel() => clearField(3);
   @$pb.TagNumber(3)
-  $21.Channel ensureCounterpartyChannel() => $_ensure(2);
+  $3.Channel ensureCounterpartyChannel() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get proofChannel => $_getN(3);
@@ -2709,15 +2709,15 @@ class MsgChannelUpgradeTimeout extends $pb.GeneratedMessage {
   void clearProofChannel() => clearField(4);
 
   @$pb.TagNumber(5)
-  $19.Height get proofHeight => $_getN(4);
+  $2.Height get proofHeight => $_getN(4);
   @$pb.TagNumber(5)
-  set proofHeight($19.Height v) { setField(5, v); }
+  set proofHeight($2.Height v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasProofHeight() => $_has(4);
   @$pb.TagNumber(5)
   void clearProofHeight() => clearField(5);
   @$pb.TagNumber(5)
-  $19.Height ensureProofHeight() => $_ensure(4);
+  $2.Height ensureProofHeight() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.String get signer => $_getSZ(5);
@@ -2767,9 +2767,9 @@ class MsgChannelUpgradeCancel extends $pb.GeneratedMessage {
   factory MsgChannelUpgradeCancel({
     $core.String? portId,
     $core.String? channelId,
-    $30.ErrorReceipt? errorReceipt,
+    $6.ErrorReceipt? errorReceipt,
     $core.List<$core.int>? proofErrorReceipt,
-    $19.Height? proofHeight,
+    $2.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -2800,9 +2800,9 @@ class MsgChannelUpgradeCancel extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgChannelUpgradeCancel', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..aOM<$30.ErrorReceipt>(3, _omitFieldNames ? '' : 'errorReceipt', subBuilder: $30.ErrorReceipt.create)
+    ..aOM<$6.ErrorReceipt>(3, _omitFieldNames ? '' : 'errorReceipt', subBuilder: $6.ErrorReceipt.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'proofErrorReceipt', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(5, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$2.Height>(5, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
     ..aOS(6, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -2847,15 +2847,15 @@ class MsgChannelUpgradeCancel extends $pb.GeneratedMessage {
   void clearChannelId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $30.ErrorReceipt get errorReceipt => $_getN(2);
+  $6.ErrorReceipt get errorReceipt => $_getN(2);
   @$pb.TagNumber(3)
-  set errorReceipt($30.ErrorReceipt v) { setField(3, v); }
+  set errorReceipt($6.ErrorReceipt v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasErrorReceipt() => $_has(2);
   @$pb.TagNumber(3)
   void clearErrorReceipt() => clearField(3);
   @$pb.TagNumber(3)
-  $30.ErrorReceipt ensureErrorReceipt() => $_ensure(2);
+  $6.ErrorReceipt ensureErrorReceipt() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get proofErrorReceipt => $_getN(3);
@@ -2867,15 +2867,15 @@ class MsgChannelUpgradeCancel extends $pb.GeneratedMessage {
   void clearProofErrorReceipt() => clearField(4);
 
   @$pb.TagNumber(5)
-  $19.Height get proofHeight => $_getN(4);
+  $2.Height get proofHeight => $_getN(4);
   @$pb.TagNumber(5)
-  set proofHeight($19.Height v) { setField(5, v); }
+  set proofHeight($2.Height v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasProofHeight() => $_has(4);
   @$pb.TagNumber(5)
   void clearProofHeight() => clearField(5);
   @$pb.TagNumber(5)
-  $19.Height ensureProofHeight() => $_ensure(4);
+  $2.Height ensureProofHeight() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.String get signer => $_getSZ(5);
@@ -2924,7 +2924,7 @@ class MsgChannelUpgradeCancelResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $21.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -2941,7 +2941,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$21.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $21.Params.create)
+    ..aOM<$3.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -2980,15 +2980,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $21.Params get params => $_getN(1);
+  $3.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($21.Params v) { setField(2, v); }
+  set params($3.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $21.Params ensureParams() => $_ensure(1);
+  $3.Params ensureParams() => $_ensure(1);
 }
 
 /// MsgUpdateParamsResponse defines the MsgUpdateParams response type.

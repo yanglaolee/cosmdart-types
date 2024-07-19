@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../tendermint/types/params.pb.dart' as $57;
+import '../../../tendermint/types/params.pb.dart' as $2;
 
 /// MsgUpdateParams is the Msg/UpdateParams request type.
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $57.BlockParams? block,
-    $57.EvidenceParams? evidence,
-    $57.ValidatorParams? validator,
-    $57.ABCIParams? abci,
+    $2.BlockParams? block,
+    $2.EvidenceParams? evidence,
+    $2.ValidatorParams? validator,
+    $2.ABCIParams? abci,
   }) {
     final $result = create();
     if (authority != null) {
@@ -48,10 +48,10 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.consensus.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$57.BlockParams>(2, _omitFieldNames ? '' : 'block', subBuilder: $57.BlockParams.create)
-    ..aOM<$57.EvidenceParams>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $57.EvidenceParams.create)
-    ..aOM<$57.ValidatorParams>(4, _omitFieldNames ? '' : 'validator', subBuilder: $57.ValidatorParams.create)
-    ..aOM<$57.ABCIParams>(5, _omitFieldNames ? '' : 'abci', subBuilder: $57.ABCIParams.create)
+    ..aOM<$2.BlockParams>(2, _omitFieldNames ? '' : 'block', subBuilder: $2.BlockParams.create)
+    ..aOM<$2.EvidenceParams>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $2.EvidenceParams.create)
+    ..aOM<$2.ValidatorParams>(4, _omitFieldNames ? '' : 'validator', subBuilder: $2.ValidatorParams.create)
+    ..aOM<$2.ABCIParams>(5, _omitFieldNames ? '' : 'abci', subBuilder: $2.ABCIParams.create)
     ..hasRequiredFields = false
   ;
 
@@ -92,49 +92,49 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $57.BlockParams get block => $_getN(1);
+  $2.BlockParams get block => $_getN(1);
   @$pb.TagNumber(2)
-  set block($57.BlockParams v) { setField(2, v); }
+  set block($2.BlockParams v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBlock() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlock() => clearField(2);
   @$pb.TagNumber(2)
-  $57.BlockParams ensureBlock() => $_ensure(1);
+  $2.BlockParams ensureBlock() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $57.EvidenceParams get evidence => $_getN(2);
+  $2.EvidenceParams get evidence => $_getN(2);
   @$pb.TagNumber(3)
-  set evidence($57.EvidenceParams v) { setField(3, v); }
+  set evidence($2.EvidenceParams v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasEvidence() => $_has(2);
   @$pb.TagNumber(3)
   void clearEvidence() => clearField(3);
   @$pb.TagNumber(3)
-  $57.EvidenceParams ensureEvidence() => $_ensure(2);
+  $2.EvidenceParams ensureEvidence() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $57.ValidatorParams get validator => $_getN(3);
+  $2.ValidatorParams get validator => $_getN(3);
   @$pb.TagNumber(4)
-  set validator($57.ValidatorParams v) { setField(4, v); }
+  set validator($2.ValidatorParams v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasValidator() => $_has(3);
   @$pb.TagNumber(4)
   void clearValidator() => clearField(4);
   @$pb.TagNumber(4)
-  $57.ValidatorParams ensureValidator() => $_ensure(3);
+  $2.ValidatorParams ensureValidator() => $_ensure(3);
 
   /// Since: cosmos-sdk 0.50
   @$pb.TagNumber(5)
-  $57.ABCIParams get abci => $_getN(4);
+  $2.ABCIParams get abci => $_getN(4);
   @$pb.TagNumber(5)
-  set abci($57.ABCIParams v) { setField(5, v); }
+  set abci($2.ABCIParams v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasAbci() => $_has(4);
   @$pb.TagNumber(5)
   void clearAbci() => clearField(5);
   @$pb.TagNumber(5)
-  $57.ABCIParams ensureAbci() => $_ensure(4);
+  $2.ABCIParams ensureAbci() => $_ensure(4);
 }
 
 /// MsgUpdateParamsResponse defines the response structure for executing a

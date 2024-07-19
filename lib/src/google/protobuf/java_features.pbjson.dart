@@ -41,7 +41,7 @@ final $typed_data.Uint8List javaFeaturesDescriptor = $convert.base64Decode(
     '8gYmUgcmVtb3ZlZCBpbiBlZGl0aW9uIDIwMjUuICBNYXJrIGVudW0gdHlwZSBvbiB0aGUgZW51'
     'bSBkZWZpbml0aW9ucyB0aGVtc2VsdmVzIHJhdGhlciB0aGFuIG9uIGZpZWxkcy5SEGxlZ2FjeU'
     'Nsb3NlZEVudW0SrwIKD3V0ZjhfdmFsaWRhdGlvbhgCIAEoDjIfLnBiLkphdmFGZWF0dXJlcy5V'
-    'dGY4VmFsaWRhdGlvbkLkAYgBAZgBBJgBAaIBDBIHREVGQVVMVBjmB7IByAEI6AcQ6AcavwFUaG'
+    'dGY4VmFsaWRhdGlvbkLkAYgBAZgBBJgBAaIBDBIHREVGQVVMVBjmB7IByAEI6AcQ6QcavwFUaG'
     'UgSmF2YS1zcGVjaWZpYyB1dGY4IHZhbGlkYXRpb24gZmVhdHVyZSBpcyBkZXByZWNhdGVkIGFu'
     'ZCBpcyBzY2hlZHVsZWQgdG8gYmUgcmVtb3ZlZCBpbiBlZGl0aW9uIDIwMjUuICBVdGY4IHZhbG'
     'lkYXRpb24gYmVoYXZpb3Igc2hvdWxkIHVzZSB0aGUgZ2xvYmFsIGNyb3NzLWxhbmd1YWdlIHV0'

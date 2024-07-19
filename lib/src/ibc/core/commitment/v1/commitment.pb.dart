@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/ics23/v1/proofs.pb.dart' as $31;
+import '../../../../cosmos/ics23/v1/proofs.pb.dart' as $0;
 
 /// MerkleRoot defines a merkle root hash.
 /// In the Cosmos SDK, the AppHash of a block header becomes the root.
@@ -174,7 +174,7 @@ class MerklePath extends $pb.GeneratedMessage {
 /// MerkleProofs are ordered from leaf-to-root
 class MerkleProof extends $pb.GeneratedMessage {
   factory MerkleProof({
-    $core.Iterable<$31.CommitmentProof>? proofs,
+    $core.Iterable<$0.CommitmentProof>? proofs,
   }) {
     final $result = create();
     if (proofs != null) {
@@ -187,7 +187,7 @@ class MerkleProof extends $pb.GeneratedMessage {
   factory MerkleProof.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MerkleProof', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.commitment.v1'), createEmptyInstance: create)
-    ..pc<$31.CommitmentProof>(1, _omitFieldNames ? '' : 'proofs', $pb.PbFieldType.PM, subBuilder: $31.CommitmentProof.create)
+    ..pc<$0.CommitmentProof>(1, _omitFieldNames ? '' : 'proofs', $pb.PbFieldType.PM, subBuilder: $0.CommitmentProof.create)
     ..hasRequiredFields = false
   ;
 
@@ -213,7 +213,7 @@ class MerkleProof extends $pb.GeneratedMessage {
   static MerkleProof? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$31.CommitmentProof> get proofs => $_getList(0);
+  $core.List<$0.CommitmentProof> get proofs => $_getList(0);
 }
 
 

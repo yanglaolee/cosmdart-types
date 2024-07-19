@@ -14,10 +14,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $46;
-import '../../../../google/protobuf/duration.pb.dart' as $55;
-import '../../../../google/protobuf/timestamp.pb.dart' as $50;
-import '../../../base/query/v1beta1/pagination.pb.dart' as $49;
+import '../../../../google/protobuf/any.pb.dart' as $1;
+import '../../../../google/protobuf/duration.pb.dart' as $4;
+import '../../../../google/protobuf/timestamp.pb.dart' as $3;
+import '../../../base/query/v1beta1/pagination.pb.dart' as $2;
 
 /// GetRequest is the Query/Get request type.
 class GetRequest extends $pb.GeneratedMessage {
@@ -102,7 +102,7 @@ class GetRequest extends $pb.GeneratedMessage {
 /// GetResponse is the Query/Get response type.
 class GetResponse extends $pb.GeneratedMessage {
   factory GetResponse({
-    $46.Any? result,
+    $1.Any? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -115,7 +115,7 @@ class GetResponse extends $pb.GeneratedMessage {
   factory GetResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.orm.query.v1alpha1'), createEmptyInstance: create)
-    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'result', subBuilder: $46.Any.create)
+    ..aOM<$1.Any>(1, _omitFieldNames ? '' : 'result', subBuilder: $1.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -143,15 +143,15 @@ class GetResponse extends $pb.GeneratedMessage {
   /// result is the result of the get query. If no value is found, the gRPC
   /// status code NOT_FOUND will be returned.
   @$pb.TagNumber(1)
-  $46.Any get result => $_getN(0);
+  $1.Any get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($46.Any v) { setField(1, v); }
+  set result($1.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasResult() => $_has(0);
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $46.Any ensureResult() => $_ensure(0);
+  $1.Any ensureResult() => $_ensure(0);
 }
 
 /// Prefix specifies the arguments to a prefix query.
@@ -274,7 +274,7 @@ class ListRequest extends $pb.GeneratedMessage {
     $core.String? index,
     ListRequest_Prefix? prefix,
     ListRequest_Range? range,
-    $49.PageRequest? pagination,
+    $2.PageRequest? pagination,
   }) {
     final $result = create();
     if (messageName != null) {
@@ -309,7 +309,7 @@ class ListRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'index')
     ..aOM<ListRequest_Prefix>(3, _omitFieldNames ? '' : 'prefix', subBuilder: ListRequest_Prefix.create)
     ..aOM<ListRequest_Range>(4, _omitFieldNames ? '' : 'range', subBuilder: ListRequest_Range.create)
-    ..aOM<$49.PageRequest>(5, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$2.PageRequest>(5, _omitFieldNames ? '' : 'pagination', subBuilder: $2.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -384,22 +384,22 @@ class ListRequest extends $pb.GeneratedMessage {
 
   /// pagination is the pagination request.
   @$pb.TagNumber(5)
-  $49.PageRequest get pagination => $_getN(4);
+  $2.PageRequest get pagination => $_getN(4);
   @$pb.TagNumber(5)
-  set pagination($49.PageRequest v) { setField(5, v); }
+  set pagination($2.PageRequest v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasPagination() => $_has(4);
   @$pb.TagNumber(5)
   void clearPagination() => clearField(5);
   @$pb.TagNumber(5)
-  $49.PageRequest ensurePagination() => $_ensure(4);
+  $2.PageRequest ensurePagination() => $_ensure(4);
 }
 
 /// ListResponse is the Query/List response type.
 class ListResponse extends $pb.GeneratedMessage {
   factory ListResponse({
-    $core.Iterable<$46.Any>? results,
-    $49.PageResponse? pagination,
+    $core.Iterable<$1.Any>? results,
+    $2.PageResponse? pagination,
   }) {
     final $result = create();
     if (results != null) {
@@ -415,8 +415,8 @@ class ListResponse extends $pb.GeneratedMessage {
   factory ListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.orm.query.v1alpha1'), createEmptyInstance: create)
-    ..pc<$46.Any>(1, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
-    ..aOM<$49.PageResponse>(5, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$1.Any>(1, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM, subBuilder: $1.Any.create)
+    ..aOM<$2.PageResponse>(5, _omitFieldNames ? '' : 'pagination', subBuilder: $2.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -443,19 +443,19 @@ class ListResponse extends $pb.GeneratedMessage {
 
   /// results are the results of the query.
   @$pb.TagNumber(1)
-  $core.List<$46.Any> get results => $_getList(0);
+  $core.List<$1.Any> get results => $_getList(0);
 
   /// pagination is the pagination response.
   @$pb.TagNumber(5)
-  $49.PageResponse get pagination => $_getN(1);
+  $2.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(5)
-  set pagination($49.PageResponse v) { setField(5, v); }
+  set pagination($2.PageResponse v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(5)
   void clearPagination() => clearField(5);
   @$pb.TagNumber(5)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $2.PageResponse ensurePagination() => $_ensure(1);
 }
 
 enum IndexValue_Value {
@@ -479,8 +479,8 @@ class IndexValue extends $pb.GeneratedMessage {
     $core.List<$core.int>? bytes,
     $core.String? enum_5,
     $core.bool? bool_6,
-    $50.Timestamp? timestamp,
-    $55.Duration? duration,
+    $3.Timestamp? timestamp,
+    $4.Duration? duration,
   }) {
     final $result = create();
     if (uint != null) {
@@ -532,8 +532,8 @@ class IndexValue extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'bytes', $pb.PbFieldType.OY)
     ..aOS(5, _omitFieldNames ? '' : 'enum')
     ..aOB(6, _omitFieldNames ? '' : 'bool')
-    ..aOM<$50.Timestamp>(7, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
-    ..aOM<$55.Duration>(8, _omitFieldNames ? '' : 'duration', subBuilder: $55.Duration.create)
+    ..aOM<$3.Timestamp>(7, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$4.Duration>(8, _omitFieldNames ? '' : 'duration', subBuilder: $4.Duration.create)
     ..hasRequiredFields = false
   ;
 
@@ -625,27 +625,27 @@ class IndexValue extends $pb.GeneratedMessage {
 
   /// timestamp specifies a value for a timestamp index field.
   @$pb.TagNumber(7)
-  $50.Timestamp get timestamp => $_getN(6);
+  $3.Timestamp get timestamp => $_getN(6);
   @$pb.TagNumber(7)
-  set timestamp($50.Timestamp v) { setField(7, v); }
+  set timestamp($3.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasTimestamp() => $_has(6);
   @$pb.TagNumber(7)
   void clearTimestamp() => clearField(7);
   @$pb.TagNumber(7)
-  $50.Timestamp ensureTimestamp() => $_ensure(6);
+  $3.Timestamp ensureTimestamp() => $_ensure(6);
 
   /// duration specifies a value for a duration index field.
   @$pb.TagNumber(8)
-  $55.Duration get duration => $_getN(7);
+  $4.Duration get duration => $_getN(7);
   @$pb.TagNumber(8)
-  set duration($55.Duration v) { setField(8, v); }
+  set duration($4.Duration v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasDuration() => $_has(7);
   @$pb.TagNumber(8)
   void clearDuration() => clearField(8);
   @$pb.TagNumber(8)
-  $55.Duration ensureDuration() => $_ensure(7);
+  $4.Duration ensureDuration() => $_ensure(7);
 }
 
 

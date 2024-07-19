@@ -3,22 +3,26 @@ plugins:
   # - name: gocosmos
   #   out: .
   #   opt: plugins=interfacetype+grpc,Mgoogle/protobuf/any.proto=github.com/cosmos/cosmos-sdk/codec/types
+
   # - name: grpc-gateway
   #   out: .
   #   opt: logtostderr=true,allow_colon_final_segments=true
-  - remote: buf.build/protocolbuffers/dart
-  # - local: "protoc-gen-dart"
+
+  # - remote: buf.build/protocolbuffers/dart
+  - local: "protoc-gen-dart"
     out: ../lib/src/
     opt: grpc
 inputs:
   - module: buf.build/protocolbuffers/wellknowntypes
+  - module: buf.build/cosmos/ics23
   - git_repo: https://github.com/cosmos/cosmos-sdk
-    tag: "v0.50.7"
+    tag: "v0.50.8"
     subdir: proto
   - git_repo: https://github.com/cosmos/ibc-go
-    tag: "v8.3.1"
+    tag: "v8.3.2"
     subdir: proto
   - git_repo: https://github.com/CosmWasm/wasmd
-    tag: "v0.51.0"
+    tag: "v0.52.0"
     subdir: proto
+
 

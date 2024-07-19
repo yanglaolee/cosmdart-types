@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'grpc.pb.dart' as $41;
+import 'grpc.pb.dart' as $1;
 
 export 'grpc.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.store.streaming.abci.ABCIListenerService')
 class ABCIListenerServiceClient extends $grpc.Client {
-  static final _$listenFinalizeBlock = $grpc.ClientMethod<$41.ListenFinalizeBlockRequest, $41.ListenFinalizeBlockResponse>(
+  static final _$listenFinalizeBlock = $grpc.ClientMethod<$1.ListenFinalizeBlockRequest, $1.ListenFinalizeBlockResponse>(
       '/cosmos.store.streaming.abci.ABCIListenerService/ListenFinalizeBlock',
-      ($41.ListenFinalizeBlockRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $41.ListenFinalizeBlockResponse.fromBuffer(value));
-  static final _$listenCommit = $grpc.ClientMethod<$41.ListenCommitRequest, $41.ListenCommitResponse>(
+      ($1.ListenFinalizeBlockRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ListenFinalizeBlockResponse.fromBuffer(value));
+  static final _$listenCommit = $grpc.ClientMethod<$1.ListenCommitRequest, $1.ListenCommitResponse>(
       '/cosmos.store.streaming.abci.ABCIListenerService/ListenCommit',
-      ($41.ListenCommitRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $41.ListenCommitResponse.fromBuffer(value));
+      ($1.ListenCommitRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ListenCommitResponse.fromBuffer(value));
 
   ABCIListenerServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class ABCIListenerServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$41.ListenFinalizeBlockResponse> listenFinalizeBlock($41.ListenFinalizeBlockRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ListenFinalizeBlockResponse> listenFinalizeBlock($1.ListenFinalizeBlockRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listenFinalizeBlock, request, options: options);
   }
 
-  $grpc.ResponseFuture<$41.ListenCommitResponse> listenCommit($41.ListenCommitRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ListenCommitResponse> listenCommit($1.ListenCommitRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listenCommit, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class ABCIListenerServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.store.streaming.abci.ABCIListenerService';
 
   ABCIListenerServiceBase() {
-    $addMethod($grpc.ServiceMethod<$41.ListenFinalizeBlockRequest, $41.ListenFinalizeBlockResponse>(
+    $addMethod($grpc.ServiceMethod<$1.ListenFinalizeBlockRequest, $1.ListenFinalizeBlockResponse>(
         'ListenFinalizeBlock',
         listenFinalizeBlock_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $41.ListenFinalizeBlockRequest.fromBuffer(value),
-        ($41.ListenFinalizeBlockResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$41.ListenCommitRequest, $41.ListenCommitResponse>(
+        ($core.List<$core.int> value) => $1.ListenFinalizeBlockRequest.fromBuffer(value),
+        ($1.ListenFinalizeBlockResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ListenCommitRequest, $1.ListenCommitResponse>(
         'ListenCommit',
         listenCommit_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $41.ListenCommitRequest.fromBuffer(value),
-        ($41.ListenCommitResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $1.ListenCommitRequest.fromBuffer(value),
+        ($1.ListenCommitResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$41.ListenFinalizeBlockResponse> listenFinalizeBlock_Pre($grpc.ServiceCall call, $async.Future<$41.ListenFinalizeBlockRequest> request) async {
+  $async.Future<$1.ListenFinalizeBlockResponse> listenFinalizeBlock_Pre($grpc.ServiceCall call, $async.Future<$1.ListenFinalizeBlockRequest> request) async {
     return listenFinalizeBlock(call, await request);
   }
 
-  $async.Future<$41.ListenCommitResponse> listenCommit_Pre($grpc.ServiceCall call, $async.Future<$41.ListenCommitRequest> request) async {
+  $async.Future<$1.ListenCommitResponse> listenCommit_Pre($grpc.ServiceCall call, $async.Future<$1.ListenCommitRequest> request) async {
     return listenCommit(call, await request);
   }
 
-  $async.Future<$41.ListenFinalizeBlockResponse> listenFinalizeBlock($grpc.ServiceCall call, $41.ListenFinalizeBlockRequest request);
-  $async.Future<$41.ListenCommitResponse> listenCommit($grpc.ServiceCall call, $41.ListenCommitRequest request);
+  $async.Future<$1.ListenFinalizeBlockResponse> listenFinalizeBlock($grpc.ServiceCall call, $1.ListenFinalizeBlockRequest request);
+  $async.Future<$1.ListenCommitResponse> listenCommit($grpc.ServiceCall call, $1.ListenCommitRequest request);
 }

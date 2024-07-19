@@ -15,24 +15,24 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $14;
+import 'tx.pb.dart' as $1;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.circuit.v1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$authorizeCircuitBreaker = $grpc.ClientMethod<$14.MsgAuthorizeCircuitBreaker, $14.MsgAuthorizeCircuitBreakerResponse>(
+  static final _$authorizeCircuitBreaker = $grpc.ClientMethod<$1.MsgAuthorizeCircuitBreaker, $1.MsgAuthorizeCircuitBreakerResponse>(
       '/cosmos.circuit.v1.Msg/AuthorizeCircuitBreaker',
-      ($14.MsgAuthorizeCircuitBreaker value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $14.MsgAuthorizeCircuitBreakerResponse.fromBuffer(value));
-  static final _$tripCircuitBreaker = $grpc.ClientMethod<$14.MsgTripCircuitBreaker, $14.MsgTripCircuitBreakerResponse>(
+      ($1.MsgAuthorizeCircuitBreaker value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.MsgAuthorizeCircuitBreakerResponse.fromBuffer(value));
+  static final _$tripCircuitBreaker = $grpc.ClientMethod<$1.MsgTripCircuitBreaker, $1.MsgTripCircuitBreakerResponse>(
       '/cosmos.circuit.v1.Msg/TripCircuitBreaker',
-      ($14.MsgTripCircuitBreaker value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $14.MsgTripCircuitBreakerResponse.fromBuffer(value));
-  static final _$resetCircuitBreaker = $grpc.ClientMethod<$14.MsgResetCircuitBreaker, $14.MsgResetCircuitBreakerResponse>(
+      ($1.MsgTripCircuitBreaker value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.MsgTripCircuitBreakerResponse.fromBuffer(value));
+  static final _$resetCircuitBreaker = $grpc.ClientMethod<$1.MsgResetCircuitBreaker, $1.MsgResetCircuitBreakerResponse>(
       '/cosmos.circuit.v1.Msg/ResetCircuitBreaker',
-      ($14.MsgResetCircuitBreaker value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $14.MsgResetCircuitBreakerResponse.fromBuffer(value));
+      ($1.MsgResetCircuitBreaker value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.MsgResetCircuitBreakerResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -40,15 +40,15 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$14.MsgAuthorizeCircuitBreakerResponse> authorizeCircuitBreaker($14.MsgAuthorizeCircuitBreaker request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.MsgAuthorizeCircuitBreakerResponse> authorizeCircuitBreaker($1.MsgAuthorizeCircuitBreaker request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$authorizeCircuitBreaker, request, options: options);
   }
 
-  $grpc.ResponseFuture<$14.MsgTripCircuitBreakerResponse> tripCircuitBreaker($14.MsgTripCircuitBreaker request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.MsgTripCircuitBreakerResponse> tripCircuitBreaker($1.MsgTripCircuitBreaker request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$tripCircuitBreaker, request, options: options);
   }
 
-  $grpc.ResponseFuture<$14.MsgResetCircuitBreakerResponse> resetCircuitBreaker($14.MsgResetCircuitBreaker request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.MsgResetCircuitBreakerResponse> resetCircuitBreaker($1.MsgResetCircuitBreaker request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$resetCircuitBreaker, request, options: options);
   }
 }
@@ -58,42 +58,42 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.circuit.v1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$14.MsgAuthorizeCircuitBreaker, $14.MsgAuthorizeCircuitBreakerResponse>(
+    $addMethod($grpc.ServiceMethod<$1.MsgAuthorizeCircuitBreaker, $1.MsgAuthorizeCircuitBreakerResponse>(
         'AuthorizeCircuitBreaker',
         authorizeCircuitBreaker_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $14.MsgAuthorizeCircuitBreaker.fromBuffer(value),
-        ($14.MsgAuthorizeCircuitBreakerResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$14.MsgTripCircuitBreaker, $14.MsgTripCircuitBreakerResponse>(
+        ($core.List<$core.int> value) => $1.MsgAuthorizeCircuitBreaker.fromBuffer(value),
+        ($1.MsgAuthorizeCircuitBreakerResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.MsgTripCircuitBreaker, $1.MsgTripCircuitBreakerResponse>(
         'TripCircuitBreaker',
         tripCircuitBreaker_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $14.MsgTripCircuitBreaker.fromBuffer(value),
-        ($14.MsgTripCircuitBreakerResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$14.MsgResetCircuitBreaker, $14.MsgResetCircuitBreakerResponse>(
+        ($core.List<$core.int> value) => $1.MsgTripCircuitBreaker.fromBuffer(value),
+        ($1.MsgTripCircuitBreakerResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.MsgResetCircuitBreaker, $1.MsgResetCircuitBreakerResponse>(
         'ResetCircuitBreaker',
         resetCircuitBreaker_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $14.MsgResetCircuitBreaker.fromBuffer(value),
-        ($14.MsgResetCircuitBreakerResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $1.MsgResetCircuitBreaker.fromBuffer(value),
+        ($1.MsgResetCircuitBreakerResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$14.MsgAuthorizeCircuitBreakerResponse> authorizeCircuitBreaker_Pre($grpc.ServiceCall call, $async.Future<$14.MsgAuthorizeCircuitBreaker> request) async {
+  $async.Future<$1.MsgAuthorizeCircuitBreakerResponse> authorizeCircuitBreaker_Pre($grpc.ServiceCall call, $async.Future<$1.MsgAuthorizeCircuitBreaker> request) async {
     return authorizeCircuitBreaker(call, await request);
   }
 
-  $async.Future<$14.MsgTripCircuitBreakerResponse> tripCircuitBreaker_Pre($grpc.ServiceCall call, $async.Future<$14.MsgTripCircuitBreaker> request) async {
+  $async.Future<$1.MsgTripCircuitBreakerResponse> tripCircuitBreaker_Pre($grpc.ServiceCall call, $async.Future<$1.MsgTripCircuitBreaker> request) async {
     return tripCircuitBreaker(call, await request);
   }
 
-  $async.Future<$14.MsgResetCircuitBreakerResponse> resetCircuitBreaker_Pre($grpc.ServiceCall call, $async.Future<$14.MsgResetCircuitBreaker> request) async {
+  $async.Future<$1.MsgResetCircuitBreakerResponse> resetCircuitBreaker_Pre($grpc.ServiceCall call, $async.Future<$1.MsgResetCircuitBreaker> request) async {
     return resetCircuitBreaker(call, await request);
   }
 
-  $async.Future<$14.MsgAuthorizeCircuitBreakerResponse> authorizeCircuitBreaker($grpc.ServiceCall call, $14.MsgAuthorizeCircuitBreaker request);
-  $async.Future<$14.MsgTripCircuitBreakerResponse> tripCircuitBreaker($grpc.ServiceCall call, $14.MsgTripCircuitBreaker request);
-  $async.Future<$14.MsgResetCircuitBreakerResponse> resetCircuitBreaker($grpc.ServiceCall call, $14.MsgResetCircuitBreaker request);
+  $async.Future<$1.MsgAuthorizeCircuitBreakerResponse> authorizeCircuitBreaker($grpc.ServiceCall call, $1.MsgAuthorizeCircuitBreaker request);
+  $async.Future<$1.MsgTripCircuitBreakerResponse> tripCircuitBreaker($grpc.ServiceCall call, $1.MsgTripCircuitBreaker request);
+  $async.Future<$1.MsgResetCircuitBreakerResponse> resetCircuitBreaker($grpc.ServiceCall call, $1.MsgResetCircuitBreaker request);
 }

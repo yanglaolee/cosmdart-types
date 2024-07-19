@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../core/channel/v1/channel.pbenum.dart' as $21;
-import '../../v1/packet.pb.dart' as $26;
-import 'controller.pb.dart' as $25;
+import '../../../../core/channel/v1/channel.pbenum.dart' as $4;
+import '../../v1/packet.pb.dart' as $3;
+import 'controller.pb.dart' as $2;
 
 /// MsgRegisterInterchainAccount defines the payload for Msg/RegisterAccount
 class MsgRegisterInterchainAccount extends $pb.GeneratedMessage {
@@ -24,7 +24,7 @@ class MsgRegisterInterchainAccount extends $pb.GeneratedMessage {
     $core.String? owner,
     $core.String? connectionId,
     $core.String? version,
-    $21.Order? ordering,
+    $4.Order? ordering,
   }) {
     final $result = create();
     if (owner != null) {
@@ -49,7 +49,7 @@ class MsgRegisterInterchainAccount extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'owner')
     ..aOS(2, _omitFieldNames ? '' : 'connectionId')
     ..aOS(3, _omitFieldNames ? '' : 'version')
-    ..e<$21.Order>(4, _omitFieldNames ? '' : 'ordering', $pb.PbFieldType.OE, defaultOrMaker: $21.Order.ORDER_NONE_UNSPECIFIED, valueOf: $21.Order.valueOf, enumValues: $21.Order.values)
+    ..e<$4.Order>(4, _omitFieldNames ? '' : 'ordering', $pb.PbFieldType.OE, defaultOrMaker: $4.Order.ORDER_NONE_UNSPECIFIED, valueOf: $4.Order.valueOf, enumValues: $4.Order.values)
     ..hasRequiredFields = false
   ;
 
@@ -102,9 +102,9 @@ class MsgRegisterInterchainAccount extends $pb.GeneratedMessage {
   void clearVersion() => clearField(3);
 
   @$pb.TagNumber(4)
-  $21.Order get ordering => $_getN(3);
+  $4.Order get ordering => $_getN(3);
   @$pb.TagNumber(4)
-  set ordering($21.Order v) { setField(4, v); }
+  set ordering($4.Order v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasOrdering() => $_has(3);
   @$pb.TagNumber(4)
@@ -181,7 +181,7 @@ class MsgSendTx extends $pb.GeneratedMessage {
   factory MsgSendTx({
     $core.String? owner,
     $core.String? connectionId,
-    $26.InterchainAccountPacketData? packetData,
+    $3.InterchainAccountPacketData? packetData,
     $fixnum.Int64? relativeTimeout,
   }) {
     final $result = create();
@@ -206,7 +206,7 @@ class MsgSendTx extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSendTx', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.controller.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'owner')
     ..aOS(2, _omitFieldNames ? '' : 'connectionId')
-    ..aOM<$26.InterchainAccountPacketData>(3, _omitFieldNames ? '' : 'packetData', subBuilder: $26.InterchainAccountPacketData.create)
+    ..aOM<$3.InterchainAccountPacketData>(3, _omitFieldNames ? '' : 'packetData', subBuilder: $3.InterchainAccountPacketData.create)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'relativeTimeout', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -251,15 +251,15 @@ class MsgSendTx extends $pb.GeneratedMessage {
   void clearConnectionId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $26.InterchainAccountPacketData get packetData => $_getN(2);
+  $3.InterchainAccountPacketData get packetData => $_getN(2);
   @$pb.TagNumber(3)
-  set packetData($26.InterchainAccountPacketData v) { setField(3, v); }
+  set packetData($3.InterchainAccountPacketData v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPacketData() => $_has(2);
   @$pb.TagNumber(3)
   void clearPacketData() => clearField(3);
   @$pb.TagNumber(3)
-  $26.InterchainAccountPacketData ensurePacketData() => $_ensure(2);
+  $3.InterchainAccountPacketData ensurePacketData() => $_ensure(2);
 
   /// Relative timeout timestamp provided will be added to the current block time during transaction execution.
   /// The timeout timestamp must be non-zero.
@@ -328,7 +328,7 @@ class MsgSendTxResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? signer,
-    $25.Params? params,
+    $2.Params? params,
   }) {
     final $result = create();
     if (signer != null) {
@@ -345,7 +345,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.controller.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signer')
-    ..aOM<$25.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $25.Params.create)
+    ..aOM<$2.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $2.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -384,15 +384,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $25.Params get params => $_getN(1);
+  $2.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($25.Params v) { setField(2, v); }
+  set params($2.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $25.Params ensureParams() => $_ensure(1);
+  $2.Params ensureParams() => $_ensure(1);
 }
 
 /// MsgUpdateParamsResponse defines the response for Msg/UpdateParams

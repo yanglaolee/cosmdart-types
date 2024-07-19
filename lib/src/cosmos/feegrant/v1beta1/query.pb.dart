@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import 'feegrant.pb.dart' as $69;
+import '../../base/query/v1beta1/pagination.pb.dart' as $7;
+import 'feegrant.pb.dart' as $6;
 
 /// QueryAllowanceRequest is the request type for the Query/Allowance RPC method.
 class QueryAllowanceRequest extends $pb.GeneratedMessage {
@@ -86,7 +86,7 @@ class QueryAllowanceRequest extends $pb.GeneratedMessage {
 /// QueryAllowanceResponse is the response type for the Query/Allowance RPC method.
 class QueryAllowanceResponse extends $pb.GeneratedMessage {
   factory QueryAllowanceResponse({
-    $69.Grant? allowance,
+    $6.Grant? allowance,
   }) {
     final $result = create();
     if (allowance != null) {
@@ -99,7 +99,7 @@ class QueryAllowanceResponse extends $pb.GeneratedMessage {
   factory QueryAllowanceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllowanceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
-    ..aOM<$69.Grant>(1, _omitFieldNames ? '' : 'allowance', subBuilder: $69.Grant.create)
+    ..aOM<$6.Grant>(1, _omitFieldNames ? '' : 'allowance', subBuilder: $6.Grant.create)
     ..hasRequiredFields = false
   ;
 
@@ -126,22 +126,22 @@ class QueryAllowanceResponse extends $pb.GeneratedMessage {
 
   /// allowance is a allowance granted for grantee by granter.
   @$pb.TagNumber(1)
-  $69.Grant get allowance => $_getN(0);
+  $6.Grant get allowance => $_getN(0);
   @$pb.TagNumber(1)
-  set allowance($69.Grant v) { setField(1, v); }
+  set allowance($6.Grant v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAllowance() => $_has(0);
   @$pb.TagNumber(1)
   void clearAllowance() => clearField(1);
   @$pb.TagNumber(1)
-  $69.Grant ensureAllowance() => $_ensure(0);
+  $6.Grant ensureAllowance() => $_ensure(0);
 }
 
 /// QueryAllowancesRequest is the request type for the Query/Allowances RPC method.
 class QueryAllowancesRequest extends $pb.GeneratedMessage {
   factory QueryAllowancesRequest({
     $core.String? grantee,
-    $49.PageRequest? pagination,
+    $7.PageRequest? pagination,
   }) {
     final $result = create();
     if (grantee != null) {
@@ -158,7 +158,7 @@ class QueryAllowancesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllowancesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$7.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $7.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -194,22 +194,22 @@ class QueryAllowancesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $7.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($7.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $7.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryAllowancesResponse is the response type for the Query/Allowances RPC method.
 class QueryAllowancesResponse extends $pb.GeneratedMessage {
   factory QueryAllowancesResponse({
-    $core.Iterable<$69.Grant>? allowances,
-    $49.PageResponse? pagination,
+    $core.Iterable<$6.Grant>? allowances,
+    $7.PageResponse? pagination,
   }) {
     final $result = create();
     if (allowances != null) {
@@ -225,8 +225,8 @@ class QueryAllowancesResponse extends $pb.GeneratedMessage {
   factory QueryAllowancesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllowancesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
-    ..pc<$69.Grant>(1, _omitFieldNames ? '' : 'allowances', $pb.PbFieldType.PM, subBuilder: $69.Grant.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$6.Grant>(1, _omitFieldNames ? '' : 'allowances', $pb.PbFieldType.PM, subBuilder: $6.Grant.create)
+    ..aOM<$7.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $7.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -253,19 +253,19 @@ class QueryAllowancesResponse extends $pb.GeneratedMessage {
 
   /// allowances are allowance's granted for grantee by granter.
   @$pb.TagNumber(1)
-  $core.List<$69.Grant> get allowances => $_getList(0);
+  $core.List<$6.Grant> get allowances => $_getList(0);
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $7.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($7.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $7.PageResponse ensurePagination() => $_ensure(1);
 }
 
 ///  QueryAllowancesByGranterRequest is the request type for the Query/AllowancesByGranter RPC method.
@@ -274,7 +274,7 @@ class QueryAllowancesResponse extends $pb.GeneratedMessage {
 class QueryAllowancesByGranterRequest extends $pb.GeneratedMessage {
   factory QueryAllowancesByGranterRequest({
     $core.String? granter,
-    $49.PageRequest? pagination,
+    $7.PageRequest? pagination,
   }) {
     final $result = create();
     if (granter != null) {
@@ -291,7 +291,7 @@ class QueryAllowancesByGranterRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllowancesByGranterRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$7.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $7.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -327,15 +327,15 @@ class QueryAllowancesByGranterRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $7.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($7.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $7.PageRequest ensurePagination() => $_ensure(1);
 }
 
 ///  QueryAllowancesByGranterResponse is the response type for the Query/AllowancesByGranter RPC method.
@@ -343,8 +343,8 @@ class QueryAllowancesByGranterRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.46
 class QueryAllowancesByGranterResponse extends $pb.GeneratedMessage {
   factory QueryAllowancesByGranterResponse({
-    $core.Iterable<$69.Grant>? allowances,
-    $49.PageResponse? pagination,
+    $core.Iterable<$6.Grant>? allowances,
+    $7.PageResponse? pagination,
   }) {
     final $result = create();
     if (allowances != null) {
@@ -360,8 +360,8 @@ class QueryAllowancesByGranterResponse extends $pb.GeneratedMessage {
   factory QueryAllowancesByGranterResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllowancesByGranterResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
-    ..pc<$69.Grant>(1, _omitFieldNames ? '' : 'allowances', $pb.PbFieldType.PM, subBuilder: $69.Grant.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$6.Grant>(1, _omitFieldNames ? '' : 'allowances', $pb.PbFieldType.PM, subBuilder: $6.Grant.create)
+    ..aOM<$7.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $7.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -388,19 +388,19 @@ class QueryAllowancesByGranterResponse extends $pb.GeneratedMessage {
 
   /// allowances that have been issued by the granter.
   @$pb.TagNumber(1)
-  $core.List<$69.Grant> get allowances => $_getList(0);
+  $core.List<$6.Grant> get allowances => $_getList(0);
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $7.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($7.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $7.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

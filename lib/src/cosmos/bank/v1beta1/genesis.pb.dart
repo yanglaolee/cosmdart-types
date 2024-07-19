@@ -13,17 +13,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $53;
-import 'bank.pb.dart' as $54;
+import '../../base/v1beta1/coin.pb.dart' as $2;
+import 'bank.pb.dart' as $3;
 
 /// GenesisState defines the bank module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $54.Params? params,
+    $3.Params? params,
     $core.Iterable<Balance>? balances,
-    $core.Iterable<$53.Coin>? supply,
-    $core.Iterable<$54.Metadata>? denomMetadata,
-    $core.Iterable<$54.SendEnabled>? sendEnabled,
+    $core.Iterable<$2.Coin>? supply,
+    $core.Iterable<$3.Metadata>? denomMetadata,
+    $core.Iterable<$3.SendEnabled>? sendEnabled,
   }) {
     final $result = create();
     if (params != null) {
@@ -48,11 +48,11 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..aOM<$54.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $54.Params.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..pc<Balance>(2, _omitFieldNames ? '' : 'balances', $pb.PbFieldType.PM, subBuilder: Balance.create)
-    ..pc<$53.Coin>(3, _omitFieldNames ? '' : 'supply', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
-    ..pc<$54.Metadata>(4, _omitFieldNames ? '' : 'denomMetadata', $pb.PbFieldType.PM, subBuilder: $54.Metadata.create)
-    ..pc<$54.SendEnabled>(5, _omitFieldNames ? '' : 'sendEnabled', $pb.PbFieldType.PM, subBuilder: $54.SendEnabled.create)
+    ..pc<$2.Coin>(3, _omitFieldNames ? '' : 'supply', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..pc<$3.Metadata>(4, _omitFieldNames ? '' : 'denomMetadata', $pb.PbFieldType.PM, subBuilder: $3.Metadata.create)
+    ..pc<$3.SendEnabled>(5, _omitFieldNames ? '' : 'sendEnabled', $pb.PbFieldType.PM, subBuilder: $3.SendEnabled.create)
     ..hasRequiredFields = false
   ;
 
@@ -79,15 +79,15 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// params defines all the parameters of the module.
   @$pb.TagNumber(1)
-  $54.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($54.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $54.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 
   /// balances is an array containing the balances of all the accounts.
   @$pb.TagNumber(2)
@@ -96,17 +96,17 @@ class GenesisState extends $pb.GeneratedMessage {
   /// supply represents the total supply. If it is left empty, then supply will be calculated based on the provided
   /// balances. Otherwise, it will be used to validate that the sum of the balances equals this amount.
   @$pb.TagNumber(3)
-  $core.List<$53.Coin> get supply => $_getList(2);
+  $core.List<$2.Coin> get supply => $_getList(2);
 
   /// denom_metadata defines the metadata of the different coins.
   @$pb.TagNumber(4)
-  $core.List<$54.Metadata> get denomMetadata => $_getList(3);
+  $core.List<$3.Metadata> get denomMetadata => $_getList(3);
 
   ///  send_enabled defines the denoms where send is enabled or disabled.
   ///
   ///  Since: cosmos-sdk 0.47
   @$pb.TagNumber(5)
-  $core.List<$54.SendEnabled> get sendEnabled => $_getList(4);
+  $core.List<$3.SendEnabled> get sendEnabled => $_getList(4);
 }
 
 /// Balance defines an account address and balance pair used in the bank module's
@@ -114,7 +114,7 @@ class GenesisState extends $pb.GeneratedMessage {
 class Balance extends $pb.GeneratedMessage {
   factory Balance({
     $core.String? address,
-    $core.Iterable<$53.Coin>? coins,
+    $core.Iterable<$2.Coin>? coins,
   }) {
     final $result = create();
     if (address != null) {
@@ -131,7 +131,7 @@ class Balance extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Balance', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..pc<$53.Coin>(2, _omitFieldNames ? '' : 'coins', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$2.Coin>(2, _omitFieldNames ? '' : 'coins', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -168,7 +168,7 @@ class Balance extends $pb.GeneratedMessage {
 
   /// coins defines the different coins this balance holds.
   @$pb.TagNumber(2)
-  $core.List<$53.Coin> get coins => $_getList(1);
+  $core.List<$2.Coin> get coins => $_getList(1);
 }
 
 

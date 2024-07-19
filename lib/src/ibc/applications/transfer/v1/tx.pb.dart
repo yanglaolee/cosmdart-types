@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $20;
-import '../../../core/client/v1/client.pb.dart' as $19;
-import 'transfer.pb.dart' as $29;
+import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $2;
+import '../../../core/client/v1/client.pb.dart' as $5;
+import 'transfer.pb.dart' as $3;
 
 /// MsgTransfer defines a msg to transfer fungible tokens (i.e Coins) between
 /// ICS20 enabled chains. See ICS Spec here:
@@ -25,10 +25,10 @@ class MsgTransfer extends $pb.GeneratedMessage {
   factory MsgTransfer({
     $core.String? sourcePort,
     $core.String? sourceChannel,
-    $20.Coin? token,
+    $2.Coin? token,
     $core.String? sender,
     $core.String? receiver,
-    $19.Height? timeoutHeight,
+    $5.Height? timeoutHeight,
     $fixnum.Int64? timeoutTimestamp,
     $core.String? memo,
   }) {
@@ -66,10 +66,10 @@ class MsgTransfer extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgTransfer', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'sourcePort')
     ..aOS(2, _omitFieldNames ? '' : 'sourceChannel')
-    ..aOM<$20.Coin>(3, _omitFieldNames ? '' : 'token', subBuilder: $20.Coin.create)
+    ..aOM<$2.Coin>(3, _omitFieldNames ? '' : 'token', subBuilder: $2.Coin.create)
     ..aOS(4, _omitFieldNames ? '' : 'sender')
     ..aOS(5, _omitFieldNames ? '' : 'receiver')
-    ..aOM<$19.Height>(6, _omitFieldNames ? '' : 'timeoutHeight', subBuilder: $19.Height.create)
+    ..aOM<$5.Height>(6, _omitFieldNames ? '' : 'timeoutHeight', subBuilder: $5.Height.create)
     ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'timeoutTimestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(8, _omitFieldNames ? '' : 'memo')
     ..hasRequiredFields = false
@@ -118,15 +118,15 @@ class MsgTransfer extends $pb.GeneratedMessage {
 
   /// the tokens to be transferred
   @$pb.TagNumber(3)
-  $20.Coin get token => $_getN(2);
+  $2.Coin get token => $_getN(2);
   @$pb.TagNumber(3)
-  set token($20.Coin v) { setField(3, v); }
+  set token($2.Coin v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasToken() => $_has(2);
   @$pb.TagNumber(3)
   void clearToken() => clearField(3);
   @$pb.TagNumber(3)
-  $20.Coin ensureToken() => $_ensure(2);
+  $2.Coin ensureToken() => $_ensure(2);
 
   /// the sender address
   @$pb.TagNumber(4)
@@ -151,15 +151,15 @@ class MsgTransfer extends $pb.GeneratedMessage {
   /// Timeout height relative to the current block height.
   /// The timeout is disabled when set to 0.
   @$pb.TagNumber(6)
-  $19.Height get timeoutHeight => $_getN(5);
+  $5.Height get timeoutHeight => $_getN(5);
   @$pb.TagNumber(6)
-  set timeoutHeight($19.Height v) { setField(6, v); }
+  set timeoutHeight($5.Height v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTimeoutHeight() => $_has(5);
   @$pb.TagNumber(6)
   void clearTimeoutHeight() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Height ensureTimeoutHeight() => $_ensure(5);
+  $5.Height ensureTimeoutHeight() => $_ensure(5);
 
   /// Timeout timestamp in absolute nanoseconds since unix epoch.
   /// The timeout is disabled when set to 0.
@@ -239,7 +239,7 @@ class MsgTransferResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? signer,
-    $29.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (signer != null) {
@@ -256,7 +256,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signer')
-    ..aOM<$29.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $29.Params.create)
+    ..aOM<$3.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -295,15 +295,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $29.Params get params => $_getN(1);
+  $3.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($29.Params v) { setField(2, v); }
+  set params($3.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $29.Params ensureParams() => $_ensure(1);
+  $3.Params ensureParams() => $_ensure(1);
 }
 
 /// MsgUpdateParamsResponse defines the response structure for executing a

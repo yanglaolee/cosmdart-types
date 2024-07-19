@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $17;
-import '../../../core/channel/v1/channel.pb.dart' as $21;
-import '../../../core/connection/v1/connection.pb.dart' as $33;
+import '../../../../google/protobuf/any.pb.dart' as $0;
+import '../../../core/channel/v1/channel.pb.dart' as $2;
+import '../../../core/connection/v1/connection.pb.dart' as $1;
 import 'solomachine.pbenum.dart';
 
 export 'solomachine.pbenum.dart';
@@ -126,7 +126,7 @@ class ClientState extends $pb.GeneratedMessage {
 /// consensus state.
 class ConsensusState extends $pb.GeneratedMessage {
   factory ConsensusState({
-    $17.Any? publicKey,
+    $0.Any? publicKey,
     $core.String? diversifier,
     $fixnum.Int64? timestamp,
   }) {
@@ -147,7 +147,7 @@ class ConsensusState extends $pb.GeneratedMessage {
   factory ConsensusState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v2'), createEmptyInstance: create)
-    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'publicKey', subBuilder: $17.Any.create)
+    ..aOM<$0.Any>(1, _omitFieldNames ? '' : 'publicKey', subBuilder: $0.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'diversifier')
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -176,15 +176,15 @@ class ConsensusState extends $pb.GeneratedMessage {
 
   /// public key of the solo machine
   @$pb.TagNumber(1)
-  $17.Any get publicKey => $_getN(0);
+  $0.Any get publicKey => $_getN(0);
   @$pb.TagNumber(1)
-  set publicKey($17.Any v) { setField(1, v); }
+  set publicKey($0.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPublicKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearPublicKey() => clearField(1);
   @$pb.TagNumber(1)
-  $17.Any ensurePublicKey() => $_ensure(0);
+  $0.Any ensurePublicKey() => $_ensure(0);
 
   /// diversifier allows the same public key to be re-used across different solo
   /// machine clients (potentially on different chains) without being considered
@@ -214,7 +214,7 @@ class Header extends $pb.GeneratedMessage {
     $fixnum.Int64? sequence,
     $fixnum.Int64? timestamp,
     $core.List<$core.int>? signature,
-    $17.Any? newPublicKey,
+    $0.Any? newPublicKey,
     $core.String? newDiversifier,
   }) {
     final $result = create();
@@ -243,7 +243,7 @@ class Header extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'sequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
-    ..aOM<$17.Any>(4, _omitFieldNames ? '' : 'newPublicKey', subBuilder: $17.Any.create)
+    ..aOM<$0.Any>(4, _omitFieldNames ? '' : 'newPublicKey', subBuilder: $0.Any.create)
     ..aOS(5, _omitFieldNames ? '' : 'newDiversifier')
     ..hasRequiredFields = false
   ;
@@ -298,15 +298,15 @@ class Header extends $pb.GeneratedMessage {
   void clearSignature() => clearField(3);
 
   @$pb.TagNumber(4)
-  $17.Any get newPublicKey => $_getN(3);
+  $0.Any get newPublicKey => $_getN(3);
   @$pb.TagNumber(4)
-  set newPublicKey($17.Any v) { setField(4, v); }
+  set newPublicKey($0.Any v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasNewPublicKey() => $_has(3);
   @$pb.TagNumber(4)
   void clearNewPublicKey() => clearField(4);
   @$pb.TagNumber(4)
-  $17.Any ensureNewPublicKey() => $_ensure(3);
+  $0.Any ensureNewPublicKey() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get newDiversifier => $_getSZ(4);
@@ -688,7 +688,7 @@ class SignBytes extends $pb.GeneratedMessage {
 /// HeaderData returns the SignBytes data for update verification.
 class HeaderData extends $pb.GeneratedMessage {
   factory HeaderData({
-    $17.Any? newPubKey,
+    $0.Any? newPubKey,
     $core.String? newDiversifier,
   }) {
     final $result = create();
@@ -705,7 +705,7 @@ class HeaderData extends $pb.GeneratedMessage {
   factory HeaderData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HeaderData', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v2'), createEmptyInstance: create)
-    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'newPubKey', subBuilder: $17.Any.create)
+    ..aOM<$0.Any>(1, _omitFieldNames ? '' : 'newPubKey', subBuilder: $0.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'newDiversifier')
     ..hasRequiredFields = false
   ;
@@ -733,15 +733,15 @@ class HeaderData extends $pb.GeneratedMessage {
 
   /// header public key
   @$pb.TagNumber(1)
-  $17.Any get newPubKey => $_getN(0);
+  $0.Any get newPubKey => $_getN(0);
   @$pb.TagNumber(1)
-  set newPubKey($17.Any v) { setField(1, v); }
+  set newPubKey($0.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasNewPubKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearNewPubKey() => clearField(1);
   @$pb.TagNumber(1)
-  $17.Any ensureNewPubKey() => $_ensure(0);
+  $0.Any ensureNewPubKey() => $_ensure(0);
 
   /// header diversifier
   @$pb.TagNumber(2)
@@ -758,7 +758,7 @@ class HeaderData extends $pb.GeneratedMessage {
 class ClientStateData extends $pb.GeneratedMessage {
   factory ClientStateData({
     $core.List<$core.int>? path,
-    $17.Any? clientState,
+    $0.Any? clientState,
   }) {
     final $result = create();
     if (path != null) {
@@ -775,7 +775,7 @@ class ClientStateData extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ClientStateData', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v2'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'path', $pb.PbFieldType.OY)
-    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
+    ..aOM<$0.Any>(2, _omitFieldNames ? '' : 'clientState', subBuilder: $0.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -810,15 +810,15 @@ class ClientStateData extends $pb.GeneratedMessage {
   void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
-  $17.Any get clientState => $_getN(1);
+  $0.Any get clientState => $_getN(1);
   @$pb.TagNumber(2)
-  set clientState($17.Any v) { setField(2, v); }
+  set clientState($0.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasClientState() => $_has(1);
   @$pb.TagNumber(2)
   void clearClientState() => clearField(2);
   @$pb.TagNumber(2)
-  $17.Any ensureClientState() => $_ensure(1);
+  $0.Any ensureClientState() => $_ensure(1);
 }
 
 /// ConsensusStateData returns the SignBytes data for consensus state
@@ -826,7 +826,7 @@ class ClientStateData extends $pb.GeneratedMessage {
 class ConsensusStateData extends $pb.GeneratedMessage {
   factory ConsensusStateData({
     $core.List<$core.int>? path,
-    $17.Any? consensusState,
+    $0.Any? consensusState,
   }) {
     final $result = create();
     if (path != null) {
@@ -843,7 +843,7 @@ class ConsensusStateData extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusStateData', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v2'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'path', $pb.PbFieldType.OY)
-    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
+    ..aOM<$0.Any>(2, _omitFieldNames ? '' : 'consensusState', subBuilder: $0.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -878,15 +878,15 @@ class ConsensusStateData extends $pb.GeneratedMessage {
   void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
-  $17.Any get consensusState => $_getN(1);
+  $0.Any get consensusState => $_getN(1);
   @$pb.TagNumber(2)
-  set consensusState($17.Any v) { setField(2, v); }
+  set consensusState($0.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConsensusState() => $_has(1);
   @$pb.TagNumber(2)
   void clearConsensusState() => clearField(2);
   @$pb.TagNumber(2)
-  $17.Any ensureConsensusState() => $_ensure(1);
+  $0.Any ensureConsensusState() => $_ensure(1);
 }
 
 /// ConnectionStateData returns the SignBytes data for connection state
@@ -894,7 +894,7 @@ class ConsensusStateData extends $pb.GeneratedMessage {
 class ConnectionStateData extends $pb.GeneratedMessage {
   factory ConnectionStateData({
     $core.List<$core.int>? path,
-    $33.ConnectionEnd? connection,
+    $1.ConnectionEnd? connection,
   }) {
     final $result = create();
     if (path != null) {
@@ -911,7 +911,7 @@ class ConnectionStateData extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConnectionStateData', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v2'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'path', $pb.PbFieldType.OY)
-    ..aOM<$33.ConnectionEnd>(2, _omitFieldNames ? '' : 'connection', subBuilder: $33.ConnectionEnd.create)
+    ..aOM<$1.ConnectionEnd>(2, _omitFieldNames ? '' : 'connection', subBuilder: $1.ConnectionEnd.create)
     ..hasRequiredFields = false
   ;
 
@@ -946,15 +946,15 @@ class ConnectionStateData extends $pb.GeneratedMessage {
   void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
-  $33.ConnectionEnd get connection => $_getN(1);
+  $1.ConnectionEnd get connection => $_getN(1);
   @$pb.TagNumber(2)
-  set connection($33.ConnectionEnd v) { setField(2, v); }
+  set connection($1.ConnectionEnd v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConnection() => $_has(1);
   @$pb.TagNumber(2)
   void clearConnection() => clearField(2);
   @$pb.TagNumber(2)
-  $33.ConnectionEnd ensureConnection() => $_ensure(1);
+  $1.ConnectionEnd ensureConnection() => $_ensure(1);
 }
 
 /// ChannelStateData returns the SignBytes data for channel state
@@ -962,7 +962,7 @@ class ConnectionStateData extends $pb.GeneratedMessage {
 class ChannelStateData extends $pb.GeneratedMessage {
   factory ChannelStateData({
     $core.List<$core.int>? path,
-    $21.Channel? channel,
+    $2.Channel? channel,
   }) {
     final $result = create();
     if (path != null) {
@@ -979,7 +979,7 @@ class ChannelStateData extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelStateData', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v2'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'path', $pb.PbFieldType.OY)
-    ..aOM<$21.Channel>(2, _omitFieldNames ? '' : 'channel', subBuilder: $21.Channel.create)
+    ..aOM<$2.Channel>(2, _omitFieldNames ? '' : 'channel', subBuilder: $2.Channel.create)
     ..hasRequiredFields = false
   ;
 
@@ -1014,15 +1014,15 @@ class ChannelStateData extends $pb.GeneratedMessage {
   void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
-  $21.Channel get channel => $_getN(1);
+  $2.Channel get channel => $_getN(1);
   @$pb.TagNumber(2)
-  set channel($21.Channel v) { setField(2, v); }
+  set channel($2.Channel v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasChannel() => $_has(1);
   @$pb.TagNumber(2)
   void clearChannel() => clearField(2);
   @$pb.TagNumber(2)
-  $21.Channel ensureChannel() => $_ensure(1);
+  $2.Channel ensureChannel() => $_ensure(1);
 }
 
 /// PacketCommitmentData returns the SignBytes data for packet commitment

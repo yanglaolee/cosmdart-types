@@ -14,11 +14,11 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/timestamp.pb.dart' as $50;
-import '../crypto/keys.pb.dart' as $56;
-import '../crypto/proof.pb.dart' as $58;
-import '../types/params.pb.dart' as $57;
-import '../types/validator.pbenum.dart' as $59;
+import '../../google/protobuf/timestamp.pb.dart' as $1;
+import '../crypto/keys.pb.dart' as $4;
+import '../crypto/proof.pb.dart' as $3;
+import '../types/params.pb.dart' as $2;
+import '../types/validator.pbenum.dart' as $5;
 import 'types.pbenum.dart';
 
 export 'types.pbenum.dart';
@@ -534,9 +534,9 @@ class RequestInfo extends $pb.GeneratedMessage {
 
 class RequestInitChain extends $pb.GeneratedMessage {
   factory RequestInitChain({
-    $50.Timestamp? time,
+    $1.Timestamp? time,
     $core.String? chainId,
-    $57.ConsensusParams? consensusParams,
+    $2.ConsensusParams? consensusParams,
     $core.Iterable<ValidatorUpdate>? validators,
     $core.List<$core.int>? appStateBytes,
     $fixnum.Int64? initialHeight,
@@ -567,9 +567,9 @@ class RequestInitChain extends $pb.GeneratedMessage {
   factory RequestInitChain.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestInitChain', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.abci'), createEmptyInstance: create)
-    ..aOM<$50.Timestamp>(1, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
+    ..aOM<$1.Timestamp>(1, _omitFieldNames ? '' : 'time', subBuilder: $1.Timestamp.create)
     ..aOS(2, _omitFieldNames ? '' : 'chainId')
-    ..aOM<$57.ConsensusParams>(3, _omitFieldNames ? '' : 'consensusParams', subBuilder: $57.ConsensusParams.create)
+    ..aOM<$2.ConsensusParams>(3, _omitFieldNames ? '' : 'consensusParams', subBuilder: $2.ConsensusParams.create)
     ..pc<ValidatorUpdate>(4, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: ValidatorUpdate.create)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'appStateBytes', $pb.PbFieldType.OY)
     ..aInt64(6, _omitFieldNames ? '' : 'initialHeight')
@@ -598,15 +598,15 @@ class RequestInitChain extends $pb.GeneratedMessage {
   static RequestInitChain? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $50.Timestamp get time => $_getN(0);
+  $1.Timestamp get time => $_getN(0);
   @$pb.TagNumber(1)
-  set time($50.Timestamp v) { setField(1, v); }
+  set time($1.Timestamp v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTime() => $_has(0);
   @$pb.TagNumber(1)
   void clearTime() => clearField(1);
   @$pb.TagNumber(1)
-  $50.Timestamp ensureTime() => $_ensure(0);
+  $1.Timestamp ensureTime() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get chainId => $_getSZ(1);
@@ -618,15 +618,15 @@ class RequestInitChain extends $pb.GeneratedMessage {
   void clearChainId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $57.ConsensusParams get consensusParams => $_getN(2);
+  $2.ConsensusParams get consensusParams => $_getN(2);
   @$pb.TagNumber(3)
-  set consensusParams($57.ConsensusParams v) { setField(3, v); }
+  set consensusParams($2.ConsensusParams v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasConsensusParams() => $_has(2);
   @$pb.TagNumber(3)
   void clearConsensusParams() => clearField(3);
   @$pb.TagNumber(3)
-  $57.ConsensusParams ensureConsensusParams() => $_ensure(2);
+  $2.ConsensusParams ensureConsensusParams() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<ValidatorUpdate> get validators => $_getList(3);
@@ -1103,7 +1103,7 @@ class RequestPrepareProposal extends $pb.GeneratedMessage {
     ExtendedCommitInfo? localLastCommit,
     $core.Iterable<Misbehavior>? misbehavior,
     $fixnum.Int64? height,
-    $50.Timestamp? time,
+    $1.Timestamp? time,
     $core.List<$core.int>? nextValidatorsHash,
     $core.List<$core.int>? proposerAddress,
   }) {
@@ -1144,7 +1144,7 @@ class RequestPrepareProposal extends $pb.GeneratedMessage {
     ..aOM<ExtendedCommitInfo>(3, _omitFieldNames ? '' : 'localLastCommit', subBuilder: ExtendedCommitInfo.create)
     ..pc<Misbehavior>(4, _omitFieldNames ? '' : 'misbehavior', $pb.PbFieldType.PM, subBuilder: Misbehavior.create)
     ..aInt64(5, _omitFieldNames ? '' : 'height')
-    ..aOM<$50.Timestamp>(6, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'time', subBuilder: $1.Timestamp.create)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'nextValidatorsHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'proposerAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -1210,15 +1210,15 @@ class RequestPrepareProposal extends $pb.GeneratedMessage {
   void clearHeight() => clearField(5);
 
   @$pb.TagNumber(6)
-  $50.Timestamp get time => $_getN(5);
+  $1.Timestamp get time => $_getN(5);
   @$pb.TagNumber(6)
-  set time($50.Timestamp v) { setField(6, v); }
+  set time($1.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTime() => $_has(5);
   @$pb.TagNumber(6)
   void clearTime() => clearField(6);
   @$pb.TagNumber(6)
-  $50.Timestamp ensureTime() => $_ensure(5);
+  $1.Timestamp ensureTime() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.List<$core.int> get nextValidatorsHash => $_getN(6);
@@ -1247,7 +1247,7 @@ class RequestProcessProposal extends $pb.GeneratedMessage {
     $core.Iterable<Misbehavior>? misbehavior,
     $core.List<$core.int>? hash,
     $fixnum.Int64? height,
-    $50.Timestamp? time,
+    $1.Timestamp? time,
     $core.List<$core.int>? nextValidatorsHash,
     $core.List<$core.int>? proposerAddress,
   }) {
@@ -1288,7 +1288,7 @@ class RequestProcessProposal extends $pb.GeneratedMessage {
     ..pc<Misbehavior>(3, _omitFieldNames ? '' : 'misbehavior', $pb.PbFieldType.PM, subBuilder: Misbehavior.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
     ..aInt64(5, _omitFieldNames ? '' : 'height')
-    ..aOM<$50.Timestamp>(6, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'time', subBuilder: $1.Timestamp.create)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'nextValidatorsHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'proposerAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -1352,15 +1352,15 @@ class RequestProcessProposal extends $pb.GeneratedMessage {
   void clearHeight() => clearField(5);
 
   @$pb.TagNumber(6)
-  $50.Timestamp get time => $_getN(5);
+  $1.Timestamp get time => $_getN(5);
   @$pb.TagNumber(6)
-  set time($50.Timestamp v) { setField(6, v); }
+  set time($1.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTime() => $_has(5);
   @$pb.TagNumber(6)
   void clearTime() => clearField(6);
   @$pb.TagNumber(6)
-  $50.Timestamp ensureTime() => $_ensure(5);
+  $1.Timestamp ensureTime() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.List<$core.int> get nextValidatorsHash => $_getN(6);
@@ -1387,7 +1387,7 @@ class RequestExtendVote extends $pb.GeneratedMessage {
   factory RequestExtendVote({
     $core.List<$core.int>? hash,
     $fixnum.Int64? height,
-    $50.Timestamp? time,
+    $1.Timestamp? time,
     $core.Iterable<$core.List<$core.int>>? txs,
     CommitInfo? proposedLastCommit,
     $core.Iterable<Misbehavior>? misbehavior,
@@ -1428,7 +1428,7 @@ class RequestExtendVote extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestExtendVote', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.abci'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
     ..aInt64(2, _omitFieldNames ? '' : 'height')
-    ..aOM<$50.Timestamp>(3, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'time', subBuilder: $1.Timestamp.create)
     ..p<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'txs', $pb.PbFieldType.PY)
     ..aOM<CommitInfo>(5, _omitFieldNames ? '' : 'proposedLastCommit', subBuilder: CommitInfo.create)
     ..pc<Misbehavior>(6, _omitFieldNames ? '' : 'misbehavior', $pb.PbFieldType.PM, subBuilder: Misbehavior.create)
@@ -1480,15 +1480,15 @@ class RequestExtendVote extends $pb.GeneratedMessage {
 
   /// info of the block that this vote may be referring to
   @$pb.TagNumber(3)
-  $50.Timestamp get time => $_getN(2);
+  $1.Timestamp get time => $_getN(2);
   @$pb.TagNumber(3)
-  set time($50.Timestamp v) { setField(3, v); }
+  set time($1.Timestamp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTime() => $_has(2);
   @$pb.TagNumber(3)
   void clearTime() => clearField(3);
   @$pb.TagNumber(3)
-  $50.Timestamp ensureTime() => $_ensure(2);
+  $1.Timestamp ensureTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.List<$core.int>> get txs => $_getList(3);
@@ -1629,7 +1629,7 @@ class RequestFinalizeBlock extends $pb.GeneratedMessage {
     $core.Iterable<Misbehavior>? misbehavior,
     $core.List<$core.int>? hash,
     $fixnum.Int64? height,
-    $50.Timestamp? time,
+    $1.Timestamp? time,
     $core.List<$core.int>? nextValidatorsHash,
     $core.List<$core.int>? proposerAddress,
   }) {
@@ -1670,7 +1670,7 @@ class RequestFinalizeBlock extends $pb.GeneratedMessage {
     ..pc<Misbehavior>(3, _omitFieldNames ? '' : 'misbehavior', $pb.PbFieldType.PM, subBuilder: Misbehavior.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
     ..aInt64(5, _omitFieldNames ? '' : 'height')
-    ..aOM<$50.Timestamp>(6, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'time', subBuilder: $1.Timestamp.create)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'nextValidatorsHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'proposerAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -1734,15 +1734,15 @@ class RequestFinalizeBlock extends $pb.GeneratedMessage {
   void clearHeight() => clearField(5);
 
   @$pb.TagNumber(6)
-  $50.Timestamp get time => $_getN(5);
+  $1.Timestamp get time => $_getN(5);
   @$pb.TagNumber(6)
-  set time($50.Timestamp v) { setField(6, v); }
+  set time($1.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTime() => $_has(5);
   @$pb.TagNumber(6)
   void clearTime() => clearField(6);
   @$pb.TagNumber(6)
-  $50.Timestamp ensureTime() => $_ensure(5);
+  $1.Timestamp ensureTime() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.List<$core.int> get nextValidatorsHash => $_getN(6);
@@ -2358,7 +2358,7 @@ class ResponseInfo extends $pb.GeneratedMessage {
 
 class ResponseInitChain extends $pb.GeneratedMessage {
   factory ResponseInitChain({
-    $57.ConsensusParams? consensusParams,
+    $2.ConsensusParams? consensusParams,
     $core.Iterable<ValidatorUpdate>? validators,
     $core.List<$core.int>? appHash,
   }) {
@@ -2379,7 +2379,7 @@ class ResponseInitChain extends $pb.GeneratedMessage {
   factory ResponseInitChain.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ResponseInitChain', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.abci'), createEmptyInstance: create)
-    ..aOM<$57.ConsensusParams>(1, _omitFieldNames ? '' : 'consensusParams', subBuilder: $57.ConsensusParams.create)
+    ..aOM<$2.ConsensusParams>(1, _omitFieldNames ? '' : 'consensusParams', subBuilder: $2.ConsensusParams.create)
     ..pc<ValidatorUpdate>(2, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: ValidatorUpdate.create)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'appHash', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -2407,15 +2407,15 @@ class ResponseInitChain extends $pb.GeneratedMessage {
   static ResponseInitChain? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $57.ConsensusParams get consensusParams => $_getN(0);
+  $2.ConsensusParams get consensusParams => $_getN(0);
   @$pb.TagNumber(1)
-  set consensusParams($57.ConsensusParams v) { setField(1, v); }
+  set consensusParams($2.ConsensusParams v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConsensusParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearConsensusParams() => clearField(1);
   @$pb.TagNumber(1)
-  $57.ConsensusParams ensureConsensusParams() => $_ensure(0);
+  $2.ConsensusParams ensureConsensusParams() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<ValidatorUpdate> get validators => $_getList(1);
@@ -2438,7 +2438,7 @@ class ResponseQuery extends $pb.GeneratedMessage {
     $fixnum.Int64? index,
     $core.List<$core.int>? key,
     $core.List<$core.int>? value,
-    $58.ProofOps? proofOps,
+    $3.ProofOps? proofOps,
     $fixnum.Int64? height,
     $core.String? codespace,
   }) {
@@ -2483,7 +2483,7 @@ class ResponseQuery extends $pb.GeneratedMessage {
     ..aInt64(5, _omitFieldNames ? '' : 'index')
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
-    ..aOM<$58.ProofOps>(8, _omitFieldNames ? '' : 'proofOps', subBuilder: $58.ProofOps.create)
+    ..aOM<$3.ProofOps>(8, _omitFieldNames ? '' : 'proofOps', subBuilder: $3.ProofOps.create)
     ..aInt64(9, _omitFieldNames ? '' : 'height')
     ..aOS(10, _omitFieldNames ? '' : 'codespace')
     ..hasRequiredFields = false
@@ -2566,15 +2566,15 @@ class ResponseQuery extends $pb.GeneratedMessage {
   void clearValue() => clearField(7);
 
   @$pb.TagNumber(8)
-  $58.ProofOps get proofOps => $_getN(6);
+  $3.ProofOps get proofOps => $_getN(6);
   @$pb.TagNumber(8)
-  set proofOps($58.ProofOps v) { setField(8, v); }
+  set proofOps($3.ProofOps v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasProofOps() => $_has(6);
   @$pb.TagNumber(8)
   void clearProofOps() => clearField(8);
   @$pb.TagNumber(8)
-  $58.ProofOps ensureProofOps() => $_ensure(6);
+  $3.ProofOps ensureProofOps() => $_ensure(6);
 
   @$pb.TagNumber(9)
   $fixnum.Int64 get height => $_getI64(7);
@@ -3196,7 +3196,7 @@ class ResponseFinalizeBlock extends $pb.GeneratedMessage {
     $core.Iterable<Event>? events,
     $core.Iterable<ExecTxResult>? txResults,
     $core.Iterable<ValidatorUpdate>? validatorUpdates,
-    $57.ConsensusParams? consensusParamUpdates,
+    $2.ConsensusParams? consensusParamUpdates,
     $core.List<$core.int>? appHash,
   }) {
     final $result = create();
@@ -3225,7 +3225,7 @@ class ResponseFinalizeBlock extends $pb.GeneratedMessage {
     ..pc<Event>(1, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: Event.create)
     ..pc<ExecTxResult>(2, _omitFieldNames ? '' : 'txResults', $pb.PbFieldType.PM, subBuilder: ExecTxResult.create)
     ..pc<ValidatorUpdate>(3, _omitFieldNames ? '' : 'validatorUpdates', $pb.PbFieldType.PM, subBuilder: ValidatorUpdate.create)
-    ..aOM<$57.ConsensusParams>(4, _omitFieldNames ? '' : 'consensusParamUpdates', subBuilder: $57.ConsensusParams.create)
+    ..aOM<$2.ConsensusParams>(4, _omitFieldNames ? '' : 'consensusParamUpdates', subBuilder: $2.ConsensusParams.create)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'appHash', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
@@ -3267,15 +3267,15 @@ class ResponseFinalizeBlock extends $pb.GeneratedMessage {
 
   /// updates to the consensus params, if any.
   @$pb.TagNumber(4)
-  $57.ConsensusParams get consensusParamUpdates => $_getN(3);
+  $2.ConsensusParams get consensusParamUpdates => $_getN(3);
   @$pb.TagNumber(4)
-  set consensusParamUpdates($57.ConsensusParams v) { setField(4, v); }
+  set consensusParamUpdates($2.ConsensusParams v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasConsensusParamUpdates() => $_has(3);
   @$pb.TagNumber(4)
   void clearConsensusParamUpdates() => clearField(4);
   @$pb.TagNumber(4)
-  $57.ConsensusParams ensureConsensusParamUpdates() => $_ensure(3);
+  $2.ConsensusParams ensureConsensusParamUpdates() => $_ensure(3);
 
   /// app_hash is the hash of the applications' state which is used to confirm that execution of the transactions was
   /// deterministic. It is up to the application to decide which algorithm to use.
@@ -3860,7 +3860,7 @@ class Validator extends $pb.GeneratedMessage {
 
 class ValidatorUpdate extends $pb.GeneratedMessage {
   factory ValidatorUpdate({
-    $56.PublicKey? pubKey,
+    $4.PublicKey? pubKey,
     $fixnum.Int64? power,
   }) {
     final $result = create();
@@ -3877,7 +3877,7 @@ class ValidatorUpdate extends $pb.GeneratedMessage {
   factory ValidatorUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.abci'), createEmptyInstance: create)
-    ..aOM<$56.PublicKey>(1, _omitFieldNames ? '' : 'pubKey', subBuilder: $56.PublicKey.create)
+    ..aOM<$4.PublicKey>(1, _omitFieldNames ? '' : 'pubKey', subBuilder: $4.PublicKey.create)
     ..aInt64(2, _omitFieldNames ? '' : 'power')
     ..hasRequiredFields = false
   ;
@@ -3904,15 +3904,15 @@ class ValidatorUpdate extends $pb.GeneratedMessage {
   static ValidatorUpdate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $56.PublicKey get pubKey => $_getN(0);
+  $4.PublicKey get pubKey => $_getN(0);
   @$pb.TagNumber(1)
-  set pubKey($56.PublicKey v) { setField(1, v); }
+  set pubKey($4.PublicKey v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPubKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearPubKey() => clearField(1);
   @$pb.TagNumber(1)
-  $56.PublicKey ensurePubKey() => $_ensure(0);
+  $4.PublicKey ensurePubKey() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get power => $_getI64(1);
@@ -3927,7 +3927,7 @@ class ValidatorUpdate extends $pb.GeneratedMessage {
 class VoteInfo extends $pb.GeneratedMessage {
   factory VoteInfo({
     Validator? validator,
-    $59.BlockIDFlag? blockIdFlag,
+    $5.BlockIDFlag? blockIdFlag,
   }) {
     final $result = create();
     if (validator != null) {
@@ -3944,7 +3944,7 @@ class VoteInfo extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VoteInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.abci'), createEmptyInstance: create)
     ..aOM<Validator>(1, _omitFieldNames ? '' : 'validator', subBuilder: Validator.create)
-    ..e<$59.BlockIDFlag>(3, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $59.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $59.BlockIDFlag.valueOf, enumValues: $59.BlockIDFlag.values)
+    ..e<$5.BlockIDFlag>(3, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $5.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $5.BlockIDFlag.valueOf, enumValues: $5.BlockIDFlag.values)
     ..hasRequiredFields = false
   ;
 
@@ -3981,9 +3981,9 @@ class VoteInfo extends $pb.GeneratedMessage {
   Validator ensureValidator() => $_ensure(0);
 
   @$pb.TagNumber(3)
-  $59.BlockIDFlag get blockIdFlag => $_getN(1);
+  $5.BlockIDFlag get blockIdFlag => $_getN(1);
   @$pb.TagNumber(3)
-  set blockIdFlag($59.BlockIDFlag v) { setField(3, v); }
+  set blockIdFlag($5.BlockIDFlag v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasBlockIdFlag() => $_has(1);
   @$pb.TagNumber(3)
@@ -3995,7 +3995,7 @@ class ExtendedVoteInfo extends $pb.GeneratedMessage {
     Validator? validator,
     $core.List<$core.int>? voteExtension,
     $core.List<$core.int>? extensionSignature,
-    $59.BlockIDFlag? blockIdFlag,
+    $5.BlockIDFlag? blockIdFlag,
   }) {
     final $result = create();
     if (validator != null) {
@@ -4020,7 +4020,7 @@ class ExtendedVoteInfo extends $pb.GeneratedMessage {
     ..aOM<Validator>(1, _omitFieldNames ? '' : 'validator', subBuilder: Validator.create)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'voteExtension', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'extensionSignature', $pb.PbFieldType.OY)
-    ..e<$59.BlockIDFlag>(5, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $59.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $59.BlockIDFlag.valueOf, enumValues: $59.BlockIDFlag.values)
+    ..e<$5.BlockIDFlag>(5, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $5.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $5.BlockIDFlag.valueOf, enumValues: $5.BlockIDFlag.values)
     ..hasRequiredFields = false
   ;
 
@@ -4079,9 +4079,9 @@ class ExtendedVoteInfo extends $pb.GeneratedMessage {
 
   /// block_id_flag indicates whether the validator voted for a block, nil, or did not vote at all
   @$pb.TagNumber(5)
-  $59.BlockIDFlag get blockIdFlag => $_getN(3);
+  $5.BlockIDFlag get blockIdFlag => $_getN(3);
   @$pb.TagNumber(5)
-  set blockIdFlag($59.BlockIDFlag v) { setField(5, v); }
+  set blockIdFlag($5.BlockIDFlag v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasBlockIdFlag() => $_has(3);
   @$pb.TagNumber(5)
@@ -4093,7 +4093,7 @@ class Misbehavior extends $pb.GeneratedMessage {
     MisbehaviorType? type,
     Validator? validator,
     $fixnum.Int64? height,
-    $50.Timestamp? time,
+    $1.Timestamp? time,
     $fixnum.Int64? totalVotingPower,
   }) {
     final $result = create();
@@ -4122,7 +4122,7 @@ class Misbehavior extends $pb.GeneratedMessage {
     ..e<MisbehaviorType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: MisbehaviorType.UNKNOWN, valueOf: MisbehaviorType.valueOf, enumValues: MisbehaviorType.values)
     ..aOM<Validator>(2, _omitFieldNames ? '' : 'validator', subBuilder: Validator.create)
     ..aInt64(3, _omitFieldNames ? '' : 'height')
-    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'time', subBuilder: $1.Timestamp.create)
     ..aInt64(5, _omitFieldNames ? '' : 'totalVotingPower')
     ..hasRequiredFields = false
   ;
@@ -4181,15 +4181,15 @@ class Misbehavior extends $pb.GeneratedMessage {
 
   /// The corresponding time where the offense occurred
   @$pb.TagNumber(4)
-  $50.Timestamp get time => $_getN(3);
+  $1.Timestamp get time => $_getN(3);
   @$pb.TagNumber(4)
-  set time($50.Timestamp v) { setField(4, v); }
+  set time($1.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearTime() => clearField(4);
   @$pb.TagNumber(4)
-  $50.Timestamp ensureTime() => $_ensure(3);
+  $1.Timestamp ensureTime() => $_ensure(3);
 
   /// Total voting power of the validator set in case the ABCI application does
   /// not store historical validators.

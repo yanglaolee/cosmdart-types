@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/duration.pb.dart' as $55;
+import '../../google/protobuf/duration.pb.dart' as $7;
 
 /// ConsensusParams contains consensus critical parameters that determine the
 /// validity of blocks.
@@ -207,7 +207,7 @@ class BlockParams extends $pb.GeneratedMessage {
 class EvidenceParams extends $pb.GeneratedMessage {
   factory EvidenceParams({
     $fixnum.Int64? maxAgeNumBlocks,
-    $55.Duration? maxAgeDuration,
+    $7.Duration? maxAgeDuration,
     $fixnum.Int64? maxBytes,
   }) {
     final $result = create();
@@ -228,7 +228,7 @@ class EvidenceParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvidenceParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'maxAgeNumBlocks')
-    ..aOM<$55.Duration>(2, _omitFieldNames ? '' : 'maxAgeDuration', subBuilder: $55.Duration.create)
+    ..aOM<$7.Duration>(2, _omitFieldNames ? '' : 'maxAgeDuration', subBuilder: $7.Duration.create)
     ..aInt64(3, _omitFieldNames ? '' : 'maxBytes')
     ..hasRequiredFields = false
   ;
@@ -273,15 +273,15 @@ class EvidenceParams extends $pb.GeneratedMessage {
   ///  mechanism for handling [Nothing-At-Stake
   ///  attacks](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed).
   @$pb.TagNumber(2)
-  $55.Duration get maxAgeDuration => $_getN(1);
+  $7.Duration get maxAgeDuration => $_getN(1);
   @$pb.TagNumber(2)
-  set maxAgeDuration($55.Duration v) { setField(2, v); }
+  set maxAgeDuration($7.Duration v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMaxAgeDuration() => $_has(1);
   @$pb.TagNumber(2)
   void clearMaxAgeDuration() => clearField(2);
   @$pb.TagNumber(2)
-  $55.Duration ensureMaxAgeDuration() => $_ensure(1);
+  $7.Duration ensureMaxAgeDuration() => $_ensure(1);
 
   /// This sets the maximum size of total evidence in bytes that can be committed in a single block.
   /// and should fall comfortably under the max block bytes.

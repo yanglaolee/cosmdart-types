@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $53;
+import '../../base/v1beta1/coin.pb.dart' as $1;
 
 /// MsgVerifyInvariant represents a message to verify a particular invariance.
 class MsgVerifyInvariant extends $pb.GeneratedMessage {
@@ -136,7 +136,7 @@ class MsgVerifyInvariantResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $53.Coin? constantFee,
+    $1.Coin? constantFee,
   }) {
     final $result = create();
     if (authority != null) {
@@ -153,7 +153,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.crisis.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$53.Coin>(2, _omitFieldNames ? '' : 'constantFee', subBuilder: $53.Coin.create)
+    ..aOM<$1.Coin>(2, _omitFieldNames ? '' : 'constantFee', subBuilder: $1.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -190,15 +190,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   /// constant_fee defines the x/crisis parameter.
   @$pb.TagNumber(2)
-  $53.Coin get constantFee => $_getN(1);
+  $1.Coin get constantFee => $_getN(1);
   @$pb.TagNumber(2)
-  set constantFee($53.Coin v) { setField(2, v); }
+  set constantFee($1.Coin v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConstantFee() => $_has(1);
   @$pb.TagNumber(2)
   void clearConstantFee() => clearField(2);
   @$pb.TagNumber(2)
-  $53.Coin ensureConstantFee() => $_ensure(1);
+  $1.Coin ensureConstantFee() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a

@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $53;
+import '../../base/v1beta1/coin.pb.dart' as $2;
 
 ///  SendAuthorization allows the grantee to spend up to spend_limit coins from
 ///  the granter's account.
@@ -21,7 +21,7 @@ import '../../base/v1beta1/coin.pb.dart' as $53;
 ///  Since: cosmos-sdk 0.43
 class SendAuthorization extends $pb.GeneratedMessage {
   factory SendAuthorization({
-    $core.Iterable<$53.Coin>? spendLimit,
+    $core.Iterable<$2.Coin>? spendLimit,
     $core.Iterable<$core.String>? allowList,
   }) {
     final $result = create();
@@ -38,7 +38,7 @@ class SendAuthorization extends $pb.GeneratedMessage {
   factory SendAuthorization.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendAuthorization', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'spendLimit', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'spendLimit', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..pPS(2, _omitFieldNames ? '' : 'allowList')
     ..hasRequiredFields = false
   ;
@@ -65,7 +65,7 @@ class SendAuthorization extends $pb.GeneratedMessage {
   static SendAuthorization? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$53.Coin> get spendLimit => $_getList(0);
+  $core.List<$2.Coin> get spendLimit => $_getList(0);
 
   ///  allow_list specifies an optional list of addresses to whom the grantee can send tokens on behalf of the
   ///  granter. If omitted, any recipient is allowed.

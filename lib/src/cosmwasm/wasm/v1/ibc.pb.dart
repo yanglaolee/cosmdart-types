@@ -166,6 +166,39 @@ class MsgIBCSendResponse extends $pb.GeneratedMessage {
   void clearSequence() => clearField(1);
 }
 
+/// MsgIBCWriteAcknowledgementResponse
+class MsgIBCWriteAcknowledgementResponse extends $pb.GeneratedMessage {
+  factory MsgIBCWriteAcknowledgementResponse() => create();
+  MsgIBCWriteAcknowledgementResponse._() : super();
+  factory MsgIBCWriteAcknowledgementResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MsgIBCWriteAcknowledgementResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgIBCWriteAcknowledgementResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmwasm.wasm.v1'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MsgIBCWriteAcknowledgementResponse clone() => MsgIBCWriteAcknowledgementResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MsgIBCWriteAcknowledgementResponse copyWith(void Function(MsgIBCWriteAcknowledgementResponse) updates) => super.copyWith((message) => updates(message as MsgIBCWriteAcknowledgementResponse)) as MsgIBCWriteAcknowledgementResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MsgIBCWriteAcknowledgementResponse create() => MsgIBCWriteAcknowledgementResponse._();
+  MsgIBCWriteAcknowledgementResponse createEmptyInstance() => create();
+  static $pb.PbList<MsgIBCWriteAcknowledgementResponse> createRepeated() => $pb.PbList<MsgIBCWriteAcknowledgementResponse>();
+  @$core.pragma('dart2js:noInline')
+  static MsgIBCWriteAcknowledgementResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgIBCWriteAcknowledgementResponse>(create);
+  static MsgIBCWriteAcknowledgementResponse? _defaultInstance;
+}
+
 /// MsgIBCCloseChannel port and channel need to be owned by the contract
 class MsgIBCCloseChannel extends $pb.GeneratedMessage {
   factory MsgIBCCloseChannel({

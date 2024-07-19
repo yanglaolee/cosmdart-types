@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/client/v1/client.pb.dart' as $19;
+import '../../../core/client/v1/client.pb.dart' as $0;
 
 /// ClientState defines the 09-localhost client state
 class ClientState extends $pb.GeneratedMessage {
   factory ClientState({
-    $19.Height? latestHeight,
+    $0.Height? latestHeight,
   }) {
     final $result = create();
     if (latestHeight != null) {
@@ -31,7 +31,7 @@ class ClientState extends $pb.GeneratedMessage {
   factory ClientState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ClientState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.localhost.v2'), createEmptyInstance: create)
-    ..aOM<$19.Height>(1, _omitFieldNames ? '' : 'latestHeight', subBuilder: $19.Height.create)
+    ..aOM<$0.Height>(1, _omitFieldNames ? '' : 'latestHeight', subBuilder: $0.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,15 +58,15 @@ class ClientState extends $pb.GeneratedMessage {
 
   /// the latest block height
   @$pb.TagNumber(1)
-  $19.Height get latestHeight => $_getN(0);
+  $0.Height get latestHeight => $_getN(0);
   @$pb.TagNumber(1)
-  set latestHeight($19.Height v) { setField(1, v); }
+  set latestHeight($0.Height v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLatestHeight() => $_has(0);
   @$pb.TagNumber(1)
   void clearLatestHeight() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Height ensureLatestHeight() => $_ensure(0);
+  $0.Height ensureLatestHeight() => $_ensure(0);
 }
 
 

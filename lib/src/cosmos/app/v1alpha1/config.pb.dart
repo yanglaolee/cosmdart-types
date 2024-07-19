@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/any.pb.dart' as $1;
 
 /// Config represents the configuration for a Cosmos SDK ABCI app.
 /// It is intended that all state machine logic including the version of
@@ -82,7 +82,7 @@ class Config extends $pb.GeneratedMessage {
 class ModuleConfig extends $pb.GeneratedMessage {
   factory ModuleConfig({
     $core.String? name,
-    $46.Any? config,
+    $1.Any? config,
     $core.Iterable<GolangBinding>? golangBindings,
   }) {
     final $result = create();
@@ -103,7 +103,7 @@ class ModuleConfig extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ModuleConfig', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.app.v1alpha1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<$46.Any>(2, _omitFieldNames ? '' : 'config', subBuilder: $46.Any.create)
+    ..aOM<$1.Any>(2, _omitFieldNames ? '' : 'config', subBuilder: $1.Any.create)
     ..pc<GolangBinding>(3, _omitFieldNames ? '' : 'golangBindings', $pb.PbFieldType.PM, subBuilder: GolangBinding.create)
     ..hasRequiredFields = false
   ;
@@ -151,15 +151,15 @@ class ModuleConfig extends $pb.GeneratedMessage {
   /// config is the config object for the module. Module config messages should
   /// define a ModuleDescriptor using the cosmos.app.v1alpha1.is_module extension.
   @$pb.TagNumber(2)
-  $46.Any get config => $_getN(1);
+  $1.Any get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config($46.Any v) { setField(2, v); }
+  set config($1.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
-  $46.Any ensureConfig() => $_ensure(1);
+  $1.Any ensureConfig() => $_ensure(1);
 
   /// golang_bindings specifies explicit interface to implementation type bindings which
   /// depinject uses to resolve interface inputs to provider functions.  The scope of this

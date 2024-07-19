@@ -14,19 +14,19 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $72;
+import 'types.pb.dart' as $5;
 
 /// GenesisState defines the group module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
     $fixnum.Int64? groupSeq,
-    $core.Iterable<$72.GroupInfo>? groups,
-    $core.Iterable<$72.GroupMember>? groupMembers,
+    $core.Iterable<$5.GroupInfo>? groups,
+    $core.Iterable<$5.GroupMember>? groupMembers,
     $fixnum.Int64? groupPolicySeq,
-    $core.Iterable<$72.GroupPolicyInfo>? groupPolicies,
+    $core.Iterable<$5.GroupPolicyInfo>? groupPolicies,
     $fixnum.Int64? proposalSeq,
-    $core.Iterable<$72.Proposal>? proposals,
-    $core.Iterable<$72.Vote>? votes,
+    $core.Iterable<$5.Proposal>? proposals,
+    $core.Iterable<$5.Vote>? votes,
   }) {
     final $result = create();
     if (groupSeq != null) {
@@ -61,13 +61,13 @@ class GenesisState extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'groupSeq', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$72.GroupInfo>(2, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $72.GroupInfo.create)
-    ..pc<$72.GroupMember>(3, _omitFieldNames ? '' : 'groupMembers', $pb.PbFieldType.PM, subBuilder: $72.GroupMember.create)
+    ..pc<$5.GroupInfo>(2, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $5.GroupInfo.create)
+    ..pc<$5.GroupMember>(3, _omitFieldNames ? '' : 'groupMembers', $pb.PbFieldType.PM, subBuilder: $5.GroupMember.create)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'groupPolicySeq', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$72.GroupPolicyInfo>(5, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, subBuilder: $72.GroupPolicyInfo.create)
+    ..pc<$5.GroupPolicyInfo>(5, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, subBuilder: $5.GroupPolicyInfo.create)
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'proposalSeq', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$72.Proposal>(7, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $72.Proposal.create)
-    ..pc<$72.Vote>(8, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $72.Vote.create)
+    ..pc<$5.Proposal>(7, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $5.Proposal.create)
+    ..pc<$5.Vote>(8, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $5.Vote.create)
     ..hasRequiredFields = false
   ;
 
@@ -105,11 +105,11 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// groups is the list of groups info.
   @$pb.TagNumber(2)
-  $core.List<$72.GroupInfo> get groups => $_getList(1);
+  $core.List<$5.GroupInfo> get groups => $_getList(1);
 
   /// group_members is the list of groups members.
   @$pb.TagNumber(3)
-  $core.List<$72.GroupMember> get groupMembers => $_getList(2);
+  $core.List<$5.GroupMember> get groupMembers => $_getList(2);
 
   /// group_policy_seq is the group policy table orm.Sequence,
   /// it is used to generate the next group policy account address.
@@ -124,7 +124,7 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// group_policies is the list of group policies info.
   @$pb.TagNumber(5)
-  $core.List<$72.GroupPolicyInfo> get groupPolicies => $_getList(4);
+  $core.List<$5.GroupPolicyInfo> get groupPolicies => $_getList(4);
 
   /// proposal_seq is the proposal table orm.Sequence,
   /// it is used to get the next proposal ID.
@@ -139,11 +139,11 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// proposals is the list of proposals.
   @$pb.TagNumber(7)
-  $core.List<$72.Proposal> get proposals => $_getList(6);
+  $core.List<$5.Proposal> get proposals => $_getList(6);
 
   /// votes is the list of votes.
   @$pb.TagNumber(8)
-  $core.List<$72.Vote> get votes => $_getList(7);
+  $core.List<$5.Vote> get votes => $_getList(7);
 }
 
 

@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $23;
+import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $2;
 
 /// QueryChecksumsRequest is the request type for the Query/Checksums RPC method.
 class QueryChecksumsRequest extends $pb.GeneratedMessage {
   factory QueryChecksumsRequest({
-    $23.PageRequest? pagination,
+    $2.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -31,7 +31,7 @@ class QueryChecksumsRequest extends $pb.GeneratedMessage {
   factory QueryChecksumsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChecksumsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.wasm.v1'), createEmptyInstance: create)
-    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
+    ..aOM<$2.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $2.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,22 +58,22 @@ class QueryChecksumsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $23.PageRequest get pagination => $_getN(0);
+  $2.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($23.PageRequest v) { setField(1, v); }
+  set pagination($2.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $23.PageRequest ensurePagination() => $_ensure(0);
+  $2.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryChecksumsResponse is the response type for the Query/Checksums RPC method.
 class QueryChecksumsResponse extends $pb.GeneratedMessage {
   factory QueryChecksumsResponse({
     $core.Iterable<$core.String>? checksums,
-    $23.PageResponse? pagination,
+    $2.PageResponse? pagination,
   }) {
     final $result = create();
     if (checksums != null) {
@@ -90,7 +90,7 @@ class QueryChecksumsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChecksumsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.wasm.v1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'checksums')
-    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..aOM<$2.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $2.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -121,15 +121,15 @@ class QueryChecksumsResponse extends $pb.GeneratedMessage {
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $23.PageResponse get pagination => $_getN(1);
+  $2.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($23.PageResponse v) { setField(2, v); }
+  set pagination($2.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $23.PageResponse ensurePagination() => $_ensure(1);
+  $2.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryCodeRequest is the request type for the Query/Code RPC method.

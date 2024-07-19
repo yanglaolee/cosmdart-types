@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../tendermint/abci/types.pb.dart' as $8;
-import '../../v1beta1/listening.pb.dart' as $79;
+import '../../../../tendermint/abci/types.pb.dart' as $0;
+import '../../v1beta1/listening.pb.dart' as $2;
 
 /// ListenEndBlockRequest is the request type for the ListenEndBlock RPC method
 class ListenFinalizeBlockRequest extends $pb.GeneratedMessage {
   factory ListenFinalizeBlockRequest({
-    $8.RequestFinalizeBlock? req,
-    $8.ResponseFinalizeBlock? res,
+    $0.RequestFinalizeBlock? req,
+    $0.ResponseFinalizeBlock? res,
   }) {
     final $result = create();
     if (req != null) {
@@ -37,8 +37,8 @@ class ListenFinalizeBlockRequest extends $pb.GeneratedMessage {
   factory ListenFinalizeBlockRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListenFinalizeBlockRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.store.streaming.abci'), createEmptyInstance: create)
-    ..aOM<$8.RequestFinalizeBlock>(1, _omitFieldNames ? '' : 'req', subBuilder: $8.RequestFinalizeBlock.create)
-    ..aOM<$8.ResponseFinalizeBlock>(2, _omitFieldNames ? '' : 'res', subBuilder: $8.ResponseFinalizeBlock.create)
+    ..aOM<$0.RequestFinalizeBlock>(1, _omitFieldNames ? '' : 'req', subBuilder: $0.RequestFinalizeBlock.create)
+    ..aOM<$0.ResponseFinalizeBlock>(2, _omitFieldNames ? '' : 'res', subBuilder: $0.ResponseFinalizeBlock.create)
     ..hasRequiredFields = false
   ;
 
@@ -64,26 +64,26 @@ class ListenFinalizeBlockRequest extends $pb.GeneratedMessage {
   static ListenFinalizeBlockRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $8.RequestFinalizeBlock get req => $_getN(0);
+  $0.RequestFinalizeBlock get req => $_getN(0);
   @$pb.TagNumber(1)
-  set req($8.RequestFinalizeBlock v) { setField(1, v); }
+  set req($0.RequestFinalizeBlock v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasReq() => $_has(0);
   @$pb.TagNumber(1)
   void clearReq() => clearField(1);
   @$pb.TagNumber(1)
-  $8.RequestFinalizeBlock ensureReq() => $_ensure(0);
+  $0.RequestFinalizeBlock ensureReq() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $8.ResponseFinalizeBlock get res => $_getN(1);
+  $0.ResponseFinalizeBlock get res => $_getN(1);
   @$pb.TagNumber(2)
-  set res($8.ResponseFinalizeBlock v) { setField(2, v); }
+  set res($0.ResponseFinalizeBlock v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRes() => $_has(1);
   @$pb.TagNumber(2)
   void clearRes() => clearField(2);
   @$pb.TagNumber(2)
-  $8.ResponseFinalizeBlock ensureRes() => $_ensure(1);
+  $0.ResponseFinalizeBlock ensureRes() => $_ensure(1);
 }
 
 /// ListenEndBlockResponse is the response type for the ListenEndBlock RPC method
@@ -123,8 +123,8 @@ class ListenFinalizeBlockResponse extends $pb.GeneratedMessage {
 class ListenCommitRequest extends $pb.GeneratedMessage {
   factory ListenCommitRequest({
     $fixnum.Int64? blockHeight,
-    $8.ResponseCommit? res,
-    $core.Iterable<$79.StoreKVPair>? changeSet,
+    $0.ResponseCommit? res,
+    $core.Iterable<$2.StoreKVPair>? changeSet,
   }) {
     final $result = create();
     if (blockHeight != null) {
@@ -144,8 +144,8 @@ class ListenCommitRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListenCommitRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.store.streaming.abci'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'blockHeight')
-    ..aOM<$8.ResponseCommit>(2, _omitFieldNames ? '' : 'res', subBuilder: $8.ResponseCommit.create)
-    ..pc<$79.StoreKVPair>(3, _omitFieldNames ? '' : 'changeSet', $pb.PbFieldType.PM, subBuilder: $79.StoreKVPair.create)
+    ..aOM<$0.ResponseCommit>(2, _omitFieldNames ? '' : 'res', subBuilder: $0.ResponseCommit.create)
+    ..pc<$2.StoreKVPair>(3, _omitFieldNames ? '' : 'changeSet', $pb.PbFieldType.PM, subBuilder: $2.StoreKVPair.create)
     ..hasRequiredFields = false
   ;
 
@@ -181,18 +181,18 @@ class ListenCommitRequest extends $pb.GeneratedMessage {
   void clearBlockHeight() => clearField(1);
 
   @$pb.TagNumber(2)
-  $8.ResponseCommit get res => $_getN(1);
+  $0.ResponseCommit get res => $_getN(1);
   @$pb.TagNumber(2)
-  set res($8.ResponseCommit v) { setField(2, v); }
+  set res($0.ResponseCommit v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRes() => $_has(1);
   @$pb.TagNumber(2)
   void clearRes() => clearField(2);
   @$pb.TagNumber(2)
-  $8.ResponseCommit ensureRes() => $_ensure(1);
+  $0.ResponseCommit ensureRes() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $core.List<$79.StoreKVPair> get changeSet => $_getList(2);
+  $core.List<$2.StoreKVPair> get changeSet => $_getList(2);
 }
 
 /// ListenCommitResponse is the response type for the ListenCommit RPC method

@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $20;
+import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $2;
 
 /// Allocation defines the spend limit for a particular port and channel
 class Allocation extends $pb.GeneratedMessage {
   factory Allocation({
     $core.String? sourcePort,
     $core.String? sourceChannel,
-    $core.Iterable<$20.Coin>? spendLimit,
+    $core.Iterable<$2.Coin>? spendLimit,
     $core.Iterable<$core.String>? allowList,
     $core.Iterable<$core.String>? allowedPacketData,
   }) {
@@ -49,7 +49,7 @@ class Allocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Allocation', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'sourcePort')
     ..aOS(2, _omitFieldNames ? '' : 'sourceChannel')
-    ..pc<$20.Coin>(3, _omitFieldNames ? '' : 'spendLimit', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
+    ..pc<$2.Coin>(3, _omitFieldNames ? '' : 'spendLimit', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..pPS(4, _omitFieldNames ? '' : 'allowList')
     ..pPS(5, _omitFieldNames ? '' : 'allowedPacketData')
     ..hasRequiredFields = false
@@ -98,7 +98,7 @@ class Allocation extends $pb.GeneratedMessage {
 
   /// spend limitation on the channel
   @$pb.TagNumber(3)
-  $core.List<$20.Coin> get spendLimit => $_getList(2);
+  $core.List<$2.Coin> get spendLimit => $_getList(2);
 
   /// allow list of receivers, an empty allow list permits any receiver address
   @$pb.TagNumber(4)

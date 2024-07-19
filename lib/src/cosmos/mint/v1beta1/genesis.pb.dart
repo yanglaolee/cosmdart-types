@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'mint.pb.dart' as $73;
+import 'mint.pb.dart' as $2;
 
 /// GenesisState defines the mint module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $73.Minter? minter,
-    $73.Params? params,
+    $2.Minter? minter,
+    $2.Params? params,
   }) {
     final $result = create();
     if (minter != null) {
@@ -35,8 +35,8 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.mint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$73.Minter>(1, _omitFieldNames ? '' : 'minter', subBuilder: $73.Minter.create)
-    ..aOM<$73.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $73.Params.create)
+    ..aOM<$2.Minter>(1, _omitFieldNames ? '' : 'minter', subBuilder: $2.Minter.create)
+    ..aOM<$2.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $2.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -63,27 +63,27 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// minter is a space for holding current inflation information.
   @$pb.TagNumber(1)
-  $73.Minter get minter => $_getN(0);
+  $2.Minter get minter => $_getN(0);
   @$pb.TagNumber(1)
-  set minter($73.Minter v) { setField(1, v); }
+  set minter($2.Minter v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMinter() => $_has(0);
   @$pb.TagNumber(1)
   void clearMinter() => clearField(1);
   @$pb.TagNumber(1)
-  $73.Minter ensureMinter() => $_ensure(0);
+  $2.Minter ensureMinter() => $_ensure(0);
 
   /// params defines all the parameters of the module.
   @$pb.TagNumber(2)
-  $73.Params get params => $_getN(1);
+  $2.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($73.Params v) { setField(2, v); }
+  set params($2.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $73.Params ensureParams() => $_ensure(1);
+  $2.Params ensureParams() => $_ensure(1);
 }
 
 

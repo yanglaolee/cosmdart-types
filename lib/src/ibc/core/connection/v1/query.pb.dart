@@ -14,10 +14,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $23;
-import '../../../../google/protobuf/any.pb.dart' as $17;
-import '../../client/v1/client.pb.dart' as $19;
-import 'connection.pb.dart' as $33;
+import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $5;
+import '../../../../google/protobuf/any.pb.dart' as $6;
+import '../../client/v1/client.pb.dart' as $4;
+import 'connection.pb.dart' as $3;
 
 /// QueryConnectionRequest is the request type for the Query/Connection RPC
 /// method
@@ -77,9 +77,9 @@ class QueryConnectionRequest extends $pb.GeneratedMessage {
 /// which the proof was retrieved.
 class QueryConnectionResponse extends $pb.GeneratedMessage {
   factory QueryConnectionResponse({
-    $33.ConnectionEnd? connection,
+    $3.ConnectionEnd? connection,
     $core.List<$core.int>? proof,
-    $19.Height? proofHeight,
+    $4.Height? proofHeight,
   }) {
     final $result = create();
     if (connection != null) {
@@ -98,9 +98,9 @@ class QueryConnectionResponse extends $pb.GeneratedMessage {
   factory QueryConnectionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..aOM<$33.ConnectionEnd>(1, _omitFieldNames ? '' : 'connection', subBuilder: $33.ConnectionEnd.create)
+    ..aOM<$3.ConnectionEnd>(1, _omitFieldNames ? '' : 'connection', subBuilder: $3.ConnectionEnd.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -127,15 +127,15 @@ class QueryConnectionResponse extends $pb.GeneratedMessage {
 
   /// connection associated with the request identifier
   @$pb.TagNumber(1)
-  $33.ConnectionEnd get connection => $_getN(0);
+  $3.ConnectionEnd get connection => $_getN(0);
   @$pb.TagNumber(1)
-  set connection($33.ConnectionEnd v) { setField(1, v); }
+  set connection($3.ConnectionEnd v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConnection() => $_has(0);
   @$pb.TagNumber(1)
   void clearConnection() => clearField(1);
   @$pb.TagNumber(1)
-  $33.ConnectionEnd ensureConnection() => $_ensure(0);
+  $3.ConnectionEnd ensureConnection() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -149,22 +149,22 @@ class QueryConnectionResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $19.Height get proofHeight => $_getN(2);
+  $4.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($19.Height v) { setField(3, v); }
+  set proofHeight($4.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $19.Height ensureProofHeight() => $_ensure(2);
+  $4.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryConnectionsRequest is the request type for the Query/Connections RPC
 /// method
 class QueryConnectionsRequest extends $pb.GeneratedMessage {
   factory QueryConnectionsRequest({
-    $23.PageRequest? pagination,
+    $5.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -177,7 +177,7 @@ class QueryConnectionsRequest extends $pb.GeneratedMessage {
   factory QueryConnectionsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
+    ..aOM<$5.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -203,24 +203,24 @@ class QueryConnectionsRequest extends $pb.GeneratedMessage {
   static QueryConnectionsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $23.PageRequest get pagination => $_getN(0);
+  $5.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($23.PageRequest v) { setField(1, v); }
+  set pagination($5.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $23.PageRequest ensurePagination() => $_ensure(0);
+  $5.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryConnectionsResponse is the response type for the Query/Connections RPC
 /// method.
 class QueryConnectionsResponse extends $pb.GeneratedMessage {
   factory QueryConnectionsResponse({
-    $core.Iterable<$33.IdentifiedConnection>? connections,
-    $23.PageResponse? pagination,
-    $19.Height? height,
+    $core.Iterable<$3.IdentifiedConnection>? connections,
+    $5.PageResponse? pagination,
+    $4.Height? height,
   }) {
     final $result = create();
     if (connections != null) {
@@ -239,9 +239,9 @@ class QueryConnectionsResponse extends $pb.GeneratedMessage {
   factory QueryConnectionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..pc<$33.IdentifiedConnection>(1, _omitFieldNames ? '' : 'connections', $pb.PbFieldType.PM, subBuilder: $33.IdentifiedConnection.create)
-    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
-    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
+    ..pc<$3.IdentifiedConnection>(1, _omitFieldNames ? '' : 'connections', $pb.PbFieldType.PM, subBuilder: $3.IdentifiedConnection.create)
+    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
+    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $4.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -268,31 +268,31 @@ class QueryConnectionsResponse extends $pb.GeneratedMessage {
 
   /// list of stored connections of the chain.
   @$pb.TagNumber(1)
-  $core.List<$33.IdentifiedConnection> get connections => $_getList(0);
+  $core.List<$3.IdentifiedConnection> get connections => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $23.PageResponse get pagination => $_getN(1);
+  $5.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($23.PageResponse v) { setField(2, v); }
+  set pagination($5.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $23.PageResponse ensurePagination() => $_ensure(1);
+  $5.PageResponse ensurePagination() => $_ensure(1);
 
   /// query block height
   @$pb.TagNumber(3)
-  $19.Height get height => $_getN(2);
+  $4.Height get height => $_getN(2);
   @$pb.TagNumber(3)
-  set height($19.Height v) { setField(3, v); }
+  set height($4.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $19.Height ensureHeight() => $_ensure(2);
+  $4.Height ensureHeight() => $_ensure(2);
 }
 
 /// QueryClientConnectionsRequest is the request type for the
@@ -354,7 +354,7 @@ class QueryClientConnectionsResponse extends $pb.GeneratedMessage {
   factory QueryClientConnectionsResponse({
     $core.Iterable<$core.String>? connectionPaths,
     $core.List<$core.int>? proof,
-    $19.Height? proofHeight,
+    $4.Height? proofHeight,
   }) {
     final $result = create();
     if (connectionPaths != null) {
@@ -375,7 +375,7 @@ class QueryClientConnectionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClientConnectionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'connectionPaths')
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -416,15 +416,15 @@ class QueryClientConnectionsResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was generated
   @$pb.TagNumber(3)
-  $19.Height get proofHeight => $_getN(2);
+  $4.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($19.Height v) { setField(3, v); }
+  set proofHeight($4.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $19.Height ensureProofHeight() => $_ensure(2);
+  $4.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryConnectionClientStateRequest is the request type for the
@@ -484,9 +484,9 @@ class QueryConnectionClientStateRequest extends $pb.GeneratedMessage {
 /// Query/ConnectionClientState RPC method
 class QueryConnectionClientStateResponse extends $pb.GeneratedMessage {
   factory QueryConnectionClientStateResponse({
-    $19.IdentifiedClientState? identifiedClientState,
+    $4.IdentifiedClientState? identifiedClientState,
     $core.List<$core.int>? proof,
-    $19.Height? proofHeight,
+    $4.Height? proofHeight,
   }) {
     final $result = create();
     if (identifiedClientState != null) {
@@ -505,9 +505,9 @@ class QueryConnectionClientStateResponse extends $pb.GeneratedMessage {
   factory QueryConnectionClientStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionClientStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..aOM<$19.IdentifiedClientState>(1, _omitFieldNames ? '' : 'identifiedClientState', subBuilder: $19.IdentifiedClientState.create)
+    ..aOM<$4.IdentifiedClientState>(1, _omitFieldNames ? '' : 'identifiedClientState', subBuilder: $4.IdentifiedClientState.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -534,15 +534,15 @@ class QueryConnectionClientStateResponse extends $pb.GeneratedMessage {
 
   /// client state associated with the channel
   @$pb.TagNumber(1)
-  $19.IdentifiedClientState get identifiedClientState => $_getN(0);
+  $4.IdentifiedClientState get identifiedClientState => $_getN(0);
   @$pb.TagNumber(1)
-  set identifiedClientState($19.IdentifiedClientState v) { setField(1, v); }
+  set identifiedClientState($4.IdentifiedClientState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIdentifiedClientState() => $_has(0);
   @$pb.TagNumber(1)
   void clearIdentifiedClientState() => clearField(1);
   @$pb.TagNumber(1)
-  $19.IdentifiedClientState ensureIdentifiedClientState() => $_ensure(0);
+  $4.IdentifiedClientState ensureIdentifiedClientState() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -556,15 +556,15 @@ class QueryConnectionClientStateResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $19.Height get proofHeight => $_getN(2);
+  $4.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($19.Height v) { setField(3, v); }
+  set proofHeight($4.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $19.Height ensureProofHeight() => $_ensure(2);
+  $4.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryConnectionConsensusStateRequest is the request type for the
@@ -652,10 +652,10 @@ class QueryConnectionConsensusStateRequest extends $pb.GeneratedMessage {
 /// Query/ConnectionConsensusState RPC method
 class QueryConnectionConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryConnectionConsensusStateResponse({
-    $17.Any? consensusState,
+    $6.Any? consensusState,
     $core.String? clientId,
     $core.List<$core.int>? proof,
-    $19.Height? proofHeight,
+    $4.Height? proofHeight,
   }) {
     final $result = create();
     if (consensusState != null) {
@@ -677,10 +677,10 @@ class QueryConnectionConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryConnectionConsensusStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionConsensusStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
+    ..aOM<$6.Any>(1, _omitFieldNames ? '' : 'consensusState', subBuilder: $6.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'clientId')
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$4.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -707,15 +707,15 @@ class QueryConnectionConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// consensus state associated with the channel
   @$pb.TagNumber(1)
-  $17.Any get consensusState => $_getN(0);
+  $6.Any get consensusState => $_getN(0);
   @$pb.TagNumber(1)
-  set consensusState($17.Any v) { setField(1, v); }
+  set consensusState($6.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConsensusState() => $_has(0);
   @$pb.TagNumber(1)
   void clearConsensusState() => clearField(1);
   @$pb.TagNumber(1)
-  $17.Any ensureConsensusState() => $_ensure(0);
+  $6.Any ensureConsensusState() => $_ensure(0);
 
   /// client ID associated with the consensus state
   @$pb.TagNumber(2)
@@ -739,15 +739,15 @@ class QueryConnectionConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(4)
-  $19.Height get proofHeight => $_getN(3);
+  $4.Height get proofHeight => $_getN(3);
   @$pb.TagNumber(4)
-  set proofHeight($19.Height v) { setField(4, v); }
+  set proofHeight($4.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(3);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $19.Height ensureProofHeight() => $_ensure(3);
+  $4.Height ensureProofHeight() => $_ensure(3);
 }
 
 /// QueryConnectionParamsRequest is the request type for the Query/ConnectionParams RPC method.
@@ -786,7 +786,7 @@ class QueryConnectionParamsRequest extends $pb.GeneratedMessage {
 /// QueryConnectionParamsResponse is the response type for the Query/ConnectionParams RPC method.
 class QueryConnectionParamsResponse extends $pb.GeneratedMessage {
   factory QueryConnectionParamsResponse({
-    $33.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -799,7 +799,7 @@ class QueryConnectionParamsResponse extends $pb.GeneratedMessage {
   factory QueryConnectionParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..aOM<$33.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $33.Params.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -826,15 +826,15 @@ class QueryConnectionParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $33.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($33.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $33.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 }
 
 

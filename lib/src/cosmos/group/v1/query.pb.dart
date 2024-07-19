@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import 'types.pb.dart' as $72;
+import '../../base/query/v1beta1/pagination.pb.dart' as $6;
+import 'types.pb.dart' as $5;
 
 /// QueryGroupInfoRequest is the Query/GroupInfo request type.
 class QueryGroupInfoRequest extends $pb.GeneratedMessage {
@@ -72,7 +72,7 @@ class QueryGroupInfoRequest extends $pb.GeneratedMessage {
 /// QueryGroupInfoResponse is the Query/GroupInfo response type.
 class QueryGroupInfoResponse extends $pb.GeneratedMessage {
   factory QueryGroupInfoResponse({
-    $72.GroupInfo? info,
+    $5.GroupInfo? info,
   }) {
     final $result = create();
     if (info != null) {
@@ -85,7 +85,7 @@ class QueryGroupInfoResponse extends $pb.GeneratedMessage {
   factory QueryGroupInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$72.GroupInfo>(1, _omitFieldNames ? '' : 'info', subBuilder: $72.GroupInfo.create)
+    ..aOM<$5.GroupInfo>(1, _omitFieldNames ? '' : 'info', subBuilder: $5.GroupInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,15 +112,15 @@ class QueryGroupInfoResponse extends $pb.GeneratedMessage {
 
   /// info is the GroupInfo of the group.
   @$pb.TagNumber(1)
-  $72.GroupInfo get info => $_getN(0);
+  $5.GroupInfo get info => $_getN(0);
   @$pb.TagNumber(1)
-  set info($72.GroupInfo v) { setField(1, v); }
+  set info($5.GroupInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $72.GroupInfo ensureInfo() => $_ensure(0);
+  $5.GroupInfo ensureInfo() => $_ensure(0);
 }
 
 /// QueryGroupPolicyInfoRequest is the Query/GroupPolicyInfo request type.
@@ -178,7 +178,7 @@ class QueryGroupPolicyInfoRequest extends $pb.GeneratedMessage {
 /// QueryGroupPolicyInfoResponse is the Query/GroupPolicyInfo response type.
 class QueryGroupPolicyInfoResponse extends $pb.GeneratedMessage {
   factory QueryGroupPolicyInfoResponse({
-    $72.GroupPolicyInfo? info,
+    $5.GroupPolicyInfo? info,
   }) {
     final $result = create();
     if (info != null) {
@@ -191,7 +191,7 @@ class QueryGroupPolicyInfoResponse extends $pb.GeneratedMessage {
   factory QueryGroupPolicyInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupPolicyInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$72.GroupPolicyInfo>(1, _omitFieldNames ? '' : 'info', subBuilder: $72.GroupPolicyInfo.create)
+    ..aOM<$5.GroupPolicyInfo>(1, _omitFieldNames ? '' : 'info', subBuilder: $5.GroupPolicyInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -218,22 +218,22 @@ class QueryGroupPolicyInfoResponse extends $pb.GeneratedMessage {
 
   /// info is the GroupPolicyInfo of the group policy.
   @$pb.TagNumber(1)
-  $72.GroupPolicyInfo get info => $_getN(0);
+  $5.GroupPolicyInfo get info => $_getN(0);
   @$pb.TagNumber(1)
-  set info($72.GroupPolicyInfo v) { setField(1, v); }
+  set info($5.GroupPolicyInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $72.GroupPolicyInfo ensureInfo() => $_ensure(0);
+  $5.GroupPolicyInfo ensureInfo() => $_ensure(0);
 }
 
 /// QueryGroupMembersRequest is the Query/GroupMembers request type.
 class QueryGroupMembersRequest extends $pb.GeneratedMessage {
   factory QueryGroupMembersRequest({
     $fixnum.Int64? groupId,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (groupId != null) {
@@ -250,7 +250,7 @@ class QueryGroupMembersRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupMembersRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'groupId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -287,22 +287,22 @@ class QueryGroupMembersRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupMembersResponse is the Query/GroupMembersResponse response type.
 class QueryGroupMembersResponse extends $pb.GeneratedMessage {
   factory QueryGroupMembersResponse({
-    $core.Iterable<$72.GroupMember>? members,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.GroupMember>? members,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (members != null) {
@@ -318,8 +318,8 @@ class QueryGroupMembersResponse extends $pb.GeneratedMessage {
   factory QueryGroupMembersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupMembersResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.GroupMember>(1, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $72.GroupMember.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.GroupMember>(1, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $5.GroupMember.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -346,26 +346,26 @@ class QueryGroupMembersResponse extends $pb.GeneratedMessage {
 
   /// members are the members of the group with given group_id.
   @$pb.TagNumber(1)
-  $core.List<$72.GroupMember> get members => $_getList(0);
+  $core.List<$5.GroupMember> get members => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupsByAdminRequest is the Query/GroupsByAdmin request type.
 class QueryGroupsByAdminRequest extends $pb.GeneratedMessage {
   factory QueryGroupsByAdminRequest({
     $core.String? admin,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (admin != null) {
@@ -382,7 +382,7 @@ class QueryGroupsByAdminRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupsByAdminRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'admin')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -419,22 +419,22 @@ class QueryGroupsByAdminRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupsByAdminResponse is the Query/GroupsByAdminResponse response type.
 class QueryGroupsByAdminResponse extends $pb.GeneratedMessage {
   factory QueryGroupsByAdminResponse({
-    $core.Iterable<$72.GroupInfo>? groups,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.GroupInfo>? groups,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (groups != null) {
@@ -450,8 +450,8 @@ class QueryGroupsByAdminResponse extends $pb.GeneratedMessage {
   factory QueryGroupsByAdminResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupsByAdminResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.GroupInfo>(1, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $72.GroupInfo.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.GroupInfo>(1, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $5.GroupInfo.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -478,26 +478,26 @@ class QueryGroupsByAdminResponse extends $pb.GeneratedMessage {
 
   /// groups are the groups info with the provided admin.
   @$pb.TagNumber(1)
-  $core.List<$72.GroupInfo> get groups => $_getList(0);
+  $core.List<$5.GroupInfo> get groups => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupPoliciesByGroupRequest is the Query/GroupPoliciesByGroup request type.
 class QueryGroupPoliciesByGroupRequest extends $pb.GeneratedMessage {
   factory QueryGroupPoliciesByGroupRequest({
     $fixnum.Int64? groupId,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (groupId != null) {
@@ -514,7 +514,7 @@ class QueryGroupPoliciesByGroupRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupPoliciesByGroupRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'groupId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -551,22 +551,22 @@ class QueryGroupPoliciesByGroupRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupPoliciesByGroupResponse is the Query/GroupPoliciesByGroup response type.
 class QueryGroupPoliciesByGroupResponse extends $pb.GeneratedMessage {
   factory QueryGroupPoliciesByGroupResponse({
-    $core.Iterable<$72.GroupPolicyInfo>? groupPolicies,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.GroupPolicyInfo>? groupPolicies,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (groupPolicies != null) {
@@ -582,8 +582,8 @@ class QueryGroupPoliciesByGroupResponse extends $pb.GeneratedMessage {
   factory QueryGroupPoliciesByGroupResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupPoliciesByGroupResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.GroupPolicyInfo>(1, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, subBuilder: $72.GroupPolicyInfo.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.GroupPolicyInfo>(1, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, subBuilder: $5.GroupPolicyInfo.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -610,26 +610,26 @@ class QueryGroupPoliciesByGroupResponse extends $pb.GeneratedMessage {
 
   /// group_policies are the group policies info associated with the provided group.
   @$pb.TagNumber(1)
-  $core.List<$72.GroupPolicyInfo> get groupPolicies => $_getList(0);
+  $core.List<$5.GroupPolicyInfo> get groupPolicies => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupPoliciesByAdminRequest is the Query/GroupPoliciesByAdmin request type.
 class QueryGroupPoliciesByAdminRequest extends $pb.GeneratedMessage {
   factory QueryGroupPoliciesByAdminRequest({
     $core.String? admin,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (admin != null) {
@@ -646,7 +646,7 @@ class QueryGroupPoliciesByAdminRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupPoliciesByAdminRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'admin')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -683,22 +683,22 @@ class QueryGroupPoliciesByAdminRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupPoliciesByAdminResponse is the Query/GroupPoliciesByAdmin response type.
 class QueryGroupPoliciesByAdminResponse extends $pb.GeneratedMessage {
   factory QueryGroupPoliciesByAdminResponse({
-    $core.Iterable<$72.GroupPolicyInfo>? groupPolicies,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.GroupPolicyInfo>? groupPolicies,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (groupPolicies != null) {
@@ -714,8 +714,8 @@ class QueryGroupPoliciesByAdminResponse extends $pb.GeneratedMessage {
   factory QueryGroupPoliciesByAdminResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupPoliciesByAdminResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.GroupPolicyInfo>(1, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, subBuilder: $72.GroupPolicyInfo.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.GroupPolicyInfo>(1, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, subBuilder: $5.GroupPolicyInfo.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -742,19 +742,19 @@ class QueryGroupPoliciesByAdminResponse extends $pb.GeneratedMessage {
 
   /// group_policies are the group policies info with provided admin.
   @$pb.TagNumber(1)
-  $core.List<$72.GroupPolicyInfo> get groupPolicies => $_getList(0);
+  $core.List<$5.GroupPolicyInfo> get groupPolicies => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryProposalRequest is the Query/Proposal request type.
@@ -812,7 +812,7 @@ class QueryProposalRequest extends $pb.GeneratedMessage {
 /// QueryProposalResponse is the Query/Proposal response type.
 class QueryProposalResponse extends $pb.GeneratedMessage {
   factory QueryProposalResponse({
-    $72.Proposal? proposal,
+    $5.Proposal? proposal,
   }) {
     final $result = create();
     if (proposal != null) {
@@ -825,7 +825,7 @@ class QueryProposalResponse extends $pb.GeneratedMessage {
   factory QueryProposalResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryProposalResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$72.Proposal>(1, _omitFieldNames ? '' : 'proposal', subBuilder: $72.Proposal.create)
+    ..aOM<$5.Proposal>(1, _omitFieldNames ? '' : 'proposal', subBuilder: $5.Proposal.create)
     ..hasRequiredFields = false
   ;
 
@@ -852,22 +852,22 @@ class QueryProposalResponse extends $pb.GeneratedMessage {
 
   /// proposal is the proposal info.
   @$pb.TagNumber(1)
-  $72.Proposal get proposal => $_getN(0);
+  $5.Proposal get proposal => $_getN(0);
   @$pb.TagNumber(1)
-  set proposal($72.Proposal v) { setField(1, v); }
+  set proposal($5.Proposal v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasProposal() => $_has(0);
   @$pb.TagNumber(1)
   void clearProposal() => clearField(1);
   @$pb.TagNumber(1)
-  $72.Proposal ensureProposal() => $_ensure(0);
+  $5.Proposal ensureProposal() => $_ensure(0);
 }
 
 /// QueryProposalsByGroupPolicyRequest is the Query/ProposalByGroupPolicy request type.
 class QueryProposalsByGroupPolicyRequest extends $pb.GeneratedMessage {
   factory QueryProposalsByGroupPolicyRequest({
     $core.String? address,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (address != null) {
@@ -884,7 +884,7 @@ class QueryProposalsByGroupPolicyRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryProposalsByGroupPolicyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -921,22 +921,22 @@ class QueryProposalsByGroupPolicyRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryProposalsByGroupPolicyResponse is the Query/ProposalByGroupPolicy response type.
 class QueryProposalsByGroupPolicyResponse extends $pb.GeneratedMessage {
   factory QueryProposalsByGroupPolicyResponse({
-    $core.Iterable<$72.Proposal>? proposals,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.Proposal>? proposals,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (proposals != null) {
@@ -952,8 +952,8 @@ class QueryProposalsByGroupPolicyResponse extends $pb.GeneratedMessage {
   factory QueryProposalsByGroupPolicyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryProposalsByGroupPolicyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.Proposal>(1, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $72.Proposal.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.Proposal>(1, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $5.Proposal.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -980,19 +980,19 @@ class QueryProposalsByGroupPolicyResponse extends $pb.GeneratedMessage {
 
   /// proposals are the proposals with given group policy.
   @$pb.TagNumber(1)
-  $core.List<$72.Proposal> get proposals => $_getList(0);
+  $core.List<$5.Proposal> get proposals => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryVoteByProposalVoterRequest is the Query/VoteByProposalVoter request type.
@@ -1065,7 +1065,7 @@ class QueryVoteByProposalVoterRequest extends $pb.GeneratedMessage {
 /// QueryVoteByProposalVoterResponse is the Query/VoteByProposalVoter response type.
 class QueryVoteByProposalVoterResponse extends $pb.GeneratedMessage {
   factory QueryVoteByProposalVoterResponse({
-    $72.Vote? vote,
+    $5.Vote? vote,
   }) {
     final $result = create();
     if (vote != null) {
@@ -1078,7 +1078,7 @@ class QueryVoteByProposalVoterResponse extends $pb.GeneratedMessage {
   factory QueryVoteByProposalVoterResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVoteByProposalVoterResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$72.Vote>(1, _omitFieldNames ? '' : 'vote', subBuilder: $72.Vote.create)
+    ..aOM<$5.Vote>(1, _omitFieldNames ? '' : 'vote', subBuilder: $5.Vote.create)
     ..hasRequiredFields = false
   ;
 
@@ -1105,22 +1105,22 @@ class QueryVoteByProposalVoterResponse extends $pb.GeneratedMessage {
 
   /// vote is the vote with given proposal_id and voter.
   @$pb.TagNumber(1)
-  $72.Vote get vote => $_getN(0);
+  $5.Vote get vote => $_getN(0);
   @$pb.TagNumber(1)
-  set vote($72.Vote v) { setField(1, v); }
+  set vote($5.Vote v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVote() => $_has(0);
   @$pb.TagNumber(1)
   void clearVote() => clearField(1);
   @$pb.TagNumber(1)
-  $72.Vote ensureVote() => $_ensure(0);
+  $5.Vote ensureVote() => $_ensure(0);
 }
 
 /// QueryVotesByProposalRequest is the Query/VotesByProposal request type.
 class QueryVotesByProposalRequest extends $pb.GeneratedMessage {
   factory QueryVotesByProposalRequest({
     $fixnum.Int64? proposalId,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -1137,7 +1137,7 @@ class QueryVotesByProposalRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVotesByProposalRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1174,22 +1174,22 @@ class QueryVotesByProposalRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryVotesByProposalResponse is the Query/VotesByProposal response type.
 class QueryVotesByProposalResponse extends $pb.GeneratedMessage {
   factory QueryVotesByProposalResponse({
-    $core.Iterable<$72.Vote>? votes,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.Vote>? votes,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (votes != null) {
@@ -1205,8 +1205,8 @@ class QueryVotesByProposalResponse extends $pb.GeneratedMessage {
   factory QueryVotesByProposalResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVotesByProposalResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.Vote>(1, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $72.Vote.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.Vote>(1, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $5.Vote.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1233,26 +1233,26 @@ class QueryVotesByProposalResponse extends $pb.GeneratedMessage {
 
   /// votes are the list of votes for given proposal_id.
   @$pb.TagNumber(1)
-  $core.List<$72.Vote> get votes => $_getList(0);
+  $core.List<$5.Vote> get votes => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryVotesByVoterRequest is the Query/VotesByVoter request type.
 class QueryVotesByVoterRequest extends $pb.GeneratedMessage {
   factory QueryVotesByVoterRequest({
     $core.String? voter,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (voter != null) {
@@ -1269,7 +1269,7 @@ class QueryVotesByVoterRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVotesByVoterRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'voter')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1306,22 +1306,22 @@ class QueryVotesByVoterRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryVotesByVoterResponse is the Query/VotesByVoter response type.
 class QueryVotesByVoterResponse extends $pb.GeneratedMessage {
   factory QueryVotesByVoterResponse({
-    $core.Iterable<$72.Vote>? votes,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.Vote>? votes,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (votes != null) {
@@ -1337,8 +1337,8 @@ class QueryVotesByVoterResponse extends $pb.GeneratedMessage {
   factory QueryVotesByVoterResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVotesByVoterResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.Vote>(1, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $72.Vote.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.Vote>(1, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $5.Vote.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1365,26 +1365,26 @@ class QueryVotesByVoterResponse extends $pb.GeneratedMessage {
 
   /// votes are the list of votes by given voter.
   @$pb.TagNumber(1)
-  $core.List<$72.Vote> get votes => $_getList(0);
+  $core.List<$5.Vote> get votes => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupsByMemberRequest is the Query/GroupsByMember request type.
 class QueryGroupsByMemberRequest extends $pb.GeneratedMessage {
   factory QueryGroupsByMemberRequest({
     $core.String? address,
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (address != null) {
@@ -1401,7 +1401,7 @@ class QueryGroupsByMemberRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupsByMemberRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1438,22 +1438,22 @@ class QueryGroupsByMemberRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $6.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $6.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGroupsByMemberResponse is the Query/GroupsByMember response type.
 class QueryGroupsByMemberResponse extends $pb.GeneratedMessage {
   factory QueryGroupsByMemberResponse({
-    $core.Iterable<$72.GroupInfo>? groups,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.GroupInfo>? groups,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (groups != null) {
@@ -1469,8 +1469,8 @@ class QueryGroupsByMemberResponse extends $pb.GeneratedMessage {
   factory QueryGroupsByMemberResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupsByMemberResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.GroupInfo>(1, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $72.GroupInfo.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.GroupInfo>(1, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $5.GroupInfo.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1497,19 +1497,19 @@ class QueryGroupsByMemberResponse extends $pb.GeneratedMessage {
 
   /// groups are the groups info with the provided group member.
   @$pb.TagNumber(1)
-  $core.List<$72.GroupInfo> get groups => $_getList(0);
+  $core.List<$5.GroupInfo> get groups => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryTallyResultRequest is the Query/TallyResult request type.
@@ -1567,7 +1567,7 @@ class QueryTallyResultRequest extends $pb.GeneratedMessage {
 /// QueryTallyResultResponse is the Query/TallyResult response type.
 class QueryTallyResultResponse extends $pb.GeneratedMessage {
   factory QueryTallyResultResponse({
-    $72.TallyResult? tally,
+    $5.TallyResult? tally,
   }) {
     final $result = create();
     if (tally != null) {
@@ -1580,7 +1580,7 @@ class QueryTallyResultResponse extends $pb.GeneratedMessage {
   factory QueryTallyResultResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTallyResultResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$72.TallyResult>(1, _omitFieldNames ? '' : 'tally', subBuilder: $72.TallyResult.create)
+    ..aOM<$5.TallyResult>(1, _omitFieldNames ? '' : 'tally', subBuilder: $5.TallyResult.create)
     ..hasRequiredFields = false
   ;
 
@@ -1607,15 +1607,15 @@ class QueryTallyResultResponse extends $pb.GeneratedMessage {
 
   /// tally defines the requested tally.
   @$pb.TagNumber(1)
-  $72.TallyResult get tally => $_getN(0);
+  $5.TallyResult get tally => $_getN(0);
   @$pb.TagNumber(1)
-  set tally($72.TallyResult v) { setField(1, v); }
+  set tally($5.TallyResult v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTally() => $_has(0);
   @$pb.TagNumber(1)
   void clearTally() => clearField(1);
   @$pb.TagNumber(1)
-  $72.TallyResult ensureTally() => $_ensure(0);
+  $5.TallyResult ensureTally() => $_ensure(0);
 }
 
 ///  QueryGroupsRequest is the Query/Groups request type.
@@ -1623,7 +1623,7 @@ class QueryTallyResultResponse extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47.1
 class QueryGroupsRequest extends $pb.GeneratedMessage {
   factory QueryGroupsRequest({
-    $49.PageRequest? pagination,
+    $6.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -1636,7 +1636,7 @@ class QueryGroupsRequest extends $pb.GeneratedMessage {
   factory QueryGroupsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$6.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1663,15 +1663,15 @@ class QueryGroupsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(0);
+  $6.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($6.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(0);
+  $6.PageRequest ensurePagination() => $_ensure(0);
 }
 
 ///  QueryGroupsResponse is the Query/Groups response type.
@@ -1679,8 +1679,8 @@ class QueryGroupsRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47.1
 class QueryGroupsResponse extends $pb.GeneratedMessage {
   factory QueryGroupsResponse({
-    $core.Iterable<$72.GroupInfo>? groups,
-    $49.PageResponse? pagination,
+    $core.Iterable<$5.GroupInfo>? groups,
+    $6.PageResponse? pagination,
   }) {
     final $result = create();
     if (groups != null) {
@@ -1696,8 +1696,8 @@ class QueryGroupsResponse extends $pb.GeneratedMessage {
   factory QueryGroupsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGroupsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..pc<$72.GroupInfo>(1, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $72.GroupInfo.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$5.GroupInfo>(1, _omitFieldNames ? '' : 'groups', $pb.PbFieldType.PM, subBuilder: $5.GroupInfo.create)
+    ..aOM<$6.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $6.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1724,19 +1724,19 @@ class QueryGroupsResponse extends $pb.GeneratedMessage {
 
   /// `groups` is all the groups present in state.
   @$pb.TagNumber(1)
-  $core.List<$72.GroupInfo> get groups => $_getList(0);
+  $core.List<$5.GroupInfo> get groups => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $6.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($6.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $6.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

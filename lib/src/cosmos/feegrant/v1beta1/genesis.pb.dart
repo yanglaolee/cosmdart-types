@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'feegrant.pb.dart' as $69;
+import 'feegrant.pb.dart' as $6;
 
 /// GenesisState contains a set of fee allowances, persisted from the store
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$69.Grant>? allowances,
+    $core.Iterable<$6.Grant>? allowances,
   }) {
     final $result = create();
     if (allowances != null) {
@@ -31,7 +31,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
-    ..pc<$69.Grant>(1, _omitFieldNames ? '' : 'allowances', $pb.PbFieldType.PM, subBuilder: $69.Grant.create)
+    ..pc<$6.Grant>(1, _omitFieldNames ? '' : 'allowances', $pb.PbFieldType.PM, subBuilder: $6.Grant.create)
     ..hasRequiredFields = false
   ;
 
@@ -57,7 +57,7 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$69.Grant> get allowances => $_getList(0);
+  $core.List<$6.Grant> get allowances => $_getList(0);
 }
 
 

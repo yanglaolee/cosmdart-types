@@ -44,6 +44,15 @@ const MsgIBCSendResponse$json = {
 final $typed_data.Uint8List msgIBCSendResponseDescriptor = $convert.base64Decode(
     'ChJNc2dJQkNTZW5kUmVzcG9uc2USGgoIc2VxdWVuY2UYASABKARSCHNlcXVlbmNl');
 
+@$core.Deprecated('Use msgIBCWriteAcknowledgementResponseDescriptor instead')
+const MsgIBCWriteAcknowledgementResponse$json = {
+  '1': 'MsgIBCWriteAcknowledgementResponse',
+};
+
+/// Descriptor for `MsgIBCWriteAcknowledgementResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgIBCWriteAcknowledgementResponseDescriptor = $convert.base64Decode(
+    'CiJNc2dJQkNXcml0ZUFja25vd2xlZGdlbWVudFJlc3BvbnNl');
+
 @$core.Deprecated('Use msgIBCCloseChannelDescriptor instead')
 const MsgIBCCloseChannel$json = {
   '1': 'MsgIBCCloseChannel',

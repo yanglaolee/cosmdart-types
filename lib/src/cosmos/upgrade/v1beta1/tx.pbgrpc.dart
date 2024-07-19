@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $44;
+import 'tx.pb.dart' as $1;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.upgrade.v1beta1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$softwareUpgrade = $grpc.ClientMethod<$44.MsgSoftwareUpgrade, $44.MsgSoftwareUpgradeResponse>(
+  static final _$softwareUpgrade = $grpc.ClientMethod<$1.MsgSoftwareUpgrade, $1.MsgSoftwareUpgradeResponse>(
       '/cosmos.upgrade.v1beta1.Msg/SoftwareUpgrade',
-      ($44.MsgSoftwareUpgrade value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $44.MsgSoftwareUpgradeResponse.fromBuffer(value));
-  static final _$cancelUpgrade = $grpc.ClientMethod<$44.MsgCancelUpgrade, $44.MsgCancelUpgradeResponse>(
+      ($1.MsgSoftwareUpgrade value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.MsgSoftwareUpgradeResponse.fromBuffer(value));
+  static final _$cancelUpgrade = $grpc.ClientMethod<$1.MsgCancelUpgrade, $1.MsgCancelUpgradeResponse>(
       '/cosmos.upgrade.v1beta1.Msg/CancelUpgrade',
-      ($44.MsgCancelUpgrade value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $44.MsgCancelUpgradeResponse.fromBuffer(value));
+      ($1.MsgCancelUpgrade value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.MsgCancelUpgradeResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$44.MsgSoftwareUpgradeResponse> softwareUpgrade($44.MsgSoftwareUpgrade request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.MsgSoftwareUpgradeResponse> softwareUpgrade($1.MsgSoftwareUpgrade request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$softwareUpgrade, request, options: options);
   }
 
-  $grpc.ResponseFuture<$44.MsgCancelUpgradeResponse> cancelUpgrade($44.MsgCancelUpgrade request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.MsgCancelUpgradeResponse> cancelUpgrade($1.MsgCancelUpgrade request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$cancelUpgrade, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.upgrade.v1beta1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$44.MsgSoftwareUpgrade, $44.MsgSoftwareUpgradeResponse>(
+    $addMethod($grpc.ServiceMethod<$1.MsgSoftwareUpgrade, $1.MsgSoftwareUpgradeResponse>(
         'SoftwareUpgrade',
         softwareUpgrade_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $44.MsgSoftwareUpgrade.fromBuffer(value),
-        ($44.MsgSoftwareUpgradeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$44.MsgCancelUpgrade, $44.MsgCancelUpgradeResponse>(
+        ($core.List<$core.int> value) => $1.MsgSoftwareUpgrade.fromBuffer(value),
+        ($1.MsgSoftwareUpgradeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.MsgCancelUpgrade, $1.MsgCancelUpgradeResponse>(
         'CancelUpgrade',
         cancelUpgrade_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $44.MsgCancelUpgrade.fromBuffer(value),
-        ($44.MsgCancelUpgradeResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $1.MsgCancelUpgrade.fromBuffer(value),
+        ($1.MsgCancelUpgradeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$44.MsgSoftwareUpgradeResponse> softwareUpgrade_Pre($grpc.ServiceCall call, $async.Future<$44.MsgSoftwareUpgrade> request) async {
+  $async.Future<$1.MsgSoftwareUpgradeResponse> softwareUpgrade_Pre($grpc.ServiceCall call, $async.Future<$1.MsgSoftwareUpgrade> request) async {
     return softwareUpgrade(call, await request);
   }
 
-  $async.Future<$44.MsgCancelUpgradeResponse> cancelUpgrade_Pre($grpc.ServiceCall call, $async.Future<$44.MsgCancelUpgrade> request) async {
+  $async.Future<$1.MsgCancelUpgradeResponse> cancelUpgrade_Pre($grpc.ServiceCall call, $async.Future<$1.MsgCancelUpgrade> request) async {
     return cancelUpgrade(call, await request);
   }
 
-  $async.Future<$44.MsgSoftwareUpgradeResponse> softwareUpgrade($grpc.ServiceCall call, $44.MsgSoftwareUpgrade request);
-  $async.Future<$44.MsgCancelUpgradeResponse> cancelUpgrade($grpc.ServiceCall call, $44.MsgCancelUpgrade request);
+  $async.Future<$1.MsgSoftwareUpgradeResponse> softwareUpgrade($grpc.ServiceCall call, $1.MsgSoftwareUpgrade request);
+  $async.Future<$1.MsgCancelUpgradeResponse> cancelUpgrade($grpc.ServiceCall call, $1.MsgCancelUpgrade request);
 }

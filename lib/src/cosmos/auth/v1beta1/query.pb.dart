@@ -14,16 +14,16 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $46;
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import 'auth.pb.dart' as $48;
+import '../../../google/protobuf/any.pb.dart' as $2;
+import '../../base/query/v1beta1/pagination.pb.dart' as $4;
+import 'auth.pb.dart' as $3;
 
 ///  QueryAccountsRequest is the request type for the Query/Accounts RPC method.
 ///
 ///  Since: cosmos-sdk 0.43
 class QueryAccountsRequest extends $pb.GeneratedMessage {
   factory QueryAccountsRequest({
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -36,7 +36,7 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
   factory QueryAccountsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -63,15 +63,15 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $49.PageRequest get pagination => $_getN(0);
+  $4.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($49.PageRequest v) { setField(1, v); }
+  set pagination($4.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $49.PageRequest ensurePagination() => $_ensure(0);
+  $4.PageRequest ensurePagination() => $_ensure(0);
 }
 
 ///  QueryAccountsResponse is the response type for the Query/Accounts RPC method.
@@ -79,8 +79,8 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.43
 class QueryAccountsResponse extends $pb.GeneratedMessage {
   factory QueryAccountsResponse({
-    $core.Iterable<$46.Any>? accounts,
-    $49.PageResponse? pagination,
+    $core.Iterable<$2.Any>? accounts,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (accounts != null) {
@@ -96,8 +96,8 @@ class QueryAccountsResponse extends $pb.GeneratedMessage {
   factory QueryAccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..pc<$46.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$2.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $2.Any.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -124,19 +124,19 @@ class QueryAccountsResponse extends $pb.GeneratedMessage {
 
   /// accounts are the existing accounts
   @$pb.TagNumber(1)
-  $core.List<$46.Any> get accounts => $_getList(0);
+  $core.List<$2.Any> get accounts => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryAccountRequest is the request type for the Query/Account RPC method.
@@ -194,7 +194,7 @@ class QueryAccountRequest extends $pb.GeneratedMessage {
 /// QueryAccountResponse is the response type for the Query/Account RPC method.
 class QueryAccountResponse extends $pb.GeneratedMessage {
   factory QueryAccountResponse({
-    $46.Any? account,
+    $2.Any? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -207,7 +207,7 @@ class QueryAccountResponse extends $pb.GeneratedMessage {
   factory QueryAccountResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $46.Any.create)
+    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -234,15 +234,15 @@ class QueryAccountResponse extends $pb.GeneratedMessage {
 
   /// account defines the account of the corresponding address.
   @$pb.TagNumber(1)
-  $46.Any get account => $_getN(0);
+  $2.Any get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($46.Any v) { setField(1, v); }
+  set account($2.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $46.Any ensureAccount() => $_ensure(0);
+  $2.Any ensureAccount() => $_ensure(0);
 }
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -281,7 +281,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $48.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -294,7 +294,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$48.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $48.Params.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -321,15 +321,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $48.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($48.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $48.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 }
 
 ///  QueryModuleAccountsRequest is the request type for the Query/ModuleAccounts RPC method.
@@ -372,7 +372,7 @@ class QueryModuleAccountsRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.46
 class QueryModuleAccountsResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountsResponse({
-    $core.Iterable<$46.Any>? accounts,
+    $core.Iterable<$2.Any>? accounts,
   }) {
     final $result = create();
     if (accounts != null) {
@@ -385,7 +385,7 @@ class QueryModuleAccountsResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryModuleAccountsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..pc<$46.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
+    ..pc<$2.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -411,7 +411,7 @@ class QueryModuleAccountsResponse extends $pb.GeneratedMessage {
   static QueryModuleAccountsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$46.Any> get accounts => $_getList(0);
+  $core.List<$2.Any> get accounts => $_getList(0);
 }
 
 /// QueryModuleAccountByNameRequest is the request type for the Query/ModuleAccountByName RPC method.
@@ -468,7 +468,7 @@ class QueryModuleAccountByNameRequest extends $pb.GeneratedMessage {
 /// QueryModuleAccountByNameResponse is the response type for the Query/ModuleAccountByName RPC method.
 class QueryModuleAccountByNameResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountByNameResponse({
-    $46.Any? account,
+    $2.Any? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -481,7 +481,7 @@ class QueryModuleAccountByNameResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountByNameResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryModuleAccountByNameResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $46.Any.create)
+    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -507,15 +507,15 @@ class QueryModuleAccountByNameResponse extends $pb.GeneratedMessage {
   static QueryModuleAccountByNameResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $46.Any get account => $_getN(0);
+  $2.Any get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($46.Any v) { setField(1, v); }
+  set account($2.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $46.Any ensureAccount() => $_ensure(0);
+  $2.Any ensureAccount() => $_ensure(0);
 }
 
 ///  Bech32PrefixRequest is the request type for Bech32Prefix rpc method.
@@ -1011,7 +1011,7 @@ class QueryAccountInfoRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47
 class QueryAccountInfoResponse extends $pb.GeneratedMessage {
   factory QueryAccountInfoResponse({
-    $48.BaseAccount? info,
+    $3.BaseAccount? info,
   }) {
     final $result = create();
     if (info != null) {
@@ -1024,7 +1024,7 @@ class QueryAccountInfoResponse extends $pb.GeneratedMessage {
   factory QueryAccountInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$48.BaseAccount>(1, _omitFieldNames ? '' : 'info', subBuilder: $48.BaseAccount.create)
+    ..aOM<$3.BaseAccount>(1, _omitFieldNames ? '' : 'info', subBuilder: $3.BaseAccount.create)
     ..hasRequiredFields = false
   ;
 
@@ -1051,15 +1051,15 @@ class QueryAccountInfoResponse extends $pb.GeneratedMessage {
 
   /// info is the account info which is represented by BaseAccount.
   @$pb.TagNumber(1)
-  $48.BaseAccount get info => $_getN(0);
+  $3.BaseAccount get info => $_getN(0);
   @$pb.TagNumber(1)
-  set info($48.BaseAccount v) { setField(1, v); }
+  set info($3.BaseAccount v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $48.BaseAccount ensureInfo() => $_ensure(0);
+  $3.BaseAccount ensureInfo() => $_ensure(0);
 }
 
 

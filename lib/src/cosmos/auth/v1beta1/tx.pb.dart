@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'auth.pb.dart' as $48;
+import 'auth.pb.dart' as $3;
 
 ///  MsgUpdateParams is the Msg/UpdateParams request type.
 ///
@@ -21,7 +21,7 @@ import 'auth.pb.dart' as $48;
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $48.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -38,7 +38,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$48.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $48.Params.create)
+    ..aOM<$3.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -77,15 +77,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $48.Params get params => $_getN(1);
+  $3.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($48.Params v) { setField(2, v); }
+  set params($3.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $48.Params ensureParams() => $_ensure(1);
+  $3.Params ensureParams() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a

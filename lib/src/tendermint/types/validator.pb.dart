@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../crypto/keys.pb.dart' as $56;
+import '../crypto/keys.pb.dart' as $0;
 
 export 'validator.pbenum.dart';
 
@@ -95,7 +95,7 @@ class ValidatorSet extends $pb.GeneratedMessage {
 class Validator extends $pb.GeneratedMessage {
   factory Validator({
     $core.List<$core.int>? address,
-    $56.PublicKey? pubKey,
+    $0.PublicKey? pubKey,
     $fixnum.Int64? votingPower,
     $fixnum.Int64? proposerPriority,
   }) {
@@ -120,7 +120,7 @@ class Validator extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Validator', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'address', $pb.PbFieldType.OY)
-    ..aOM<$56.PublicKey>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $56.PublicKey.create)
+    ..aOM<$0.PublicKey>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $0.PublicKey.create)
     ..aInt64(3, _omitFieldNames ? '' : 'votingPower')
     ..aInt64(4, _omitFieldNames ? '' : 'proposerPriority')
     ..hasRequiredFields = false
@@ -157,15 +157,15 @@ class Validator extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $56.PublicKey get pubKey => $_getN(1);
+  $0.PublicKey get pubKey => $_getN(1);
   @$pb.TagNumber(2)
-  set pubKey($56.PublicKey v) { setField(2, v); }
+  set pubKey($0.PublicKey v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPubKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearPubKey() => clearField(2);
   @$pb.TagNumber(2)
-  $56.PublicKey ensurePubKey() => $_ensure(1);
+  $0.PublicKey ensurePubKey() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get votingPower => $_getI64(2);
@@ -188,7 +188,7 @@ class Validator extends $pb.GeneratedMessage {
 
 class SimpleValidator extends $pb.GeneratedMessage {
   factory SimpleValidator({
-    $56.PublicKey? pubKey,
+    $0.PublicKey? pubKey,
     $fixnum.Int64? votingPower,
   }) {
     final $result = create();
@@ -205,7 +205,7 @@ class SimpleValidator extends $pb.GeneratedMessage {
   factory SimpleValidator.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SimpleValidator', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$56.PublicKey>(1, _omitFieldNames ? '' : 'pubKey', subBuilder: $56.PublicKey.create)
+    ..aOM<$0.PublicKey>(1, _omitFieldNames ? '' : 'pubKey', subBuilder: $0.PublicKey.create)
     ..aInt64(2, _omitFieldNames ? '' : 'votingPower')
     ..hasRequiredFields = false
   ;
@@ -232,15 +232,15 @@ class SimpleValidator extends $pb.GeneratedMessage {
   static SimpleValidator? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $56.PublicKey get pubKey => $_getN(0);
+  $0.PublicKey get pubKey => $_getN(0);
   @$pb.TagNumber(1)
-  set pubKey($56.PublicKey v) { setField(1, v); }
+  set pubKey($0.PublicKey v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPubKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearPubKey() => clearField(1);
   @$pb.TagNumber(1)
-  $56.PublicKey ensurePubKey() => $_ensure(0);
+  $0.PublicKey ensurePubKey() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get votingPower => $_getI64(1);

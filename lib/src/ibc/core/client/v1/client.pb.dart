@@ -14,15 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/upgrade/v1beta1/upgrade.pb.dart' as $18;
-import '../../../../google/protobuf/any.pb.dart' as $17;
+import '../../../../cosmos/upgrade/v1beta1/upgrade.pb.dart' as $3;
+import '../../../../google/protobuf/any.pb.dart' as $2;
 
 /// IdentifiedClientState defines a client state with an additional client
 /// identifier field.
 class IdentifiedClientState extends $pb.GeneratedMessage {
   factory IdentifiedClientState({
     $core.String? clientId,
-    $17.Any? clientState,
+    $2.Any? clientState,
   }) {
     final $result = create();
     if (clientId != null) {
@@ -39,7 +39,7 @@ class IdentifiedClientState extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IdentifiedClientState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
+    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'clientState', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -76,15 +76,15 @@ class IdentifiedClientState extends $pb.GeneratedMessage {
 
   /// client state
   @$pb.TagNumber(2)
-  $17.Any get clientState => $_getN(1);
+  $2.Any get clientState => $_getN(1);
   @$pb.TagNumber(2)
-  set clientState($17.Any v) { setField(2, v); }
+  set clientState($2.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasClientState() => $_has(1);
   @$pb.TagNumber(2)
   void clearClientState() => clearField(2);
   @$pb.TagNumber(2)
-  $17.Any ensureClientState() => $_ensure(1);
+  $2.Any ensureClientState() => $_ensure(1);
 }
 
 /// ConsensusStateWithHeight defines a consensus state with an additional height
@@ -92,7 +92,7 @@ class IdentifiedClientState extends $pb.GeneratedMessage {
 class ConsensusStateWithHeight extends $pb.GeneratedMessage {
   factory ConsensusStateWithHeight({
     Height? height,
-    $17.Any? consensusState,
+    $2.Any? consensusState,
   }) {
     final $result = create();
     if (height != null) {
@@ -109,7 +109,7 @@ class ConsensusStateWithHeight extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusStateWithHeight', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOM<Height>(1, _omitFieldNames ? '' : 'height', subBuilder: Height.create)
-    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
+    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'consensusState', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -148,15 +148,15 @@ class ConsensusStateWithHeight extends $pb.GeneratedMessage {
 
   /// consensus state
   @$pb.TagNumber(2)
-  $17.Any get consensusState => $_getN(1);
+  $2.Any get consensusState => $_getN(1);
   @$pb.TagNumber(2)
-  set consensusState($17.Any v) { setField(2, v); }
+  set consensusState($2.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConsensusState() => $_has(1);
   @$pb.TagNumber(2)
   void clearConsensusState() => clearField(2);
   @$pb.TagNumber(2)
-  $17.Any ensureConsensusState() => $_ensure(1);
+  $2.Any ensureConsensusState() => $_ensure(1);
 }
 
 /// ClientConsensusStates defines all the stored consensus states for a given
@@ -456,8 +456,8 @@ class UpgradeProposal extends $pb.GeneratedMessage {
   factory UpgradeProposal({
     $core.String? title,
     $core.String? description,
-    $18.Plan? plan,
-    $17.Any? upgradedClientState,
+    $3.Plan? plan,
+    $2.Any? upgradedClientState,
   }) {
     final $result = create();
     if (title != null) {
@@ -481,8 +481,8 @@ class UpgradeProposal extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpgradeProposal', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'title')
     ..aOS(2, _omitFieldNames ? '' : 'description')
-    ..aOM<$18.Plan>(3, _omitFieldNames ? '' : 'plan', subBuilder: $18.Plan.create)
-    ..aOM<$17.Any>(4, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $17.Any.create)
+    ..aOM<$3.Plan>(3, _omitFieldNames ? '' : 'plan', subBuilder: $3.Plan.create)
+    ..aOM<$2.Any>(4, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -526,15 +526,15 @@ class UpgradeProposal extends $pb.GeneratedMessage {
   void clearDescription() => clearField(2);
 
   @$pb.TagNumber(3)
-  $18.Plan get plan => $_getN(2);
+  $3.Plan get plan => $_getN(2);
   @$pb.TagNumber(3)
-  set plan($18.Plan v) { setField(3, v); }
+  set plan($3.Plan v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPlan() => $_has(2);
   @$pb.TagNumber(3)
   void clearPlan() => clearField(3);
   @$pb.TagNumber(3)
-  $18.Plan ensurePlan() => $_ensure(2);
+  $3.Plan ensurePlan() => $_ensure(2);
 
   /// An UpgradedClientState must be provided to perform an IBC breaking upgrade.
   /// This will make the chain commit to the correct upgraded (self) client state
@@ -543,15 +543,15 @@ class UpgradeProposal extends $pb.GeneratedMessage {
   /// of the chain. This will allow IBC connections to persist smoothly across
   /// planned chain upgrades
   @$pb.TagNumber(4)
-  $17.Any get upgradedClientState => $_getN(3);
+  $2.Any get upgradedClientState => $_getN(3);
   @$pb.TagNumber(4)
-  set upgradedClientState($17.Any v) { setField(4, v); }
+  set upgradedClientState($2.Any v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasUpgradedClientState() => $_has(3);
   @$pb.TagNumber(4)
   void clearUpgradedClientState() => clearField(4);
   @$pb.TagNumber(4)
-  $17.Any ensureUpgradedClientState() => $_ensure(3);
+  $2.Any ensureUpgradedClientState() => $_ensure(3);
 }
 
 

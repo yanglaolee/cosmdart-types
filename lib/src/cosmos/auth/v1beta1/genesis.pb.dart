@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $46;
-import 'auth.pb.dart' as $48;
+import '../../../google/protobuf/any.pb.dart' as $2;
+import 'auth.pb.dart' as $3;
 
 /// GenesisState defines the auth module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $48.Params? params,
-    $core.Iterable<$46.Any>? accounts,
+    $3.Params? params,
+    $core.Iterable<$2.Any>? accounts,
   }) {
     final $result = create();
     if (params != null) {
@@ -36,8 +36,8 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$48.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $48.Params.create)
-    ..pc<$46.Any>(2, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
+    ..pc<$2.Any>(2, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -64,19 +64,19 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// params defines all the parameters of the module.
   @$pb.TagNumber(1)
-  $48.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($48.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $48.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 
   /// accounts are the accounts present at genesis.
   @$pb.TagNumber(2)
-  $core.List<$46.Any> get accounts => $_getList(1);
+  $core.List<$2.Any> get accounts => $_getList(1);
 }
 
 

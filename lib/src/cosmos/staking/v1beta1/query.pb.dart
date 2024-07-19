@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import 'staking.pb.dart' as $78;
+import '../../base/query/v1beta1/pagination.pb.dart' as $9;
+import 'staking.pb.dart' as $8;
 
 /// QueryValidatorsRequest is request type for Query/Validators RPC method.
 class QueryValidatorsRequest extends $pb.GeneratedMessage {
   factory QueryValidatorsRequest({
     $core.String? status,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (status != null) {
@@ -38,7 +38,7 @@ class QueryValidatorsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'status')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -75,22 +75,22 @@ class QueryValidatorsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $9.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($9.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $9.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryValidatorsResponse is response type for the Query/Validators RPC method
 class QueryValidatorsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorsResponse({
-    $core.Iterable<$78.Validator>? validators,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.Validator>? validators,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (validators != null) {
@@ -106,8 +106,8 @@ class QueryValidatorsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.Validator>(1, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: $78.Validator.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.Validator>(1, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: $8.Validator.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -134,19 +134,19 @@ class QueryValidatorsResponse extends $pb.GeneratedMessage {
 
   /// validators contains all the queried validators.
   @$pb.TagNumber(1)
-  $core.List<$78.Validator> get validators => $_getList(0);
+  $core.List<$8.Validator> get validators => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryValidatorRequest is response type for the Query/Validator RPC method
@@ -204,7 +204,7 @@ class QueryValidatorRequest extends $pb.GeneratedMessage {
 /// QueryValidatorResponse is response type for the Query/Validator RPC method
 class QueryValidatorResponse extends $pb.GeneratedMessage {
   factory QueryValidatorResponse({
-    $78.Validator? validator,
+    $8.Validator? validator,
   }) {
     final $result = create();
     if (validator != null) {
@@ -217,7 +217,7 @@ class QueryValidatorResponse extends $pb.GeneratedMessage {
   factory QueryValidatorResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Validator>(1, _omitFieldNames ? '' : 'validator', subBuilder: $78.Validator.create)
+    ..aOM<$8.Validator>(1, _omitFieldNames ? '' : 'validator', subBuilder: $8.Validator.create)
     ..hasRequiredFields = false
   ;
 
@@ -244,15 +244,15 @@ class QueryValidatorResponse extends $pb.GeneratedMessage {
 
   /// validator defines the validator info.
   @$pb.TagNumber(1)
-  $78.Validator get validator => $_getN(0);
+  $8.Validator get validator => $_getN(0);
   @$pb.TagNumber(1)
-  set validator($78.Validator v) { setField(1, v); }
+  set validator($8.Validator v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasValidator() => $_has(0);
   @$pb.TagNumber(1)
   void clearValidator() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Validator ensureValidator() => $_ensure(0);
+  $8.Validator ensureValidator() => $_ensure(0);
 }
 
 /// QueryValidatorDelegationsRequest is request type for the
@@ -260,7 +260,7 @@ class QueryValidatorResponse extends $pb.GeneratedMessage {
 class QueryValidatorDelegationsRequest extends $pb.GeneratedMessage {
   factory QueryValidatorDelegationsRequest({
     $core.String? validatorAddr,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (validatorAddr != null) {
@@ -277,7 +277,7 @@ class QueryValidatorDelegationsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorDelegationsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddr')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -314,23 +314,23 @@ class QueryValidatorDelegationsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $9.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($9.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $9.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryValidatorDelegationsResponse is response type for the
 /// Query/ValidatorDelegations RPC method
 class QueryValidatorDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorDelegationsResponse({
-    $core.Iterable<$78.DelegationResponse>? delegationResponses,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.DelegationResponse>? delegationResponses,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (delegationResponses != null) {
@@ -346,8 +346,8 @@ class QueryValidatorDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorDelegationsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorDelegationsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.DelegationResponse>(1, _omitFieldNames ? '' : 'delegationResponses', $pb.PbFieldType.PM, subBuilder: $78.DelegationResponse.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.DelegationResponse>(1, _omitFieldNames ? '' : 'delegationResponses', $pb.PbFieldType.PM, subBuilder: $8.DelegationResponse.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -373,19 +373,19 @@ class QueryValidatorDelegationsResponse extends $pb.GeneratedMessage {
   static QueryValidatorDelegationsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$78.DelegationResponse> get delegationResponses => $_getList(0);
+  $core.List<$8.DelegationResponse> get delegationResponses => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryValidatorUnbondingDelegationsRequest is required type for the
@@ -393,7 +393,7 @@ class QueryValidatorDelegationsResponse extends $pb.GeneratedMessage {
 class QueryValidatorUnbondingDelegationsRequest extends $pb.GeneratedMessage {
   factory QueryValidatorUnbondingDelegationsRequest({
     $core.String? validatorAddr,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (validatorAddr != null) {
@@ -410,7 +410,7 @@ class QueryValidatorUnbondingDelegationsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorUnbondingDelegationsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddr')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -447,23 +447,23 @@ class QueryValidatorUnbondingDelegationsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $9.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($9.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $9.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryValidatorUnbondingDelegationsResponse is response type for the
 /// Query/ValidatorUnbondingDelegations RPC method.
 class QueryValidatorUnbondingDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorUnbondingDelegationsResponse({
-    $core.Iterable<$78.UnbondingDelegation>? unbondingResponses,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.UnbondingDelegation>? unbondingResponses,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (unbondingResponses != null) {
@@ -479,8 +479,8 @@ class QueryValidatorUnbondingDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryValidatorUnbondingDelegationsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryValidatorUnbondingDelegationsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.UnbondingDelegation>(1, _omitFieldNames ? '' : 'unbondingResponses', $pb.PbFieldType.PM, subBuilder: $78.UnbondingDelegation.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.UnbondingDelegation>(1, _omitFieldNames ? '' : 'unbondingResponses', $pb.PbFieldType.PM, subBuilder: $8.UnbondingDelegation.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -506,19 +506,19 @@ class QueryValidatorUnbondingDelegationsResponse extends $pb.GeneratedMessage {
   static QueryValidatorUnbondingDelegationsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$78.UnbondingDelegation> get unbondingResponses => $_getList(0);
+  $core.List<$8.UnbondingDelegation> get unbondingResponses => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegationRequest is request type for the Query/Delegation RPC method.
@@ -591,7 +591,7 @@ class QueryDelegationRequest extends $pb.GeneratedMessage {
 /// QueryDelegationResponse is response type for the Query/Delegation RPC method.
 class QueryDelegationResponse extends $pb.GeneratedMessage {
   factory QueryDelegationResponse({
-    $78.DelegationResponse? delegationResponse,
+    $8.DelegationResponse? delegationResponse,
   }) {
     final $result = create();
     if (delegationResponse != null) {
@@ -604,7 +604,7 @@ class QueryDelegationResponse extends $pb.GeneratedMessage {
   factory QueryDelegationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.DelegationResponse>(1, _omitFieldNames ? '' : 'delegationResponse', subBuilder: $78.DelegationResponse.create)
+    ..aOM<$8.DelegationResponse>(1, _omitFieldNames ? '' : 'delegationResponse', subBuilder: $8.DelegationResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -631,15 +631,15 @@ class QueryDelegationResponse extends $pb.GeneratedMessage {
 
   /// delegation_responses defines the delegation info of a delegation.
   @$pb.TagNumber(1)
-  $78.DelegationResponse get delegationResponse => $_getN(0);
+  $8.DelegationResponse get delegationResponse => $_getN(0);
   @$pb.TagNumber(1)
-  set delegationResponse($78.DelegationResponse v) { setField(1, v); }
+  set delegationResponse($8.DelegationResponse v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDelegationResponse() => $_has(0);
   @$pb.TagNumber(1)
   void clearDelegationResponse() => clearField(1);
   @$pb.TagNumber(1)
-  $78.DelegationResponse ensureDelegationResponse() => $_ensure(0);
+  $8.DelegationResponse ensureDelegationResponse() => $_ensure(0);
 }
 
 /// QueryUnbondingDelegationRequest is request type for the
@@ -714,7 +714,7 @@ class QueryUnbondingDelegationRequest extends $pb.GeneratedMessage {
 /// RPC method.
 class QueryUnbondingDelegationResponse extends $pb.GeneratedMessage {
   factory QueryUnbondingDelegationResponse({
-    $78.UnbondingDelegation? unbond,
+    $8.UnbondingDelegation? unbond,
   }) {
     final $result = create();
     if (unbond != null) {
@@ -727,7 +727,7 @@ class QueryUnbondingDelegationResponse extends $pb.GeneratedMessage {
   factory QueryUnbondingDelegationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUnbondingDelegationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.UnbondingDelegation>(1, _omitFieldNames ? '' : 'unbond', subBuilder: $78.UnbondingDelegation.create)
+    ..aOM<$8.UnbondingDelegation>(1, _omitFieldNames ? '' : 'unbond', subBuilder: $8.UnbondingDelegation.create)
     ..hasRequiredFields = false
   ;
 
@@ -754,15 +754,15 @@ class QueryUnbondingDelegationResponse extends $pb.GeneratedMessage {
 
   /// unbond defines the unbonding information of a delegation.
   @$pb.TagNumber(1)
-  $78.UnbondingDelegation get unbond => $_getN(0);
+  $8.UnbondingDelegation get unbond => $_getN(0);
   @$pb.TagNumber(1)
-  set unbond($78.UnbondingDelegation v) { setField(1, v); }
+  set unbond($8.UnbondingDelegation v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUnbond() => $_has(0);
   @$pb.TagNumber(1)
   void clearUnbond() => clearField(1);
   @$pb.TagNumber(1)
-  $78.UnbondingDelegation ensureUnbond() => $_ensure(0);
+  $8.UnbondingDelegation ensureUnbond() => $_ensure(0);
 }
 
 /// QueryDelegatorDelegationsRequest is request type for the
@@ -770,7 +770,7 @@ class QueryUnbondingDelegationResponse extends $pb.GeneratedMessage {
 class QueryDelegatorDelegationsRequest extends $pb.GeneratedMessage {
   factory QueryDelegatorDelegationsRequest({
     $core.String? delegatorAddr,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (delegatorAddr != null) {
@@ -787,7 +787,7 @@ class QueryDelegatorDelegationsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorDelegationsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddr')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -824,23 +824,23 @@ class QueryDelegatorDelegationsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $9.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($9.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $9.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegatorDelegationsResponse is response type for the
 /// Query/DelegatorDelegations RPC method.
 class QueryDelegatorDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorDelegationsResponse({
-    $core.Iterable<$78.DelegationResponse>? delegationResponses,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.DelegationResponse>? delegationResponses,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (delegationResponses != null) {
@@ -856,8 +856,8 @@ class QueryDelegatorDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorDelegationsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorDelegationsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.DelegationResponse>(1, _omitFieldNames ? '' : 'delegationResponses', $pb.PbFieldType.PM, subBuilder: $78.DelegationResponse.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.DelegationResponse>(1, _omitFieldNames ? '' : 'delegationResponses', $pb.PbFieldType.PM, subBuilder: $8.DelegationResponse.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -884,19 +884,19 @@ class QueryDelegatorDelegationsResponse extends $pb.GeneratedMessage {
 
   /// delegation_responses defines all the delegations' info of a delegator.
   @$pb.TagNumber(1)
-  $core.List<$78.DelegationResponse> get delegationResponses => $_getList(0);
+  $core.List<$8.DelegationResponse> get delegationResponses => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegatorUnbondingDelegationsRequest is request type for the
@@ -904,7 +904,7 @@ class QueryDelegatorDelegationsResponse extends $pb.GeneratedMessage {
 class QueryDelegatorUnbondingDelegationsRequest extends $pb.GeneratedMessage {
   factory QueryDelegatorUnbondingDelegationsRequest({
     $core.String? delegatorAddr,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (delegatorAddr != null) {
@@ -921,7 +921,7 @@ class QueryDelegatorUnbondingDelegationsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorUnbondingDelegationsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddr')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -958,23 +958,23 @@ class QueryDelegatorUnbondingDelegationsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $9.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($9.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $9.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryUnbondingDelegatorDelegationsResponse is response type for the
 /// Query/UnbondingDelegatorDelegations RPC method.
 class QueryDelegatorUnbondingDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorUnbondingDelegationsResponse({
-    $core.Iterable<$78.UnbondingDelegation>? unbondingResponses,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.UnbondingDelegation>? unbondingResponses,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (unbondingResponses != null) {
@@ -990,8 +990,8 @@ class QueryDelegatorUnbondingDelegationsResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorUnbondingDelegationsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorUnbondingDelegationsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.UnbondingDelegation>(1, _omitFieldNames ? '' : 'unbondingResponses', $pb.PbFieldType.PM, subBuilder: $78.UnbondingDelegation.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.UnbondingDelegation>(1, _omitFieldNames ? '' : 'unbondingResponses', $pb.PbFieldType.PM, subBuilder: $8.UnbondingDelegation.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1017,19 +1017,19 @@ class QueryDelegatorUnbondingDelegationsResponse extends $pb.GeneratedMessage {
   static QueryDelegatorUnbondingDelegationsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$78.UnbondingDelegation> get unbondingResponses => $_getList(0);
+  $core.List<$8.UnbondingDelegation> get unbondingResponses => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryRedelegationsRequest is request type for the Query/Redelegations RPC
@@ -1039,7 +1039,7 @@ class QueryRedelegationsRequest extends $pb.GeneratedMessage {
     $core.String? delegatorAddr,
     $core.String? srcValidatorAddr,
     $core.String? dstValidatorAddr,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (delegatorAddr != null) {
@@ -1064,7 +1064,7 @@ class QueryRedelegationsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddr')
     ..aOS(2, _omitFieldNames ? '' : 'srcValidatorAddr')
     ..aOS(3, _omitFieldNames ? '' : 'dstValidatorAddr')
-    ..aOM<$49.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1121,23 +1121,23 @@ class QueryRedelegationsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(4)
-  $49.PageRequest get pagination => $_getN(3);
+  $9.PageRequest get pagination => $_getN(3);
   @$pb.TagNumber(4)
-  set pagination($49.PageRequest v) { setField(4, v); }
+  set pagination($9.PageRequest v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasPagination() => $_has(3);
   @$pb.TagNumber(4)
   void clearPagination() => clearField(4);
   @$pb.TagNumber(4)
-  $49.PageRequest ensurePagination() => $_ensure(3);
+  $9.PageRequest ensurePagination() => $_ensure(3);
 }
 
 /// QueryRedelegationsResponse is response type for the Query/Redelegations RPC
 /// method.
 class QueryRedelegationsResponse extends $pb.GeneratedMessage {
   factory QueryRedelegationsResponse({
-    $core.Iterable<$78.RedelegationResponse>? redelegationResponses,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.RedelegationResponse>? redelegationResponses,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (redelegationResponses != null) {
@@ -1153,8 +1153,8 @@ class QueryRedelegationsResponse extends $pb.GeneratedMessage {
   factory QueryRedelegationsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryRedelegationsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.RedelegationResponse>(1, _omitFieldNames ? '' : 'redelegationResponses', $pb.PbFieldType.PM, subBuilder: $78.RedelegationResponse.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.RedelegationResponse>(1, _omitFieldNames ? '' : 'redelegationResponses', $pb.PbFieldType.PM, subBuilder: $8.RedelegationResponse.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1180,19 +1180,19 @@ class QueryRedelegationsResponse extends $pb.GeneratedMessage {
   static QueryRedelegationsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$78.RedelegationResponse> get redelegationResponses => $_getList(0);
+  $core.List<$8.RedelegationResponse> get redelegationResponses => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegatorValidatorsRequest is request type for the
@@ -1200,7 +1200,7 @@ class QueryRedelegationsResponse extends $pb.GeneratedMessage {
 class QueryDelegatorValidatorsRequest extends $pb.GeneratedMessage {
   factory QueryDelegatorValidatorsRequest({
     $core.String? delegatorAddr,
-    $49.PageRequest? pagination,
+    $9.PageRequest? pagination,
   }) {
     final $result = create();
     if (delegatorAddr != null) {
@@ -1217,7 +1217,7 @@ class QueryDelegatorValidatorsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorValidatorsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddr')
-    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$9.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1254,23 +1254,23 @@ class QueryDelegatorValidatorsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $49.PageRequest get pagination => $_getN(1);
+  $9.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageRequest v) { setField(2, v); }
+  set pagination($9.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageRequest ensurePagination() => $_ensure(1);
+  $9.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegatorValidatorsResponse is response type for the
 /// Query/DelegatorValidators RPC method.
 class QueryDelegatorValidatorsResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorValidatorsResponse({
-    $core.Iterable<$78.Validator>? validators,
-    $49.PageResponse? pagination,
+    $core.Iterable<$8.Validator>? validators,
+    $9.PageResponse? pagination,
   }) {
     final $result = create();
     if (validators != null) {
@@ -1286,8 +1286,8 @@ class QueryDelegatorValidatorsResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorValidatorsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorValidatorsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.Validator>(1, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: $78.Validator.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$8.Validator>(1, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: $8.Validator.create)
+    ..aOM<$9.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $9.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1314,19 +1314,19 @@ class QueryDelegatorValidatorsResponse extends $pb.GeneratedMessage {
 
   /// validators defines the validators' info of a delegator.
   @$pb.TagNumber(1)
-  $core.List<$78.Validator> get validators => $_getList(0);
+  $core.List<$8.Validator> get validators => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $9.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($9.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $9.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDelegatorValidatorRequest is request type for the
@@ -1401,7 +1401,7 @@ class QueryDelegatorValidatorRequest extends $pb.GeneratedMessage {
 /// Query/DelegatorValidator RPC method.
 class QueryDelegatorValidatorResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorValidatorResponse({
-    $78.Validator? validator,
+    $8.Validator? validator,
   }) {
     final $result = create();
     if (validator != null) {
@@ -1414,7 +1414,7 @@ class QueryDelegatorValidatorResponse extends $pb.GeneratedMessage {
   factory QueryDelegatorValidatorResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDelegatorValidatorResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Validator>(1, _omitFieldNames ? '' : 'validator', subBuilder: $78.Validator.create)
+    ..aOM<$8.Validator>(1, _omitFieldNames ? '' : 'validator', subBuilder: $8.Validator.create)
     ..hasRequiredFields = false
   ;
 
@@ -1441,15 +1441,15 @@ class QueryDelegatorValidatorResponse extends $pb.GeneratedMessage {
 
   /// validator defines the validator info.
   @$pb.TagNumber(1)
-  $78.Validator get validator => $_getN(0);
+  $8.Validator get validator => $_getN(0);
   @$pb.TagNumber(1)
-  set validator($78.Validator v) { setField(1, v); }
+  set validator($8.Validator v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasValidator() => $_has(0);
   @$pb.TagNumber(1)
   void clearValidator() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Validator ensureValidator() => $_ensure(0);
+  $8.Validator ensureValidator() => $_ensure(0);
 }
 
 /// QueryHistoricalInfoRequest is request type for the Query/HistoricalInfo RPC
@@ -1509,7 +1509,7 @@ class QueryHistoricalInfoRequest extends $pb.GeneratedMessage {
 /// method.
 class QueryHistoricalInfoResponse extends $pb.GeneratedMessage {
   factory QueryHistoricalInfoResponse({
-    $78.HistoricalInfo? hist,
+    $8.HistoricalInfo? hist,
   }) {
     final $result = create();
     if (hist != null) {
@@ -1522,7 +1522,7 @@ class QueryHistoricalInfoResponse extends $pb.GeneratedMessage {
   factory QueryHistoricalInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryHistoricalInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.HistoricalInfo>(1, _omitFieldNames ? '' : 'hist', subBuilder: $78.HistoricalInfo.create)
+    ..aOM<$8.HistoricalInfo>(1, _omitFieldNames ? '' : 'hist', subBuilder: $8.HistoricalInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -1549,15 +1549,15 @@ class QueryHistoricalInfoResponse extends $pb.GeneratedMessage {
 
   /// hist defines the historical info at the given height.
   @$pb.TagNumber(1)
-  $78.HistoricalInfo get hist => $_getN(0);
+  $8.HistoricalInfo get hist => $_getN(0);
   @$pb.TagNumber(1)
-  set hist($78.HistoricalInfo v) { setField(1, v); }
+  set hist($8.HistoricalInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasHist() => $_has(0);
   @$pb.TagNumber(1)
   void clearHist() => clearField(1);
   @$pb.TagNumber(1)
-  $78.HistoricalInfo ensureHist() => $_ensure(0);
+  $8.HistoricalInfo ensureHist() => $_ensure(0);
 }
 
 /// QueryPoolRequest is request type for the Query/Pool RPC method.
@@ -1596,7 +1596,7 @@ class QueryPoolRequest extends $pb.GeneratedMessage {
 /// QueryPoolResponse is response type for the Query/Pool RPC method.
 class QueryPoolResponse extends $pb.GeneratedMessage {
   factory QueryPoolResponse({
-    $78.Pool? pool,
+    $8.Pool? pool,
   }) {
     final $result = create();
     if (pool != null) {
@@ -1609,7 +1609,7 @@ class QueryPoolResponse extends $pb.GeneratedMessage {
   factory QueryPoolResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPoolResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Pool>(1, _omitFieldNames ? '' : 'pool', subBuilder: $78.Pool.create)
+    ..aOM<$8.Pool>(1, _omitFieldNames ? '' : 'pool', subBuilder: $8.Pool.create)
     ..hasRequiredFields = false
   ;
 
@@ -1636,15 +1636,15 @@ class QueryPoolResponse extends $pb.GeneratedMessage {
 
   /// pool defines the pool info.
   @$pb.TagNumber(1)
-  $78.Pool get pool => $_getN(0);
+  $8.Pool get pool => $_getN(0);
   @$pb.TagNumber(1)
-  set pool($78.Pool v) { setField(1, v); }
+  set pool($8.Pool v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPool() => $_has(0);
   @$pb.TagNumber(1)
   void clearPool() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Pool ensurePool() => $_ensure(0);
+  $8.Pool ensurePool() => $_ensure(0);
 }
 
 /// QueryParamsRequest is request type for the Query/Params RPC method.
@@ -1683,7 +1683,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $78.Params? params,
+    $8.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -1696,7 +1696,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $78.Params.create)
+    ..aOM<$8.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $8.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -1723,15 +1723,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params holds all the parameters of this module.
   @$pb.TagNumber(1)
-  $78.Params get params => $_getN(0);
+  $8.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($78.Params v) { setField(1, v); }
+  set params($8.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Params ensureParams() => $_ensure(0);
+  $8.Params ensureParams() => $_ensure(0);
 }
 
 

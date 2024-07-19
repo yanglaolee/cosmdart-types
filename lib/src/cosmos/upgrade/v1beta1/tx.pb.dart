@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'upgrade.pb.dart' as $84;
+import 'upgrade.pb.dart' as $4;
 
 ///  MsgSoftwareUpgrade is the Msg/SoftwareUpgrade request type.
 ///
@@ -21,7 +21,7 @@ import 'upgrade.pb.dart' as $84;
 class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
   factory MsgSoftwareUpgrade({
     $core.String? authority,
-    $84.Plan? plan,
+    $4.Plan? plan,
   }) {
     final $result = create();
     if (authority != null) {
@@ -38,7 +38,7 @@ class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSoftwareUpgrade', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.upgrade.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$84.Plan>(2, _omitFieldNames ? '' : 'plan', subBuilder: $84.Plan.create)
+    ..aOM<$4.Plan>(2, _omitFieldNames ? '' : 'plan', subBuilder: $4.Plan.create)
     ..hasRequiredFields = false
   ;
 
@@ -75,15 +75,15 @@ class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
 
   /// plan is the upgrade plan.
   @$pb.TagNumber(2)
-  $84.Plan get plan => $_getN(1);
+  $4.Plan get plan => $_getN(1);
   @$pb.TagNumber(2)
-  set plan($84.Plan v) { setField(2, v); }
+  set plan($4.Plan v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPlan() => $_has(1);
   @$pb.TagNumber(2)
   void clearPlan() => clearField(2);
   @$pb.TagNumber(2)
-  $84.Plan ensurePlan() => $_ensure(1);
+  $4.Plan ensurePlan() => $_ensure(1);
 }
 
 ///  MsgSoftwareUpgradeResponse is the Msg/SoftwareUpgrade response type.

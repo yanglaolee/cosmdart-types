@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'mint.pb.dart' as $73;
+import 'mint.pb.dart' as $2;
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
 class QueryParamsRequest extends $pb.GeneratedMessage {
@@ -51,7 +51,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $73.Params? params,
+    $2.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -64,7 +64,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.mint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$73.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $73.Params.create)
+    ..aOM<$2.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $2.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -91,15 +91,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $73.Params get params => $_getN(0);
+  $2.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($73.Params v) { setField(1, v); }
+  set params($2.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $73.Params ensureParams() => $_ensure(0);
+  $2.Params ensureParams() => $_ensure(0);
 }
 
 /// QueryInflationRequest is the request type for the Query/Inflation RPC method.

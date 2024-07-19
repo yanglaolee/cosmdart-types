@@ -14,15 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'client.pb.dart' as $19;
+import 'client.pb.dart' as $4;
 
 /// GenesisState defines the ibc client submodule's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$19.IdentifiedClientState>? clients,
-    $core.Iterable<$19.ClientConsensusStates>? clientsConsensus,
+    $core.Iterable<$4.IdentifiedClientState>? clients,
+    $core.Iterable<$4.ClientConsensusStates>? clientsConsensus,
     $core.Iterable<IdentifiedGenesisMetadata>? clientsMetadata,
-    $19.Params? params,
+    $4.Params? params,
   @$core.Deprecated('This field is deprecated.')
     $core.bool? createLocalhost,
     $fixnum.Int64? nextClientSequence,
@@ -54,10 +54,10 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..pc<$19.IdentifiedClientState>(1, _omitFieldNames ? '' : 'clients', $pb.PbFieldType.PM, subBuilder: $19.IdentifiedClientState.create)
-    ..pc<$19.ClientConsensusStates>(2, _omitFieldNames ? '' : 'clientsConsensus', $pb.PbFieldType.PM, subBuilder: $19.ClientConsensusStates.create)
+    ..pc<$4.IdentifiedClientState>(1, _omitFieldNames ? '' : 'clients', $pb.PbFieldType.PM, subBuilder: $4.IdentifiedClientState.create)
+    ..pc<$4.ClientConsensusStates>(2, _omitFieldNames ? '' : 'clientsConsensus', $pb.PbFieldType.PM, subBuilder: $4.ClientConsensusStates.create)
     ..pc<IdentifiedGenesisMetadata>(3, _omitFieldNames ? '' : 'clientsMetadata', $pb.PbFieldType.PM, subBuilder: IdentifiedGenesisMetadata.create)
-    ..aOM<$19.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $19.Params.create)
+    ..aOM<$4.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $4.Params.create)
     ..aOB(5, _omitFieldNames ? '' : 'createLocalhost')
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'nextClientSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -86,26 +86,26 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// client states with their corresponding identifiers
   @$pb.TagNumber(1)
-  $core.List<$19.IdentifiedClientState> get clients => $_getList(0);
+  $core.List<$4.IdentifiedClientState> get clients => $_getList(0);
 
   /// consensus states from each client
   @$pb.TagNumber(2)
-  $core.List<$19.ClientConsensusStates> get clientsConsensus => $_getList(1);
+  $core.List<$4.ClientConsensusStates> get clientsConsensus => $_getList(1);
 
   /// metadata from each client
   @$pb.TagNumber(3)
   $core.List<IdentifiedGenesisMetadata> get clientsMetadata => $_getList(2);
 
   @$pb.TagNumber(4)
-  $19.Params get params => $_getN(3);
+  $4.Params get params => $_getN(3);
   @$pb.TagNumber(4)
-  set params($19.Params v) { setField(4, v); }
+  set params($4.Params v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
   @$pb.TagNumber(4)
   void clearParams() => clearField(4);
   @$pb.TagNumber(4)
-  $19.Params ensureParams() => $_ensure(3);
+  $4.Params ensureParams() => $_ensure(3);
 
   /// Deprecated: create_localhost has been deprecated.
   /// The localhost client is automatically created at genesis.

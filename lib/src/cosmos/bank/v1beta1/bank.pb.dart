@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $53;
+import '../../base/v1beta1/coin.pb.dart' as $2;
 
 /// Params defines the parameters for the bank module.
 class Params extends $pb.GeneratedMessage {
@@ -152,7 +152,7 @@ class SendEnabled extends $pb.GeneratedMessage {
 class Input extends $pb.GeneratedMessage {
   factory Input({
     $core.String? address,
-    $core.Iterable<$53.Coin>? coins,
+    $core.Iterable<$2.Coin>? coins,
   }) {
     final $result = create();
     if (address != null) {
@@ -169,7 +169,7 @@ class Input extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Input', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..pc<$53.Coin>(2, _omitFieldNames ? '' : 'coins', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$2.Coin>(2, _omitFieldNames ? '' : 'coins', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -204,14 +204,14 @@ class Input extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$53.Coin> get coins => $_getList(1);
+  $core.List<$2.Coin> get coins => $_getList(1);
 }
 
 /// Output models transaction outputs.
 class Output extends $pb.GeneratedMessage {
   factory Output({
     $core.String? address,
-    $core.Iterable<$53.Coin>? coins,
+    $core.Iterable<$2.Coin>? coins,
   }) {
     final $result = create();
     if (address != null) {
@@ -228,7 +228,7 @@ class Output extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Output', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..pc<$53.Coin>(2, _omitFieldNames ? '' : 'coins', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$2.Coin>(2, _omitFieldNames ? '' : 'coins', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -263,7 +263,7 @@ class Output extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$53.Coin> get coins => $_getList(1);
+  $core.List<$2.Coin> get coins => $_getList(1);
 }
 
 /// Supply represents a struct that passively keeps track of the total supply
@@ -271,7 +271,7 @@ class Output extends $pb.GeneratedMessage {
 /// This message is deprecated now that supply is indexed by denom.
 class Supply extends $pb.GeneratedMessage {
   factory Supply({
-    $core.Iterable<$53.Coin>? total,
+    $core.Iterable<$2.Coin>? total,
   }) {
     final $result = create();
     if (total != null) {
@@ -284,7 +284,7 @@ class Supply extends $pb.GeneratedMessage {
   factory Supply.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Supply', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'total', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'total', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -310,7 +310,7 @@ class Supply extends $pb.GeneratedMessage {
   static Supply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$53.Coin> get total => $_getList(0);
+  $core.List<$2.Coin> get total => $_getList(0);
 }
 
 /// DenomUnit represents a struct that describes a given

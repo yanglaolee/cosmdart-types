@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'params.pb.dart' as $75;
+import 'params.pb.dart' as $1;
 
 /// QueryParamsRequest is request type for the Query/Params RPC method.
 class QueryParamsRequest extends $pb.GeneratedMessage {
@@ -85,7 +85,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $75.ParamChange? param,
+    $1.ParamChange? param,
   }) {
     final $result = create();
     if (param != null) {
@@ -98,7 +98,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.params.v1beta1'), createEmptyInstance: create)
-    ..aOM<$75.ParamChange>(1, _omitFieldNames ? '' : 'param', subBuilder: $75.ParamChange.create)
+    ..aOM<$1.ParamChange>(1, _omitFieldNames ? '' : 'param', subBuilder: $1.ParamChange.create)
     ..hasRequiredFields = false
   ;
 
@@ -125,15 +125,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// param defines the queried parameter.
   @$pb.TagNumber(1)
-  $75.ParamChange get param => $_getN(0);
+  $1.ParamChange get param => $_getN(0);
   @$pb.TagNumber(1)
-  set param($75.ParamChange v) { setField(1, v); }
+  set param($1.ParamChange v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParam() => $_has(0);
   @$pb.TagNumber(1)
   void clearParam() => clearField(1);
   @$pb.TagNumber(1)
-  $75.ParamChange ensureParam() => $_ensure(0);
+  $1.ParamChange ensureParam() => $_ensure(0);
 }
 
 ///  QuerySubspacesRequest defines a request type for querying for all registered

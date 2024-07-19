@@ -14,19 +14,19 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/timestamp.pb.dart' as $50;
-import '../../../../tendermint/types/evidence.pb.dart' as $62;
-import '../../../../tendermint/types/types.pb.dart' as $61;
-import '../../../../tendermint/version/types.pb.dart' as $60;
+import '../../../../google/protobuf/timestamp.pb.dart' as $4;
+import '../../../../tendermint/types/evidence.pb.dart' as $2;
+import '../../../../tendermint/types/types.pb.dart' as $1;
+import '../../../../tendermint/version/types.pb.dart' as $3;
 
 /// Block is tendermint type Block, with the Header proposer address
 /// field converted to bech32 string.
 class Block extends $pb.GeneratedMessage {
   factory Block({
     Header? header,
-    $61.Data? data,
-    $62.EvidenceList? evidence,
-    $61.Commit? lastCommit,
+    $1.Data? data,
+    $2.EvidenceList? evidence,
+    $1.Commit? lastCommit,
   }) {
     final $result = create();
     if (header != null) {
@@ -49,9 +49,9 @@ class Block extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Block', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
     ..aOM<Header>(1, _omitFieldNames ? '' : 'header', subBuilder: Header.create)
-    ..aOM<$61.Data>(2, _omitFieldNames ? '' : 'data', subBuilder: $61.Data.create)
-    ..aOM<$62.EvidenceList>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $62.EvidenceList.create)
-    ..aOM<$61.Commit>(4, _omitFieldNames ? '' : 'lastCommit', subBuilder: $61.Commit.create)
+    ..aOM<$1.Data>(2, _omitFieldNames ? '' : 'data', subBuilder: $1.Data.create)
+    ..aOM<$2.EvidenceList>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $2.EvidenceList.create)
+    ..aOM<$1.Commit>(4, _omitFieldNames ? '' : 'lastCommit', subBuilder: $1.Commit.create)
     ..hasRequiredFields = false
   ;
 
@@ -88,47 +88,47 @@ class Block extends $pb.GeneratedMessage {
   Header ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $61.Data get data => $_getN(1);
+  $1.Data get data => $_getN(1);
   @$pb.TagNumber(2)
-  set data($61.Data v) { setField(2, v); }
+  set data($1.Data v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasData() => $_has(1);
   @$pb.TagNumber(2)
   void clearData() => clearField(2);
   @$pb.TagNumber(2)
-  $61.Data ensureData() => $_ensure(1);
+  $1.Data ensureData() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $62.EvidenceList get evidence => $_getN(2);
+  $2.EvidenceList get evidence => $_getN(2);
   @$pb.TagNumber(3)
-  set evidence($62.EvidenceList v) { setField(3, v); }
+  set evidence($2.EvidenceList v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasEvidence() => $_has(2);
   @$pb.TagNumber(3)
   void clearEvidence() => clearField(3);
   @$pb.TagNumber(3)
-  $62.EvidenceList ensureEvidence() => $_ensure(2);
+  $2.EvidenceList ensureEvidence() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $61.Commit get lastCommit => $_getN(3);
+  $1.Commit get lastCommit => $_getN(3);
   @$pb.TagNumber(4)
-  set lastCommit($61.Commit v) { setField(4, v); }
+  set lastCommit($1.Commit v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasLastCommit() => $_has(3);
   @$pb.TagNumber(4)
   void clearLastCommit() => clearField(4);
   @$pb.TagNumber(4)
-  $61.Commit ensureLastCommit() => $_ensure(3);
+  $1.Commit ensureLastCommit() => $_ensure(3);
 }
 
 /// Header defines the structure of a Tendermint block header.
 class Header extends $pb.GeneratedMessage {
   factory Header({
-    $60.Consensus? version,
+    $3.Consensus? version,
     $core.String? chainId,
     $fixnum.Int64? height,
-    $50.Timestamp? time,
-    $61.BlockID? lastBlockId,
+    $4.Timestamp? time,
+    $1.BlockID? lastBlockId,
     $core.List<$core.int>? lastCommitHash,
     $core.List<$core.int>? dataHash,
     $core.List<$core.int>? validatorsHash,
@@ -189,11 +189,11 @@ class Header extends $pb.GeneratedMessage {
   factory Header.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Header', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$60.Consensus>(1, _omitFieldNames ? '' : 'version', subBuilder: $60.Consensus.create)
+    ..aOM<$3.Consensus>(1, _omitFieldNames ? '' : 'version', subBuilder: $3.Consensus.create)
     ..aOS(2, _omitFieldNames ? '' : 'chainId')
     ..aInt64(3, _omitFieldNames ? '' : 'height')
-    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
-    ..aOM<$61.BlockID>(5, _omitFieldNames ? '' : 'lastBlockId', subBuilder: $61.BlockID.create)
+    ..aOM<$4.Timestamp>(4, _omitFieldNames ? '' : 'time', subBuilder: $4.Timestamp.create)
+    ..aOM<$1.BlockID>(5, _omitFieldNames ? '' : 'lastBlockId', subBuilder: $1.BlockID.create)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'lastCommitHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'dataHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'validatorsHash', $pb.PbFieldType.OY)
@@ -229,15 +229,15 @@ class Header extends $pb.GeneratedMessage {
 
   /// basic block info
   @$pb.TagNumber(1)
-  $60.Consensus get version => $_getN(0);
+  $3.Consensus get version => $_getN(0);
   @$pb.TagNumber(1)
-  set version($60.Consensus v) { setField(1, v); }
+  set version($3.Consensus v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVersion() => $_has(0);
   @$pb.TagNumber(1)
   void clearVersion() => clearField(1);
   @$pb.TagNumber(1)
-  $60.Consensus ensureVersion() => $_ensure(0);
+  $3.Consensus ensureVersion() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get chainId => $_getSZ(1);
@@ -258,27 +258,27 @@ class Header extends $pb.GeneratedMessage {
   void clearHeight() => clearField(3);
 
   @$pb.TagNumber(4)
-  $50.Timestamp get time => $_getN(3);
+  $4.Timestamp get time => $_getN(3);
   @$pb.TagNumber(4)
-  set time($50.Timestamp v) { setField(4, v); }
+  set time($4.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearTime() => clearField(4);
   @$pb.TagNumber(4)
-  $50.Timestamp ensureTime() => $_ensure(3);
+  $4.Timestamp ensureTime() => $_ensure(3);
 
   /// prev block info
   @$pb.TagNumber(5)
-  $61.BlockID get lastBlockId => $_getN(4);
+  $1.BlockID get lastBlockId => $_getN(4);
   @$pb.TagNumber(5)
-  set lastBlockId($61.BlockID v) { setField(5, v); }
+  set lastBlockId($1.BlockID v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasLastBlockId() => $_has(4);
   @$pb.TagNumber(5)
   void clearLastBlockId() => clearField(5);
   @$pb.TagNumber(5)
-  $61.BlockID ensureLastBlockId() => $_ensure(4);
+  $1.BlockID ensureLastBlockId() => $_ensure(4);
 
   /// hashes of block data
   @$pb.TagNumber(6)

@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $23;
-import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $20;
-import 'transfer.pb.dart' as $29;
+import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $4;
+import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $2;
+import 'transfer.pb.dart' as $3;
 
 /// QueryDenomTraceRequest is the request type for the Query/DenomTrace RPC
 /// method
@@ -74,7 +74,7 @@ class QueryDenomTraceRequest extends $pb.GeneratedMessage {
 /// method.
 class QueryDenomTraceResponse extends $pb.GeneratedMessage {
   factory QueryDenomTraceResponse({
-    $29.DenomTrace? denomTrace,
+    $3.DenomTrace? denomTrace,
   }) {
     final $result = create();
     if (denomTrace != null) {
@@ -87,7 +87,7 @@ class QueryDenomTraceResponse extends $pb.GeneratedMessage {
   factory QueryDenomTraceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomTraceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
-    ..aOM<$29.DenomTrace>(1, _omitFieldNames ? '' : 'denomTrace', subBuilder: $29.DenomTrace.create)
+    ..aOM<$3.DenomTrace>(1, _omitFieldNames ? '' : 'denomTrace', subBuilder: $3.DenomTrace.create)
     ..hasRequiredFields = false
   ;
 
@@ -114,22 +114,22 @@ class QueryDenomTraceResponse extends $pb.GeneratedMessage {
 
   /// denom_trace returns the requested denomination trace information.
   @$pb.TagNumber(1)
-  $29.DenomTrace get denomTrace => $_getN(0);
+  $3.DenomTrace get denomTrace => $_getN(0);
   @$pb.TagNumber(1)
-  set denomTrace($29.DenomTrace v) { setField(1, v); }
+  set denomTrace($3.DenomTrace v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDenomTrace() => $_has(0);
   @$pb.TagNumber(1)
   void clearDenomTrace() => clearField(1);
   @$pb.TagNumber(1)
-  $29.DenomTrace ensureDenomTrace() => $_ensure(0);
+  $3.DenomTrace ensureDenomTrace() => $_ensure(0);
 }
 
 /// QueryConnectionsRequest is the request type for the Query/DenomTraces RPC
 /// method
 class QueryDenomTracesRequest extends $pb.GeneratedMessage {
   factory QueryDenomTracesRequest({
-    $23.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -142,7 +142,7 @@ class QueryDenomTracesRequest extends $pb.GeneratedMessage {
   factory QueryDenomTracesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomTracesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
-    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
+    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -169,23 +169,23 @@ class QueryDenomTracesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $23.PageRequest get pagination => $_getN(0);
+  $4.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($23.PageRequest v) { setField(1, v); }
+  set pagination($4.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $23.PageRequest ensurePagination() => $_ensure(0);
+  $4.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryConnectionsResponse is the response type for the Query/DenomTraces RPC
 /// method.
 class QueryDenomTracesResponse extends $pb.GeneratedMessage {
   factory QueryDenomTracesResponse({
-    $core.Iterable<$29.DenomTrace>? denomTraces,
-    $23.PageResponse? pagination,
+    $core.Iterable<$3.DenomTrace>? denomTraces,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (denomTraces != null) {
@@ -201,8 +201,8 @@ class QueryDenomTracesResponse extends $pb.GeneratedMessage {
   factory QueryDenomTracesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDenomTracesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
-    ..pc<$29.DenomTrace>(1, _omitFieldNames ? '' : 'denomTraces', $pb.PbFieldType.PM, subBuilder: $29.DenomTrace.create)
-    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..pc<$3.DenomTrace>(1, _omitFieldNames ? '' : 'denomTraces', $pb.PbFieldType.PM, subBuilder: $3.DenomTrace.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -229,19 +229,19 @@ class QueryDenomTracesResponse extends $pb.GeneratedMessage {
 
   /// denom_traces returns all denominations trace information.
   @$pb.TagNumber(1)
-  $core.List<$29.DenomTrace> get denomTraces => $_getList(0);
+  $core.List<$3.DenomTrace> get denomTraces => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $23.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($23.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $23.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -280,7 +280,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $29.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -293,7 +293,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
-    ..aOM<$29.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $29.Params.create)
+    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -320,15 +320,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $29.Params get params => $_getN(0);
+  $3.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($29.Params v) { setField(1, v); }
+  set params($3.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $29.Params ensureParams() => $_ensure(0);
+  $3.Params ensureParams() => $_ensure(0);
 }
 
 /// QueryDenomHashRequest is the request type for the Query/DenomHash RPC
@@ -610,7 +610,7 @@ class QueryTotalEscrowForDenomRequest extends $pb.GeneratedMessage {
 /// QueryTotalEscrowForDenomResponse is the response type for TotalEscrowForDenom RPC method.
 class QueryTotalEscrowForDenomResponse extends $pb.GeneratedMessage {
   factory QueryTotalEscrowForDenomResponse({
-    $20.Coin? amount,
+    $2.Coin? amount,
   }) {
     final $result = create();
     if (amount != null) {
@@ -623,7 +623,7 @@ class QueryTotalEscrowForDenomResponse extends $pb.GeneratedMessage {
   factory QueryTotalEscrowForDenomResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalEscrowForDenomResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
-    ..aOM<$20.Coin>(1, _omitFieldNames ? '' : 'amount', subBuilder: $20.Coin.create)
+    ..aOM<$2.Coin>(1, _omitFieldNames ? '' : 'amount', subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -649,15 +649,15 @@ class QueryTotalEscrowForDenomResponse extends $pb.GeneratedMessage {
   static QueryTotalEscrowForDenomResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $20.Coin get amount => $_getN(0);
+  $2.Coin get amount => $_getN(0);
   @$pb.TagNumber(1)
-  set amount($20.Coin v) { setField(1, v); }
+  set amount($2.Coin v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAmount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAmount() => clearField(1);
   @$pb.TagNumber(1)
-  $20.Coin ensureAmount() => $_ensure(0);
+  $2.Coin ensureAmount() => $_ensure(0);
 }
 
 

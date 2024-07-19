@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'upgrade.pb.dart' as $84;
+import 'upgrade.pb.dart' as $4;
 
 /// QueryCurrentPlanRequest is the request type for the Query/CurrentPlan RPC
 /// method.
@@ -54,7 +54,7 @@ class QueryCurrentPlanRequest extends $pb.GeneratedMessage {
 /// method.
 class QueryCurrentPlanResponse extends $pb.GeneratedMessage {
   factory QueryCurrentPlanResponse({
-    $84.Plan? plan,
+    $4.Plan? plan,
   }) {
     final $result = create();
     if (plan != null) {
@@ -67,7 +67,7 @@ class QueryCurrentPlanResponse extends $pb.GeneratedMessage {
   factory QueryCurrentPlanResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryCurrentPlanResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.upgrade.v1beta1'), createEmptyInstance: create)
-    ..aOM<$84.Plan>(1, _omitFieldNames ? '' : 'plan', subBuilder: $84.Plan.create)
+    ..aOM<$4.Plan>(1, _omitFieldNames ? '' : 'plan', subBuilder: $4.Plan.create)
     ..hasRequiredFields = false
   ;
 
@@ -94,15 +94,15 @@ class QueryCurrentPlanResponse extends $pb.GeneratedMessage {
 
   /// plan is the current upgrade plan.
   @$pb.TagNumber(1)
-  $84.Plan get plan => $_getN(0);
+  $4.Plan get plan => $_getN(0);
   @$pb.TagNumber(1)
-  set plan($84.Plan v) { setField(1, v); }
+  set plan($4.Plan v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPlan() => $_has(0);
   @$pb.TagNumber(1)
   void clearPlan() => clearField(1);
   @$pb.TagNumber(1)
-  $84.Plan ensurePlan() => $_ensure(0);
+  $4.Plan ensurePlan() => $_ensure(0);
 }
 
 /// QueryCurrentPlanRequest is the request type for the Query/AppliedPlan RPC
@@ -381,7 +381,7 @@ class QueryModuleVersionsRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.43
 class QueryModuleVersionsResponse extends $pb.GeneratedMessage {
   factory QueryModuleVersionsResponse({
-    $core.Iterable<$84.ModuleVersion>? moduleVersions,
+    $core.Iterable<$4.ModuleVersion>? moduleVersions,
   }) {
     final $result = create();
     if (moduleVersions != null) {
@@ -394,7 +394,7 @@ class QueryModuleVersionsResponse extends $pb.GeneratedMessage {
   factory QueryModuleVersionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryModuleVersionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.upgrade.v1beta1'), createEmptyInstance: create)
-    ..pc<$84.ModuleVersion>(1, _omitFieldNames ? '' : 'moduleVersions', $pb.PbFieldType.PM, subBuilder: $84.ModuleVersion.create)
+    ..pc<$4.ModuleVersion>(1, _omitFieldNames ? '' : 'moduleVersions', $pb.PbFieldType.PM, subBuilder: $4.ModuleVersion.create)
     ..hasRequiredFields = false
   ;
 
@@ -421,7 +421,7 @@ class QueryModuleVersionsResponse extends $pb.GeneratedMessage {
 
   /// module_versions is a list of module names with their consensus versions.
   @$pb.TagNumber(1)
-  $core.List<$84.ModuleVersion> get moduleVersions => $_getList(0);
+  $core.List<$4.ModuleVersion> get moduleVersions => $_getList(0);
 }
 
 ///  QueryAuthorityRequest is the request type for Query/Authority

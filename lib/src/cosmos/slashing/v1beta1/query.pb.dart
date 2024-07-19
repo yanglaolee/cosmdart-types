@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import 'slashing.pb.dart' as $77;
+import '../../base/query/v1beta1/pagination.pb.dart' as $5;
+import 'slashing.pb.dart' as $4;
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method
 class QueryParamsRequest extends $pb.GeneratedMessage {
@@ -52,7 +52,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $77.Params? params,
+    $4.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -65,7 +65,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
-    ..aOM<$77.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $77.Params.create)
+    ..aOM<$4.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $4.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -91,15 +91,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   static QueryParamsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $77.Params get params => $_getN(0);
+  $4.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($77.Params v) { setField(1, v); }
+  set params($4.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $77.Params ensureParams() => $_ensure(0);
+  $4.Params ensureParams() => $_ensure(0);
 }
 
 /// QuerySigningInfoRequest is the request type for the Query/SigningInfo RPC
@@ -159,7 +159,7 @@ class QuerySigningInfoRequest extends $pb.GeneratedMessage {
 /// method
 class QuerySigningInfoResponse extends $pb.GeneratedMessage {
   factory QuerySigningInfoResponse({
-    $77.ValidatorSigningInfo? valSigningInfo,
+    $4.ValidatorSigningInfo? valSigningInfo,
   }) {
     final $result = create();
     if (valSigningInfo != null) {
@@ -172,7 +172,7 @@ class QuerySigningInfoResponse extends $pb.GeneratedMessage {
   factory QuerySigningInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySigningInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
-    ..aOM<$77.ValidatorSigningInfo>(1, _omitFieldNames ? '' : 'valSigningInfo', subBuilder: $77.ValidatorSigningInfo.create)
+    ..aOM<$4.ValidatorSigningInfo>(1, _omitFieldNames ? '' : 'valSigningInfo', subBuilder: $4.ValidatorSigningInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -199,22 +199,22 @@ class QuerySigningInfoResponse extends $pb.GeneratedMessage {
 
   /// val_signing_info is the signing info of requested val cons address
   @$pb.TagNumber(1)
-  $77.ValidatorSigningInfo get valSigningInfo => $_getN(0);
+  $4.ValidatorSigningInfo get valSigningInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set valSigningInfo($77.ValidatorSigningInfo v) { setField(1, v); }
+  set valSigningInfo($4.ValidatorSigningInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasValSigningInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearValSigningInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $77.ValidatorSigningInfo ensureValSigningInfo() => $_ensure(0);
+  $4.ValidatorSigningInfo ensureValSigningInfo() => $_ensure(0);
 }
 
 /// QuerySigningInfosRequest is the request type for the Query/SigningInfos RPC
 /// method
 class QuerySigningInfosRequest extends $pb.GeneratedMessage {
   factory QuerySigningInfosRequest({
-    $49.PageRequest? pagination,
+    $5.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -227,7 +227,7 @@ class QuerySigningInfosRequest extends $pb.GeneratedMessage {
   factory QuerySigningInfosRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySigningInfosRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$5.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -253,23 +253,23 @@ class QuerySigningInfosRequest extends $pb.GeneratedMessage {
   static QuerySigningInfosRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $49.PageRequest get pagination => $_getN(0);
+  $5.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($49.PageRequest v) { setField(1, v); }
+  set pagination($5.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $49.PageRequest ensurePagination() => $_ensure(0);
+  $5.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QuerySigningInfosResponse is the response type for the Query/SigningInfos RPC
 /// method
 class QuerySigningInfosResponse extends $pb.GeneratedMessage {
   factory QuerySigningInfosResponse({
-    $core.Iterable<$77.ValidatorSigningInfo>? info,
-    $49.PageResponse? pagination,
+    $core.Iterable<$4.ValidatorSigningInfo>? info,
+    $5.PageResponse? pagination,
   }) {
     final $result = create();
     if (info != null) {
@@ -285,8 +285,8 @@ class QuerySigningInfosResponse extends $pb.GeneratedMessage {
   factory QuerySigningInfosResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySigningInfosResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
-    ..pc<$77.ValidatorSigningInfo>(1, _omitFieldNames ? '' : 'info', $pb.PbFieldType.PM, subBuilder: $77.ValidatorSigningInfo.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$4.ValidatorSigningInfo>(1, _omitFieldNames ? '' : 'info', $pb.PbFieldType.PM, subBuilder: $4.ValidatorSigningInfo.create)
+    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -313,18 +313,18 @@ class QuerySigningInfosResponse extends $pb.GeneratedMessage {
 
   /// info is the signing info of all validators
   @$pb.TagNumber(1)
-  $core.List<$77.ValidatorSigningInfo> get info => $_getList(0);
+  $core.List<$4.ValidatorSigningInfo> get info => $_getList(0);
 
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $5.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($5.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $5.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $49;
-import 'nft.pb.dart' as $74;
+import '../../base/query/v1beta1/pagination.pb.dart' as $4;
+import 'nft.pb.dart' as $3;
 
 /// QueryBalanceRequest is the request type for the Query/Balance RPC method
 class QueryBalanceRequest extends $pb.GeneratedMessage {
@@ -364,7 +364,7 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   factory QueryNFTsRequest({
     $core.String? classId,
     $core.String? owner,
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (classId != null) {
@@ -385,7 +385,7 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNFTsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'classId')
     ..aOS(2, _omitFieldNames ? '' : 'owner')
-    ..aOM<$49.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -432,22 +432,22 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(3)
-  $49.PageRequest get pagination => $_getN(2);
+  $4.PageRequest get pagination => $_getN(2);
   @$pb.TagNumber(3)
-  set pagination($49.PageRequest v) { setField(3, v); }
+  set pagination($4.PageRequest v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
   @$pb.TagNumber(3)
   void clearPagination() => clearField(3);
   @$pb.TagNumber(3)
-  $49.PageRequest ensurePagination() => $_ensure(2);
+  $4.PageRequest ensurePagination() => $_ensure(2);
 }
 
 /// QueryNFTsResponse is the response type for the Query/NFTs RPC methods
 class QueryNFTsResponse extends $pb.GeneratedMessage {
   factory QueryNFTsResponse({
-    $core.Iterable<$74.NFT>? nfts,
-    $49.PageResponse? pagination,
+    $core.Iterable<$3.NFT>? nfts,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (nfts != null) {
@@ -463,8 +463,8 @@ class QueryNFTsResponse extends $pb.GeneratedMessage {
   factory QueryNFTsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNFTsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..pc<$74.NFT>(1, _omitFieldNames ? '' : 'nfts', $pb.PbFieldType.PM, subBuilder: $74.NFT.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$3.NFT>(1, _omitFieldNames ? '' : 'nfts', $pb.PbFieldType.PM, subBuilder: $3.NFT.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -491,19 +491,19 @@ class QueryNFTsResponse extends $pb.GeneratedMessage {
 
   /// NFT defines the NFT
   @$pb.TagNumber(1)
-  $core.List<$74.NFT> get nfts => $_getList(0);
+  $core.List<$3.NFT> get nfts => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryNFTRequest is the request type for the Query/NFT RPC method
@@ -576,7 +576,7 @@ class QueryNFTRequest extends $pb.GeneratedMessage {
 /// QueryNFTResponse is the response type for the Query/NFT RPC method
 class QueryNFTResponse extends $pb.GeneratedMessage {
   factory QueryNFTResponse({
-    $74.NFT? nft,
+    $3.NFT? nft,
   }) {
     final $result = create();
     if (nft != null) {
@@ -589,7 +589,7 @@ class QueryNFTResponse extends $pb.GeneratedMessage {
   factory QueryNFTResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNFTResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..aOM<$74.NFT>(1, _omitFieldNames ? '' : 'nft', subBuilder: $74.NFT.create)
+    ..aOM<$3.NFT>(1, _omitFieldNames ? '' : 'nft', subBuilder: $3.NFT.create)
     ..hasRequiredFields = false
   ;
 
@@ -616,15 +616,15 @@ class QueryNFTResponse extends $pb.GeneratedMessage {
 
   /// owner is the owner address of the nft
   @$pb.TagNumber(1)
-  $74.NFT get nft => $_getN(0);
+  $3.NFT get nft => $_getN(0);
   @$pb.TagNumber(1)
-  set nft($74.NFT v) { setField(1, v); }
+  set nft($3.NFT v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasNft() => $_has(0);
   @$pb.TagNumber(1)
   void clearNft() => clearField(1);
   @$pb.TagNumber(1)
-  $74.NFT ensureNft() => $_ensure(0);
+  $3.NFT ensureNft() => $_ensure(0);
 }
 
 /// QueryClassRequest is the request type for the Query/Class RPC method
@@ -682,7 +682,7 @@ class QueryClassRequest extends $pb.GeneratedMessage {
 /// QueryClassResponse is the response type for the Query/Class RPC method
 class QueryClassResponse extends $pb.GeneratedMessage {
   factory QueryClassResponse({
-    $74.Class? class_1,
+    $3.Class? class_1,
   }) {
     final $result = create();
     if (class_1 != null) {
@@ -695,7 +695,7 @@ class QueryClassResponse extends $pb.GeneratedMessage {
   factory QueryClassResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClassResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..aOM<$74.Class>(1, _omitFieldNames ? '' : 'class', subBuilder: $74.Class.create)
+    ..aOM<$3.Class>(1, _omitFieldNames ? '' : 'class', subBuilder: $3.Class.create)
     ..hasRequiredFields = false
   ;
 
@@ -722,21 +722,21 @@ class QueryClassResponse extends $pb.GeneratedMessage {
 
   /// class defines the class of the nft type.
   @$pb.TagNumber(1)
-  $74.Class get class_1 => $_getN(0);
+  $3.Class get class_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set class_1($74.Class v) { setField(1, v); }
+  set class_1($3.Class v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClass_1() => $_has(0);
   @$pb.TagNumber(1)
   void clearClass_1() => clearField(1);
   @$pb.TagNumber(1)
-  $74.Class ensureClass_1() => $_ensure(0);
+  $3.Class ensureClass_1() => $_ensure(0);
 }
 
 /// QueryClassesRequest is the request type for the Query/Classes RPC method
 class QueryClassesRequest extends $pb.GeneratedMessage {
   factory QueryClassesRequest({
-    $49.PageRequest? pagination,
+    $4.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -749,7 +749,7 @@ class QueryClassesRequest extends $pb.GeneratedMessage {
   factory QueryClassesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClassesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
+    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -776,22 +776,22 @@ class QueryClassesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $49.PageRequest get pagination => $_getN(0);
+  $4.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($49.PageRequest v) { setField(1, v); }
+  set pagination($4.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $49.PageRequest ensurePagination() => $_ensure(0);
+  $4.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryClassesResponse is the response type for the Query/Classes RPC method
 class QueryClassesResponse extends $pb.GeneratedMessage {
   factory QueryClassesResponse({
-    $core.Iterable<$74.Class>? classes,
-    $49.PageResponse? pagination,
+    $core.Iterable<$3.Class>? classes,
+    $4.PageResponse? pagination,
   }) {
     final $result = create();
     if (classes != null) {
@@ -807,8 +807,8 @@ class QueryClassesResponse extends $pb.GeneratedMessage {
   factory QueryClassesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClassesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..pc<$74.Class>(1, _omitFieldNames ? '' : 'classes', $pb.PbFieldType.PM, subBuilder: $74.Class.create)
-    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
+    ..pc<$3.Class>(1, _omitFieldNames ? '' : 'classes', $pb.PbFieldType.PM, subBuilder: $3.Class.create)
+    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -835,19 +835,19 @@ class QueryClassesResponse extends $pb.GeneratedMessage {
 
   /// class defines the class of the nft type.
   @$pb.TagNumber(1)
-  $core.List<$74.Class> get classes => $_getList(0);
+  $core.List<$3.Class> get classes => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $49.PageResponse get pagination => $_getN(1);
+  $4.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($49.PageResponse v) { setField(2, v); }
+  set pagination($4.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $49.PageResponse ensurePagination() => $_ensure(1);
+  $4.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $20;
-import 'transfer.pb.dart' as $29;
+import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $2;
+import 'transfer.pb.dart' as $3;
 
 /// GenesisState defines the ibc-transfer genesis state
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
     $core.String? portId,
-    $core.Iterable<$29.DenomTrace>? denomTraces,
-    $29.Params? params,
-    $core.Iterable<$20.Coin>? totalEscrowed,
+    $core.Iterable<$3.DenomTrace>? denomTraces,
+    $3.Params? params,
+    $core.Iterable<$2.Coin>? totalEscrowed,
   }) {
     final $result = create();
     if (portId != null) {
@@ -45,9 +45,9 @@ class GenesisState extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.transfer.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
-    ..pc<$29.DenomTrace>(2, _omitFieldNames ? '' : 'denomTraces', $pb.PbFieldType.PM, subBuilder: $29.DenomTrace.create)
-    ..aOM<$29.Params>(3, _omitFieldNames ? '' : 'params', subBuilder: $29.Params.create)
-    ..pc<$20.Coin>(4, _omitFieldNames ? '' : 'totalEscrowed', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
+    ..pc<$3.DenomTrace>(2, _omitFieldNames ? '' : 'denomTraces', $pb.PbFieldType.PM, subBuilder: $3.DenomTrace.create)
+    ..aOM<$3.Params>(3, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
+    ..pc<$2.Coin>(4, _omitFieldNames ? '' : 'totalEscrowed', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -82,23 +82,23 @@ class GenesisState extends $pb.GeneratedMessage {
   void clearPortId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$29.DenomTrace> get denomTraces => $_getList(1);
+  $core.List<$3.DenomTrace> get denomTraces => $_getList(1);
 
   @$pb.TagNumber(3)
-  $29.Params get params => $_getN(2);
+  $3.Params get params => $_getN(2);
   @$pb.TagNumber(3)
-  set params($29.Params v) { setField(3, v); }
+  set params($3.Params v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasParams() => $_has(2);
   @$pb.TagNumber(3)
   void clearParams() => clearField(3);
   @$pb.TagNumber(3)
-  $29.Params ensureParams() => $_ensure(2);
+  $3.Params ensureParams() => $_ensure(2);
 
   /// total_escrowed contains the total amount of tokens escrowed
   /// by the transfer module
   @$pb.TagNumber(4)
-  $core.List<$20.Coin> get totalEscrowed => $_getList(3);
+  $core.List<$2.Coin> get totalEscrowed => $_getList(3);
 }
 
 

@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/any.pb.dart' as $3;
 
 /// MsgSubmitEvidence represents a message that supports submitting arbitrary
 /// Evidence of misbehavior such as equivocation or counterfactual signing.
 class MsgSubmitEvidence extends $pb.GeneratedMessage {
   factory MsgSubmitEvidence({
     $core.String? submitter,
-    $46.Any? evidence,
+    $3.Any? evidence,
   }) {
     final $result = create();
     if (submitter != null) {
@@ -37,7 +37,7 @@ class MsgSubmitEvidence extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSubmitEvidence', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'submitter')
-    ..aOM<$46.Any>(2, _omitFieldNames ? '' : 'evidence', subBuilder: $46.Any.create)
+    ..aOM<$3.Any>(2, _omitFieldNames ? '' : 'evidence', subBuilder: $3.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -74,15 +74,15 @@ class MsgSubmitEvidence extends $pb.GeneratedMessage {
 
   /// evidence defines the evidence of misbehavior.
   @$pb.TagNumber(2)
-  $46.Any get evidence => $_getN(1);
+  $3.Any get evidence => $_getN(1);
   @$pb.TagNumber(2)
-  set evidence($46.Any v) { setField(2, v); }
+  set evidence($3.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasEvidence() => $_has(1);
   @$pb.TagNumber(2)
   void clearEvidence() => clearField(2);
   @$pb.TagNumber(2)
-  $46.Any ensureEvidence() => $_ensure(1);
+  $3.Any ensureEvidence() => $_ensure(1);
 }
 
 /// MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type.

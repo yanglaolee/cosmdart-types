@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/any.pb.dart' as $2;
 
 /// Class defines the class of the nft type.
 class Class extends $pb.GeneratedMessage {
@@ -24,7 +24,7 @@ class Class extends $pb.GeneratedMessage {
     $core.String? description,
     $core.String? uri,
     $core.String? uriHash,
-    $46.Any? data,
+    $2.Any? data,
   }) {
     final $result = create();
     if (id != null) {
@@ -61,7 +61,7 @@ class Class extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'uri')
     ..aOS(6, _omitFieldNames ? '' : 'uriHash')
-    ..aOM<$46.Any>(7, _omitFieldNames ? '' : 'data', subBuilder: $46.Any.create)
+    ..aOM<$2.Any>(7, _omitFieldNames ? '' : 'data', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -148,15 +148,15 @@ class Class extends $pb.GeneratedMessage {
 
   /// data is the app specific metadata of the NFT class. Optional
   @$pb.TagNumber(7)
-  $46.Any get data => $_getN(6);
+  $2.Any get data => $_getN(6);
   @$pb.TagNumber(7)
-  set data($46.Any v) { setField(7, v); }
+  set data($2.Any v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasData() => $_has(6);
   @$pb.TagNumber(7)
   void clearData() => clearField(7);
   @$pb.TagNumber(7)
-  $46.Any ensureData() => $_ensure(6);
+  $2.Any ensureData() => $_ensure(6);
 }
 
 /// NFT defines the NFT.
@@ -166,7 +166,7 @@ class NFT extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? uri,
     $core.String? uriHash,
-    $46.Any? data,
+    $2.Any? data,
   }) {
     final $result = create();
     if (classId != null) {
@@ -195,7 +195,7 @@ class NFT extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'uri')
     ..aOS(4, _omitFieldNames ? '' : 'uriHash')
-    ..aOM<$46.Any>(10, _omitFieldNames ? '' : 'data', subBuilder: $46.Any.create)
+    ..aOM<$2.Any>(10, _omitFieldNames ? '' : 'data', subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -262,15 +262,15 @@ class NFT extends $pb.GeneratedMessage {
 
   /// data is an app specific data of the NFT. Optional
   @$pb.TagNumber(10)
-  $46.Any get data => $_getN(4);
+  $2.Any get data => $_getN(4);
   @$pb.TagNumber(10)
-  set data($46.Any v) { setField(10, v); }
+  set data($2.Any v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasData() => $_has(4);
   @$pb.TagNumber(10)
   void clearData() => clearField(10);
   @$pb.TagNumber(10)
-  $46.Any ensureData() => $_ensure(4);
+  $2.Any ensureData() => $_ensure(4);
 }
 
 

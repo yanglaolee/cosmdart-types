@@ -14,16 +14,16 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $23;
-import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $20;
-import '../../../core/channel/v1/channel.pb.dart' as $21;
-import 'fee.pb.dart' as $22;
-import 'genesis.pb.dart' as $24;
+import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $5;
+import '../../../../cosmos/base/v1beta1/coin.pb.dart' as $2;
+import '../../../core/channel/v1/channel.pb.dart' as $3;
+import 'fee.pb.dart' as $4;
+import 'genesis.pb.dart' as $6;
 
 /// QueryIncentivizedPacketsRequest defines the request type for the IncentivizedPackets rpc
 class QueryIncentivizedPacketsRequest extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsRequest({
-    $23.PageRequest? pagination,
+    $5.PageRequest? pagination,
     $fixnum.Int64? queryHeight,
   }) {
     final $result = create();
@@ -40,7 +40,7 @@ class QueryIncentivizedPacketsRequest extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryIncentivizedPacketsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
+    ..aOM<$5.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'queryHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -68,15 +68,15 @@ class QueryIncentivizedPacketsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $23.PageRequest get pagination => $_getN(0);
+  $5.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($23.PageRequest v) { setField(1, v); }
+  set pagination($5.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $23.PageRequest ensurePagination() => $_ensure(0);
+  $5.PageRequest ensurePagination() => $_ensure(0);
 
   /// block height at which to query
   @$pb.TagNumber(2)
@@ -92,8 +92,8 @@ class QueryIncentivizedPacketsRequest extends $pb.GeneratedMessage {
 /// QueryIncentivizedPacketsResponse defines the response type for the IncentivizedPackets rpc
 class QueryIncentivizedPacketsResponse extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsResponse({
-    $core.Iterable<$22.IdentifiedPacketFees>? incentivizedPackets,
-    $23.PageResponse? pagination,
+    $core.Iterable<$4.IdentifiedPacketFees>? incentivizedPackets,
+    $5.PageResponse? pagination,
   }) {
     final $result = create();
     if (incentivizedPackets != null) {
@@ -109,8 +109,8 @@ class QueryIncentivizedPacketsResponse extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryIncentivizedPacketsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$22.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'incentivizedPackets', $pb.PbFieldType.PM, subBuilder: $22.IdentifiedPacketFees.create)
-    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..pc<$4.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'incentivizedPackets', $pb.PbFieldType.PM, subBuilder: $4.IdentifiedPacketFees.create)
+    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -137,25 +137,25 @@ class QueryIncentivizedPacketsResponse extends $pb.GeneratedMessage {
 
   /// list of identified fees for incentivized packets
   @$pb.TagNumber(1)
-  $core.List<$22.IdentifiedPacketFees> get incentivizedPackets => $_getList(0);
+  $core.List<$4.IdentifiedPacketFees> get incentivizedPackets => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $23.PageResponse get pagination => $_getN(1);
+  $5.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($23.PageResponse v) { setField(2, v); }
+  set pagination($5.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $23.PageResponse ensurePagination() => $_ensure(1);
+  $5.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryIncentivizedPacketRequest defines the request type for the IncentivizedPacket rpc
 class QueryIncentivizedPacketRequest extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketRequest({
-    $21.PacketId? packetId,
+    $3.PacketId? packetId,
     $fixnum.Int64? queryHeight,
   }) {
     final $result = create();
@@ -172,7 +172,7 @@ class QueryIncentivizedPacketRequest extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryIncentivizedPacketRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$21.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
+    ..aOM<$3.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'queryHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -200,15 +200,15 @@ class QueryIncentivizedPacketRequest extends $pb.GeneratedMessage {
 
   /// unique packet identifier comprised of channel ID, port ID and sequence
   @$pb.TagNumber(1)
-  $21.PacketId get packetId => $_getN(0);
+  $3.PacketId get packetId => $_getN(0);
   @$pb.TagNumber(1)
-  set packetId($21.PacketId v) { setField(1, v); }
+  set packetId($3.PacketId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacketId() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacketId() => clearField(1);
   @$pb.TagNumber(1)
-  $21.PacketId ensurePacketId() => $_ensure(0);
+  $3.PacketId ensurePacketId() => $_ensure(0);
 
   /// block height at which to query
   @$pb.TagNumber(2)
@@ -224,7 +224,7 @@ class QueryIncentivizedPacketRequest extends $pb.GeneratedMessage {
 /// QueryIncentivizedPacketsResponse defines the response type for the IncentivizedPacket rpc
 class QueryIncentivizedPacketResponse extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketResponse({
-    $22.IdentifiedPacketFees? incentivizedPacket,
+    $4.IdentifiedPacketFees? incentivizedPacket,
   }) {
     final $result = create();
     if (incentivizedPacket != null) {
@@ -237,7 +237,7 @@ class QueryIncentivizedPacketResponse extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryIncentivizedPacketResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$22.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'incentivizedPacket', subBuilder: $22.IdentifiedPacketFees.create)
+    ..aOM<$4.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'incentivizedPacket', subBuilder: $4.IdentifiedPacketFees.create)
     ..hasRequiredFields = false
   ;
 
@@ -264,22 +264,22 @@ class QueryIncentivizedPacketResponse extends $pb.GeneratedMessage {
 
   /// the identified fees for the incentivized packet
   @$pb.TagNumber(1)
-  $22.IdentifiedPacketFees get incentivizedPacket => $_getN(0);
+  $4.IdentifiedPacketFees get incentivizedPacket => $_getN(0);
   @$pb.TagNumber(1)
-  set incentivizedPacket($22.IdentifiedPacketFees v) { setField(1, v); }
+  set incentivizedPacket($4.IdentifiedPacketFees v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIncentivizedPacket() => $_has(0);
   @$pb.TagNumber(1)
   void clearIncentivizedPacket() => clearField(1);
   @$pb.TagNumber(1)
-  $22.IdentifiedPacketFees ensureIncentivizedPacket() => $_ensure(0);
+  $4.IdentifiedPacketFees ensureIncentivizedPacket() => $_ensure(0);
 }
 
 /// QueryIncentivizedPacketsForChannelRequest defines the request type for querying for all incentivized packets
 /// for a specific channel
 class QueryIncentivizedPacketsForChannelRequest extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsForChannelRequest({
-    $23.PageRequest? pagination,
+    $5.PageRequest? pagination,
     $core.String? portId,
     $core.String? channelId,
     $fixnum.Int64? queryHeight,
@@ -304,7 +304,7 @@ class QueryIncentivizedPacketsForChannelRequest extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsForChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryIncentivizedPacketsForChannelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
+    ..aOM<$5.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
     ..aOS(2, _omitFieldNames ? '' : 'portId')
     ..aOS(3, _omitFieldNames ? '' : 'channelId')
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'queryHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -334,15 +334,15 @@ class QueryIncentivizedPacketsForChannelRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $23.PageRequest get pagination => $_getN(0);
+  $5.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($23.PageRequest v) { setField(1, v); }
+  set pagination($5.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $23.PageRequest ensurePagination() => $_ensure(0);
+  $5.PageRequest ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get portId => $_getSZ(1);
@@ -376,8 +376,8 @@ class QueryIncentivizedPacketsForChannelRequest extends $pb.GeneratedMessage {
 /// QueryIncentivizedPacketsResponse defines the response type for the incentivized packets RPC
 class QueryIncentivizedPacketsForChannelResponse extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsForChannelResponse({
-    $core.Iterable<$22.IdentifiedPacketFees>? incentivizedPackets,
-    $23.PageResponse? pagination,
+    $core.Iterable<$4.IdentifiedPacketFees>? incentivizedPackets,
+    $5.PageResponse? pagination,
   }) {
     final $result = create();
     if (incentivizedPackets != null) {
@@ -393,8 +393,8 @@ class QueryIncentivizedPacketsForChannelResponse extends $pb.GeneratedMessage {
   factory QueryIncentivizedPacketsForChannelResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryIncentivizedPacketsForChannelResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$22.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'incentivizedPackets', $pb.PbFieldType.PM, subBuilder: $22.IdentifiedPacketFees.create)
-    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..pc<$4.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'incentivizedPackets', $pb.PbFieldType.PM, subBuilder: $4.IdentifiedPacketFees.create)
+    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -421,25 +421,25 @@ class QueryIncentivizedPacketsForChannelResponse extends $pb.GeneratedMessage {
 
   /// Map of all incentivized_packets
   @$pb.TagNumber(1)
-  $core.List<$22.IdentifiedPacketFees> get incentivizedPackets => $_getList(0);
+  $core.List<$4.IdentifiedPacketFees> get incentivizedPackets => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $23.PageResponse get pagination => $_getN(1);
+  $5.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($23.PageResponse v) { setField(2, v); }
+  set pagination($5.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $23.PageResponse ensurePagination() => $_ensure(1);
+  $5.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryTotalRecvFeesRequest defines the request type for the TotalRecvFees rpc
 class QueryTotalRecvFeesRequest extends $pb.GeneratedMessage {
   factory QueryTotalRecvFeesRequest({
-    $21.PacketId? packetId,
+    $3.PacketId? packetId,
   }) {
     final $result = create();
     if (packetId != null) {
@@ -452,7 +452,7 @@ class QueryTotalRecvFeesRequest extends $pb.GeneratedMessage {
   factory QueryTotalRecvFeesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalRecvFeesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$21.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
+    ..aOM<$3.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
     ..hasRequiredFields = false
   ;
 
@@ -479,21 +479,21 @@ class QueryTotalRecvFeesRequest extends $pb.GeneratedMessage {
 
   /// the packet identifier for the associated fees
   @$pb.TagNumber(1)
-  $21.PacketId get packetId => $_getN(0);
+  $3.PacketId get packetId => $_getN(0);
   @$pb.TagNumber(1)
-  set packetId($21.PacketId v) { setField(1, v); }
+  set packetId($3.PacketId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacketId() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacketId() => clearField(1);
   @$pb.TagNumber(1)
-  $21.PacketId ensurePacketId() => $_ensure(0);
+  $3.PacketId ensurePacketId() => $_ensure(0);
 }
 
 /// QueryTotalRecvFeesResponse defines the response type for the TotalRecvFees rpc
 class QueryTotalRecvFeesResponse extends $pb.GeneratedMessage {
   factory QueryTotalRecvFeesResponse({
-    $core.Iterable<$20.Coin>? recvFees,
+    $core.Iterable<$2.Coin>? recvFees,
   }) {
     final $result = create();
     if (recvFees != null) {
@@ -506,7 +506,7 @@ class QueryTotalRecvFeesResponse extends $pb.GeneratedMessage {
   factory QueryTotalRecvFeesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalRecvFeesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$20.Coin>(1, _omitFieldNames ? '' : 'recvFees', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'recvFees', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -533,13 +533,13 @@ class QueryTotalRecvFeesResponse extends $pb.GeneratedMessage {
 
   /// the total packet receive fees
   @$pb.TagNumber(1)
-  $core.List<$20.Coin> get recvFees => $_getList(0);
+  $core.List<$2.Coin> get recvFees => $_getList(0);
 }
 
 /// QueryTotalAckFeesRequest defines the request type for the TotalAckFees rpc
 class QueryTotalAckFeesRequest extends $pb.GeneratedMessage {
   factory QueryTotalAckFeesRequest({
-    $21.PacketId? packetId,
+    $3.PacketId? packetId,
   }) {
     final $result = create();
     if (packetId != null) {
@@ -552,7 +552,7 @@ class QueryTotalAckFeesRequest extends $pb.GeneratedMessage {
   factory QueryTotalAckFeesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalAckFeesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$21.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
+    ..aOM<$3.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
     ..hasRequiredFields = false
   ;
 
@@ -579,21 +579,21 @@ class QueryTotalAckFeesRequest extends $pb.GeneratedMessage {
 
   /// the packet identifier for the associated fees
   @$pb.TagNumber(1)
-  $21.PacketId get packetId => $_getN(0);
+  $3.PacketId get packetId => $_getN(0);
   @$pb.TagNumber(1)
-  set packetId($21.PacketId v) { setField(1, v); }
+  set packetId($3.PacketId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacketId() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacketId() => clearField(1);
   @$pb.TagNumber(1)
-  $21.PacketId ensurePacketId() => $_ensure(0);
+  $3.PacketId ensurePacketId() => $_ensure(0);
 }
 
 /// QueryTotalAckFeesResponse defines the response type for the TotalAckFees rpc
 class QueryTotalAckFeesResponse extends $pb.GeneratedMessage {
   factory QueryTotalAckFeesResponse({
-    $core.Iterable<$20.Coin>? ackFees,
+    $core.Iterable<$2.Coin>? ackFees,
   }) {
     final $result = create();
     if (ackFees != null) {
@@ -606,7 +606,7 @@ class QueryTotalAckFeesResponse extends $pb.GeneratedMessage {
   factory QueryTotalAckFeesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalAckFeesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$20.Coin>(1, _omitFieldNames ? '' : 'ackFees', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'ackFees', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -633,13 +633,13 @@ class QueryTotalAckFeesResponse extends $pb.GeneratedMessage {
 
   /// the total packet acknowledgement fees
   @$pb.TagNumber(1)
-  $core.List<$20.Coin> get ackFees => $_getList(0);
+  $core.List<$2.Coin> get ackFees => $_getList(0);
 }
 
 /// QueryTotalTimeoutFeesRequest defines the request type for the TotalTimeoutFees rpc
 class QueryTotalTimeoutFeesRequest extends $pb.GeneratedMessage {
   factory QueryTotalTimeoutFeesRequest({
-    $21.PacketId? packetId,
+    $3.PacketId? packetId,
   }) {
     final $result = create();
     if (packetId != null) {
@@ -652,7 +652,7 @@ class QueryTotalTimeoutFeesRequest extends $pb.GeneratedMessage {
   factory QueryTotalTimeoutFeesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalTimeoutFeesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$21.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
+    ..aOM<$3.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
     ..hasRequiredFields = false
   ;
 
@@ -679,21 +679,21 @@ class QueryTotalTimeoutFeesRequest extends $pb.GeneratedMessage {
 
   /// the packet identifier for the associated fees
   @$pb.TagNumber(1)
-  $21.PacketId get packetId => $_getN(0);
+  $3.PacketId get packetId => $_getN(0);
   @$pb.TagNumber(1)
-  set packetId($21.PacketId v) { setField(1, v); }
+  set packetId($3.PacketId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacketId() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacketId() => clearField(1);
   @$pb.TagNumber(1)
-  $21.PacketId ensurePacketId() => $_ensure(0);
+  $3.PacketId ensurePacketId() => $_ensure(0);
 }
 
 /// QueryTotalTimeoutFeesResponse defines the response type for the TotalTimeoutFees rpc
 class QueryTotalTimeoutFeesResponse extends $pb.GeneratedMessage {
   factory QueryTotalTimeoutFeesResponse({
-    $core.Iterable<$20.Coin>? timeoutFees,
+    $core.Iterable<$2.Coin>? timeoutFees,
   }) {
     final $result = create();
     if (timeoutFees != null) {
@@ -706,7 +706,7 @@ class QueryTotalTimeoutFeesResponse extends $pb.GeneratedMessage {
   factory QueryTotalTimeoutFeesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTotalTimeoutFeesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$20.Coin>(1, _omitFieldNames ? '' : 'timeoutFees', $pb.PbFieldType.PM, subBuilder: $20.Coin.create)
+    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'timeoutFees', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -733,7 +733,7 @@ class QueryTotalTimeoutFeesResponse extends $pb.GeneratedMessage {
 
   /// the total packet timeout fees
   @$pb.TagNumber(1)
-  $core.List<$20.Coin> get timeoutFees => $_getList(0);
+  $core.List<$2.Coin> get timeoutFees => $_getList(0);
 }
 
 /// QueryPayeeRequest defines the request type for the Payee rpc
@@ -977,7 +977,7 @@ class QueryCounterpartyPayeeResponse extends $pb.GeneratedMessage {
 /// QueryFeeEnabledChannelsRequest defines the request type for the FeeEnabledChannels rpc
 class QueryFeeEnabledChannelsRequest extends $pb.GeneratedMessage {
   factory QueryFeeEnabledChannelsRequest({
-    $23.PageRequest? pagination,
+    $5.PageRequest? pagination,
     $fixnum.Int64? queryHeight,
   }) {
     final $result = create();
@@ -994,7 +994,7 @@ class QueryFeeEnabledChannelsRequest extends $pb.GeneratedMessage {
   factory QueryFeeEnabledChannelsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryFeeEnabledChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
+    ..aOM<$5.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'queryHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -1022,15 +1022,15 @@ class QueryFeeEnabledChannelsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $23.PageRequest get pagination => $_getN(0);
+  $5.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($23.PageRequest v) { setField(1, v); }
+  set pagination($5.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $23.PageRequest ensurePagination() => $_ensure(0);
+  $5.PageRequest ensurePagination() => $_ensure(0);
 
   /// block height at which to query
   @$pb.TagNumber(2)
@@ -1046,8 +1046,8 @@ class QueryFeeEnabledChannelsRequest extends $pb.GeneratedMessage {
 /// QueryFeeEnabledChannelsResponse defines the response type for the FeeEnabledChannels rpc
 class QueryFeeEnabledChannelsResponse extends $pb.GeneratedMessage {
   factory QueryFeeEnabledChannelsResponse({
-    $core.Iterable<$24.FeeEnabledChannel>? feeEnabledChannels,
-    $23.PageResponse? pagination,
+    $core.Iterable<$6.FeeEnabledChannel>? feeEnabledChannels,
+    $5.PageResponse? pagination,
   }) {
     final $result = create();
     if (feeEnabledChannels != null) {
@@ -1063,8 +1063,8 @@ class QueryFeeEnabledChannelsResponse extends $pb.GeneratedMessage {
   factory QueryFeeEnabledChannelsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryFeeEnabledChannelsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$24.FeeEnabledChannel>(1, _omitFieldNames ? '' : 'feeEnabledChannels', $pb.PbFieldType.PM, subBuilder: $24.FeeEnabledChannel.create)
-    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..pc<$6.FeeEnabledChannel>(1, _omitFieldNames ? '' : 'feeEnabledChannels', $pb.PbFieldType.PM, subBuilder: $6.FeeEnabledChannel.create)
+    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -1091,19 +1091,19 @@ class QueryFeeEnabledChannelsResponse extends $pb.GeneratedMessage {
 
   /// list of fee enabled channels
   @$pb.TagNumber(1)
-  $core.List<$24.FeeEnabledChannel> get feeEnabledChannels => $_getList(0);
+  $core.List<$6.FeeEnabledChannel> get feeEnabledChannels => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $23.PageResponse get pagination => $_getN(1);
+  $5.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($23.PageResponse v) { setField(2, v); }
+  set pagination($5.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $23.PageResponse ensurePagination() => $_ensure(1);
+  $5.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryFeeEnabledChannelRequest defines the request type for the FeeEnabledChannel rpc

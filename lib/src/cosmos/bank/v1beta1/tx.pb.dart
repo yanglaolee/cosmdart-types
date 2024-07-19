@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $53;
-import 'bank.pb.dart' as $54;
+import '../../base/v1beta1/coin.pb.dart' as $2;
+import 'bank.pb.dart' as $3;
 
 /// MsgSend represents a message to send coins from one account to another.
 class MsgSend extends $pb.GeneratedMessage {
   factory MsgSend({
     $core.String? fromAddress,
     $core.String? toAddress,
-    $core.Iterable<$53.Coin>? amount,
+    $core.Iterable<$2.Coin>? amount,
   }) {
     final $result = create();
     if (fromAddress != null) {
@@ -42,7 +42,7 @@ class MsgSend extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSend', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'fromAddress')
     ..aOS(2, _omitFieldNames ? '' : 'toAddress')
-    ..pc<$53.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$2.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -86,7 +86,7 @@ class MsgSend extends $pb.GeneratedMessage {
   void clearToAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$53.Coin> get amount => $_getList(2);
+  $core.List<$2.Coin> get amount => $_getList(2);
 }
 
 /// MsgSendResponse defines the Msg/Send response type.
@@ -125,8 +125,8 @@ class MsgSendResponse extends $pb.GeneratedMessage {
 /// MsgMultiSend represents an arbitrary multi-in, multi-out send message.
 class MsgMultiSend extends $pb.GeneratedMessage {
   factory MsgMultiSend({
-    $core.Iterable<$54.Input>? inputs,
-    $core.Iterable<$54.Output>? outputs,
+    $core.Iterable<$3.Input>? inputs,
+    $core.Iterable<$3.Output>? outputs,
   }) {
     final $result = create();
     if (inputs != null) {
@@ -142,8 +142,8 @@ class MsgMultiSend extends $pb.GeneratedMessage {
   factory MsgMultiSend.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgMultiSend', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
-    ..pc<$54.Input>(1, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $54.Input.create)
-    ..pc<$54.Output>(2, _omitFieldNames ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $54.Output.create)
+    ..pc<$3.Input>(1, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $3.Input.create)
+    ..pc<$3.Output>(2, _omitFieldNames ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $3.Output.create)
     ..hasRequiredFields = false
   ;
 
@@ -171,10 +171,10 @@ class MsgMultiSend extends $pb.GeneratedMessage {
   /// Inputs, despite being `repeated`, only allows one sender input. This is
   /// checked in MsgMultiSend's ValidateBasic.
   @$pb.TagNumber(1)
-  $core.List<$54.Input> get inputs => $_getList(0);
+  $core.List<$3.Input> get inputs => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<$54.Output> get outputs => $_getList(1);
+  $core.List<$3.Output> get outputs => $_getList(1);
 }
 
 /// MsgMultiSendResponse defines the Msg/MultiSend response type.
@@ -216,7 +216,7 @@ class MsgMultiSendResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $54.Params? params,
+    $3.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -233,7 +233,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$54.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $54.Params.create)
+    ..aOM<$3.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -272,15 +272,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $54.Params get params => $_getN(1);
+  $3.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($54.Params v) { setField(2, v); }
+  set params($3.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $54.Params ensureParams() => $_ensure(1);
+  $3.Params ensureParams() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a
@@ -329,7 +329,7 @@ class MsgUpdateParamsResponse extends $pb.GeneratedMessage {
 class MsgSetSendEnabled extends $pb.GeneratedMessage {
   factory MsgSetSendEnabled({
     $core.String? authority,
-    $core.Iterable<$54.SendEnabled>? sendEnabled,
+    $core.Iterable<$3.SendEnabled>? sendEnabled,
     $core.Iterable<$core.String>? useDefaultFor,
   }) {
     final $result = create();
@@ -350,7 +350,7 @@ class MsgSetSendEnabled extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSetSendEnabled', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..pc<$54.SendEnabled>(2, _omitFieldNames ? '' : 'sendEnabled', $pb.PbFieldType.PM, subBuilder: $54.SendEnabled.create)
+    ..pc<$3.SendEnabled>(2, _omitFieldNames ? '' : 'sendEnabled', $pb.PbFieldType.PM, subBuilder: $3.SendEnabled.create)
     ..pPS(3, _omitFieldNames ? '' : 'useDefaultFor')
     ..hasRequiredFields = false
   ;
@@ -388,7 +388,7 @@ class MsgSetSendEnabled extends $pb.GeneratedMessage {
 
   /// send_enabled is the list of entries to add or update.
   @$pb.TagNumber(2)
-  $core.List<$54.SendEnabled> get sendEnabled => $_getList(1);
+  $core.List<$3.SendEnabled> get sendEnabled => $_getList(1);
 
   /// use_default_for is a list of denoms that should use the params.default_send_enabled value.
   /// Denoms listed here will have their SendEnabled entries deleted.

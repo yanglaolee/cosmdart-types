@@ -14,13 +14,13 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'capability.pb.dart' as $16;
+import 'capability.pb.dart' as $0;
 
 /// GenesisOwners defines the capability owners with their corresponding index.
 class GenesisOwners extends $pb.GeneratedMessage {
   factory GenesisOwners({
     $fixnum.Int64? index,
-    $16.CapabilityOwners? indexOwners,
+    $0.CapabilityOwners? indexOwners,
   }) {
     final $result = create();
     if (index != null) {
@@ -37,7 +37,7 @@ class GenesisOwners extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisOwners', package: const $pb.PackageName(_omitMessageNames ? '' : 'capability.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$16.CapabilityOwners>(2, _omitFieldNames ? '' : 'indexOwners', subBuilder: $16.CapabilityOwners.create)
+    ..aOM<$0.CapabilityOwners>(2, _omitFieldNames ? '' : 'indexOwners', subBuilder: $0.CapabilityOwners.create)
     ..hasRequiredFields = false
   ;
 
@@ -74,15 +74,15 @@ class GenesisOwners extends $pb.GeneratedMessage {
 
   /// index_owners are the owners at the given index.
   @$pb.TagNumber(2)
-  $16.CapabilityOwners get indexOwners => $_getN(1);
+  $0.CapabilityOwners get indexOwners => $_getN(1);
   @$pb.TagNumber(2)
-  set indexOwners($16.CapabilityOwners v) { setField(2, v); }
+  set indexOwners($0.CapabilityOwners v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasIndexOwners() => $_has(1);
   @$pb.TagNumber(2)
   void clearIndexOwners() => clearField(2);
   @$pb.TagNumber(2)
-  $16.CapabilityOwners ensureIndexOwners() => $_ensure(1);
+  $0.CapabilityOwners ensureIndexOwners() => $_ensure(1);
 }
 
 /// GenesisState defines the capability module's genesis state.
