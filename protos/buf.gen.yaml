@@ -8,13 +8,17 @@ plugins:
   #   out: .
   #   opt: logtostderr=true,allow_colon_final_segments=true
 
-  # - remote: buf.build/protocolbuffers/dart
-  - local: "protoc-gen-dart"
+  - remote: buf.build/protocolbuffers/dart
+  # - local: "protoc-gen-dart"
     out: ../lib/src/
     opt: grpc
 inputs:
   - module: buf.build/protocolbuffers/wellknowntypes
   - module: buf.build/cosmos/ics23
+  - module: buf.build/tendermint/tendermint
+  # - git_repo: https://github.com/cometbft/cometbft
+  #   tag: "v0.38.10"
+  #   subdir: proto
   - git_repo: https://github.com/cosmos/cosmos-sdk
     tag: "v0.50.8"
     subdir: proto
