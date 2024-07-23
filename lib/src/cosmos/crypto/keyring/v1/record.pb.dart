@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $0;
-import '../../hd/v1/hd.pb.dart' as $1;
+import '../../../../google/protobuf/any.pb.dart' as $46;
+import '../../hd/v1/hd.pb.dart' as $67;
 
 /// Item is a keyring item stored in a keyring backend.
 /// Local item
 class Record_Local extends $pb.GeneratedMessage {
   factory Record_Local({
-    $0.Any? privKey,
+    $46.Any? privKey,
   }) {
     final $result = create();
     if (privKey != null) {
@@ -33,7 +33,7 @@ class Record_Local extends $pb.GeneratedMessage {
   factory Record_Local.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Record.Local', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.crypto.keyring.v1'), createEmptyInstance: create)
-    ..aOM<$0.Any>(1, _omitFieldNames ? '' : 'privKey', subBuilder: $0.Any.create)
+    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'privKey', subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -59,21 +59,21 @@ class Record_Local extends $pb.GeneratedMessage {
   static Record_Local? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Any get privKey => $_getN(0);
+  $46.Any get privKey => $_getN(0);
   @$pb.TagNumber(1)
-  set privKey($0.Any v) { setField(1, v); }
+  set privKey($46.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPrivKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearPrivKey() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Any ensurePrivKey() => $_ensure(0);
+  $46.Any ensurePrivKey() => $_ensure(0);
 }
 
 /// Ledger item
 class Record_Ledger extends $pb.GeneratedMessage {
   factory Record_Ledger({
-    $1.BIP44Params? path,
+    $67.BIP44Params? path,
   }) {
     final $result = create();
     if (path != null) {
@@ -86,7 +86,7 @@ class Record_Ledger extends $pb.GeneratedMessage {
   factory Record_Ledger.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Record.Ledger', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.crypto.keyring.v1'), createEmptyInstance: create)
-    ..aOM<$1.BIP44Params>(1, _omitFieldNames ? '' : 'path', subBuilder: $1.BIP44Params.create)
+    ..aOM<$67.BIP44Params>(1, _omitFieldNames ? '' : 'path', subBuilder: $67.BIP44Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,15 +112,15 @@ class Record_Ledger extends $pb.GeneratedMessage {
   static Record_Ledger? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.BIP44Params get path => $_getN(0);
+  $67.BIP44Params get path => $_getN(0);
   @$pb.TagNumber(1)
-  set path($1.BIP44Params v) { setField(1, v); }
+  set path($67.BIP44Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
   @$pb.TagNumber(1)
-  $1.BIP44Params ensurePath() => $_ensure(0);
+  $67.BIP44Params ensurePath() => $_ensure(0);
 }
 
 /// Multi item
@@ -201,7 +201,7 @@ enum Record_Item {
 class Record extends $pb.GeneratedMessage {
   factory Record({
     $core.String? name,
-    $0.Any? pubKey,
+    $46.Any? pubKey,
     Record_Local? local,
     Record_Ledger? ledger,
     Record_Multi? multi,
@@ -242,7 +242,7 @@ class Record extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Record', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.crypto.keyring.v1'), createEmptyInstance: create)
     ..oo(0, [3, 4, 5, 6])
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $0.Any.create)
+    ..aOM<$46.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $46.Any.create)
     ..aOM<Record_Local>(3, _omitFieldNames ? '' : 'local', subBuilder: Record_Local.create)
     ..aOM<Record_Ledger>(4, _omitFieldNames ? '' : 'ledger', subBuilder: Record_Ledger.create)
     ..aOM<Record_Multi>(5, _omitFieldNames ? '' : 'multi', subBuilder: Record_Multi.create)
@@ -286,15 +286,15 @@ class Record extends $pb.GeneratedMessage {
 
   /// pub_key represents a public key in any format
   @$pb.TagNumber(2)
-  $0.Any get pubKey => $_getN(1);
+  $46.Any get pubKey => $_getN(1);
   @$pb.TagNumber(2)
-  set pubKey($0.Any v) { setField(2, v); }
+  set pubKey($46.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPubKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearPubKey() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Any ensurePubKey() => $_ensure(1);
+  $46.Any ensurePubKey() => $_ensure(1);
 
   /// local stores the private key locally.
   @$pb.TagNumber(3)

@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/client/v1/client.pb.dart' as $3;
+import '../../../core/client/v1/client.pb.dart' as $19;
 
 /// Wasm light client's Client state
 class ClientState extends $pb.GeneratedMessage {
   factory ClientState({
     $core.List<$core.int>? data,
     $core.List<$core.int>? checksum,
-    $3.Height? latestHeight,
+    $19.Height? latestHeight,
   }) {
     final $result = create();
     if (data != null) {
@@ -41,7 +41,7 @@ class ClientState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ClientState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.wasm.v1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'checksum', $pb.PbFieldType.OY)
-    ..aOM<$3.Height>(3, _omitFieldNames ? '' : 'latestHeight', subBuilder: $3.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'latestHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -87,15 +87,15 @@ class ClientState extends $pb.GeneratedMessage {
   void clearChecksum() => clearField(2);
 
   @$pb.TagNumber(3)
-  $3.Height get latestHeight => $_getN(2);
+  $19.Height get latestHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set latestHeight($3.Height v) { setField(3, v); }
+  set latestHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasLatestHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearLatestHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Height ensureLatestHeight() => $_ensure(2);
+  $19.Height ensureLatestHeight() => $_ensure(2);
 }
 
 /// Wasm light client's ConsensusState

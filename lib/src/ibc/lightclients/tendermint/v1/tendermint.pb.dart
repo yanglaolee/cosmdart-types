@@ -14,13 +14,13 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/ics23/v1/proofs.pb.dart' as $2;
-import '../../../../google/protobuf/duration.pb.dart' as $0;
-import '../../../../google/protobuf/timestamp.pb.dart' as $3;
-import '../../../../tendermint/types/types.pb.dart' as $5;
-import '../../../../tendermint/types/validator.pb.dart' as $6;
-import '../../../core/client/v1/client.pb.dart' as $1;
-import '../../../core/commitment/v1/commitment.pb.dart' as $4;
+import '../../../../cosmos/ics23/v1/proofs.pb.dart' as $31;
+import '../../../../google/protobuf/duration.pb.dart' as $37;
+import '../../../../google/protobuf/timestamp.pb.dart' as $38;
+import '../../../../tendermint/types/types.pb.dart' as $39;
+import '../../../../tendermint/types/validator.pb.dart' as $40;
+import '../../../core/client/v1/client.pb.dart' as $19;
+import '../../../core/commitment/v1/commitment.pb.dart' as $32;
 
 /// ClientState from Tendermint tracks the current validator set, latest height,
 /// and a possible frozen height.
@@ -28,12 +28,12 @@ class ClientState extends $pb.GeneratedMessage {
   factory ClientState({
     $core.String? chainId,
     Fraction? trustLevel,
-    $0.Duration? trustingPeriod,
-    $0.Duration? unbondingPeriod,
-    $0.Duration? maxClockDrift,
-    $1.Height? frozenHeight,
-    $1.Height? latestHeight,
-    $core.Iterable<$2.ProofSpec>? proofSpecs,
+    $37.Duration? trustingPeriod,
+    $37.Duration? unbondingPeriod,
+    $37.Duration? maxClockDrift,
+    $19.Height? frozenHeight,
+    $19.Height? latestHeight,
+    $core.Iterable<$31.ProofSpec>? proofSpecs,
     $core.Iterable<$core.String>? upgradePath,
   @$core.Deprecated('This field is deprecated.')
     $core.bool? allowUpdateAfterExpiry,
@@ -85,12 +85,12 @@ class ClientState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ClientState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.tendermint.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'chainId')
     ..aOM<Fraction>(2, _omitFieldNames ? '' : 'trustLevel', subBuilder: Fraction.create)
-    ..aOM<$0.Duration>(3, _omitFieldNames ? '' : 'trustingPeriod', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(4, _omitFieldNames ? '' : 'unbondingPeriod', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(5, _omitFieldNames ? '' : 'maxClockDrift', subBuilder: $0.Duration.create)
-    ..aOM<$1.Height>(6, _omitFieldNames ? '' : 'frozenHeight', subBuilder: $1.Height.create)
-    ..aOM<$1.Height>(7, _omitFieldNames ? '' : 'latestHeight', subBuilder: $1.Height.create)
-    ..pc<$2.ProofSpec>(8, _omitFieldNames ? '' : 'proofSpecs', $pb.PbFieldType.PM, subBuilder: $2.ProofSpec.create)
+    ..aOM<$37.Duration>(3, _omitFieldNames ? '' : 'trustingPeriod', subBuilder: $37.Duration.create)
+    ..aOM<$37.Duration>(4, _omitFieldNames ? '' : 'unbondingPeriod', subBuilder: $37.Duration.create)
+    ..aOM<$37.Duration>(5, _omitFieldNames ? '' : 'maxClockDrift', subBuilder: $37.Duration.create)
+    ..aOM<$19.Height>(6, _omitFieldNames ? '' : 'frozenHeight', subBuilder: $19.Height.create)
+    ..aOM<$19.Height>(7, _omitFieldNames ? '' : 'latestHeight', subBuilder: $19.Height.create)
+    ..pc<$31.ProofSpec>(8, _omitFieldNames ? '' : 'proofSpecs', $pb.PbFieldType.PM, subBuilder: $31.ProofSpec.create)
     ..pPS(9, _omitFieldNames ? '' : 'upgradePath')
     ..aOB(10, _omitFieldNames ? '' : 'allowUpdateAfterExpiry')
     ..aOB(11, _omitFieldNames ? '' : 'allowUpdateAfterMisbehaviour')
@@ -141,67 +141,67 @@ class ClientState extends $pb.GeneratedMessage {
   /// duration of the period since the LastestTimestamp during which the
   /// submitted headers are valid for upgrade
   @$pb.TagNumber(3)
-  $0.Duration get trustingPeriod => $_getN(2);
+  $37.Duration get trustingPeriod => $_getN(2);
   @$pb.TagNumber(3)
-  set trustingPeriod($0.Duration v) { setField(3, v); }
+  set trustingPeriod($37.Duration v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTrustingPeriod() => $_has(2);
   @$pb.TagNumber(3)
   void clearTrustingPeriod() => clearField(3);
   @$pb.TagNumber(3)
-  $0.Duration ensureTrustingPeriod() => $_ensure(2);
+  $37.Duration ensureTrustingPeriod() => $_ensure(2);
 
   /// duration of the staking unbonding period
   @$pb.TagNumber(4)
-  $0.Duration get unbondingPeriod => $_getN(3);
+  $37.Duration get unbondingPeriod => $_getN(3);
   @$pb.TagNumber(4)
-  set unbondingPeriod($0.Duration v) { setField(4, v); }
+  set unbondingPeriod($37.Duration v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasUnbondingPeriod() => $_has(3);
   @$pb.TagNumber(4)
   void clearUnbondingPeriod() => clearField(4);
   @$pb.TagNumber(4)
-  $0.Duration ensureUnbondingPeriod() => $_ensure(3);
+  $37.Duration ensureUnbondingPeriod() => $_ensure(3);
 
   /// defines how much new (untrusted) header's Time can drift into the future.
   @$pb.TagNumber(5)
-  $0.Duration get maxClockDrift => $_getN(4);
+  $37.Duration get maxClockDrift => $_getN(4);
   @$pb.TagNumber(5)
-  set maxClockDrift($0.Duration v) { setField(5, v); }
+  set maxClockDrift($37.Duration v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasMaxClockDrift() => $_has(4);
   @$pb.TagNumber(5)
   void clearMaxClockDrift() => clearField(5);
   @$pb.TagNumber(5)
-  $0.Duration ensureMaxClockDrift() => $_ensure(4);
+  $37.Duration ensureMaxClockDrift() => $_ensure(4);
 
   /// Block height when the client was frozen due to a misbehaviour
   @$pb.TagNumber(6)
-  $1.Height get frozenHeight => $_getN(5);
+  $19.Height get frozenHeight => $_getN(5);
   @$pb.TagNumber(6)
-  set frozenHeight($1.Height v) { setField(6, v); }
+  set frozenHeight($19.Height v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasFrozenHeight() => $_has(5);
   @$pb.TagNumber(6)
   void clearFrozenHeight() => clearField(6);
   @$pb.TagNumber(6)
-  $1.Height ensureFrozenHeight() => $_ensure(5);
+  $19.Height ensureFrozenHeight() => $_ensure(5);
 
   /// Latest height the client was updated to
   @$pb.TagNumber(7)
-  $1.Height get latestHeight => $_getN(6);
+  $19.Height get latestHeight => $_getN(6);
   @$pb.TagNumber(7)
-  set latestHeight($1.Height v) { setField(7, v); }
+  set latestHeight($19.Height v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasLatestHeight() => $_has(6);
   @$pb.TagNumber(7)
   void clearLatestHeight() => clearField(7);
   @$pb.TagNumber(7)
-  $1.Height ensureLatestHeight() => $_ensure(6);
+  $19.Height ensureLatestHeight() => $_ensure(6);
 
   /// Proof specifications used in verifying counterparty state
   @$pb.TagNumber(8)
-  $core.List<$2.ProofSpec> get proofSpecs => $_getList(7);
+  $core.List<$31.ProofSpec> get proofSpecs => $_getList(7);
 
   /// Path at which next upgraded client will be committed.
   /// Each element corresponds to the key for a single CommitmentProof in the
@@ -245,8 +245,8 @@ class ClientState extends $pb.GeneratedMessage {
 /// ConsensusState defines the consensus state from Tendermint.
 class ConsensusState extends $pb.GeneratedMessage {
   factory ConsensusState({
-    $3.Timestamp? timestamp,
-    $4.MerkleRoot? root,
+    $38.Timestamp? timestamp,
+    $32.MerkleRoot? root,
     $core.List<$core.int>? nextValidatorsHash,
   }) {
     final $result = create();
@@ -266,8 +266,8 @@ class ConsensusState extends $pb.GeneratedMessage {
   factory ConsensusState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.tendermint.v1'), createEmptyInstance: create)
-    ..aOM<$3.Timestamp>(1, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
-    ..aOM<$4.MerkleRoot>(2, _omitFieldNames ? '' : 'root', subBuilder: $4.MerkleRoot.create)
+    ..aOM<$38.Timestamp>(1, _omitFieldNames ? '' : 'timestamp', subBuilder: $38.Timestamp.create)
+    ..aOM<$32.MerkleRoot>(2, _omitFieldNames ? '' : 'root', subBuilder: $32.MerkleRoot.create)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'nextValidatorsHash', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
@@ -296,27 +296,27 @@ class ConsensusState extends $pb.GeneratedMessage {
   /// timestamp that corresponds to the block height in which the ConsensusState
   /// was stored.
   @$pb.TagNumber(1)
-  $3.Timestamp get timestamp => $_getN(0);
+  $38.Timestamp get timestamp => $_getN(0);
   @$pb.TagNumber(1)
-  set timestamp($3.Timestamp v) { setField(1, v); }
+  set timestamp($38.Timestamp v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTimestamp() => $_has(0);
   @$pb.TagNumber(1)
   void clearTimestamp() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Timestamp ensureTimestamp() => $_ensure(0);
+  $38.Timestamp ensureTimestamp() => $_ensure(0);
 
   /// commitment root (i.e app hash)
   @$pb.TagNumber(2)
-  $4.MerkleRoot get root => $_getN(1);
+  $32.MerkleRoot get root => $_getN(1);
   @$pb.TagNumber(2)
-  set root($4.MerkleRoot v) { setField(2, v); }
+  set root($32.MerkleRoot v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRoot() => $_has(1);
   @$pb.TagNumber(2)
   void clearRoot() => clearField(2);
   @$pb.TagNumber(2)
-  $4.MerkleRoot ensureRoot() => $_ensure(1);
+  $32.MerkleRoot ensureRoot() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.List<$core.int> get nextValidatorsHash => $_getN(2);
@@ -433,10 +433,10 @@ class Misbehaviour extends $pb.GeneratedMessage {
 /// trusted validator set at the TrustedHeight.
 class Header extends $pb.GeneratedMessage {
   factory Header({
-    $5.SignedHeader? signedHeader,
-    $6.ValidatorSet? validatorSet,
-    $1.Height? trustedHeight,
-    $6.ValidatorSet? trustedValidators,
+    $39.SignedHeader? signedHeader,
+    $40.ValidatorSet? validatorSet,
+    $19.Height? trustedHeight,
+    $40.ValidatorSet? trustedValidators,
   }) {
     final $result = create();
     if (signedHeader != null) {
@@ -458,10 +458,10 @@ class Header extends $pb.GeneratedMessage {
   factory Header.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Header', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.tendermint.v1'), createEmptyInstance: create)
-    ..aOM<$5.SignedHeader>(1, _omitFieldNames ? '' : 'signedHeader', subBuilder: $5.SignedHeader.create)
-    ..aOM<$6.ValidatorSet>(2, _omitFieldNames ? '' : 'validatorSet', subBuilder: $6.ValidatorSet.create)
-    ..aOM<$1.Height>(3, _omitFieldNames ? '' : 'trustedHeight', subBuilder: $1.Height.create)
-    ..aOM<$6.ValidatorSet>(4, _omitFieldNames ? '' : 'trustedValidators', subBuilder: $6.ValidatorSet.create)
+    ..aOM<$39.SignedHeader>(1, _omitFieldNames ? '' : 'signedHeader', subBuilder: $39.SignedHeader.create)
+    ..aOM<$40.ValidatorSet>(2, _omitFieldNames ? '' : 'validatorSet', subBuilder: $40.ValidatorSet.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'trustedHeight', subBuilder: $19.Height.create)
+    ..aOM<$40.ValidatorSet>(4, _omitFieldNames ? '' : 'trustedValidators', subBuilder: $40.ValidatorSet.create)
     ..hasRequiredFields = false
   ;
 
@@ -487,48 +487,48 @@ class Header extends $pb.GeneratedMessage {
   static Header? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.SignedHeader get signedHeader => $_getN(0);
+  $39.SignedHeader get signedHeader => $_getN(0);
   @$pb.TagNumber(1)
-  set signedHeader($5.SignedHeader v) { setField(1, v); }
+  set signedHeader($39.SignedHeader v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSignedHeader() => $_has(0);
   @$pb.TagNumber(1)
   void clearSignedHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $5.SignedHeader ensureSignedHeader() => $_ensure(0);
+  $39.SignedHeader ensureSignedHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $6.ValidatorSet get validatorSet => $_getN(1);
+  $40.ValidatorSet get validatorSet => $_getN(1);
   @$pb.TagNumber(2)
-  set validatorSet($6.ValidatorSet v) { setField(2, v); }
+  set validatorSet($40.ValidatorSet v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasValidatorSet() => $_has(1);
   @$pb.TagNumber(2)
   void clearValidatorSet() => clearField(2);
   @$pb.TagNumber(2)
-  $6.ValidatorSet ensureValidatorSet() => $_ensure(1);
+  $40.ValidatorSet ensureValidatorSet() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $1.Height get trustedHeight => $_getN(2);
+  $19.Height get trustedHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set trustedHeight($1.Height v) { setField(3, v); }
+  set trustedHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTrustedHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearTrustedHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $1.Height ensureTrustedHeight() => $_ensure(2);
+  $19.Height ensureTrustedHeight() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $6.ValidatorSet get trustedValidators => $_getN(3);
+  $40.ValidatorSet get trustedValidators => $_getN(3);
   @$pb.TagNumber(4)
-  set trustedValidators($6.ValidatorSet v) { setField(4, v); }
+  set trustedValidators($40.ValidatorSet v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTrustedValidators() => $_has(3);
   @$pb.TagNumber(4)
   void clearTrustedValidators() => clearField(4);
   @$pb.TagNumber(4)
-  $6.ValidatorSet ensureTrustedValidators() => $_ensure(3);
+  $40.ValidatorSet ensureTrustedValidators() => $_ensure(3);
 }
 
 /// Fraction defines the protobuf message type for tmmath.Fraction that only

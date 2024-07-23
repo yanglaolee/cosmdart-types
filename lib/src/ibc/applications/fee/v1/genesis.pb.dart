@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/channel/v1/channel.pb.dart' as $3;
-import 'fee.pb.dart' as $4;
+import '../../../core/channel/v1/channel.pb.dart' as $21;
+import 'fee.pb.dart' as $22;
 
 /// GenesisState defines the ICS29 fee middleware genesis state
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$4.IdentifiedPacketFees>? identifiedFees,
+    $core.Iterable<$22.IdentifiedPacketFees>? identifiedFees,
     $core.Iterable<FeeEnabledChannel>? feeEnabledChannels,
     $core.Iterable<RegisteredPayee>? registeredPayees,
     $core.Iterable<RegisteredCounterpartyPayee>? registeredCounterpartyPayees,
@@ -48,7 +48,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..pc<$4.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'identifiedFees', $pb.PbFieldType.PM, subBuilder: $4.IdentifiedPacketFees.create)
+    ..pc<$22.IdentifiedPacketFees>(1, _omitFieldNames ? '' : 'identifiedFees', $pb.PbFieldType.PM, subBuilder: $22.IdentifiedPacketFees.create)
     ..pc<FeeEnabledChannel>(2, _omitFieldNames ? '' : 'feeEnabledChannels', $pb.PbFieldType.PM, subBuilder: FeeEnabledChannel.create)
     ..pc<RegisteredPayee>(3, _omitFieldNames ? '' : 'registeredPayees', $pb.PbFieldType.PM, subBuilder: RegisteredPayee.create)
     ..pc<RegisteredCounterpartyPayee>(4, _omitFieldNames ? '' : 'registeredCounterpartyPayees', $pb.PbFieldType.PM, subBuilder: RegisteredCounterpartyPayee.create)
@@ -79,7 +79,7 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// list of identified packet fees
   @$pb.TagNumber(1)
-  $core.List<$4.IdentifiedPacketFees> get identifiedFees => $_getList(0);
+  $core.List<$22.IdentifiedPacketFees> get identifiedFees => $_getList(0);
 
   /// list of fee enabled channels
   @$pb.TagNumber(2)
@@ -334,7 +334,7 @@ class RegisteredCounterpartyPayee extends $pb.GeneratedMessage {
 class ForwardRelayerAddress extends $pb.GeneratedMessage {
   factory ForwardRelayerAddress({
     $core.String? address,
-    $3.PacketId? packetId,
+    $21.PacketId? packetId,
   }) {
     final $result = create();
     if (address != null) {
@@ -351,7 +351,7 @@ class ForwardRelayerAddress extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ForwardRelayerAddress', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$3.PacketId>(2, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
+    ..aOM<$21.PacketId>(2, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
     ..hasRequiredFields = false
   ;
 
@@ -388,15 +388,15 @@ class ForwardRelayerAddress extends $pb.GeneratedMessage {
 
   /// unique packet identifer comprised of the channel ID, port ID and sequence
   @$pb.TagNumber(2)
-  $3.PacketId get packetId => $_getN(1);
+  $21.PacketId get packetId => $_getN(1);
   @$pb.TagNumber(2)
-  set packetId($3.PacketId v) { setField(2, v); }
+  set packetId($21.PacketId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPacketId() => $_has(1);
   @$pb.TagNumber(2)
   void clearPacketId() => clearField(2);
   @$pb.TagNumber(2)
-  $3.PacketId ensurePacketId() => $_ensure(1);
+  $21.PacketId ensurePacketId() => $_ensure(1);
 }
 
 

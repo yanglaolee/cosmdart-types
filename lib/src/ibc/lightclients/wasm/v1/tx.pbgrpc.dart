@@ -15,24 +15,24 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $1;
+import 'tx.pb.dart' as $15;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('ibc.lightclients.wasm.v1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$storeCode = $grpc.ClientMethod<$1.MsgStoreCode, $1.MsgStoreCodeResponse>(
+  static final _$storeCode = $grpc.ClientMethod<$15.MsgStoreCode, $15.MsgStoreCodeResponse>(
       '/ibc.lightclients.wasm.v1.Msg/StoreCode',
-      ($1.MsgStoreCode value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgStoreCodeResponse.fromBuffer(value));
-  static final _$removeChecksum = $grpc.ClientMethod<$1.MsgRemoveChecksum, $1.MsgRemoveChecksumResponse>(
+      ($15.MsgStoreCode value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $15.MsgStoreCodeResponse.fromBuffer(value));
+  static final _$removeChecksum = $grpc.ClientMethod<$15.MsgRemoveChecksum, $15.MsgRemoveChecksumResponse>(
       '/ibc.lightclients.wasm.v1.Msg/RemoveChecksum',
-      ($1.MsgRemoveChecksum value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgRemoveChecksumResponse.fromBuffer(value));
-  static final _$migrateContract = $grpc.ClientMethod<$1.MsgMigrateContract, $1.MsgMigrateContractResponse>(
+      ($15.MsgRemoveChecksum value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $15.MsgRemoveChecksumResponse.fromBuffer(value));
+  static final _$migrateContract = $grpc.ClientMethod<$15.MsgMigrateContract, $15.MsgMigrateContractResponse>(
       '/ibc.lightclients.wasm.v1.Msg/MigrateContract',
-      ($1.MsgMigrateContract value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgMigrateContractResponse.fromBuffer(value));
+      ($15.MsgMigrateContract value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $15.MsgMigrateContractResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -40,15 +40,15 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.MsgStoreCodeResponse> storeCode($1.MsgStoreCode request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$15.MsgStoreCodeResponse> storeCode($15.MsgStoreCode request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$storeCode, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgRemoveChecksumResponse> removeChecksum($1.MsgRemoveChecksum request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$15.MsgRemoveChecksumResponse> removeChecksum($15.MsgRemoveChecksum request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$removeChecksum, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgMigrateContractResponse> migrateContract($1.MsgMigrateContract request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$15.MsgMigrateContractResponse> migrateContract($15.MsgMigrateContract request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$migrateContract, request, options: options);
   }
 }
@@ -58,42 +58,42 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'ibc.lightclients.wasm.v1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.MsgStoreCode, $1.MsgStoreCodeResponse>(
+    $addMethod($grpc.ServiceMethod<$15.MsgStoreCode, $15.MsgStoreCodeResponse>(
         'StoreCode',
         storeCode_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgStoreCode.fromBuffer(value),
-        ($1.MsgStoreCodeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgRemoveChecksum, $1.MsgRemoveChecksumResponse>(
+        ($core.List<$core.int> value) => $15.MsgStoreCode.fromBuffer(value),
+        ($15.MsgStoreCodeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$15.MsgRemoveChecksum, $15.MsgRemoveChecksumResponse>(
         'RemoveChecksum',
         removeChecksum_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgRemoveChecksum.fromBuffer(value),
-        ($1.MsgRemoveChecksumResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgMigrateContract, $1.MsgMigrateContractResponse>(
+        ($core.List<$core.int> value) => $15.MsgRemoveChecksum.fromBuffer(value),
+        ($15.MsgRemoveChecksumResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$15.MsgMigrateContract, $15.MsgMigrateContractResponse>(
         'MigrateContract',
         migrateContract_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgMigrateContract.fromBuffer(value),
-        ($1.MsgMigrateContractResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $15.MsgMigrateContract.fromBuffer(value),
+        ($15.MsgMigrateContractResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.MsgStoreCodeResponse> storeCode_Pre($grpc.ServiceCall call, $async.Future<$1.MsgStoreCode> request) async {
+  $async.Future<$15.MsgStoreCodeResponse> storeCode_Pre($grpc.ServiceCall call, $async.Future<$15.MsgStoreCode> request) async {
     return storeCode(call, await request);
   }
 
-  $async.Future<$1.MsgRemoveChecksumResponse> removeChecksum_Pre($grpc.ServiceCall call, $async.Future<$1.MsgRemoveChecksum> request) async {
+  $async.Future<$15.MsgRemoveChecksumResponse> removeChecksum_Pre($grpc.ServiceCall call, $async.Future<$15.MsgRemoveChecksum> request) async {
     return removeChecksum(call, await request);
   }
 
-  $async.Future<$1.MsgMigrateContractResponse> migrateContract_Pre($grpc.ServiceCall call, $async.Future<$1.MsgMigrateContract> request) async {
+  $async.Future<$15.MsgMigrateContractResponse> migrateContract_Pre($grpc.ServiceCall call, $async.Future<$15.MsgMigrateContract> request) async {
     return migrateContract(call, await request);
   }
 
-  $async.Future<$1.MsgStoreCodeResponse> storeCode($grpc.ServiceCall call, $1.MsgStoreCode request);
-  $async.Future<$1.MsgRemoveChecksumResponse> removeChecksum($grpc.ServiceCall call, $1.MsgRemoveChecksum request);
-  $async.Future<$1.MsgMigrateContractResponse> migrateContract($grpc.ServiceCall call, $1.MsgMigrateContract request);
+  $async.Future<$15.MsgStoreCodeResponse> storeCode($grpc.ServiceCall call, $15.MsgStoreCode request);
+  $async.Future<$15.MsgRemoveChecksumResponse> removeChecksum($grpc.ServiceCall call, $15.MsgRemoveChecksum request);
+  $async.Future<$15.MsgMigrateContractResponse> migrateContract($grpc.ServiceCall call, $15.MsgMigrateContract request);
 }

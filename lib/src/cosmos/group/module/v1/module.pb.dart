@@ -14,12 +14,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/duration.pb.dart' as $0;
+import '../../../../google/protobuf/duration.pb.dart' as $55;
 
 /// Module is the config object of the group module.
 class Module extends $pb.GeneratedMessage {
   factory Module({
-    $0.Duration? maxExecutionPeriod,
+    $55.Duration? maxExecutionPeriod,
     $fixnum.Int64? maxMetadataLen,
   }) {
     final $result = create();
@@ -36,7 +36,7 @@ class Module extends $pb.GeneratedMessage {
   factory Module.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Module', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.module.v1'), createEmptyInstance: create)
-    ..aOM<$0.Duration>(1, _omitFieldNames ? '' : 'maxExecutionPeriod', subBuilder: $0.Duration.create)
+    ..aOM<$55.Duration>(1, _omitFieldNames ? '' : 'maxExecutionPeriod', subBuilder: $55.Duration.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'maxMetadataLen', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -65,15 +65,15 @@ class Module extends $pb.GeneratedMessage {
   /// max_execution_period defines the max duration after a proposal's voting period ends that members can send a MsgExec
   /// to execute the proposal.
   @$pb.TagNumber(1)
-  $0.Duration get maxExecutionPeriod => $_getN(0);
+  $55.Duration get maxExecutionPeriod => $_getN(0);
   @$pb.TagNumber(1)
-  set maxExecutionPeriod($0.Duration v) { setField(1, v); }
+  set maxExecutionPeriod($55.Duration v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMaxExecutionPeriod() => $_has(0);
   @$pb.TagNumber(1)
   void clearMaxExecutionPeriod() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Duration ensureMaxExecutionPeriod() => $_ensure(0);
+  $55.Duration ensureMaxExecutionPeriod() => $_ensure(0);
 
   /// max_metadata_len defines the max length of the metadata bytes field for various entities within the group module.
   /// Defaults to 255 if not explicitly set.

@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../commitment/v1/commitment.pb.dart' as $2;
+import '../../commitment/v1/commitment.pb.dart' as $32;
 import 'connection.pbenum.dart';
 
 export 'connection.pbenum.dart';
@@ -263,7 +263,7 @@ class Counterparty extends $pb.GeneratedMessage {
   factory Counterparty({
     $core.String? clientId,
     $core.String? connectionId,
-    $2.MerklePrefix? prefix,
+    $32.MerklePrefix? prefix,
   }) {
     final $result = create();
     if (clientId != null) {
@@ -284,7 +284,7 @@ class Counterparty extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Counterparty', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
     ..aOS(2, _omitFieldNames ? '' : 'connectionId')
-    ..aOM<$2.MerklePrefix>(3, _omitFieldNames ? '' : 'prefix', subBuilder: $2.MerklePrefix.create)
+    ..aOM<$32.MerklePrefix>(3, _omitFieldNames ? '' : 'prefix', subBuilder: $32.MerklePrefix.create)
     ..hasRequiredFields = false
   ;
 
@@ -333,15 +333,15 @@ class Counterparty extends $pb.GeneratedMessage {
 
   /// commitment merkle prefix of the counterparty chain.
   @$pb.TagNumber(3)
-  $2.MerklePrefix get prefix => $_getN(2);
+  $32.MerklePrefix get prefix => $_getN(2);
   @$pb.TagNumber(3)
-  set prefix($2.MerklePrefix v) { setField(3, v); }
+  set prefix($32.MerklePrefix v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPrefix() => $_has(2);
   @$pb.TagNumber(3)
   void clearPrefix() => clearField(3);
   @$pb.TagNumber(3)
-  $2.MerklePrefix ensurePrefix() => $_ensure(2);
+  $32.MerklePrefix ensurePrefix() => $_ensure(2);
 }
 
 /// ClientPaths define all the connection paths for a client state.

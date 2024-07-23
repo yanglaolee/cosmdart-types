@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../controller/v1/controller.pb.dart' as $0;
-import '../../host/v1/host.pb.dart' as $1;
+import '../../controller/v1/controller.pb.dart' as $25;
+import '../../host/v1/host.pb.dart' as $27;
 
 /// GenesisState defines the interchain accounts genesis state
 class GenesisState extends $pb.GeneratedMessage {
@@ -91,7 +91,7 @@ class ControllerGenesisState extends $pb.GeneratedMessage {
     $core.Iterable<ActiveChannel>? activeChannels,
     $core.Iterable<RegisteredInterchainAccount>? interchainAccounts,
     $core.Iterable<$core.String>? ports,
-    $0.Params? params,
+    $25.Params? params,
   }) {
     final $result = create();
     if (activeChannels != null) {
@@ -116,7 +116,7 @@ class ControllerGenesisState extends $pb.GeneratedMessage {
     ..pc<ActiveChannel>(1, _omitFieldNames ? '' : 'activeChannels', $pb.PbFieldType.PM, subBuilder: ActiveChannel.create)
     ..pc<RegisteredInterchainAccount>(2, _omitFieldNames ? '' : 'interchainAccounts', $pb.PbFieldType.PM, subBuilder: RegisteredInterchainAccount.create)
     ..pPS(3, _omitFieldNames ? '' : 'ports')
-    ..aOM<$0.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $0.Params.create)
+    ..aOM<$25.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $25.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -151,15 +151,15 @@ class ControllerGenesisState extends $pb.GeneratedMessage {
   $core.List<$core.String> get ports => $_getList(2);
 
   @$pb.TagNumber(4)
-  $0.Params get params => $_getN(3);
+  $25.Params get params => $_getN(3);
   @$pb.TagNumber(4)
-  set params($0.Params v) { setField(4, v); }
+  set params($25.Params v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
   @$pb.TagNumber(4)
   void clearParams() => clearField(4);
   @$pb.TagNumber(4)
-  $0.Params ensureParams() => $_ensure(3);
+  $25.Params ensureParams() => $_ensure(3);
 }
 
 /// HostGenesisState defines the interchain accounts host genesis state
@@ -168,7 +168,7 @@ class HostGenesisState extends $pb.GeneratedMessage {
     $core.Iterable<ActiveChannel>? activeChannels,
     $core.Iterable<RegisteredInterchainAccount>? interchainAccounts,
     $core.String? port,
-    $1.Params? params,
+    $27.Params? params,
   }) {
     final $result = create();
     if (activeChannels != null) {
@@ -193,7 +193,7 @@ class HostGenesisState extends $pb.GeneratedMessage {
     ..pc<ActiveChannel>(1, _omitFieldNames ? '' : 'activeChannels', $pb.PbFieldType.PM, subBuilder: ActiveChannel.create)
     ..pc<RegisteredInterchainAccount>(2, _omitFieldNames ? '' : 'interchainAccounts', $pb.PbFieldType.PM, subBuilder: RegisteredInterchainAccount.create)
     ..aOS(3, _omitFieldNames ? '' : 'port')
-    ..aOM<$1.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $1.Params.create)
+    ..aOM<$27.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $27.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -234,15 +234,15 @@ class HostGenesisState extends $pb.GeneratedMessage {
   void clearPort() => clearField(3);
 
   @$pb.TagNumber(4)
-  $1.Params get params => $_getN(3);
+  $27.Params get params => $_getN(3);
   @$pb.TagNumber(4)
-  set params($1.Params v) { setField(4, v); }
+  set params($27.Params v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
   @$pb.TagNumber(4)
   void clearParams() => clearField(4);
   @$pb.TagNumber(4)
-  $1.Params ensureParams() => $_ensure(3);
+  $27.Params ensureParams() => $_ensure(3);
 }
 
 /// ActiveChannel contains a connection ID, port ID and associated active channel ID, as well as a boolean flag to

@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $0;
+import 'query.pb.dart' as $35;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.params.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$params = $grpc.ClientMethod<$0.QueryParamsRequest, $0.QueryParamsResponse>(
+  static final _$params = $grpc.ClientMethod<$35.QueryParamsRequest, $35.QueryParamsResponse>(
       '/cosmos.params.v1beta1.Query/Params',
-      ($0.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryParamsResponse.fromBuffer(value));
-  static final _$subspaces = $grpc.ClientMethod<$0.QuerySubspacesRequest, $0.QuerySubspacesResponse>(
+      ($35.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $35.QueryParamsResponse.fromBuffer(value));
+  static final _$subspaces = $grpc.ClientMethod<$35.QuerySubspacesRequest, $35.QuerySubspacesResponse>(
       '/cosmos.params.v1beta1.Query/Subspaces',
-      ($0.QuerySubspacesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QuerySubspacesResponse.fromBuffer(value));
+      ($35.QuerySubspacesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $35.QuerySubspacesResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.QueryParamsResponse> params($0.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$35.QueryParamsResponse> params($35.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.QuerySubspacesResponse> subspaces($0.QuerySubspacesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$35.QuerySubspacesResponse> subspaces($35.QuerySubspacesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$subspaces, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.params.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.QueryParamsRequest, $0.QueryParamsResponse>(
+    $addMethod($grpc.ServiceMethod<$35.QueryParamsRequest, $35.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryParamsRequest.fromBuffer(value),
-        ($0.QueryParamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.QuerySubspacesRequest, $0.QuerySubspacesResponse>(
+        ($core.List<$core.int> value) => $35.QueryParamsRequest.fromBuffer(value),
+        ($35.QueryParamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$35.QuerySubspacesRequest, $35.QuerySubspacesResponse>(
         'Subspaces',
         subspaces_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QuerySubspacesRequest.fromBuffer(value),
-        ($0.QuerySubspacesResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $35.QuerySubspacesRequest.fromBuffer(value),
+        ($35.QuerySubspacesResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$0.QueryParamsRequest> request) async {
+  $async.Future<$35.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$35.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$0.QuerySubspacesResponse> subspaces_Pre($grpc.ServiceCall call, $async.Future<$0.QuerySubspacesRequest> request) async {
+  $async.Future<$35.QuerySubspacesResponse> subspaces_Pre($grpc.ServiceCall call, $async.Future<$35.QuerySubspacesRequest> request) async {
     return subspaces(call, await request);
   }
 
-  $async.Future<$0.QueryParamsResponse> params($grpc.ServiceCall call, $0.QueryParamsRequest request);
-  $async.Future<$0.QuerySubspacesResponse> subspaces($grpc.ServiceCall call, $0.QuerySubspacesRequest request);
+  $async.Future<$35.QueryParamsResponse> params($grpc.ServiceCall call, $35.QueryParamsRequest request);
+  $async.Future<$35.QuerySubspacesResponse> subspaces($grpc.ServiceCall call, $35.QuerySubspacesRequest request);
 }

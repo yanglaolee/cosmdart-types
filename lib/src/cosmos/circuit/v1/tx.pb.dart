@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $2;
+import 'types.pb.dart' as $66;
 
 /// MsgAuthorizeCircuitBreaker defines the Msg/AuthorizeCircuitBreaker request type.
 class MsgAuthorizeCircuitBreaker extends $pb.GeneratedMessage {
   factory MsgAuthorizeCircuitBreaker({
     $core.String? granter,
     $core.String? grantee,
-    $2.Permissions? permissions,
+    $66.Permissions? permissions,
   }) {
     final $result = create();
     if (granter != null) {
@@ -41,7 +41,7 @@ class MsgAuthorizeCircuitBreaker extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgAuthorizeCircuitBreaker', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.circuit.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
     ..aOS(2, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$2.Permissions>(3, _omitFieldNames ? '' : 'permissions', subBuilder: $2.Permissions.create)
+    ..aOM<$66.Permissions>(3, _omitFieldNames ? '' : 'permissions', subBuilder: $66.Permissions.create)
     ..hasRequiredFields = false
   ;
 
@@ -91,15 +91,15 @@ class MsgAuthorizeCircuitBreaker extends $pb.GeneratedMessage {
   /// These will overwrite any existing permissions. LEVEL_NONE_UNSPECIFIED can
   /// be specified to revoke all permissions.
   @$pb.TagNumber(3)
-  $2.Permissions get permissions => $_getN(2);
+  $66.Permissions get permissions => $_getN(2);
   @$pb.TagNumber(3)
-  set permissions($2.Permissions v) { setField(3, v); }
+  set permissions($66.Permissions v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPermissions() => $_has(2);
   @$pb.TagNumber(3)
   void clearPermissions() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Permissions ensurePermissions() => $_ensure(2);
+  $66.Permissions ensurePermissions() => $_ensure(2);
 }
 
 /// MsgAuthorizeCircuitBreakerResponse defines the Msg/AuthorizeCircuitBreaker response type.

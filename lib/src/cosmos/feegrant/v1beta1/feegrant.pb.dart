@@ -13,17 +13,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $5;
-import '../../../google/protobuf/duration.pb.dart' as $4;
-import '../../../google/protobuf/timestamp.pb.dart' as $3;
-import '../../base/v1beta1/coin.pb.dart' as $2;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/duration.pb.dart' as $55;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
+import '../../base/v1beta1/coin.pb.dart' as $53;
 
 /// BasicAllowance implements Allowance with a one-time grant of coins
 /// that optionally expires. The grantee can use up to SpendLimit to cover fees.
 class BasicAllowance extends $pb.GeneratedMessage {
   factory BasicAllowance({
-    $core.Iterable<$2.Coin>? spendLimit,
-    $3.Timestamp? expiration,
+    $core.Iterable<$53.Coin>? spendLimit,
+    $50.Timestamp? expiration,
   }) {
     final $result = create();
     if (spendLimit != null) {
@@ -39,8 +39,8 @@ class BasicAllowance extends $pb.GeneratedMessage {
   factory BasicAllowance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BasicAllowance', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
-    ..pc<$2.Coin>(1, _omitFieldNames ? '' : 'spendLimit', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
-    ..aOM<$3.Timestamp>(2, _omitFieldNames ? '' : 'expiration', subBuilder: $3.Timestamp.create)
+    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'spendLimit', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'expiration', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -69,19 +69,19 @@ class BasicAllowance extends $pb.GeneratedMessage {
   /// by this allowance and will be updated as coins are spent. If it is
   /// empty, there is no spend limit and any amount of coins can be spent.
   @$pb.TagNumber(1)
-  $core.List<$2.Coin> get spendLimit => $_getList(0);
+  $core.List<$53.Coin> get spendLimit => $_getList(0);
 
   /// expiration specifies an optional time when this allowance expires
   @$pb.TagNumber(2)
-  $3.Timestamp get expiration => $_getN(1);
+  $50.Timestamp get expiration => $_getN(1);
   @$pb.TagNumber(2)
-  set expiration($3.Timestamp v) { setField(2, v); }
+  set expiration($50.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasExpiration() => $_has(1);
   @$pb.TagNumber(2)
   void clearExpiration() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Timestamp ensureExpiration() => $_ensure(1);
+  $50.Timestamp ensureExpiration() => $_ensure(1);
 }
 
 /// PeriodicAllowance extends Allowance to allow for both a maximum cap,
@@ -89,10 +89,10 @@ class BasicAllowance extends $pb.GeneratedMessage {
 class PeriodicAllowance extends $pb.GeneratedMessage {
   factory PeriodicAllowance({
     BasicAllowance? basic,
-    $4.Duration? period,
-    $core.Iterable<$2.Coin>? periodSpendLimit,
-    $core.Iterable<$2.Coin>? periodCanSpend,
-    $3.Timestamp? periodReset,
+    $55.Duration? period,
+    $core.Iterable<$53.Coin>? periodSpendLimit,
+    $core.Iterable<$53.Coin>? periodCanSpend,
+    $50.Timestamp? periodReset,
   }) {
     final $result = create();
     if (basic != null) {
@@ -118,10 +118,10 @@ class PeriodicAllowance extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PeriodicAllowance', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
     ..aOM<BasicAllowance>(1, _omitFieldNames ? '' : 'basic', subBuilder: BasicAllowance.create)
-    ..aOM<$4.Duration>(2, _omitFieldNames ? '' : 'period', subBuilder: $4.Duration.create)
-    ..pc<$2.Coin>(3, _omitFieldNames ? '' : 'periodSpendLimit', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
-    ..pc<$2.Coin>(4, _omitFieldNames ? '' : 'periodCanSpend', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
-    ..aOM<$3.Timestamp>(5, _omitFieldNames ? '' : 'periodReset', subBuilder: $3.Timestamp.create)
+    ..aOM<$55.Duration>(2, _omitFieldNames ? '' : 'period', subBuilder: $55.Duration.create)
+    ..pc<$53.Coin>(3, _omitFieldNames ? '' : 'periodSpendLimit', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..pc<$53.Coin>(4, _omitFieldNames ? '' : 'periodCanSpend', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'periodReset', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -161,44 +161,44 @@ class PeriodicAllowance extends $pb.GeneratedMessage {
   /// period specifies the time duration in which period_spend_limit coins can
   /// be spent before that allowance is reset
   @$pb.TagNumber(2)
-  $4.Duration get period => $_getN(1);
+  $55.Duration get period => $_getN(1);
   @$pb.TagNumber(2)
-  set period($4.Duration v) { setField(2, v); }
+  set period($55.Duration v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPeriod() => $_has(1);
   @$pb.TagNumber(2)
   void clearPeriod() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Duration ensurePeriod() => $_ensure(1);
+  $55.Duration ensurePeriod() => $_ensure(1);
 
   /// period_spend_limit specifies the maximum number of coins that can be spent
   /// in the period
   @$pb.TagNumber(3)
-  $core.List<$2.Coin> get periodSpendLimit => $_getList(2);
+  $core.List<$53.Coin> get periodSpendLimit => $_getList(2);
 
   /// period_can_spend is the number of coins left to be spent before the period_reset time
   @$pb.TagNumber(4)
-  $core.List<$2.Coin> get periodCanSpend => $_getList(3);
+  $core.List<$53.Coin> get periodCanSpend => $_getList(3);
 
   /// period_reset is the time at which this period resets and a new one begins,
   /// it is calculated from the start time of the first transaction after the
   /// last period ended
   @$pb.TagNumber(5)
-  $3.Timestamp get periodReset => $_getN(4);
+  $50.Timestamp get periodReset => $_getN(4);
   @$pb.TagNumber(5)
-  set periodReset($3.Timestamp v) { setField(5, v); }
+  set periodReset($50.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasPeriodReset() => $_has(4);
   @$pb.TagNumber(5)
   void clearPeriodReset() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Timestamp ensurePeriodReset() => $_ensure(4);
+  $50.Timestamp ensurePeriodReset() => $_ensure(4);
 }
 
 /// AllowedMsgAllowance creates allowance only for specified message types.
 class AllowedMsgAllowance extends $pb.GeneratedMessage {
   factory AllowedMsgAllowance({
-    $5.Any? allowance,
+    $46.Any? allowance,
     $core.Iterable<$core.String>? allowedMessages,
   }) {
     final $result = create();
@@ -215,7 +215,7 @@ class AllowedMsgAllowance extends $pb.GeneratedMessage {
   factory AllowedMsgAllowance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AllowedMsgAllowance', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
-    ..aOM<$5.Any>(1, _omitFieldNames ? '' : 'allowance', subBuilder: $5.Any.create)
+    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'allowance', subBuilder: $46.Any.create)
     ..pPS(2, _omitFieldNames ? '' : 'allowedMessages')
     ..hasRequiredFields = false
   ;
@@ -243,15 +243,15 @@ class AllowedMsgAllowance extends $pb.GeneratedMessage {
 
   /// allowance can be any of basic and periodic fee allowance.
   @$pb.TagNumber(1)
-  $5.Any get allowance => $_getN(0);
+  $46.Any get allowance => $_getN(0);
   @$pb.TagNumber(1)
-  set allowance($5.Any v) { setField(1, v); }
+  set allowance($46.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAllowance() => $_has(0);
   @$pb.TagNumber(1)
   void clearAllowance() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Any ensureAllowance() => $_ensure(0);
+  $46.Any ensureAllowance() => $_ensure(0);
 
   /// allowed_messages are the messages for which the grantee has the access.
   @$pb.TagNumber(2)
@@ -263,7 +263,7 @@ class Grant extends $pb.GeneratedMessage {
   factory Grant({
     $core.String? granter,
     $core.String? grantee,
-    $5.Any? allowance,
+    $46.Any? allowance,
   }) {
     final $result = create();
     if (granter != null) {
@@ -284,7 +284,7 @@ class Grant extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Grant', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
     ..aOS(2, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$5.Any>(3, _omitFieldNames ? '' : 'allowance', subBuilder: $5.Any.create)
+    ..aOM<$46.Any>(3, _omitFieldNames ? '' : 'allowance', subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -331,15 +331,15 @@ class Grant extends $pb.GeneratedMessage {
 
   /// allowance can be any of basic, periodic, allowed fee allowance.
   @$pb.TagNumber(3)
-  $5.Any get allowance => $_getN(2);
+  $46.Any get allowance => $_getN(2);
   @$pb.TagNumber(3)
-  set allowance($5.Any v) { setField(3, v); }
+  set allowance($46.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasAllowance() => $_has(2);
   @$pb.TagNumber(3)
   void clearAllowance() => clearField(3);
   @$pb.TagNumber(3)
-  $5.Any ensureAllowance() => $_ensure(2);
+  $46.Any ensureAllowance() => $_ensure(2);
 }
 
 

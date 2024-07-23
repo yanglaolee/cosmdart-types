@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/auth/v1beta1/auth.pb.dart' as $0;
+import '../../../../cosmos/auth/v1beta1/auth.pb.dart' as $28;
 
 /// An InterchainAccount is defined as a BaseAccount & the address of the account owner on the controller chain
 class InterchainAccount extends $pb.GeneratedMessage {
   factory InterchainAccount({
-    $0.BaseAccount? baseAccount,
+    $28.BaseAccount? baseAccount,
     $core.String? accountOwner,
   }) {
     final $result = create();
@@ -35,7 +35,7 @@ class InterchainAccount extends $pb.GeneratedMessage {
   factory InterchainAccount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'InterchainAccount', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.v1'), createEmptyInstance: create)
-    ..aOM<$0.BaseAccount>(1, _omitFieldNames ? '' : 'baseAccount', subBuilder: $0.BaseAccount.create)
+    ..aOM<$28.BaseAccount>(1, _omitFieldNames ? '' : 'baseAccount', subBuilder: $28.BaseAccount.create)
     ..aOS(2, _omitFieldNames ? '' : 'accountOwner')
     ..hasRequiredFields = false
   ;
@@ -62,15 +62,15 @@ class InterchainAccount extends $pb.GeneratedMessage {
   static InterchainAccount? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.BaseAccount get baseAccount => $_getN(0);
+  $28.BaseAccount get baseAccount => $_getN(0);
   @$pb.TagNumber(1)
-  set baseAccount($0.BaseAccount v) { setField(1, v); }
+  set baseAccount($28.BaseAccount v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBaseAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearBaseAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $0.BaseAccount ensureBaseAccount() => $_ensure(0);
+  $28.BaseAccount ensureBaseAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get accountOwner => $_getSZ(1);

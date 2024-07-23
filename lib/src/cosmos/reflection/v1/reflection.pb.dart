@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/descriptor.pb.dart' as $1;
+import '../../../google/protobuf/descriptor.pb.dart' as $76;
 
 /// FileDescriptorsRequest is the Query/FileDescriptors request type.
 class FileDescriptorsRequest extends $pb.GeneratedMessage {
@@ -51,7 +51,7 @@ class FileDescriptorsRequest extends $pb.GeneratedMessage {
 /// FileDescriptorsResponse is the Query/FileDescriptors response type.
 class FileDescriptorsResponse extends $pb.GeneratedMessage {
   factory FileDescriptorsResponse({
-    $core.Iterable<$1.FileDescriptorProto>? files,
+    $core.Iterable<$76.FileDescriptorProto>? files,
   }) {
     final $result = create();
     if (files != null) {
@@ -64,7 +64,7 @@ class FileDescriptorsResponse extends $pb.GeneratedMessage {
   factory FileDescriptorsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FileDescriptorsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.reflection.v1'), createEmptyInstance: create)
-    ..pc<$1.FileDescriptorProto>(1, _omitFieldNames ? '' : 'files', $pb.PbFieldType.PM, subBuilder: $1.FileDescriptorProto.create)
+    ..pc<$76.FileDescriptorProto>(1, _omitFieldNames ? '' : 'files', $pb.PbFieldType.PM, subBuilder: $76.FileDescriptorProto.create)
   ;
 
   @$core.Deprecated(
@@ -90,7 +90,7 @@ class FileDescriptorsResponse extends $pb.GeneratedMessage {
 
   /// files is the file descriptors.
   @$pb.TagNumber(1)
-  $core.List<$1.FileDescriptorProto> get files => $_getList(0);
+  $core.List<$76.FileDescriptorProto> get files => $_getList(0);
 }
 
 

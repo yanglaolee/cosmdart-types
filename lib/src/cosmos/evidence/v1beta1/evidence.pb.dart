@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/timestamp.pb.dart' as $2;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
 
 /// Equivocation implements the Evidence interface and defines evidence of double
 /// signing misbehavior.
 class Equivocation extends $pb.GeneratedMessage {
   factory Equivocation({
     $fixnum.Int64? height,
-    $2.Timestamp? time,
+    $50.Timestamp? time,
     $fixnum.Int64? power,
     $core.String? consensusAddress,
   }) {
@@ -46,7 +46,7 @@ class Equivocation extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Equivocation', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'height')
-    ..aOM<$2.Timestamp>(2, _omitFieldNames ? '' : 'time', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
     ..aInt64(3, _omitFieldNames ? '' : 'power')
     ..aOS(4, _omitFieldNames ? '' : 'consensusAddress')
     ..hasRequiredFields = false
@@ -85,15 +85,15 @@ class Equivocation extends $pb.GeneratedMessage {
 
   /// time is the equivocation time.
   @$pb.TagNumber(2)
-  $2.Timestamp get time => $_getN(1);
+  $50.Timestamp get time => $_getN(1);
   @$pb.TagNumber(2)
-  set time($2.Timestamp v) { setField(2, v); }
+  set time($50.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTime() => $_has(1);
   @$pb.TagNumber(2)
   void clearTime() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Timestamp ensureTime() => $_ensure(1);
+  $50.Timestamp ensureTime() => $_ensure(1);
 
   /// power is the equivocation validator power.
   @$pb.TagNumber(3)

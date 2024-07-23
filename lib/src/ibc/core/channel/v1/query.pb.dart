@@ -14,11 +14,11 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $4;
-import '../../../../google/protobuf/any.pb.dart' as $5;
-import '../../client/v1/client.pb.dart' as $2;
-import 'channel.pb.dart' as $3;
-import 'upgrade.pb.dart' as $6;
+import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $23;
+import '../../../../google/protobuf/any.pb.dart' as $17;
+import '../../client/v1/client.pb.dart' as $19;
+import 'channel.pb.dart' as $21;
+import 'upgrade.pb.dart' as $30;
 
 /// QueryChannelRequest is the request type for the Query/Channel RPC method
 class QueryChannelRequest extends $pb.GeneratedMessage {
@@ -92,9 +92,9 @@ class QueryChannelRequest extends $pb.GeneratedMessage {
 /// proof was retrieved.
 class QueryChannelResponse extends $pb.GeneratedMessage {
   factory QueryChannelResponse({
-    $3.Channel? channel,
+    $21.Channel? channel,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (channel != null) {
@@ -113,9 +113,9 @@ class QueryChannelResponse extends $pb.GeneratedMessage {
   factory QueryChannelResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChannelResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$3.Channel>(1, _omitFieldNames ? '' : 'channel', subBuilder: $3.Channel.create)
+    ..aOM<$21.Channel>(1, _omitFieldNames ? '' : 'channel', subBuilder: $21.Channel.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -142,15 +142,15 @@ class QueryChannelResponse extends $pb.GeneratedMessage {
 
   /// channel associated with the request identifiers
   @$pb.TagNumber(1)
-  $3.Channel get channel => $_getN(0);
+  $21.Channel get channel => $_getN(0);
   @$pb.TagNumber(1)
-  set channel($3.Channel v) { setField(1, v); }
+  set channel($21.Channel v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasChannel() => $_has(0);
   @$pb.TagNumber(1)
   void clearChannel() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Channel ensureChannel() => $_ensure(0);
+  $21.Channel ensureChannel() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -164,21 +164,21 @@ class QueryChannelResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryChannelsRequest is the request type for the Query/Channels RPC method
 class QueryChannelsRequest extends $pb.GeneratedMessage {
   factory QueryChannelsRequest({
-    $4.PageRequest? pagination,
+    $23.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -191,7 +191,7 @@ class QueryChannelsRequest extends $pb.GeneratedMessage {
   factory QueryChannelsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
+    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -218,23 +218,23 @@ class QueryChannelsRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(1)
-  $4.PageRequest get pagination => $_getN(0);
+  $23.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($4.PageRequest v) { setField(1, v); }
+  set pagination($23.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $4.PageRequest ensurePagination() => $_ensure(0);
+  $23.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryChannelsResponse is the response type for the Query/Channels RPC method.
 class QueryChannelsResponse extends $pb.GeneratedMessage {
   factory QueryChannelsResponse({
-    $core.Iterable<$3.IdentifiedChannel>? channels,
-    $4.PageResponse? pagination,
-    $2.Height? height,
+    $core.Iterable<$21.IdentifiedChannel>? channels,
+    $23.PageResponse? pagination,
+    $19.Height? height,
   }) {
     final $result = create();
     if (channels != null) {
@@ -253,9 +253,9 @@ class QueryChannelsResponse extends $pb.GeneratedMessage {
   factory QueryChannelsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChannelsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..pc<$3.IdentifiedChannel>(1, _omitFieldNames ? '' : 'channels', $pb.PbFieldType.PM, subBuilder: $3.IdentifiedChannel.create)
-    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..pc<$21.IdentifiedChannel>(1, _omitFieldNames ? '' : 'channels', $pb.PbFieldType.PM, subBuilder: $21.IdentifiedChannel.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -282,31 +282,31 @@ class QueryChannelsResponse extends $pb.GeneratedMessage {
 
   /// list of stored channels of the chain.
   @$pb.TagNumber(1)
-  $core.List<$3.IdentifiedChannel> get channels => $_getList(0);
+  $core.List<$21.IdentifiedChannel> get channels => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $4.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($4.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 
   /// query block height
   @$pb.TagNumber(3)
-  $2.Height get height => $_getN(2);
+  $19.Height get height => $_getN(2);
   @$pb.TagNumber(3)
-  set height($2.Height v) { setField(3, v); }
+  set height($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureHeight() => $_ensure(2);
+  $19.Height ensureHeight() => $_ensure(2);
 }
 
 /// QueryConnectionChannelsRequest is the request type for the
@@ -314,7 +314,7 @@ class QueryChannelsResponse extends $pb.GeneratedMessage {
 class QueryConnectionChannelsRequest extends $pb.GeneratedMessage {
   factory QueryConnectionChannelsRequest({
     $core.String? connection,
-    $4.PageRequest? pagination,
+    $23.PageRequest? pagination,
   }) {
     final $result = create();
     if (connection != null) {
@@ -331,7 +331,7 @@ class QueryConnectionChannelsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'connection')
-    ..aOM<$4.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
+    ..aOM<$23.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -368,24 +368,24 @@ class QueryConnectionChannelsRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(2)
-  $4.PageRequest get pagination => $_getN(1);
+  $23.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($4.PageRequest v) { setField(2, v); }
+  set pagination($23.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PageRequest ensurePagination() => $_ensure(1);
+  $23.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryConnectionChannelsResponse is the Response type for the
 /// Query/QueryConnectionChannels RPC method
 class QueryConnectionChannelsResponse extends $pb.GeneratedMessage {
   factory QueryConnectionChannelsResponse({
-    $core.Iterable<$3.IdentifiedChannel>? channels,
-    $4.PageResponse? pagination,
-    $2.Height? height,
+    $core.Iterable<$21.IdentifiedChannel>? channels,
+    $23.PageResponse? pagination,
+    $19.Height? height,
   }) {
     final $result = create();
     if (channels != null) {
@@ -404,9 +404,9 @@ class QueryConnectionChannelsResponse extends $pb.GeneratedMessage {
   factory QueryConnectionChannelsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConnectionChannelsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..pc<$3.IdentifiedChannel>(1, _omitFieldNames ? '' : 'channels', $pb.PbFieldType.PM, subBuilder: $3.IdentifiedChannel.create)
-    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..pc<$21.IdentifiedChannel>(1, _omitFieldNames ? '' : 'channels', $pb.PbFieldType.PM, subBuilder: $21.IdentifiedChannel.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -433,31 +433,31 @@ class QueryConnectionChannelsResponse extends $pb.GeneratedMessage {
 
   /// list of channels associated with a connection.
   @$pb.TagNumber(1)
-  $core.List<$3.IdentifiedChannel> get channels => $_getList(0);
+  $core.List<$21.IdentifiedChannel> get channels => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $4.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($4.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 
   /// query block height
   @$pb.TagNumber(3)
-  $2.Height get height => $_getN(2);
+  $19.Height get height => $_getN(2);
   @$pb.TagNumber(3)
-  set height($2.Height v) { setField(3, v); }
+  set height($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureHeight() => $_ensure(2);
+  $19.Height ensureHeight() => $_ensure(2);
 }
 
 /// QueryChannelClientStateRequest is the request type for the Query/ClientState
@@ -532,9 +532,9 @@ class QueryChannelClientStateRequest extends $pb.GeneratedMessage {
 /// Query/QueryChannelClientState RPC method
 class QueryChannelClientStateResponse extends $pb.GeneratedMessage {
   factory QueryChannelClientStateResponse({
-    $2.IdentifiedClientState? identifiedClientState,
+    $19.IdentifiedClientState? identifiedClientState,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (identifiedClientState != null) {
@@ -553,9 +553,9 @@ class QueryChannelClientStateResponse extends $pb.GeneratedMessage {
   factory QueryChannelClientStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChannelClientStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$2.IdentifiedClientState>(1, _omitFieldNames ? '' : 'identifiedClientState', subBuilder: $2.IdentifiedClientState.create)
+    ..aOM<$19.IdentifiedClientState>(1, _omitFieldNames ? '' : 'identifiedClientState', subBuilder: $19.IdentifiedClientState.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -582,15 +582,15 @@ class QueryChannelClientStateResponse extends $pb.GeneratedMessage {
 
   /// client state associated with the channel
   @$pb.TagNumber(1)
-  $2.IdentifiedClientState get identifiedClientState => $_getN(0);
+  $19.IdentifiedClientState get identifiedClientState => $_getN(0);
   @$pb.TagNumber(1)
-  set identifiedClientState($2.IdentifiedClientState v) { setField(1, v); }
+  set identifiedClientState($19.IdentifiedClientState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIdentifiedClientState() => $_has(0);
   @$pb.TagNumber(1)
   void clearIdentifiedClientState() => clearField(1);
   @$pb.TagNumber(1)
-  $2.IdentifiedClientState ensureIdentifiedClientState() => $_ensure(0);
+  $19.IdentifiedClientState ensureIdentifiedClientState() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -604,15 +604,15 @@ class QueryChannelClientStateResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryChannelConsensusStateRequest is the request type for the
@@ -717,10 +717,10 @@ class QueryChannelConsensusStateRequest extends $pb.GeneratedMessage {
 /// Query/QueryChannelClientState RPC method
 class QueryChannelConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryChannelConsensusStateResponse({
-    $5.Any? consensusState,
+    $17.Any? consensusState,
     $core.String? clientId,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (consensusState != null) {
@@ -742,10 +742,10 @@ class QueryChannelConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryChannelConsensusStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChannelConsensusStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$5.Any>(1, _omitFieldNames ? '' : 'consensusState', subBuilder: $5.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'clientId')
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -772,15 +772,15 @@ class QueryChannelConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// consensus state associated with the channel
   @$pb.TagNumber(1)
-  $5.Any get consensusState => $_getN(0);
+  $17.Any get consensusState => $_getN(0);
   @$pb.TagNumber(1)
-  set consensusState($5.Any v) { setField(1, v); }
+  set consensusState($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConsensusState() => $_has(0);
   @$pb.TagNumber(1)
   void clearConsensusState() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Any ensureConsensusState() => $_ensure(0);
+  $17.Any ensureConsensusState() => $_ensure(0);
 
   /// client ID associated with the consensus state
   @$pb.TagNumber(2)
@@ -804,15 +804,15 @@ class QueryChannelConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(4)
-  $2.Height get proofHeight => $_getN(3);
+  $19.Height get proofHeight => $_getN(3);
   @$pb.TagNumber(4)
-  set proofHeight($2.Height v) { setField(4, v); }
+  set proofHeight($19.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(3);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $2.Height ensureProofHeight() => $_ensure(3);
+  $19.Height ensureProofHeight() => $_ensure(3);
 }
 
 /// QueryPacketCommitmentRequest is the request type for the
@@ -905,7 +905,7 @@ class QueryPacketCommitmentResponse extends $pb.GeneratedMessage {
   factory QueryPacketCommitmentResponse({
     $core.List<$core.int>? commitment,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (commitment != null) {
@@ -926,7 +926,7 @@ class QueryPacketCommitmentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketCommitmentResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'commitment', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -973,15 +973,15 @@ class QueryPacketCommitmentResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryPacketCommitmentsRequest is the request type for the
@@ -990,7 +990,7 @@ class QueryPacketCommitmentsRequest extends $pb.GeneratedMessage {
   factory QueryPacketCommitmentsRequest({
     $core.String? portId,
     $core.String? channelId,
-    $4.PageRequest? pagination,
+    $23.PageRequest? pagination,
   }) {
     final $result = create();
     if (portId != null) {
@@ -1011,7 +1011,7 @@ class QueryPacketCommitmentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketCommitmentsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..aOM<$4.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
+    ..aOM<$23.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -1058,24 +1058,24 @@ class QueryPacketCommitmentsRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(3)
-  $4.PageRequest get pagination => $_getN(2);
+  $23.PageRequest get pagination => $_getN(2);
   @$pb.TagNumber(3)
-  set pagination($4.PageRequest v) { setField(3, v); }
+  set pagination($23.PageRequest v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
   @$pb.TagNumber(3)
   void clearPagination() => clearField(3);
   @$pb.TagNumber(3)
-  $4.PageRequest ensurePagination() => $_ensure(2);
+  $23.PageRequest ensurePagination() => $_ensure(2);
 }
 
 /// QueryPacketCommitmentsResponse is the request type for the
 /// Query/QueryPacketCommitments RPC method
 class QueryPacketCommitmentsResponse extends $pb.GeneratedMessage {
   factory QueryPacketCommitmentsResponse({
-    $core.Iterable<$3.PacketState>? commitments,
-    $4.PageResponse? pagination,
-    $2.Height? height,
+    $core.Iterable<$21.PacketState>? commitments,
+    $23.PageResponse? pagination,
+    $19.Height? height,
   }) {
     final $result = create();
     if (commitments != null) {
@@ -1094,9 +1094,9 @@ class QueryPacketCommitmentsResponse extends $pb.GeneratedMessage {
   factory QueryPacketCommitmentsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketCommitmentsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..pc<$3.PacketState>(1, _omitFieldNames ? '' : 'commitments', $pb.PbFieldType.PM, subBuilder: $3.PacketState.create)
-    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..pc<$21.PacketState>(1, _omitFieldNames ? '' : 'commitments', $pb.PbFieldType.PM, subBuilder: $21.PacketState.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -1122,31 +1122,31 @@ class QueryPacketCommitmentsResponse extends $pb.GeneratedMessage {
   static QueryPacketCommitmentsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.PacketState> get commitments => $_getList(0);
+  $core.List<$21.PacketState> get commitments => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $4.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($4.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 
   /// query block height
   @$pb.TagNumber(3)
-  $2.Height get height => $_getN(2);
+  $19.Height get height => $_getN(2);
   @$pb.TagNumber(3)
-  set height($2.Height v) { setField(3, v); }
+  set height($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureHeight() => $_ensure(2);
+  $19.Height ensureHeight() => $_ensure(2);
 }
 
 /// QueryPacketReceiptRequest is the request type for the
@@ -1239,7 +1239,7 @@ class QueryPacketReceiptResponse extends $pb.GeneratedMessage {
   factory QueryPacketReceiptResponse({
     $core.bool? received,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (received != null) {
@@ -1260,7 +1260,7 @@ class QueryPacketReceiptResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketReceiptResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOB(2, _omitFieldNames ? '' : 'received')
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(4, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -1307,15 +1307,15 @@ class QueryPacketReceiptResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(4)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(4)
-  set proofHeight($2.Height v) { setField(4, v); }
+  set proofHeight($19.Height v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(4)
   void clearProofHeight() => clearField(4);
   @$pb.TagNumber(4)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryPacketAcknowledgementRequest is the request type for the
@@ -1408,7 +1408,7 @@ class QueryPacketAcknowledgementResponse extends $pb.GeneratedMessage {
   factory QueryPacketAcknowledgementResponse({
     $core.List<$core.int>? acknowledgement,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (acknowledgement != null) {
@@ -1429,7 +1429,7 @@ class QueryPacketAcknowledgementResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketAcknowledgementResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'acknowledgement', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -1476,15 +1476,15 @@ class QueryPacketAcknowledgementResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryPacketAcknowledgementsRequest is the request type for the
@@ -1493,7 +1493,7 @@ class QueryPacketAcknowledgementsRequest extends $pb.GeneratedMessage {
   factory QueryPacketAcknowledgementsRequest({
     $core.String? portId,
     $core.String? channelId,
-    $4.PageRequest? pagination,
+    $23.PageRequest? pagination,
     $core.Iterable<$fixnum.Int64>? packetCommitmentSequences,
   }) {
     final $result = create();
@@ -1518,7 +1518,7 @@ class QueryPacketAcknowledgementsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketAcknowledgementsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'portId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
-    ..aOM<$4.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
+    ..aOM<$23.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..p<$fixnum.Int64>(4, _omitFieldNames ? '' : 'packetCommitmentSequences', $pb.PbFieldType.KU6)
     ..hasRequiredFields = false
   ;
@@ -1566,15 +1566,15 @@ class QueryPacketAcknowledgementsRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(3)
-  $4.PageRequest get pagination => $_getN(2);
+  $23.PageRequest get pagination => $_getN(2);
   @$pb.TagNumber(3)
-  set pagination($4.PageRequest v) { setField(3, v); }
+  set pagination($23.PageRequest v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
   @$pb.TagNumber(3)
   void clearPagination() => clearField(3);
   @$pb.TagNumber(3)
-  $4.PageRequest ensurePagination() => $_ensure(2);
+  $23.PageRequest ensurePagination() => $_ensure(2);
 
   /// list of packet sequences
   @$pb.TagNumber(4)
@@ -1585,9 +1585,9 @@ class QueryPacketAcknowledgementsRequest extends $pb.GeneratedMessage {
 /// Query/QueryPacketAcknowledgements RPC method
 class QueryPacketAcknowledgementsResponse extends $pb.GeneratedMessage {
   factory QueryPacketAcknowledgementsResponse({
-    $core.Iterable<$3.PacketState>? acknowledgements,
-    $4.PageResponse? pagination,
-    $2.Height? height,
+    $core.Iterable<$21.PacketState>? acknowledgements,
+    $23.PageResponse? pagination,
+    $19.Height? height,
   }) {
     final $result = create();
     if (acknowledgements != null) {
@@ -1606,9 +1606,9 @@ class QueryPacketAcknowledgementsResponse extends $pb.GeneratedMessage {
   factory QueryPacketAcknowledgementsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryPacketAcknowledgementsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..pc<$3.PacketState>(1, _omitFieldNames ? '' : 'acknowledgements', $pb.PbFieldType.PM, subBuilder: $3.PacketState.create)
-    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..pc<$21.PacketState>(1, _omitFieldNames ? '' : 'acknowledgements', $pb.PbFieldType.PM, subBuilder: $21.PacketState.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -1634,31 +1634,31 @@ class QueryPacketAcknowledgementsResponse extends $pb.GeneratedMessage {
   static QueryPacketAcknowledgementsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.PacketState> get acknowledgements => $_getList(0);
+  $core.List<$21.PacketState> get acknowledgements => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $4.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($4.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 
   /// query block height
   @$pb.TagNumber(3)
-  $2.Height get height => $_getN(2);
+  $19.Height get height => $_getN(2);
   @$pb.TagNumber(3)
-  set height($2.Height v) { setField(3, v); }
+  set height($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureHeight() => $_ensure(2);
+  $19.Height ensureHeight() => $_ensure(2);
 }
 
 /// QueryUnreceivedPacketsRequest is the request type for the
@@ -1743,7 +1743,7 @@ class QueryUnreceivedPacketsRequest extends $pb.GeneratedMessage {
 class QueryUnreceivedPacketsResponse extends $pb.GeneratedMessage {
   factory QueryUnreceivedPacketsResponse({
     $core.Iterable<$fixnum.Int64>? sequences,
-    $2.Height? height,
+    $19.Height? height,
   }) {
     final $result = create();
     if (sequences != null) {
@@ -1760,7 +1760,7 @@ class QueryUnreceivedPacketsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUnreceivedPacketsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..p<$fixnum.Int64>(1, _omitFieldNames ? '' : 'sequences', $pb.PbFieldType.KU6)
-    ..aOM<$2.Height>(2, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(2, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -1791,15 +1791,15 @@ class QueryUnreceivedPacketsResponse extends $pb.GeneratedMessage {
 
   /// query block height
   @$pb.TagNumber(2)
-  $2.Height get height => $_getN(1);
+  $19.Height get height => $_getN(1);
   @$pb.TagNumber(2)
-  set height($2.Height v) { setField(2, v); }
+  set height($19.Height v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasHeight() => $_has(1);
   @$pb.TagNumber(2)
   void clearHeight() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Height ensureHeight() => $_ensure(1);
+  $19.Height ensureHeight() => $_ensure(1);
 }
 
 /// QueryUnreceivedAcks is the request type for the
@@ -1884,7 +1884,7 @@ class QueryUnreceivedAcksRequest extends $pb.GeneratedMessage {
 class QueryUnreceivedAcksResponse extends $pb.GeneratedMessage {
   factory QueryUnreceivedAcksResponse({
     $core.Iterable<$fixnum.Int64>? sequences,
-    $2.Height? height,
+    $19.Height? height,
   }) {
     final $result = create();
     if (sequences != null) {
@@ -1901,7 +1901,7 @@ class QueryUnreceivedAcksResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUnreceivedAcksResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..p<$fixnum.Int64>(1, _omitFieldNames ? '' : 'sequences', $pb.PbFieldType.KU6)
-    ..aOM<$2.Height>(2, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(2, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -1932,15 +1932,15 @@ class QueryUnreceivedAcksResponse extends $pb.GeneratedMessage {
 
   /// query block height
   @$pb.TagNumber(2)
-  $2.Height get height => $_getN(1);
+  $19.Height get height => $_getN(1);
   @$pb.TagNumber(2)
-  set height($2.Height v) { setField(2, v); }
+  set height($19.Height v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasHeight() => $_has(1);
   @$pb.TagNumber(2)
   void clearHeight() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Height ensureHeight() => $_ensure(1);
+  $19.Height ensureHeight() => $_ensure(1);
 }
 
 /// QueryNextSequenceReceiveRequest is the request type for the
@@ -2017,7 +2017,7 @@ class QueryNextSequenceReceiveResponse extends $pb.GeneratedMessage {
   factory QueryNextSequenceReceiveResponse({
     $fixnum.Int64? nextSequenceReceive,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (nextSequenceReceive != null) {
@@ -2038,7 +2038,7 @@ class QueryNextSequenceReceiveResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNextSequenceReceiveResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'nextSequenceReceive', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -2085,15 +2085,15 @@ class QueryNextSequenceReceiveResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryNextSequenceSendRequest is the request type for the
@@ -2170,7 +2170,7 @@ class QueryNextSequenceSendResponse extends $pb.GeneratedMessage {
   factory QueryNextSequenceSendResponse({
     $fixnum.Int64? nextSequenceSend,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (nextSequenceSend != null) {
@@ -2191,7 +2191,7 @@ class QueryNextSequenceSendResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNextSequenceSendResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'nextSequenceSend', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -2238,15 +2238,15 @@ class QueryNextSequenceSendResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryUpgradeErrorRequest is the request type for the Query/QueryUpgradeError RPC method
@@ -2317,9 +2317,9 @@ class QueryUpgradeErrorRequest extends $pb.GeneratedMessage {
 /// QueryUpgradeErrorResponse is the response type for the Query/QueryUpgradeError RPC method
 class QueryUpgradeErrorResponse extends $pb.GeneratedMessage {
   factory QueryUpgradeErrorResponse({
-    $6.ErrorReceipt? errorReceipt,
+    $30.ErrorReceipt? errorReceipt,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (errorReceipt != null) {
@@ -2338,9 +2338,9 @@ class QueryUpgradeErrorResponse extends $pb.GeneratedMessage {
   factory QueryUpgradeErrorResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUpgradeErrorResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$6.ErrorReceipt>(1, _omitFieldNames ? '' : 'errorReceipt', subBuilder: $6.ErrorReceipt.create)
+    ..aOM<$30.ErrorReceipt>(1, _omitFieldNames ? '' : 'errorReceipt', subBuilder: $30.ErrorReceipt.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -2366,15 +2366,15 @@ class QueryUpgradeErrorResponse extends $pb.GeneratedMessage {
   static QueryUpgradeErrorResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.ErrorReceipt get errorReceipt => $_getN(0);
+  $30.ErrorReceipt get errorReceipt => $_getN(0);
   @$pb.TagNumber(1)
-  set errorReceipt($6.ErrorReceipt v) { setField(1, v); }
+  set errorReceipt($30.ErrorReceipt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasErrorReceipt() => $_has(0);
   @$pb.TagNumber(1)
   void clearErrorReceipt() => clearField(1);
   @$pb.TagNumber(1)
-  $6.ErrorReceipt ensureErrorReceipt() => $_ensure(0);
+  $30.ErrorReceipt ensureErrorReceipt() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -2388,15 +2388,15 @@ class QueryUpgradeErrorResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryUpgradeRequest is the request type for the QueryUpgradeRequest RPC method
@@ -2467,9 +2467,9 @@ class QueryUpgradeRequest extends $pb.GeneratedMessage {
 /// QueryUpgradeResponse is the response type for the QueryUpgradeResponse RPC method
 class QueryUpgradeResponse extends $pb.GeneratedMessage {
   factory QueryUpgradeResponse({
-    $6.Upgrade? upgrade,
+    $30.Upgrade? upgrade,
     $core.List<$core.int>? proof,
-    $2.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (upgrade != null) {
@@ -2488,9 +2488,9 @@ class QueryUpgradeResponse extends $pb.GeneratedMessage {
   factory QueryUpgradeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUpgradeResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$6.Upgrade>(1, _omitFieldNames ? '' : 'upgrade', subBuilder: $6.Upgrade.create)
+    ..aOM<$30.Upgrade>(1, _omitFieldNames ? '' : 'upgrade', subBuilder: $30.Upgrade.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -2516,15 +2516,15 @@ class QueryUpgradeResponse extends $pb.GeneratedMessage {
   static QueryUpgradeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.Upgrade get upgrade => $_getN(0);
+  $30.Upgrade get upgrade => $_getN(0);
   @$pb.TagNumber(1)
-  set upgrade($6.Upgrade v) { setField(1, v); }
+  set upgrade($30.Upgrade v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUpgrade() => $_has(0);
   @$pb.TagNumber(1)
   void clearUpgrade() => clearField(1);
   @$pb.TagNumber(1)
-  $6.Upgrade ensureUpgrade() => $_ensure(0);
+  $30.Upgrade ensureUpgrade() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -2538,15 +2538,15 @@ class QueryUpgradeResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $2.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($2.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryChannelParamsRequest is the request type for the Query/ChannelParams RPC method.
@@ -2585,7 +2585,7 @@ class QueryChannelParamsRequest extends $pb.GeneratedMessage {
 /// QueryChannelParamsResponse is the response type for the Query/ChannelParams RPC method.
 class QueryChannelParamsResponse extends $pb.GeneratedMessage {
   factory QueryChannelParamsResponse({
-    $3.Params? params,
+    $21.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -2598,7 +2598,7 @@ class QueryChannelParamsResponse extends $pb.GeneratedMessage {
   factory QueryChannelParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryChannelParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$3.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
+    ..aOM<$21.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $21.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -2625,15 +2625,15 @@ class QueryChannelParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $3.Params get params => $_getN(0);
+  $21.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($3.Params v) { setField(1, v); }
+  set params($21.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Params ensureParams() => $_ensure(0);
+  $21.Params ensureParams() => $_ensure(0);
 }
 
 

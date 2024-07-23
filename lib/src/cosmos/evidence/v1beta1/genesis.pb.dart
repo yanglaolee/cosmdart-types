@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $3;
+import '../../../google/protobuf/any.pb.dart' as $46;
 
 /// GenesisState defines the evidence module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$3.Any>? evidence,
+    $core.Iterable<$46.Any>? evidence,
   }) {
     final $result = create();
     if (evidence != null) {
@@ -31,7 +31,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
-    ..pc<$3.Any>(1, _omitFieldNames ? '' : 'evidence', $pb.PbFieldType.PM, subBuilder: $3.Any.create)
+    ..pc<$46.Any>(1, _omitFieldNames ? '' : 'evidence', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -58,7 +58,7 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// evidence defines all the evidence at genesis.
   @$pb.TagNumber(1)
-  $core.List<$3.Any> get evidence => $_getList(0);
+  $core.List<$46.Any> get evidence => $_getList(0);
 }
 
 

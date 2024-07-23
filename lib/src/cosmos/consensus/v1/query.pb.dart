@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../tendermint/types/params.pb.dart' as $2;
+import '../../../tendermint/types/params.pb.dart' as $57;
 
 /// QueryParamsRequest defines the request type for querying x/consensus parameters.
 class QueryParamsRequest extends $pb.GeneratedMessage {
@@ -51,7 +51,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse defines the response type for querying x/consensus parameters.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $2.ConsensusParams? params,
+    $57.ConsensusParams? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -64,7 +64,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.consensus.v1'), createEmptyInstance: create)
-    ..aOM<$2.ConsensusParams>(1, _omitFieldNames ? '' : 'params', subBuilder: $2.ConsensusParams.create)
+    ..aOM<$57.ConsensusParams>(1, _omitFieldNames ? '' : 'params', subBuilder: $57.ConsensusParams.create)
     ..hasRequiredFields = false
   ;
 
@@ -93,15 +93,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   /// Please note that `params.version` is not populated in this response, it is
   /// tracked separately in the x/upgrade module.
   @$pb.TagNumber(1)
-  $2.ConsensusParams get params => $_getN(0);
+  $57.ConsensusParams get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($2.ConsensusParams v) { setField(1, v); }
+  set params($57.ConsensusParams v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $2.ConsensusParams ensureParams() => $_ensure(0);
+  $57.ConsensusParams ensureParams() => $_ensure(0);
 }
 
 

@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $3;
-import '../../base/query/v1beta1/pagination.pb.dart' as $4;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../base/query/v1beta1/pagination.pb.dart' as $49;
 
 /// QueryEvidenceRequest is the request type for the Query/Evidence RPC method.
 class QueryEvidenceRequest extends $pb.GeneratedMessage {
@@ -95,7 +95,7 @@ class QueryEvidenceRequest extends $pb.GeneratedMessage {
 /// QueryEvidenceResponse is the response type for the Query/Evidence RPC method.
 class QueryEvidenceResponse extends $pb.GeneratedMessage {
   factory QueryEvidenceResponse({
-    $3.Any? evidence,
+    $46.Any? evidence,
   }) {
     final $result = create();
     if (evidence != null) {
@@ -108,7 +108,7 @@ class QueryEvidenceResponse extends $pb.GeneratedMessage {
   factory QueryEvidenceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryEvidenceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
-    ..aOM<$3.Any>(1, _omitFieldNames ? '' : 'evidence', subBuilder: $3.Any.create)
+    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'evidence', subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -135,22 +135,22 @@ class QueryEvidenceResponse extends $pb.GeneratedMessage {
 
   /// evidence returns the requested evidence.
   @$pb.TagNumber(1)
-  $3.Any get evidence => $_getN(0);
+  $46.Any get evidence => $_getN(0);
   @$pb.TagNumber(1)
-  set evidence($3.Any v) { setField(1, v); }
+  set evidence($46.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvidence() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvidence() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Any ensureEvidence() => $_ensure(0);
+  $46.Any ensureEvidence() => $_ensure(0);
 }
 
 /// QueryEvidenceRequest is the request type for the Query/AllEvidence RPC
 /// method.
 class QueryAllEvidenceRequest extends $pb.GeneratedMessage {
   factory QueryAllEvidenceRequest({
-    $4.PageRequest? pagination,
+    $49.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -163,7 +163,7 @@ class QueryAllEvidenceRequest extends $pb.GeneratedMessage {
   factory QueryAllEvidenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllEvidenceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
-    ..aOM<$4.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageRequest.create)
+    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -190,23 +190,23 @@ class QueryAllEvidenceRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $4.PageRequest get pagination => $_getN(0);
+  $49.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($4.PageRequest v) { setField(1, v); }
+  set pagination($49.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $4.PageRequest ensurePagination() => $_ensure(0);
+  $49.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryAllEvidenceResponse is the response type for the Query/AllEvidence RPC
 /// method.
 class QueryAllEvidenceResponse extends $pb.GeneratedMessage {
   factory QueryAllEvidenceResponse({
-    $core.Iterable<$3.Any>? evidence,
-    $4.PageResponse? pagination,
+    $core.Iterable<$46.Any>? evidence,
+    $49.PageResponse? pagination,
   }) {
     final $result = create();
     if (evidence != null) {
@@ -222,8 +222,8 @@ class QueryAllEvidenceResponse extends $pb.GeneratedMessage {
   factory QueryAllEvidenceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAllEvidenceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
-    ..pc<$3.Any>(1, _omitFieldNames ? '' : 'evidence', $pb.PbFieldType.PM, subBuilder: $3.Any.create)
-    ..aOM<$4.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $4.PageResponse.create)
+    ..pc<$46.Any>(1, _omitFieldNames ? '' : 'evidence', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
+    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -250,19 +250,19 @@ class QueryAllEvidenceResponse extends $pb.GeneratedMessage {
 
   /// evidence returns all evidences.
   @$pb.TagNumber(1)
-  $core.List<$3.Any> get evidence => $_getList(0);
+  $core.List<$46.Any> get evidence => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $4.PageResponse get pagination => $_getN(1);
+  $49.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($4.PageResponse v) { setField(2, v); }
+  set pagination($49.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PageResponse ensurePagination() => $_ensure(1);
+  $49.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../channel/v1/genesis.pb.dart' as $2;
-import '../../client/v1/genesis.pb.dart' as $0;
-import '../../connection/v1/genesis.pb.dart' as $1;
+import '../../channel/v1/genesis.pb.dart' as $36;
+import '../../client/v1/genesis.pb.dart' as $34;
+import '../../connection/v1/genesis.pb.dart' as $35;
 
 /// GenesisState defines the ibc module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $0.GenesisState? clientGenesis,
-    $1.GenesisState? connectionGenesis,
-    $2.GenesisState? channelGenesis,
+    $34.GenesisState? clientGenesis,
+    $35.GenesisState? connectionGenesis,
+    $36.GenesisState? channelGenesis,
   }) {
     final $result = create();
     if (clientGenesis != null) {
@@ -41,9 +41,9 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.types.v1'), createEmptyInstance: create)
-    ..aOM<$0.GenesisState>(1, _omitFieldNames ? '' : 'clientGenesis', subBuilder: $0.GenesisState.create)
-    ..aOM<$1.GenesisState>(2, _omitFieldNames ? '' : 'connectionGenesis', subBuilder: $1.GenesisState.create)
-    ..aOM<$2.GenesisState>(3, _omitFieldNames ? '' : 'channelGenesis', subBuilder: $2.GenesisState.create)
+    ..aOM<$34.GenesisState>(1, _omitFieldNames ? '' : 'clientGenesis', subBuilder: $34.GenesisState.create)
+    ..aOM<$35.GenesisState>(2, _omitFieldNames ? '' : 'connectionGenesis', subBuilder: $35.GenesisState.create)
+    ..aOM<$36.GenesisState>(3, _omitFieldNames ? '' : 'channelGenesis', subBuilder: $36.GenesisState.create)
     ..hasRequiredFields = false
   ;
 
@@ -70,39 +70,39 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// ICS002 - Clients genesis state
   @$pb.TagNumber(1)
-  $0.GenesisState get clientGenesis => $_getN(0);
+  $34.GenesisState get clientGenesis => $_getN(0);
   @$pb.TagNumber(1)
-  set clientGenesis($0.GenesisState v) { setField(1, v); }
+  set clientGenesis($34.GenesisState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClientGenesis() => $_has(0);
   @$pb.TagNumber(1)
   void clearClientGenesis() => clearField(1);
   @$pb.TagNumber(1)
-  $0.GenesisState ensureClientGenesis() => $_ensure(0);
+  $34.GenesisState ensureClientGenesis() => $_ensure(0);
 
   /// ICS003 - Connections genesis state
   @$pb.TagNumber(2)
-  $1.GenesisState get connectionGenesis => $_getN(1);
+  $35.GenesisState get connectionGenesis => $_getN(1);
   @$pb.TagNumber(2)
-  set connectionGenesis($1.GenesisState v) { setField(2, v); }
+  set connectionGenesis($35.GenesisState v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConnectionGenesis() => $_has(1);
   @$pb.TagNumber(2)
   void clearConnectionGenesis() => clearField(2);
   @$pb.TagNumber(2)
-  $1.GenesisState ensureConnectionGenesis() => $_ensure(1);
+  $35.GenesisState ensureConnectionGenesis() => $_ensure(1);
 
   /// ICS004 - Channel genesis state
   @$pb.TagNumber(3)
-  $2.GenesisState get channelGenesis => $_getN(2);
+  $36.GenesisState get channelGenesis => $_getN(2);
   @$pb.TagNumber(3)
-  set channelGenesis($2.GenesisState v) { setField(3, v); }
+  set channelGenesis($36.GenesisState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasChannelGenesis() => $_has(2);
   @$pb.TagNumber(3)
   void clearChannelGenesis() => clearField(3);
   @$pb.TagNumber(3)
-  $2.GenesisState ensureChannelGenesis() => $_ensure(2);
+  $36.GenesisState ensureChannelGenesis() => $_ensure(2);
 }
 
 

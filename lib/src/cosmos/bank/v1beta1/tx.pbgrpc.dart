@@ -15,28 +15,28 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $1;
+import 'tx.pb.dart' as $7;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.bank.v1beta1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$send = $grpc.ClientMethod<$1.MsgSend, $1.MsgSendResponse>(
+  static final _$send = $grpc.ClientMethod<$7.MsgSend, $7.MsgSendResponse>(
       '/cosmos.bank.v1beta1.Msg/Send',
-      ($1.MsgSend value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgSendResponse.fromBuffer(value));
-  static final _$multiSend = $grpc.ClientMethod<$1.MsgMultiSend, $1.MsgMultiSendResponse>(
+      ($7.MsgSend value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.MsgSendResponse.fromBuffer(value));
+  static final _$multiSend = $grpc.ClientMethod<$7.MsgMultiSend, $7.MsgMultiSendResponse>(
       '/cosmos.bank.v1beta1.Msg/MultiSend',
-      ($1.MsgMultiSend value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgMultiSendResponse.fromBuffer(value));
-  static final _$updateParams = $grpc.ClientMethod<$1.MsgUpdateParams, $1.MsgUpdateParamsResponse>(
+      ($7.MsgMultiSend value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.MsgMultiSendResponse.fromBuffer(value));
+  static final _$updateParams = $grpc.ClientMethod<$7.MsgUpdateParams, $7.MsgUpdateParamsResponse>(
       '/cosmos.bank.v1beta1.Msg/UpdateParams',
-      ($1.MsgUpdateParams value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgUpdateParamsResponse.fromBuffer(value));
-  static final _$setSendEnabled = $grpc.ClientMethod<$1.MsgSetSendEnabled, $1.MsgSetSendEnabledResponse>(
+      ($7.MsgUpdateParams value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.MsgUpdateParamsResponse.fromBuffer(value));
+  static final _$setSendEnabled = $grpc.ClientMethod<$7.MsgSetSendEnabled, $7.MsgSetSendEnabledResponse>(
       '/cosmos.bank.v1beta1.Msg/SetSendEnabled',
-      ($1.MsgSetSendEnabled value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgSetSendEnabledResponse.fromBuffer(value));
+      ($7.MsgSetSendEnabled value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.MsgSetSendEnabledResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -44,19 +44,19 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.MsgSendResponse> send($1.MsgSend request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.MsgSendResponse> send($7.MsgSend request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$send, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgMultiSendResponse> multiSend($1.MsgMultiSend request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.MsgMultiSendResponse> multiSend($7.MsgMultiSend request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$multiSend, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgUpdateParamsResponse> updateParams($1.MsgUpdateParams request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.MsgUpdateParamsResponse> updateParams($7.MsgUpdateParams request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateParams, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgSetSendEnabledResponse> setSendEnabled($1.MsgSetSendEnabled request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.MsgSetSendEnabledResponse> setSendEnabled($7.MsgSetSendEnabled request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setSendEnabled, request, options: options);
   }
 }
@@ -66,54 +66,54 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.bank.v1beta1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.MsgSend, $1.MsgSendResponse>(
+    $addMethod($grpc.ServiceMethod<$7.MsgSend, $7.MsgSendResponse>(
         'Send',
         send_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgSend.fromBuffer(value),
-        ($1.MsgSendResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgMultiSend, $1.MsgMultiSendResponse>(
+        ($core.List<$core.int> value) => $7.MsgSend.fromBuffer(value),
+        ($7.MsgSendResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.MsgMultiSend, $7.MsgMultiSendResponse>(
         'MultiSend',
         multiSend_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgMultiSend.fromBuffer(value),
-        ($1.MsgMultiSendResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgUpdateParams, $1.MsgUpdateParamsResponse>(
+        ($core.List<$core.int> value) => $7.MsgMultiSend.fromBuffer(value),
+        ($7.MsgMultiSendResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.MsgUpdateParams, $7.MsgUpdateParamsResponse>(
         'UpdateParams',
         updateParams_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgUpdateParams.fromBuffer(value),
-        ($1.MsgUpdateParamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgSetSendEnabled, $1.MsgSetSendEnabledResponse>(
+        ($core.List<$core.int> value) => $7.MsgUpdateParams.fromBuffer(value),
+        ($7.MsgUpdateParamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.MsgSetSendEnabled, $7.MsgSetSendEnabledResponse>(
         'SetSendEnabled',
         setSendEnabled_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgSetSendEnabled.fromBuffer(value),
-        ($1.MsgSetSendEnabledResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $7.MsgSetSendEnabled.fromBuffer(value),
+        ($7.MsgSetSendEnabledResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.MsgSendResponse> send_Pre($grpc.ServiceCall call, $async.Future<$1.MsgSend> request) async {
+  $async.Future<$7.MsgSendResponse> send_Pre($grpc.ServiceCall call, $async.Future<$7.MsgSend> request) async {
     return send(call, await request);
   }
 
-  $async.Future<$1.MsgMultiSendResponse> multiSend_Pre($grpc.ServiceCall call, $async.Future<$1.MsgMultiSend> request) async {
+  $async.Future<$7.MsgMultiSendResponse> multiSend_Pre($grpc.ServiceCall call, $async.Future<$7.MsgMultiSend> request) async {
     return multiSend(call, await request);
   }
 
-  $async.Future<$1.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$1.MsgUpdateParams> request) async {
+  $async.Future<$7.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$7.MsgUpdateParams> request) async {
     return updateParams(call, await request);
   }
 
-  $async.Future<$1.MsgSetSendEnabledResponse> setSendEnabled_Pre($grpc.ServiceCall call, $async.Future<$1.MsgSetSendEnabled> request) async {
+  $async.Future<$7.MsgSetSendEnabledResponse> setSendEnabled_Pre($grpc.ServiceCall call, $async.Future<$7.MsgSetSendEnabled> request) async {
     return setSendEnabled(call, await request);
   }
 
-  $async.Future<$1.MsgSendResponse> send($grpc.ServiceCall call, $1.MsgSend request);
-  $async.Future<$1.MsgMultiSendResponse> multiSend($grpc.ServiceCall call, $1.MsgMultiSend request);
-  $async.Future<$1.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $1.MsgUpdateParams request);
-  $async.Future<$1.MsgSetSendEnabledResponse> setSendEnabled($grpc.ServiceCall call, $1.MsgSetSendEnabled request);
+  $async.Future<$7.MsgSendResponse> send($grpc.ServiceCall call, $7.MsgSend request);
+  $async.Future<$7.MsgMultiSendResponse> multiSend($grpc.ServiceCall call, $7.MsgMultiSend request);
+  $async.Future<$7.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $7.MsgUpdateParams request);
+  $async.Future<$7.MsgSetSendEnabledResponse> setSendEnabled($grpc.ServiceCall call, $7.MsgSetSendEnabled request);
 }

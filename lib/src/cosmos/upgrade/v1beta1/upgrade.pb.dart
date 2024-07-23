@@ -14,19 +14,19 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $3;
-import '../../../google/protobuf/timestamp.pb.dart' as $2;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
 
 /// Plan specifies information about a planned upgrade and when it should occur.
 class Plan extends $pb.GeneratedMessage {
   factory Plan({
     $core.String? name,
   @$core.Deprecated('This field is deprecated.')
-    $2.Timestamp? time,
+    $50.Timestamp? time,
     $fixnum.Int64? height,
     $core.String? info,
   @$core.Deprecated('This field is deprecated.')
-    $3.Any? upgradedClientState,
+    $46.Any? upgradedClientState,
   }) {
     final $result = create();
     if (name != null) {
@@ -54,10 +54,10 @@ class Plan extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Plan', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.upgrade.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<$2.Timestamp>(2, _omitFieldNames ? '' : 'time', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
     ..aInt64(3, _omitFieldNames ? '' : 'height')
     ..aOS(4, _omitFieldNames ? '' : 'info')
-    ..aOM<$3.Any>(5, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $3.Any.create)
+    ..aOM<$46.Any>(5, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -103,10 +103,10 @@ class Plan extends $pb.GeneratedMessage {
   /// If this field is not empty, an error will be thrown.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
-  $2.Timestamp get time => $_getN(1);
+  $50.Timestamp get time => $_getN(1);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
-  set time($2.Timestamp v) { setField(2, v); }
+  set time($50.Timestamp v) { setField(2, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.bool hasTime() => $_has(1);
@@ -115,7 +115,7 @@ class Plan extends $pb.GeneratedMessage {
   void clearTime() => clearField(2);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
-  $2.Timestamp ensureTime() => $_ensure(1);
+  $50.Timestamp ensureTime() => $_ensure(1);
 
   /// The height at which the upgrade must be performed.
   @$pb.TagNumber(3)
@@ -143,10 +143,10 @@ class Plan extends $pb.GeneratedMessage {
   /// If this field is not empty, an error will be thrown.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  $3.Any get upgradedClientState => $_getN(4);
+  $46.Any get upgradedClientState => $_getN(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  set upgradedClientState($3.Any v) { setField(5, v); }
+  set upgradedClientState($46.Any v) { setField(5, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasUpgradedClientState() => $_has(4);
@@ -155,7 +155,7 @@ class Plan extends $pb.GeneratedMessage {
   void clearUpgradedClientState() => clearField(5);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  $3.Any ensureUpgradedClientState() => $_ensure(4);
+  $46.Any ensureUpgradedClientState() => $_ensure(4);
 }
 
 /// SoftwareUpgradeProposal is a gov Content type for initiating a software

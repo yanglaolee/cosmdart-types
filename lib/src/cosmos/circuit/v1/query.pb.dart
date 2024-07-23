@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $3;
-import 'types.pb.dart' as $2;
+import '../../base/query/v1beta1/pagination.pb.dart' as $49;
+import 'types.pb.dart' as $66;
 
 /// QueryAccountRequest is the request type for the Query/Account RPC method.
 class QueryAccountRequest extends $pb.GeneratedMessage {
@@ -70,7 +70,7 @@ class QueryAccountRequest extends $pb.GeneratedMessage {
 /// AccountResponse is the response type for the Query/Account RPC method.
 class AccountResponse extends $pb.GeneratedMessage {
   factory AccountResponse({
-    $2.Permissions? permission,
+    $66.Permissions? permission,
   }) {
     final $result = create();
     if (permission != null) {
@@ -83,7 +83,7 @@ class AccountResponse extends $pb.GeneratedMessage {
   factory AccountResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccountResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.circuit.v1'), createEmptyInstance: create)
-    ..aOM<$2.Permissions>(1, _omitFieldNames ? '' : 'permission', subBuilder: $2.Permissions.create)
+    ..aOM<$66.Permissions>(1, _omitFieldNames ? '' : 'permission', subBuilder: $66.Permissions.create)
     ..hasRequiredFields = false
   ;
 
@@ -109,21 +109,21 @@ class AccountResponse extends $pb.GeneratedMessage {
   static AccountResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.Permissions get permission => $_getN(0);
+  $66.Permissions get permission => $_getN(0);
   @$pb.TagNumber(1)
-  set permission($2.Permissions v) { setField(1, v); }
+  set permission($66.Permissions v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPermission() => $_has(0);
   @$pb.TagNumber(1)
   void clearPermission() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Permissions ensurePermission() => $_ensure(0);
+  $66.Permissions ensurePermission() => $_ensure(0);
 }
 
 /// QueryAccountsRequest is the request type for the Query/Accounts RPC method.
 class QueryAccountsRequest extends $pb.GeneratedMessage {
   factory QueryAccountsRequest({
-    $3.PageRequest? pagination,
+    $49.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -136,7 +136,7 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
   factory QueryAccountsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.circuit.v1'), createEmptyInstance: create)
-    ..aOM<$3.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $3.PageRequest.create)
+    ..aOM<$49.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -163,22 +163,22 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $3.PageRequest get pagination => $_getN(0);
+  $49.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($3.PageRequest v) { setField(1, v); }
+  set pagination($49.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PageRequest ensurePagination() => $_ensure(0);
+  $49.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// AccountsResponse is the response type for the Query/Accounts RPC method.
 class AccountsResponse extends $pb.GeneratedMessage {
   factory AccountsResponse({
-    $core.Iterable<$2.GenesisAccountPermissions>? accounts,
-    $3.PageResponse? pagination,
+    $core.Iterable<$66.GenesisAccountPermissions>? accounts,
+    $49.PageResponse? pagination,
   }) {
     final $result = create();
     if (accounts != null) {
@@ -194,8 +194,8 @@ class AccountsResponse extends $pb.GeneratedMessage {
   factory AccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccountsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.circuit.v1'), createEmptyInstance: create)
-    ..pc<$2.GenesisAccountPermissions>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $2.GenesisAccountPermissions.create)
-    ..aOM<$3.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $3.PageResponse.create)
+    ..pc<$66.GenesisAccountPermissions>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $66.GenesisAccountPermissions.create)
+    ..aOM<$49.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -221,19 +221,19 @@ class AccountsResponse extends $pb.GeneratedMessage {
   static AccountsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.GenesisAccountPermissions> get accounts => $_getList(0);
+  $core.List<$66.GenesisAccountPermissions> get accounts => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $3.PageResponse get pagination => $_getN(1);
+  $49.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($3.PageResponse v) { setField(2, v); }
+  set pagination($49.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $3.PageResponse ensurePagination() => $_ensure(1);
+  $49.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryDisableListRequest is the request type for the Query/DisabledList RPC method.

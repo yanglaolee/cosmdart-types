@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../client/v1/client.pb.dart' as $2;
+import '../../client/v1/client.pb.dart' as $19;
 import 'channel.pbenum.dart';
 
 export 'channel.pbenum.dart';
@@ -378,7 +378,7 @@ class Packet extends $pb.GeneratedMessage {
     $core.String? destinationPort,
     $core.String? destinationChannel,
     $core.List<$core.int>? data,
-    $2.Height? timeoutHeight,
+    $19.Height? timeoutHeight,
     $fixnum.Int64? timeoutTimestamp,
   }) {
     final $result = create();
@@ -419,7 +419,7 @@ class Packet extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'destinationPort')
     ..aOS(5, _omitFieldNames ? '' : 'destinationChannel')
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
-    ..aOM<$2.Height>(7, _omitFieldNames ? '' : 'timeoutHeight', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(7, _omitFieldNames ? '' : 'timeoutHeight', subBuilder: $19.Height.create)
     ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'timeoutTimestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -509,15 +509,15 @@ class Packet extends $pb.GeneratedMessage {
 
   /// block height after which the packet times out
   @$pb.TagNumber(7)
-  $2.Height get timeoutHeight => $_getN(6);
+  $19.Height get timeoutHeight => $_getN(6);
   @$pb.TagNumber(7)
-  set timeoutHeight($2.Height v) { setField(7, v); }
+  set timeoutHeight($19.Height v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasTimeoutHeight() => $_has(6);
   @$pb.TagNumber(7)
   void clearTimeoutHeight() => clearField(7);
   @$pb.TagNumber(7)
-  $2.Height ensureTimeoutHeight() => $_ensure(6);
+  $19.Height ensureTimeoutHeight() => $_ensure(6);
 
   /// block timestamp (in nanoseconds) after which the packet times out
   @$pb.TagNumber(8)
@@ -805,7 +805,7 @@ class Acknowledgement extends $pb.GeneratedMessage {
 /// A valid Timeout contains either one or both of a timestamp and block height (sequence).
 class Timeout extends $pb.GeneratedMessage {
   factory Timeout({
-    $2.Height? height,
+    $19.Height? height,
     $fixnum.Int64? timestamp,
   }) {
     final $result = create();
@@ -822,7 +822,7 @@ class Timeout extends $pb.GeneratedMessage {
   factory Timeout.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Timeout', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..aOM<$2.Height>(1, _omitFieldNames ? '' : 'height', subBuilder: $2.Height.create)
+    ..aOM<$19.Height>(1, _omitFieldNames ? '' : 'height', subBuilder: $19.Height.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -850,15 +850,15 @@ class Timeout extends $pb.GeneratedMessage {
 
   /// block height after which the packet or upgrade times out
   @$pb.TagNumber(1)
-  $2.Height get height => $_getN(0);
+  $19.Height get height => $_getN(0);
   @$pb.TagNumber(1)
-  set height($2.Height v) { setField(1, v); }
+  set height($19.Height v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasHeight() => $_has(0);
   @$pb.TagNumber(1)
   void clearHeight() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Height ensureHeight() => $_ensure(0);
+  $19.Height ensureHeight() => $_ensure(0);
 
   /// block timestamp (in nanoseconds) after which the packet or upgrade times out
   @$pb.TagNumber(2)

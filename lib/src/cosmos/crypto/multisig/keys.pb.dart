@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $0;
+import '../../../google/protobuf/any.pb.dart' as $46;
 
 /// LegacyAminoPubKey specifies a public key type
 /// which nests multiple public keys and a threshold,
@@ -21,7 +21,7 @@ import '../../../google/protobuf/any.pb.dart' as $0;
 class LegacyAminoPubKey extends $pb.GeneratedMessage {
   factory LegacyAminoPubKey({
     $core.int? threshold,
-    $core.Iterable<$0.Any>? publicKeys,
+    $core.Iterable<$46.Any>? publicKeys,
   }) {
     final $result = create();
     if (threshold != null) {
@@ -38,7 +38,7 @@ class LegacyAminoPubKey extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LegacyAminoPubKey', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.crypto.multisig'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OU3)
-    ..pc<$0.Any>(2, _omitFieldNames ? '' : 'publicKeys', $pb.PbFieldType.PM, subBuilder: $0.Any.create)
+    ..pc<$46.Any>(2, _omitFieldNames ? '' : 'publicKeys', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -73,7 +73,7 @@ class LegacyAminoPubKey extends $pb.GeneratedMessage {
   void clearThreshold() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$0.Any> get publicKeys => $_getList(1);
+  $core.List<$46.Any> get publicKeys => $_getList(1);
 }
 
 

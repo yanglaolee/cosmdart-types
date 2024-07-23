@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/timestamp.pb.dart' as $3;
-import 'types.pb.dart' as $5;
-import 'validator.pb.dart' as $4;
+import '../../google/protobuf/timestamp.pb.dart' as $50;
+import 'types.pb.dart' as $61;
+import 'validator.pb.dart' as $59;
 
 enum Evidence_Sum {
   duplicateVoteEvidence, 
@@ -104,11 +104,11 @@ class Evidence extends $pb.GeneratedMessage {
 /// DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes.
 class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   factory DuplicateVoteEvidence({
-    $5.Vote? voteA,
-    $5.Vote? voteB,
+    $61.Vote? voteA,
+    $61.Vote? voteB,
     $fixnum.Int64? totalVotingPower,
     $fixnum.Int64? validatorPower,
-    $3.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
   }) {
     final $result = create();
     if (voteA != null) {
@@ -133,11 +133,11 @@ class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   factory DuplicateVoteEvidence.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DuplicateVoteEvidence', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$5.Vote>(1, _omitFieldNames ? '' : 'voteA', subBuilder: $5.Vote.create)
-    ..aOM<$5.Vote>(2, _omitFieldNames ? '' : 'voteB', subBuilder: $5.Vote.create)
+    ..aOM<$61.Vote>(1, _omitFieldNames ? '' : 'voteA', subBuilder: $61.Vote.create)
+    ..aOM<$61.Vote>(2, _omitFieldNames ? '' : 'voteB', subBuilder: $61.Vote.create)
     ..aInt64(3, _omitFieldNames ? '' : 'totalVotingPower')
     ..aInt64(4, _omitFieldNames ? '' : 'validatorPower')
-    ..aOM<$3.Timestamp>(5, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -163,26 +163,26 @@ class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   static DuplicateVoteEvidence? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.Vote get voteA => $_getN(0);
+  $61.Vote get voteA => $_getN(0);
   @$pb.TagNumber(1)
-  set voteA($5.Vote v) { setField(1, v); }
+  set voteA($61.Vote v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVoteA() => $_has(0);
   @$pb.TagNumber(1)
   void clearVoteA() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Vote ensureVoteA() => $_ensure(0);
+  $61.Vote ensureVoteA() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $5.Vote get voteB => $_getN(1);
+  $61.Vote get voteB => $_getN(1);
   @$pb.TagNumber(2)
-  set voteB($5.Vote v) { setField(2, v); }
+  set voteB($61.Vote v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVoteB() => $_has(1);
   @$pb.TagNumber(2)
   void clearVoteB() => clearField(2);
   @$pb.TagNumber(2)
-  $5.Vote ensureVoteB() => $_ensure(1);
+  $61.Vote ensureVoteB() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get totalVotingPower => $_getI64(2);
@@ -203,25 +203,25 @@ class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   void clearValidatorPower() => clearField(4);
 
   @$pb.TagNumber(5)
-  $3.Timestamp get timestamp => $_getN(4);
+  $50.Timestamp get timestamp => $_getN(4);
   @$pb.TagNumber(5)
-  set timestamp($3.Timestamp v) { setField(5, v); }
+  set timestamp($50.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTimestamp() => $_has(4);
   @$pb.TagNumber(5)
   void clearTimestamp() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Timestamp ensureTimestamp() => $_ensure(4);
+  $50.Timestamp ensureTimestamp() => $_ensure(4);
 }
 
 /// LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client.
 class LightClientAttackEvidence extends $pb.GeneratedMessage {
   factory LightClientAttackEvidence({
-    $5.LightBlock? conflictingBlock,
+    $61.LightBlock? conflictingBlock,
     $fixnum.Int64? commonHeight,
-    $core.Iterable<$4.Validator>? byzantineValidators,
+    $core.Iterable<$59.Validator>? byzantineValidators,
     $fixnum.Int64? totalVotingPower,
-    $3.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
   }) {
     final $result = create();
     if (conflictingBlock != null) {
@@ -246,11 +246,11 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   factory LightClientAttackEvidence.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LightClientAttackEvidence', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$5.LightBlock>(1, _omitFieldNames ? '' : 'conflictingBlock', subBuilder: $5.LightBlock.create)
+    ..aOM<$61.LightBlock>(1, _omitFieldNames ? '' : 'conflictingBlock', subBuilder: $61.LightBlock.create)
     ..aInt64(2, _omitFieldNames ? '' : 'commonHeight')
-    ..pc<$4.Validator>(3, _omitFieldNames ? '' : 'byzantineValidators', $pb.PbFieldType.PM, subBuilder: $4.Validator.create)
+    ..pc<$59.Validator>(3, _omitFieldNames ? '' : 'byzantineValidators', $pb.PbFieldType.PM, subBuilder: $59.Validator.create)
     ..aInt64(4, _omitFieldNames ? '' : 'totalVotingPower')
-    ..aOM<$3.Timestamp>(5, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -276,15 +276,15 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   static LightClientAttackEvidence? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.LightBlock get conflictingBlock => $_getN(0);
+  $61.LightBlock get conflictingBlock => $_getN(0);
   @$pb.TagNumber(1)
-  set conflictingBlock($5.LightBlock v) { setField(1, v); }
+  set conflictingBlock($61.LightBlock v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConflictingBlock() => $_has(0);
   @$pb.TagNumber(1)
   void clearConflictingBlock() => clearField(1);
   @$pb.TagNumber(1)
-  $5.LightBlock ensureConflictingBlock() => $_ensure(0);
+  $61.LightBlock ensureConflictingBlock() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get commonHeight => $_getI64(1);
@@ -296,7 +296,7 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   void clearCommonHeight() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$4.Validator> get byzantineValidators => $_getList(2);
+  $core.List<$59.Validator> get byzantineValidators => $_getList(2);
 
   @$pb.TagNumber(4)
   $fixnum.Int64 get totalVotingPower => $_getI64(3);
@@ -308,15 +308,15 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   void clearTotalVotingPower() => clearField(4);
 
   @$pb.TagNumber(5)
-  $3.Timestamp get timestamp => $_getN(4);
+  $50.Timestamp get timestamp => $_getN(4);
   @$pb.TagNumber(5)
-  set timestamp($3.Timestamp v) { setField(5, v); }
+  set timestamp($50.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTimestamp() => $_has(4);
   @$pb.TagNumber(5)
   void clearTimestamp() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Timestamp ensureTimestamp() => $_ensure(4);
+  $50.Timestamp ensureTimestamp() => $_ensure(4);
 }
 
 class EvidenceList extends $pb.GeneratedMessage {

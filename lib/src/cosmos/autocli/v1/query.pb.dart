@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'options.pb.dart' as $1;
+import 'options.pb.dart' as $52;
 
 /// AppOptionsRequest is the RemoteInfoService/AppOptions request type.
 class AppOptionsRequest extends $pb.GeneratedMessage {
@@ -51,7 +51,7 @@ class AppOptionsRequest extends $pb.GeneratedMessage {
 /// AppOptionsResponse is the RemoteInfoService/AppOptions response type.
 class AppOptionsResponse extends $pb.GeneratedMessage {
   factory AppOptionsResponse({
-    $core.Map<$core.String, $1.ModuleOptions>? moduleOptions,
+    $core.Map<$core.String, $52.ModuleOptions>? moduleOptions,
   }) {
     final $result = create();
     if (moduleOptions != null) {
@@ -64,7 +64,7 @@ class AppOptionsResponse extends $pb.GeneratedMessage {
   factory AppOptionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AppOptionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.autocli.v1'), createEmptyInstance: create)
-    ..m<$core.String, $1.ModuleOptions>(1, _omitFieldNames ? '' : 'moduleOptions', entryClassName: 'AppOptionsResponse.ModuleOptionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: $1.ModuleOptions.create, valueDefaultOrMaker: $1.ModuleOptions.getDefault, packageName: const $pb.PackageName('cosmos.autocli.v1'))
+    ..m<$core.String, $52.ModuleOptions>(1, _omitFieldNames ? '' : 'moduleOptions', entryClassName: 'AppOptionsResponse.ModuleOptionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: $52.ModuleOptions.create, valueDefaultOrMaker: $52.ModuleOptions.getDefault, packageName: const $pb.PackageName('cosmos.autocli.v1'))
     ..hasRequiredFields = false
   ;
 
@@ -91,7 +91,7 @@ class AppOptionsResponse extends $pb.GeneratedMessage {
 
   /// module_options is a map of module name to autocli module options.
   @$pb.TagNumber(1)
-  $core.Map<$core.String, $1.ModuleOptions> get moduleOptions => $_getMap(0);
+  $core.Map<$core.String, $52.ModuleOptions> get moduleOptions => $_getMap(0);
 }
 
 

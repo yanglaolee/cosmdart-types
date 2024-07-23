@@ -15,32 +15,32 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $1;
+import 'tx.pb.dart' as $13;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('ibc.core.connection.v1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$connectionOpenInit = $grpc.ClientMethod<$1.MsgConnectionOpenInit, $1.MsgConnectionOpenInitResponse>(
+  static final _$connectionOpenInit = $grpc.ClientMethod<$13.MsgConnectionOpenInit, $13.MsgConnectionOpenInitResponse>(
       '/ibc.core.connection.v1.Msg/ConnectionOpenInit',
-      ($1.MsgConnectionOpenInit value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgConnectionOpenInitResponse.fromBuffer(value));
-  static final _$connectionOpenTry = $grpc.ClientMethod<$1.MsgConnectionOpenTry, $1.MsgConnectionOpenTryResponse>(
+      ($13.MsgConnectionOpenInit value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.MsgConnectionOpenInitResponse.fromBuffer(value));
+  static final _$connectionOpenTry = $grpc.ClientMethod<$13.MsgConnectionOpenTry, $13.MsgConnectionOpenTryResponse>(
       '/ibc.core.connection.v1.Msg/ConnectionOpenTry',
-      ($1.MsgConnectionOpenTry value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgConnectionOpenTryResponse.fromBuffer(value));
-  static final _$connectionOpenAck = $grpc.ClientMethod<$1.MsgConnectionOpenAck, $1.MsgConnectionOpenAckResponse>(
+      ($13.MsgConnectionOpenTry value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.MsgConnectionOpenTryResponse.fromBuffer(value));
+  static final _$connectionOpenAck = $grpc.ClientMethod<$13.MsgConnectionOpenAck, $13.MsgConnectionOpenAckResponse>(
       '/ibc.core.connection.v1.Msg/ConnectionOpenAck',
-      ($1.MsgConnectionOpenAck value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgConnectionOpenAckResponse.fromBuffer(value));
-  static final _$connectionOpenConfirm = $grpc.ClientMethod<$1.MsgConnectionOpenConfirm, $1.MsgConnectionOpenConfirmResponse>(
+      ($13.MsgConnectionOpenAck value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.MsgConnectionOpenAckResponse.fromBuffer(value));
+  static final _$connectionOpenConfirm = $grpc.ClientMethod<$13.MsgConnectionOpenConfirm, $13.MsgConnectionOpenConfirmResponse>(
       '/ibc.core.connection.v1.Msg/ConnectionOpenConfirm',
-      ($1.MsgConnectionOpenConfirm value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgConnectionOpenConfirmResponse.fromBuffer(value));
-  static final _$updateConnectionParams = $grpc.ClientMethod<$1.MsgUpdateParams, $1.MsgUpdateParamsResponse>(
+      ($13.MsgConnectionOpenConfirm value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.MsgConnectionOpenConfirmResponse.fromBuffer(value));
+  static final _$updateConnectionParams = $grpc.ClientMethod<$13.MsgUpdateParams, $13.MsgUpdateParamsResponse>(
       '/ibc.core.connection.v1.Msg/UpdateConnectionParams',
-      ($1.MsgUpdateParams value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgUpdateParamsResponse.fromBuffer(value));
+      ($13.MsgUpdateParams value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.MsgUpdateParamsResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -48,23 +48,23 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.MsgConnectionOpenInitResponse> connectionOpenInit($1.MsgConnectionOpenInit request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.MsgConnectionOpenInitResponse> connectionOpenInit($13.MsgConnectionOpenInit request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$connectionOpenInit, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgConnectionOpenTryResponse> connectionOpenTry($1.MsgConnectionOpenTry request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.MsgConnectionOpenTryResponse> connectionOpenTry($13.MsgConnectionOpenTry request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$connectionOpenTry, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgConnectionOpenAckResponse> connectionOpenAck($1.MsgConnectionOpenAck request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.MsgConnectionOpenAckResponse> connectionOpenAck($13.MsgConnectionOpenAck request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$connectionOpenAck, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgConnectionOpenConfirmResponse> connectionOpenConfirm($1.MsgConnectionOpenConfirm request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.MsgConnectionOpenConfirmResponse> connectionOpenConfirm($13.MsgConnectionOpenConfirm request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$connectionOpenConfirm, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.MsgUpdateParamsResponse> updateConnectionParams($1.MsgUpdateParams request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.MsgUpdateParamsResponse> updateConnectionParams($13.MsgUpdateParams request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateConnectionParams, request, options: options);
   }
 }
@@ -74,66 +74,66 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'ibc.core.connection.v1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.MsgConnectionOpenInit, $1.MsgConnectionOpenInitResponse>(
+    $addMethod($grpc.ServiceMethod<$13.MsgConnectionOpenInit, $13.MsgConnectionOpenInitResponse>(
         'ConnectionOpenInit',
         connectionOpenInit_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgConnectionOpenInit.fromBuffer(value),
-        ($1.MsgConnectionOpenInitResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgConnectionOpenTry, $1.MsgConnectionOpenTryResponse>(
+        ($core.List<$core.int> value) => $13.MsgConnectionOpenInit.fromBuffer(value),
+        ($13.MsgConnectionOpenInitResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.MsgConnectionOpenTry, $13.MsgConnectionOpenTryResponse>(
         'ConnectionOpenTry',
         connectionOpenTry_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgConnectionOpenTry.fromBuffer(value),
-        ($1.MsgConnectionOpenTryResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgConnectionOpenAck, $1.MsgConnectionOpenAckResponse>(
+        ($core.List<$core.int> value) => $13.MsgConnectionOpenTry.fromBuffer(value),
+        ($13.MsgConnectionOpenTryResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.MsgConnectionOpenAck, $13.MsgConnectionOpenAckResponse>(
         'ConnectionOpenAck',
         connectionOpenAck_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgConnectionOpenAck.fromBuffer(value),
-        ($1.MsgConnectionOpenAckResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgConnectionOpenConfirm, $1.MsgConnectionOpenConfirmResponse>(
+        ($core.List<$core.int> value) => $13.MsgConnectionOpenAck.fromBuffer(value),
+        ($13.MsgConnectionOpenAckResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.MsgConnectionOpenConfirm, $13.MsgConnectionOpenConfirmResponse>(
         'ConnectionOpenConfirm',
         connectionOpenConfirm_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgConnectionOpenConfirm.fromBuffer(value),
-        ($1.MsgConnectionOpenConfirmResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.MsgUpdateParams, $1.MsgUpdateParamsResponse>(
+        ($core.List<$core.int> value) => $13.MsgConnectionOpenConfirm.fromBuffer(value),
+        ($13.MsgConnectionOpenConfirmResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.MsgUpdateParams, $13.MsgUpdateParamsResponse>(
         'UpdateConnectionParams',
         updateConnectionParams_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgUpdateParams.fromBuffer(value),
-        ($1.MsgUpdateParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $13.MsgUpdateParams.fromBuffer(value),
+        ($13.MsgUpdateParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.MsgConnectionOpenInitResponse> connectionOpenInit_Pre($grpc.ServiceCall call, $async.Future<$1.MsgConnectionOpenInit> request) async {
+  $async.Future<$13.MsgConnectionOpenInitResponse> connectionOpenInit_Pre($grpc.ServiceCall call, $async.Future<$13.MsgConnectionOpenInit> request) async {
     return connectionOpenInit(call, await request);
   }
 
-  $async.Future<$1.MsgConnectionOpenTryResponse> connectionOpenTry_Pre($grpc.ServiceCall call, $async.Future<$1.MsgConnectionOpenTry> request) async {
+  $async.Future<$13.MsgConnectionOpenTryResponse> connectionOpenTry_Pre($grpc.ServiceCall call, $async.Future<$13.MsgConnectionOpenTry> request) async {
     return connectionOpenTry(call, await request);
   }
 
-  $async.Future<$1.MsgConnectionOpenAckResponse> connectionOpenAck_Pre($grpc.ServiceCall call, $async.Future<$1.MsgConnectionOpenAck> request) async {
+  $async.Future<$13.MsgConnectionOpenAckResponse> connectionOpenAck_Pre($grpc.ServiceCall call, $async.Future<$13.MsgConnectionOpenAck> request) async {
     return connectionOpenAck(call, await request);
   }
 
-  $async.Future<$1.MsgConnectionOpenConfirmResponse> connectionOpenConfirm_Pre($grpc.ServiceCall call, $async.Future<$1.MsgConnectionOpenConfirm> request) async {
+  $async.Future<$13.MsgConnectionOpenConfirmResponse> connectionOpenConfirm_Pre($grpc.ServiceCall call, $async.Future<$13.MsgConnectionOpenConfirm> request) async {
     return connectionOpenConfirm(call, await request);
   }
 
-  $async.Future<$1.MsgUpdateParamsResponse> updateConnectionParams_Pre($grpc.ServiceCall call, $async.Future<$1.MsgUpdateParams> request) async {
+  $async.Future<$13.MsgUpdateParamsResponse> updateConnectionParams_Pre($grpc.ServiceCall call, $async.Future<$13.MsgUpdateParams> request) async {
     return updateConnectionParams(call, await request);
   }
 
-  $async.Future<$1.MsgConnectionOpenInitResponse> connectionOpenInit($grpc.ServiceCall call, $1.MsgConnectionOpenInit request);
-  $async.Future<$1.MsgConnectionOpenTryResponse> connectionOpenTry($grpc.ServiceCall call, $1.MsgConnectionOpenTry request);
-  $async.Future<$1.MsgConnectionOpenAckResponse> connectionOpenAck($grpc.ServiceCall call, $1.MsgConnectionOpenAck request);
-  $async.Future<$1.MsgConnectionOpenConfirmResponse> connectionOpenConfirm($grpc.ServiceCall call, $1.MsgConnectionOpenConfirm request);
-  $async.Future<$1.MsgUpdateParamsResponse> updateConnectionParams($grpc.ServiceCall call, $1.MsgUpdateParams request);
+  $async.Future<$13.MsgConnectionOpenInitResponse> connectionOpenInit($grpc.ServiceCall call, $13.MsgConnectionOpenInit request);
+  $async.Future<$13.MsgConnectionOpenTryResponse> connectionOpenTry($grpc.ServiceCall call, $13.MsgConnectionOpenTry request);
+  $async.Future<$13.MsgConnectionOpenAckResponse> connectionOpenAck($grpc.ServiceCall call, $13.MsgConnectionOpenAck request);
+  $async.Future<$13.MsgConnectionOpenConfirmResponse> connectionOpenConfirm($grpc.ServiceCall call, $13.MsgConnectionOpenConfirm request);
+  $async.Future<$13.MsgUpdateParamsResponse> updateConnectionParams($grpc.ServiceCall call, $13.MsgUpdateParams request);
 }

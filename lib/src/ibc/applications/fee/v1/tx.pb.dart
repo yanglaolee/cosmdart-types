@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/channel/v1/channel.pb.dart' as $3;
-import 'fee.pb.dart' as $4;
+import '../../../core/channel/v1/channel.pb.dart' as $21;
+import 'fee.pb.dart' as $22;
 
 /// MsgRegisterPayee defines the request type for the RegisterPayee rpc
 class MsgRegisterPayee extends $pb.GeneratedMessage {
@@ -281,7 +281,7 @@ class MsgRegisterCounterpartyPayeeResponse extends $pb.GeneratedMessage {
 /// paid for
 class MsgPayPacketFee extends $pb.GeneratedMessage {
   factory MsgPayPacketFee({
-    $4.Fee? fee,
+    $22.Fee? fee,
     $core.String? sourcePortId,
     $core.String? sourceChannelId,
     $core.String? signer,
@@ -310,7 +310,7 @@ class MsgPayPacketFee extends $pb.GeneratedMessage {
   factory MsgPayPacketFee.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgPayPacketFee', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$4.Fee>(1, _omitFieldNames ? '' : 'fee', subBuilder: $4.Fee.create)
+    ..aOM<$22.Fee>(1, _omitFieldNames ? '' : 'fee', subBuilder: $22.Fee.create)
     ..aOS(2, _omitFieldNames ? '' : 'sourcePortId')
     ..aOS(3, _omitFieldNames ? '' : 'sourceChannelId')
     ..aOS(4, _omitFieldNames ? '' : 'signer')
@@ -341,15 +341,15 @@ class MsgPayPacketFee extends $pb.GeneratedMessage {
 
   /// fee encapsulates the recv, ack and timeout fees associated with an IBC packet
   @$pb.TagNumber(1)
-  $4.Fee get fee => $_getN(0);
+  $22.Fee get fee => $_getN(0);
   @$pb.TagNumber(1)
-  set fee($4.Fee v) { setField(1, v); }
+  set fee($22.Fee v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasFee() => $_has(0);
   @$pb.TagNumber(1)
   void clearFee() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Fee ensureFee() => $_ensure(0);
+  $22.Fee ensureFee() => $_ensure(0);
 
   /// the source port unique identifier
   @$pb.TagNumber(2)
@@ -423,8 +423,8 @@ class MsgPayPacketFeeResponse extends $pb.GeneratedMessage {
 /// This Msg can be used to pay for a packet at a specified sequence (instead of the next sequence send)
 class MsgPayPacketFeeAsync extends $pb.GeneratedMessage {
   factory MsgPayPacketFeeAsync({
-    $3.PacketId? packetId,
-    $4.PacketFee? packetFee,
+    $21.PacketId? packetId,
+    $22.PacketFee? packetFee,
   }) {
     final $result = create();
     if (packetId != null) {
@@ -440,8 +440,8 @@ class MsgPayPacketFeeAsync extends $pb.GeneratedMessage {
   factory MsgPayPacketFeeAsync.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgPayPacketFeeAsync', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.fee.v1'), createEmptyInstance: create)
-    ..aOM<$3.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $3.PacketId.create)
-    ..aOM<$4.PacketFee>(2, _omitFieldNames ? '' : 'packetFee', subBuilder: $4.PacketFee.create)
+    ..aOM<$21.PacketId>(1, _omitFieldNames ? '' : 'packetId', subBuilder: $21.PacketId.create)
+    ..aOM<$22.PacketFee>(2, _omitFieldNames ? '' : 'packetFee', subBuilder: $22.PacketFee.create)
     ..hasRequiredFields = false
   ;
 
@@ -468,27 +468,27 @@ class MsgPayPacketFeeAsync extends $pb.GeneratedMessage {
 
   /// unique packet identifier comprised of the channel ID, port ID and sequence
   @$pb.TagNumber(1)
-  $3.PacketId get packetId => $_getN(0);
+  $21.PacketId get packetId => $_getN(0);
   @$pb.TagNumber(1)
-  set packetId($3.PacketId v) { setField(1, v); }
+  set packetId($21.PacketId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPacketId() => $_has(0);
   @$pb.TagNumber(1)
   void clearPacketId() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PacketId ensurePacketId() => $_ensure(0);
+  $21.PacketId ensurePacketId() => $_ensure(0);
 
   /// the packet fee associated with a particular IBC packet
   @$pb.TagNumber(2)
-  $4.PacketFee get packetFee => $_getN(1);
+  $22.PacketFee get packetFee => $_getN(1);
   @$pb.TagNumber(2)
-  set packetFee($4.PacketFee v) { setField(2, v); }
+  set packetFee($22.PacketFee v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPacketFee() => $_has(1);
   @$pb.TagNumber(2)
   void clearPacketFee() => clearField(2);
   @$pb.TagNumber(2)
-  $4.PacketFee ensurePacketFee() => $_ensure(1);
+  $22.PacketFee ensurePacketFee() => $_ensure(1);
 }
 
 /// MsgPayPacketFeeAsyncResponse defines the response type for the PayPacketFeeAsync rpc

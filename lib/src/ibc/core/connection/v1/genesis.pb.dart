@@ -14,15 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'connection.pb.dart' as $3;
+import 'connection.pb.dart' as $33;
 
 /// GenesisState defines the ibc connection submodule's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$3.IdentifiedConnection>? connections,
-    $core.Iterable<$3.ConnectionPaths>? clientConnectionPaths,
+    $core.Iterable<$33.IdentifiedConnection>? connections,
+    $core.Iterable<$33.ConnectionPaths>? clientConnectionPaths,
     $fixnum.Int64? nextConnectionSequence,
-    $3.Params? params,
+    $33.Params? params,
   }) {
     final $result = create();
     if (connections != null) {
@@ -44,10 +44,10 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
-    ..pc<$3.IdentifiedConnection>(1, _omitFieldNames ? '' : 'connections', $pb.PbFieldType.PM, subBuilder: $3.IdentifiedConnection.create)
-    ..pc<$3.ConnectionPaths>(2, _omitFieldNames ? '' : 'clientConnectionPaths', $pb.PbFieldType.PM, subBuilder: $3.ConnectionPaths.create)
+    ..pc<$33.IdentifiedConnection>(1, _omitFieldNames ? '' : 'connections', $pb.PbFieldType.PM, subBuilder: $33.IdentifiedConnection.create)
+    ..pc<$33.ConnectionPaths>(2, _omitFieldNames ? '' : 'clientConnectionPaths', $pb.PbFieldType.PM, subBuilder: $33.ConnectionPaths.create)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nextConnectionSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$3.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
+    ..aOM<$33.Params>(4, _omitFieldNames ? '' : 'params', subBuilder: $33.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -73,10 +73,10 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.IdentifiedConnection> get connections => $_getList(0);
+  $core.List<$33.IdentifiedConnection> get connections => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<$3.ConnectionPaths> get clientConnectionPaths => $_getList(1);
+  $core.List<$33.ConnectionPaths> get clientConnectionPaths => $_getList(1);
 
   /// the sequence for the next generated connection identifier
   @$pb.TagNumber(3)
@@ -89,15 +89,15 @@ class GenesisState extends $pb.GeneratedMessage {
   void clearNextConnectionSequence() => clearField(3);
 
   @$pb.TagNumber(4)
-  $3.Params get params => $_getN(3);
+  $33.Params get params => $_getN(3);
   @$pb.TagNumber(4)
-  set params($3.Params v) { setField(4, v); }
+  set params($33.Params v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
   @$pb.TagNumber(4)
   void clearParams() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Params ensureParams() => $_ensure(3);
+  $33.Params ensureParams() => $_ensure(3);
 }
 
 

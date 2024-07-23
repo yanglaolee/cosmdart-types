@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $2;
+import '../../../google/protobuf/any.pb.dart' as $46;
 
 /// BaseAccount defines a base account type. It contains all the necessary fields
 /// for basic account functionality. Any custom account type should extend this
@@ -22,7 +22,7 @@ import '../../../google/protobuf/any.pb.dart' as $2;
 class BaseAccount extends $pb.GeneratedMessage {
   factory BaseAccount({
     $core.String? address,
-    $2.Any? pubKey,
+    $46.Any? pubKey,
     $fixnum.Int64? accountNumber,
     $fixnum.Int64? sequence,
   }) {
@@ -47,7 +47,7 @@ class BaseAccount extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BaseAccount', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $2.Any.create)
+    ..aOM<$46.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $46.Any.create)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'accountNumber', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'sequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -84,15 +84,15 @@ class BaseAccount extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $2.Any get pubKey => $_getN(1);
+  $46.Any get pubKey => $_getN(1);
   @$pb.TagNumber(2)
-  set pubKey($2.Any v) { setField(2, v); }
+  set pubKey($46.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPubKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearPubKey() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Any ensurePubKey() => $_ensure(1);
+  $46.Any ensurePubKey() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get accountNumber => $_getI64(2);

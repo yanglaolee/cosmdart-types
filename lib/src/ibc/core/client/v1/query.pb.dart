@@ -14,10 +14,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $5;
-import '../../../../google/protobuf/any.pb.dart' as $2;
-import '../../commitment/v1/commitment.pb.dart' as $6;
-import 'client.pb.dart' as $4;
+import '../../../../cosmos/base/query/v1beta1/pagination.pb.dart' as $23;
+import '../../../../google/protobuf/any.pb.dart' as $17;
+import '../../commitment/v1/commitment.pb.dart' as $32;
+import 'client.pb.dart' as $19;
 
 /// QueryClientStateRequest is the request type for the Query/ClientState RPC
 /// method
@@ -77,9 +77,9 @@ class QueryClientStateRequest extends $pb.GeneratedMessage {
 /// which the proof was retrieved.
 class QueryClientStateResponse extends $pb.GeneratedMessage {
   factory QueryClientStateResponse({
-    $2.Any? clientState,
+    $17.Any? clientState,
     $core.List<$core.int>? proof,
-    $4.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (clientState != null) {
@@ -98,9 +98,9 @@ class QueryClientStateResponse extends $pb.GeneratedMessage {
   factory QueryClientStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClientStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'clientState', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -127,15 +127,15 @@ class QueryClientStateResponse extends $pb.GeneratedMessage {
 
   /// client state associated with the request identifier
   @$pb.TagNumber(1)
-  $2.Any get clientState => $_getN(0);
+  $17.Any get clientState => $_getN(0);
   @$pb.TagNumber(1)
-  set clientState($2.Any v) { setField(1, v); }
+  set clientState($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClientState() => $_has(0);
   @$pb.TagNumber(1)
   void clearClientState() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Any ensureClientState() => $_ensure(0);
+  $17.Any ensureClientState() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -149,22 +149,22 @@ class QueryClientStateResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $4.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($4.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryClientStatesRequest is the request type for the Query/ClientStates RPC
 /// method
 class QueryClientStatesRequest extends $pb.GeneratedMessage {
   factory QueryClientStatesRequest({
-    $5.PageRequest? pagination,
+    $23.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -177,7 +177,7 @@ class QueryClientStatesRequest extends $pb.GeneratedMessage {
   factory QueryClientStatesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClientStatesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$5.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
+    ..aOM<$23.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -204,23 +204,23 @@ class QueryClientStatesRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(1)
-  $5.PageRequest get pagination => $_getN(0);
+  $23.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($5.PageRequest v) { setField(1, v); }
+  set pagination($23.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $5.PageRequest ensurePagination() => $_ensure(0);
+  $23.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryClientStatesResponse is the response type for the Query/ClientStates RPC
 /// method.
 class QueryClientStatesResponse extends $pb.GeneratedMessage {
   factory QueryClientStatesResponse({
-    $core.Iterable<$4.IdentifiedClientState>? clientStates,
-    $5.PageResponse? pagination,
+    $core.Iterable<$19.IdentifiedClientState>? clientStates,
+    $23.PageResponse? pagination,
   }) {
     final $result = create();
     if (clientStates != null) {
@@ -236,8 +236,8 @@ class QueryClientStatesResponse extends $pb.GeneratedMessage {
   factory QueryClientStatesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClientStatesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..pc<$4.IdentifiedClientState>(1, _omitFieldNames ? '' : 'clientStates', $pb.PbFieldType.PM, subBuilder: $4.IdentifiedClientState.create)
-    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
+    ..pc<$19.IdentifiedClientState>(1, _omitFieldNames ? '' : 'clientStates', $pb.PbFieldType.PM, subBuilder: $19.IdentifiedClientState.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -264,19 +264,19 @@ class QueryClientStatesResponse extends $pb.GeneratedMessage {
 
   /// list of stored ClientStates of the chain.
   @$pb.TagNumber(1)
-  $core.List<$4.IdentifiedClientState> get clientStates => $_getList(0);
+  $core.List<$19.IdentifiedClientState> get clientStates => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $5.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($5.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $5.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryConsensusStateRequest is the request type for the Query/ConsensusState
@@ -383,9 +383,9 @@ class QueryConsensusStateRequest extends $pb.GeneratedMessage {
 /// RPC method
 class QueryConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryConsensusStateResponse({
-    $2.Any? consensusState,
+    $17.Any? consensusState,
     $core.List<$core.int>? proof,
-    $4.Height? proofHeight,
+    $19.Height? proofHeight,
   }) {
     final $result = create();
     if (consensusState != null) {
@@ -404,9 +404,9 @@ class QueryConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryConsensusStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConsensusStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'consensusState', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..hasRequiredFields = false
   ;
 
@@ -433,15 +433,15 @@ class QueryConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// consensus state associated with the client identifier at the given height
   @$pb.TagNumber(1)
-  $2.Any get consensusState => $_getN(0);
+  $17.Any get consensusState => $_getN(0);
   @$pb.TagNumber(1)
-  set consensusState($2.Any v) { setField(1, v); }
+  set consensusState($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConsensusState() => $_has(0);
   @$pb.TagNumber(1)
   void clearConsensusState() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Any ensureConsensusState() => $_ensure(0);
+  $17.Any ensureConsensusState() => $_ensure(0);
 
   /// merkle proof of existence
   @$pb.TagNumber(2)
@@ -455,15 +455,15 @@ class QueryConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// height at which the proof was retrieved
   @$pb.TagNumber(3)
-  $4.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($4.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 }
 
 /// QueryConsensusStatesRequest is the request type for the Query/ConsensusStates
@@ -471,7 +471,7 @@ class QueryConsensusStateResponse extends $pb.GeneratedMessage {
 class QueryConsensusStatesRequest extends $pb.GeneratedMessage {
   factory QueryConsensusStatesRequest({
     $core.String? clientId,
-    $5.PageRequest? pagination,
+    $23.PageRequest? pagination,
   }) {
     final $result = create();
     if (clientId != null) {
@@ -488,7 +488,7 @@ class QueryConsensusStatesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConsensusStatesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$5.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
+    ..aOM<$23.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -525,23 +525,23 @@ class QueryConsensusStatesRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(2)
-  $5.PageRequest get pagination => $_getN(1);
+  $23.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($5.PageRequest v) { setField(2, v); }
+  set pagination($23.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $5.PageRequest ensurePagination() => $_ensure(1);
+  $23.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryConsensusStatesResponse is the response type for the
 /// Query/ConsensusStates RPC method
 class QueryConsensusStatesResponse extends $pb.GeneratedMessage {
   factory QueryConsensusStatesResponse({
-    $core.Iterable<$4.ConsensusStateWithHeight>? consensusStates,
-    $5.PageResponse? pagination,
+    $core.Iterable<$19.ConsensusStateWithHeight>? consensusStates,
+    $23.PageResponse? pagination,
   }) {
     final $result = create();
     if (consensusStates != null) {
@@ -557,8 +557,8 @@ class QueryConsensusStatesResponse extends $pb.GeneratedMessage {
   factory QueryConsensusStatesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConsensusStatesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..pc<$4.ConsensusStateWithHeight>(1, _omitFieldNames ? '' : 'consensusStates', $pb.PbFieldType.PM, subBuilder: $4.ConsensusStateWithHeight.create)
-    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
+    ..pc<$19.ConsensusStateWithHeight>(1, _omitFieldNames ? '' : 'consensusStates', $pb.PbFieldType.PM, subBuilder: $19.ConsensusStateWithHeight.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -585,19 +585,19 @@ class QueryConsensusStatesResponse extends $pb.GeneratedMessage {
 
   /// consensus states associated with the identifier
   @$pb.TagNumber(1)
-  $core.List<$4.ConsensusStateWithHeight> get consensusStates => $_getList(0);
+  $core.List<$19.ConsensusStateWithHeight> get consensusStates => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $5.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($5.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $5.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryConsensusStateHeightsRequest is the request type for Query/ConsensusStateHeights
@@ -605,7 +605,7 @@ class QueryConsensusStatesResponse extends $pb.GeneratedMessage {
 class QueryConsensusStateHeightsRequest extends $pb.GeneratedMessage {
   factory QueryConsensusStateHeightsRequest({
     $core.String? clientId,
-    $5.PageRequest? pagination,
+    $23.PageRequest? pagination,
   }) {
     final $result = create();
     if (clientId != null) {
@@ -622,7 +622,7 @@ class QueryConsensusStateHeightsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConsensusStateHeightsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$5.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageRequest.create)
+    ..aOM<$23.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -659,23 +659,23 @@ class QueryConsensusStateHeightsRequest extends $pb.GeneratedMessage {
 
   /// pagination request
   @$pb.TagNumber(2)
-  $5.PageRequest get pagination => $_getN(1);
+  $23.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($5.PageRequest v) { setField(2, v); }
+  set pagination($23.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $5.PageRequest ensurePagination() => $_ensure(1);
+  $23.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryConsensusStateHeightsResponse is the response type for the
 /// Query/ConsensusStateHeights RPC method
 class QueryConsensusStateHeightsResponse extends $pb.GeneratedMessage {
   factory QueryConsensusStateHeightsResponse({
-    $core.Iterable<$4.Height>? consensusStateHeights,
-    $5.PageResponse? pagination,
+    $core.Iterable<$19.Height>? consensusStateHeights,
+    $23.PageResponse? pagination,
   }) {
     final $result = create();
     if (consensusStateHeights != null) {
@@ -691,8 +691,8 @@ class QueryConsensusStateHeightsResponse extends $pb.GeneratedMessage {
   factory QueryConsensusStateHeightsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConsensusStateHeightsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..pc<$4.Height>(1, _omitFieldNames ? '' : 'consensusStateHeights', $pb.PbFieldType.PM, subBuilder: $4.Height.create)
-    ..aOM<$5.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $5.PageResponse.create)
+    ..pc<$19.Height>(1, _omitFieldNames ? '' : 'consensusStateHeights', $pb.PbFieldType.PM, subBuilder: $19.Height.create)
+    ..aOM<$23.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $23.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -719,19 +719,19 @@ class QueryConsensusStateHeightsResponse extends $pb.GeneratedMessage {
 
   /// consensus state heights
   @$pb.TagNumber(1)
-  $core.List<$4.Height> get consensusStateHeights => $_getList(0);
+  $core.List<$19.Height> get consensusStateHeights => $_getList(0);
 
   /// pagination response
   @$pb.TagNumber(2)
-  $5.PageResponse get pagination => $_getN(1);
+  $23.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($5.PageResponse v) { setField(2, v); }
+  set pagination($23.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $5.PageResponse ensurePagination() => $_ensure(1);
+  $23.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryClientStatusRequest is the request type for the Query/ClientStatus RPC
@@ -877,7 +877,7 @@ class QueryClientParamsRequest extends $pb.GeneratedMessage {
 /// method.
 class QueryClientParamsResponse extends $pb.GeneratedMessage {
   factory QueryClientParamsResponse({
-    $4.Params? params,
+    $19.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -890,7 +890,7 @@ class QueryClientParamsResponse extends $pb.GeneratedMessage {
   factory QueryClientParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClientParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$4.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $4.Params.create)
+    ..aOM<$19.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $19.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -917,15 +917,15 @@ class QueryClientParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $4.Params get params => $_getN(0);
+  $19.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($4.Params v) { setField(1, v); }
+  set params($19.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Params ensureParams() => $_ensure(0);
+  $19.Params ensureParams() => $_ensure(0);
 }
 
 /// QueryUpgradedClientStateRequest is the request type for the
@@ -966,7 +966,7 @@ class QueryUpgradedClientStateRequest extends $pb.GeneratedMessage {
 /// Query/UpgradedClientState RPC method.
 class QueryUpgradedClientStateResponse extends $pb.GeneratedMessage {
   factory QueryUpgradedClientStateResponse({
-    $2.Any? upgradedClientState,
+    $17.Any? upgradedClientState,
   }) {
     final $result = create();
     if (upgradedClientState != null) {
@@ -979,7 +979,7 @@ class QueryUpgradedClientStateResponse extends $pb.GeneratedMessage {
   factory QueryUpgradedClientStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUpgradedClientStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $17.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -1006,15 +1006,15 @@ class QueryUpgradedClientStateResponse extends $pb.GeneratedMessage {
 
   /// client state associated with the request identifier
   @$pb.TagNumber(1)
-  $2.Any get upgradedClientState => $_getN(0);
+  $17.Any get upgradedClientState => $_getN(0);
   @$pb.TagNumber(1)
-  set upgradedClientState($2.Any v) { setField(1, v); }
+  set upgradedClientState($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUpgradedClientState() => $_has(0);
   @$pb.TagNumber(1)
   void clearUpgradedClientState() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Any ensureUpgradedClientState() => $_ensure(0);
+  $17.Any ensureUpgradedClientState() => $_ensure(0);
 }
 
 /// QueryUpgradedConsensusStateRequest is the request type for the
@@ -1055,7 +1055,7 @@ class QueryUpgradedConsensusStateRequest extends $pb.GeneratedMessage {
 /// Query/UpgradedConsensusState RPC method.
 class QueryUpgradedConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryUpgradedConsensusStateResponse({
-    $2.Any? upgradedConsensusState,
+    $17.Any? upgradedConsensusState,
   }) {
     final $result = create();
     if (upgradedConsensusState != null) {
@@ -1068,7 +1068,7 @@ class QueryUpgradedConsensusStateResponse extends $pb.GeneratedMessage {
   factory QueryUpgradedConsensusStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUpgradedConsensusStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'upgradedConsensusState', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'upgradedConsensusState', subBuilder: $17.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -1095,15 +1095,15 @@ class QueryUpgradedConsensusStateResponse extends $pb.GeneratedMessage {
 
   /// Consensus state associated with the request identifier
   @$pb.TagNumber(1)
-  $2.Any get upgradedConsensusState => $_getN(0);
+  $17.Any get upgradedConsensusState => $_getN(0);
   @$pb.TagNumber(1)
-  set upgradedConsensusState($2.Any v) { setField(1, v); }
+  set upgradedConsensusState($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUpgradedConsensusState() => $_has(0);
   @$pb.TagNumber(1)
   void clearUpgradedConsensusState() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Any ensureUpgradedConsensusState() => $_ensure(0);
+  $17.Any ensureUpgradedConsensusState() => $_ensure(0);
 }
 
 /// QueryVerifyMembershipRequest is the request type for the Query/VerifyMembership RPC method
@@ -1111,8 +1111,8 @@ class QueryVerifyMembershipRequest extends $pb.GeneratedMessage {
   factory QueryVerifyMembershipRequest({
     $core.String? clientId,
     $core.List<$core.int>? proof,
-    $4.Height? proofHeight,
-    $6.MerklePath? merklePath,
+    $19.Height? proofHeight,
+    $32.MerklePath? merklePath,
     $core.List<$core.int>? value,
     $fixnum.Int64? timeDelay,
     $fixnum.Int64? blockDelay,
@@ -1148,8 +1148,8 @@ class QueryVerifyMembershipRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVerifyMembershipRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proof', $pb.PbFieldType.OY)
-    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
-    ..aOM<$6.MerklePath>(4, _omitFieldNames ? '' : 'merklePath', subBuilder: $6.MerklePath.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
+    ..aOM<$32.MerklePath>(4, _omitFieldNames ? '' : 'merklePath', subBuilder: $32.MerklePath.create)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'timeDelay', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'blockDelay', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1199,27 +1199,27 @@ class QueryVerifyMembershipRequest extends $pb.GeneratedMessage {
 
   /// the height of the commitment root at which the proof is verified.
   @$pb.TagNumber(3)
-  $4.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($4.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 
   /// the commitment key path.
   @$pb.TagNumber(4)
-  $6.MerklePath get merklePath => $_getN(3);
+  $32.MerklePath get merklePath => $_getN(3);
   @$pb.TagNumber(4)
-  set merklePath($6.MerklePath v) { setField(4, v); }
+  set merklePath($32.MerklePath v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasMerklePath() => $_has(3);
   @$pb.TagNumber(4)
   void clearMerklePath() => clearField(4);
   @$pb.TagNumber(4)
-  $6.MerklePath ensureMerklePath() => $_ensure(3);
+  $32.MerklePath ensureMerklePath() => $_ensure(3);
 
   /// the value which is proven.
   @$pb.TagNumber(5)

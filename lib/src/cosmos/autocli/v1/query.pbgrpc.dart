@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $0;
+import 'query.pb.dart' as $5;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.autocli.v1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$appOptions = $grpc.ClientMethod<$0.AppOptionsRequest, $0.AppOptionsResponse>(
+  static final _$appOptions = $grpc.ClientMethod<$5.AppOptionsRequest, $5.AppOptionsResponse>(
       '/cosmos.autocli.v1.Query/AppOptions',
-      ($0.AppOptionsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.AppOptionsResponse.fromBuffer(value));
+      ($5.AppOptionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $5.AppOptionsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.AppOptionsResponse> appOptions($0.AppOptionsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$5.AppOptionsResponse> appOptions($5.AppOptionsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$appOptions, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.autocli.v1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.AppOptionsRequest, $0.AppOptionsResponse>(
+    $addMethod($grpc.ServiceMethod<$5.AppOptionsRequest, $5.AppOptionsResponse>(
         'AppOptions',
         appOptions_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.AppOptionsRequest.fromBuffer(value),
-        ($0.AppOptionsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $5.AppOptionsRequest.fromBuffer(value),
+        ($5.AppOptionsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.AppOptionsResponse> appOptions_Pre($grpc.ServiceCall call, $async.Future<$0.AppOptionsRequest> request) async {
+  $async.Future<$5.AppOptionsResponse> appOptions_Pre($grpc.ServiceCall call, $async.Future<$5.AppOptionsRequest> request) async {
     return appOptions(call, await request);
   }
 
-  $async.Future<$0.AppOptionsResponse> appOptions($grpc.ServiceCall call, $0.AppOptionsRequest request);
+  $async.Future<$5.AppOptionsResponse> appOptions($grpc.ServiceCall call, $5.AppOptionsRequest request);
 }

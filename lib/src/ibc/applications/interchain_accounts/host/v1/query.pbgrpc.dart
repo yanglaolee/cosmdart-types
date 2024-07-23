@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $0;
+import 'query.pb.dart' as $4;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('ibc.applications.interchain_accounts.host.v1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$params = $grpc.ClientMethod<$0.QueryParamsRequest, $0.QueryParamsResponse>(
+  static final _$params = $grpc.ClientMethod<$4.QueryParamsRequest, $4.QueryParamsResponse>(
       '/ibc.applications.interchain_accounts.host.v1.Query/Params',
-      ($0.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryParamsResponse.fromBuffer(value));
+      ($4.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.QueryParamsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.QueryParamsResponse> params($0.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$4.QueryParamsResponse> params($4.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'ibc.applications.interchain_accounts.host.v1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.QueryParamsRequest, $0.QueryParamsResponse>(
+    $addMethod($grpc.ServiceMethod<$4.QueryParamsRequest, $4.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryParamsRequest.fromBuffer(value),
-        ($0.QueryParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $4.QueryParamsRequest.fromBuffer(value),
+        ($4.QueryParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$0.QueryParamsRequest> request) async {
+  $async.Future<$4.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$4.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$0.QueryParamsResponse> params($grpc.ServiceCall call, $0.QueryParamsRequest request);
+  $async.Future<$4.QueryParamsResponse> params($grpc.ServiceCall call, $4.QueryParamsRequest request);
 }

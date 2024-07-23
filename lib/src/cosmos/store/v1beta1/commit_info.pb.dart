@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/timestamp.pb.dart' as $1;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
 
 /// CommitInfo defines commit information used by the multi-store when committing
 /// a version/height.
@@ -22,7 +22,7 @@ class CommitInfo extends $pb.GeneratedMessage {
   factory CommitInfo({
     $fixnum.Int64? version,
     $core.Iterable<StoreInfo>? storeInfos,
-    $1.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
   }) {
     final $result = create();
     if (version != null) {
@@ -43,7 +43,7 @@ class CommitInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CommitInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.store.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'version')
     ..pc<StoreInfo>(2, _omitFieldNames ? '' : 'storeInfos', $pb.PbFieldType.PM, subBuilder: StoreInfo.create)
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $1.Timestamp.create)
+    ..aOM<$50.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -81,15 +81,15 @@ class CommitInfo extends $pb.GeneratedMessage {
   $core.List<StoreInfo> get storeInfos => $_getList(1);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get timestamp => $_getN(2);
+  $50.Timestamp get timestamp => $_getN(2);
   @$pb.TagNumber(3)
-  set timestamp($1.Timestamp v) { setField(3, v); }
+  set timestamp($50.Timestamp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTimestamp() => $_has(2);
   @$pb.TagNumber(3)
   void clearTimestamp() => clearField(3);
   @$pb.TagNumber(3)
-  $1.Timestamp ensureTimestamp() => $_ensure(2);
+  $50.Timestamp ensureTimestamp() => $_ensure(2);
 }
 
 /// StoreInfo defines store-specific commit information. It contains a reference

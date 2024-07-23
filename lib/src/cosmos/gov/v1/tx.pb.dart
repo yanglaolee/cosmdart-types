@@ -14,18 +14,18 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $3;
-import '../../../google/protobuf/timestamp.pb.dart' as $4;
-import '../../base/v1beta1/coin.pb.dart' as $2;
-import 'gov.pb.dart' as $6;
-import 'gov.pbenum.dart' as $6;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
+import '../../base/v1beta1/coin.pb.dart' as $53;
+import 'gov.pb.dart' as $70;
+import 'gov.pbenum.dart' as $70;
 
 /// MsgSubmitProposal defines an sdk.Msg type that supports submitting arbitrary
 /// proposal Content.
 class MsgSubmitProposal extends $pb.GeneratedMessage {
   factory MsgSubmitProposal({
-    $core.Iterable<$3.Any>? messages,
-    $core.Iterable<$2.Coin>? initialDeposit,
+    $core.Iterable<$46.Any>? messages,
+    $core.Iterable<$53.Coin>? initialDeposit,
     $core.String? proposer,
     $core.String? metadata,
     $core.String? title,
@@ -61,8 +61,8 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
   factory MsgSubmitProposal.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSubmitProposal', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
-    ..pc<$3.Any>(1, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $3.Any.create)
-    ..pc<$2.Coin>(2, _omitFieldNames ? '' : 'initialDeposit', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..pc<$46.Any>(1, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
+    ..pc<$53.Coin>(2, _omitFieldNames ? '' : 'initialDeposit', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
     ..aOS(3, _omitFieldNames ? '' : 'proposer')
     ..aOS(4, _omitFieldNames ? '' : 'metadata')
     ..aOS(5, _omitFieldNames ? '' : 'title')
@@ -94,11 +94,11 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
 
   /// messages are the arbitrary messages to be executed if proposal passes.
   @$pb.TagNumber(1)
-  $core.List<$3.Any> get messages => $_getList(0);
+  $core.List<$46.Any> get messages => $_getList(0);
 
   /// initial_deposit is the deposit value that must be paid at proposal submission.
   @$pb.TagNumber(2)
-  $core.List<$2.Coin> get initialDeposit => $_getList(1);
+  $core.List<$53.Coin> get initialDeposit => $_getList(1);
 
   /// proposer is the account address of the proposer.
   @$pb.TagNumber(3)
@@ -213,7 +213,7 @@ class MsgSubmitProposalResponse extends $pb.GeneratedMessage {
 /// This ensures backwards compatibility with v1beta1.MsgSubmitProposal.
 class MsgExecLegacyContent extends $pb.GeneratedMessage {
   factory MsgExecLegacyContent({
-    $3.Any? content,
+    $46.Any? content,
     $core.String? authority,
   }) {
     final $result = create();
@@ -230,7 +230,7 @@ class MsgExecLegacyContent extends $pb.GeneratedMessage {
   factory MsgExecLegacyContent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgExecLegacyContent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
-    ..aOM<$3.Any>(1, _omitFieldNames ? '' : 'content', subBuilder: $3.Any.create)
+    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'content', subBuilder: $46.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'authority')
     ..hasRequiredFields = false
   ;
@@ -258,15 +258,15 @@ class MsgExecLegacyContent extends $pb.GeneratedMessage {
 
   /// content is the proposal's content.
   @$pb.TagNumber(1)
-  $3.Any get content => $_getN(0);
+  $46.Any get content => $_getN(0);
   @$pb.TagNumber(1)
-  set content($3.Any v) { setField(1, v); }
+  set content($46.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasContent() => $_has(0);
   @$pb.TagNumber(1)
   void clearContent() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Any ensureContent() => $_ensure(0);
+  $46.Any ensureContent() => $_ensure(0);
 
   /// authority must be the gov module address.
   @$pb.TagNumber(2)
@@ -317,7 +317,7 @@ class MsgVote extends $pb.GeneratedMessage {
   factory MsgVote({
     $fixnum.Int64? proposalId,
     $core.String? voter,
-    $6.VoteOption? option,
+    $70.VoteOption? option,
     $core.String? metadata,
   }) {
     final $result = create();
@@ -342,7 +342,7 @@ class MsgVote extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgVote', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'voter')
-    ..e<$6.VoteOption>(3, _omitFieldNames ? '' : 'option', $pb.PbFieldType.OE, defaultOrMaker: $6.VoteOption.VOTE_OPTION_UNSPECIFIED, valueOf: $6.VoteOption.valueOf, enumValues: $6.VoteOption.values)
+    ..e<$70.VoteOption>(3, _omitFieldNames ? '' : 'option', $pb.PbFieldType.OE, defaultOrMaker: $70.VoteOption.VOTE_OPTION_UNSPECIFIED, valueOf: $70.VoteOption.valueOf, enumValues: $70.VoteOption.values)
     ..aOS(4, _omitFieldNames ? '' : 'metadata')
     ..hasRequiredFields = false
   ;
@@ -390,9 +390,9 @@ class MsgVote extends $pb.GeneratedMessage {
 
   /// option defines the vote option.
   @$pb.TagNumber(3)
-  $6.VoteOption get option => $_getN(2);
+  $70.VoteOption get option => $_getN(2);
   @$pb.TagNumber(3)
-  set option($6.VoteOption v) { setField(3, v); }
+  set option($70.VoteOption v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOption() => $_has(2);
   @$pb.TagNumber(3)
@@ -447,7 +447,7 @@ class MsgVoteWeighted extends $pb.GeneratedMessage {
   factory MsgVoteWeighted({
     $fixnum.Int64? proposalId,
     $core.String? voter,
-    $core.Iterable<$6.WeightedVoteOption>? options,
+    $core.Iterable<$70.WeightedVoteOption>? options,
     $core.String? metadata,
   }) {
     final $result = create();
@@ -472,7 +472,7 @@ class MsgVoteWeighted extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgVoteWeighted', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'voter')
-    ..pc<$6.WeightedVoteOption>(3, _omitFieldNames ? '' : 'options', $pb.PbFieldType.PM, subBuilder: $6.WeightedVoteOption.create)
+    ..pc<$70.WeightedVoteOption>(3, _omitFieldNames ? '' : 'options', $pb.PbFieldType.PM, subBuilder: $70.WeightedVoteOption.create)
     ..aOS(4, _omitFieldNames ? '' : 'metadata')
     ..hasRequiredFields = false
   ;
@@ -520,7 +520,7 @@ class MsgVoteWeighted extends $pb.GeneratedMessage {
 
   /// options defines the weighted vote options.
   @$pb.TagNumber(3)
-  $core.List<$6.WeightedVoteOption> get options => $_getList(2);
+  $core.List<$70.WeightedVoteOption> get options => $_getList(2);
 
   /// metadata is any arbitrary metadata attached to the VoteWeighted.
   @$pb.TagNumber(4)
@@ -571,7 +571,7 @@ class MsgDeposit extends $pb.GeneratedMessage {
   factory MsgDeposit({
     $fixnum.Int64? proposalId,
     $core.String? depositor,
-    $core.Iterable<$2.Coin>? amount,
+    $core.Iterable<$53.Coin>? amount,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -592,7 +592,7 @@ class MsgDeposit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgDeposit', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'depositor')
-    ..pc<$2.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $2.Coin.create)
+    ..pc<$53.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -639,7 +639,7 @@ class MsgDeposit extends $pb.GeneratedMessage {
 
   /// amount to be deposited by depositor.
   @$pb.TagNumber(3)
-  $core.List<$2.Coin> get amount => $_getList(2);
+  $core.List<$53.Coin> get amount => $_getList(2);
 }
 
 /// MsgDepositResponse defines the Msg/Deposit response type.
@@ -681,7 +681,7 @@ class MsgDepositResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $6.Params? params,
+    $70.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -698,7 +698,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$6.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $6.Params.create)
+    ..aOM<$70.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $70.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -737,15 +737,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $6.Params get params => $_getN(1);
+  $70.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($6.Params v) { setField(2, v); }
+  set params($70.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $6.Params ensureParams() => $_ensure(1);
+  $70.Params ensureParams() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a
@@ -860,7 +860,7 @@ class MsgCancelProposal extends $pb.GeneratedMessage {
 class MsgCancelProposalResponse extends $pb.GeneratedMessage {
   factory MsgCancelProposalResponse({
     $fixnum.Int64? proposalId,
-    $4.Timestamp? canceledTime,
+    $50.Timestamp? canceledTime,
     $fixnum.Int64? canceledHeight,
   }) {
     final $result = create();
@@ -881,7 +881,7 @@ class MsgCancelProposalResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCancelProposalResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$4.Timestamp>(2, _omitFieldNames ? '' : 'canceledTime', subBuilder: $4.Timestamp.create)
+    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'canceledTime', subBuilder: $50.Timestamp.create)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'canceledHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -919,15 +919,15 @@ class MsgCancelProposalResponse extends $pb.GeneratedMessage {
 
   /// canceled_time is the time when proposal is canceled.
   @$pb.TagNumber(2)
-  $4.Timestamp get canceledTime => $_getN(1);
+  $50.Timestamp get canceledTime => $_getN(1);
   @$pb.TagNumber(2)
-  set canceledTime($4.Timestamp v) { setField(2, v); }
+  set canceledTime($50.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCanceledTime() => $_has(1);
   @$pb.TagNumber(2)
   void clearCanceledTime() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Timestamp ensureCanceledTime() => $_ensure(1);
+  $50.Timestamp ensureCanceledTime() => $_ensure(1);
 
   /// canceled_height defines the block height at which the proposal is canceled.
   @$pb.TagNumber(3)

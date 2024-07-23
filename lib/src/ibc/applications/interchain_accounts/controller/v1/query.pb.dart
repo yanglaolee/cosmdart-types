@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'controller.pb.dart' as $2;
+import 'controller.pb.dart' as $25;
 
 /// QueryInterchainAccountRequest is the request type for the Query/InterchainAccount RPC method.
 class QueryInterchainAccountRequest extends $pb.GeneratedMessage {
@@ -167,7 +167,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $2.Params? params,
+    $25.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -180,7 +180,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.controller.v1'), createEmptyInstance: create)
-    ..aOM<$2.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $2.Params.create)
+    ..aOM<$25.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $25.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -207,15 +207,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $2.Params get params => $_getN(0);
+  $25.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($2.Params v) { setField(1, v); }
+  set params($25.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Params ensureParams() => $_ensure(0);
+  $25.Params ensureParams() => $_ensure(0);
 }
 
 

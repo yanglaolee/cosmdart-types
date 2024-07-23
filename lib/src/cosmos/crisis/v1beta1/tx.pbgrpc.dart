@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $0;
+import 'tx.pb.dart' as $17;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.crisis.v1beta1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$verifyInvariant = $grpc.ClientMethod<$0.MsgVerifyInvariant, $0.MsgVerifyInvariantResponse>(
+  static final _$verifyInvariant = $grpc.ClientMethod<$17.MsgVerifyInvariant, $17.MsgVerifyInvariantResponse>(
       '/cosmos.crisis.v1beta1.Msg/VerifyInvariant',
-      ($0.MsgVerifyInvariant value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.MsgVerifyInvariantResponse.fromBuffer(value));
-  static final _$updateParams = $grpc.ClientMethod<$0.MsgUpdateParams, $0.MsgUpdateParamsResponse>(
+      ($17.MsgVerifyInvariant value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgVerifyInvariantResponse.fromBuffer(value));
+  static final _$updateParams = $grpc.ClientMethod<$17.MsgUpdateParams, $17.MsgUpdateParamsResponse>(
       '/cosmos.crisis.v1beta1.Msg/UpdateParams',
-      ($0.MsgUpdateParams value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.MsgUpdateParamsResponse.fromBuffer(value));
+      ($17.MsgUpdateParams value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgUpdateParamsResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.MsgVerifyInvariantResponse> verifyInvariant($0.MsgVerifyInvariant request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.MsgVerifyInvariantResponse> verifyInvariant($17.MsgVerifyInvariant request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$verifyInvariant, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.MsgUpdateParamsResponse> updateParams($0.MsgUpdateParams request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.MsgUpdateParamsResponse> updateParams($17.MsgUpdateParams request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateParams, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.crisis.v1beta1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.MsgVerifyInvariant, $0.MsgVerifyInvariantResponse>(
+    $addMethod($grpc.ServiceMethod<$17.MsgVerifyInvariant, $17.MsgVerifyInvariantResponse>(
         'VerifyInvariant',
         verifyInvariant_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.MsgVerifyInvariant.fromBuffer(value),
-        ($0.MsgVerifyInvariantResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.MsgUpdateParams, $0.MsgUpdateParamsResponse>(
+        ($core.List<$core.int> value) => $17.MsgVerifyInvariant.fromBuffer(value),
+        ($17.MsgVerifyInvariantResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.MsgUpdateParams, $17.MsgUpdateParamsResponse>(
         'UpdateParams',
         updateParams_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.MsgUpdateParams.fromBuffer(value),
-        ($0.MsgUpdateParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $17.MsgUpdateParams.fromBuffer(value),
+        ($17.MsgUpdateParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.MsgVerifyInvariantResponse> verifyInvariant_Pre($grpc.ServiceCall call, $async.Future<$0.MsgVerifyInvariant> request) async {
+  $async.Future<$17.MsgVerifyInvariantResponse> verifyInvariant_Pre($grpc.ServiceCall call, $async.Future<$17.MsgVerifyInvariant> request) async {
     return verifyInvariant(call, await request);
   }
 
-  $async.Future<$0.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$0.MsgUpdateParams> request) async {
+  $async.Future<$17.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$17.MsgUpdateParams> request) async {
     return updateParams(call, await request);
   }
 
-  $async.Future<$0.MsgVerifyInvariantResponse> verifyInvariant($grpc.ServiceCall call, $0.MsgVerifyInvariant request);
-  $async.Future<$0.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $0.MsgUpdateParams request);
+  $async.Future<$17.MsgVerifyInvariantResponse> verifyInvariant($grpc.ServiceCall call, $17.MsgVerifyInvariant request);
+  $async.Future<$17.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $17.MsgUpdateParams request);
 }

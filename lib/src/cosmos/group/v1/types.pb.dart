@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $4;
-import '../../../google/protobuf/duration.pb.dart' as $3;
-import '../../../google/protobuf/timestamp.pb.dart' as $2;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/duration.pb.dart' as $55;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
 import 'types.pbenum.dart';
 
 export 'types.pbenum.dart';
@@ -28,7 +28,7 @@ class Member extends $pb.GeneratedMessage {
     $core.String? address,
     $core.String? weight,
     $core.String? metadata,
-    $2.Timestamp? addedAt,
+    $50.Timestamp? addedAt,
   }) {
     final $result = create();
     if (address != null) {
@@ -53,7 +53,7 @@ class Member extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'address')
     ..aOS(2, _omitFieldNames ? '' : 'weight')
     ..aOS(3, _omitFieldNames ? '' : 'metadata')
-    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'addedAt', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'addedAt', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -110,15 +110,15 @@ class Member extends $pb.GeneratedMessage {
 
   /// added_at is a timestamp specifying when a member was added.
   @$pb.TagNumber(4)
-  $2.Timestamp get addedAt => $_getN(3);
+  $50.Timestamp get addedAt => $_getN(3);
   @$pb.TagNumber(4)
-  set addedAt($2.Timestamp v) { setField(4, v); }
+  set addedAt($50.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAddedAt() => $_has(3);
   @$pb.TagNumber(4)
   void clearAddedAt() => clearField(4);
   @$pb.TagNumber(4)
-  $2.Timestamp ensureAddedAt() => $_ensure(3);
+  $50.Timestamp ensureAddedAt() => $_ensure(3);
 }
 
 /// MemberRequest represents a group member to be used in Msg server requests.
@@ -358,8 +358,8 @@ class PercentageDecisionPolicy extends $pb.GeneratedMessage {
 /// DecisionPolicyWindows defines the different windows for voting and execution.
 class DecisionPolicyWindows extends $pb.GeneratedMessage {
   factory DecisionPolicyWindows({
-    $3.Duration? votingPeriod,
-    $3.Duration? minExecutionPeriod,
+    $55.Duration? votingPeriod,
+    $55.Duration? minExecutionPeriod,
   }) {
     final $result = create();
     if (votingPeriod != null) {
@@ -375,8 +375,8 @@ class DecisionPolicyWindows extends $pb.GeneratedMessage {
   factory DecisionPolicyWindows.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DecisionPolicyWindows', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..aOM<$3.Duration>(1, _omitFieldNames ? '' : 'votingPeriod', subBuilder: $3.Duration.create)
-    ..aOM<$3.Duration>(2, _omitFieldNames ? '' : 'minExecutionPeriod', subBuilder: $3.Duration.create)
+    ..aOM<$55.Duration>(1, _omitFieldNames ? '' : 'votingPeriod', subBuilder: $55.Duration.create)
+    ..aOM<$55.Duration>(2, _omitFieldNames ? '' : 'minExecutionPeriod', subBuilder: $55.Duration.create)
     ..hasRequiredFields = false
   ;
 
@@ -404,15 +404,15 @@ class DecisionPolicyWindows extends $pb.GeneratedMessage {
   /// voting_period is the duration from submission of a proposal to the end of voting period
   /// Within this times votes can be submitted with MsgVote.
   @$pb.TagNumber(1)
-  $3.Duration get votingPeriod => $_getN(0);
+  $55.Duration get votingPeriod => $_getN(0);
   @$pb.TagNumber(1)
-  set votingPeriod($3.Duration v) { setField(1, v); }
+  set votingPeriod($55.Duration v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVotingPeriod() => $_has(0);
   @$pb.TagNumber(1)
   void clearVotingPeriod() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Duration ensureVotingPeriod() => $_ensure(0);
+  $55.Duration ensureVotingPeriod() => $_ensure(0);
 
   ///  min_execution_period is the minimum duration after the proposal submission
   ///  where members can start sending MsgExec. This means that the window for
@@ -426,15 +426,15 @@ class DecisionPolicyWindows extends $pb.GeneratedMessage {
   ///  is empty, meaning that all proposals created with this decision policy
   ///  won't be able to be executed.
   @$pb.TagNumber(2)
-  $3.Duration get minExecutionPeriod => $_getN(1);
+  $55.Duration get minExecutionPeriod => $_getN(1);
   @$pb.TagNumber(2)
-  set minExecutionPeriod($3.Duration v) { setField(2, v); }
+  set minExecutionPeriod($55.Duration v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMinExecutionPeriod() => $_has(1);
   @$pb.TagNumber(2)
   void clearMinExecutionPeriod() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Duration ensureMinExecutionPeriod() => $_ensure(1);
+  $55.Duration ensureMinExecutionPeriod() => $_ensure(1);
 }
 
 /// GroupInfo represents the high-level on-chain information for a group.
@@ -445,7 +445,7 @@ class GroupInfo extends $pb.GeneratedMessage {
     $core.String? metadata,
     $fixnum.Int64? version,
     $core.String? totalWeight,
-    $2.Timestamp? createdAt,
+    $50.Timestamp? createdAt,
   }) {
     final $result = create();
     if (id != null) {
@@ -478,7 +478,7 @@ class GroupInfo extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'metadata')
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(5, _omitFieldNames ? '' : 'totalWeight')
-    ..aOM<$2.Timestamp>(6, _omitFieldNames ? '' : 'createdAt', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(6, _omitFieldNames ? '' : 'createdAt', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -559,15 +559,15 @@ class GroupInfo extends $pb.GeneratedMessage {
 
   /// created_at is a timestamp specifying when a group was created.
   @$pb.TagNumber(6)
-  $2.Timestamp get createdAt => $_getN(5);
+  $50.Timestamp get createdAt => $_getN(5);
   @$pb.TagNumber(6)
-  set createdAt($2.Timestamp v) { setField(6, v); }
+  set createdAt($50.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasCreatedAt() => $_has(5);
   @$pb.TagNumber(6)
   void clearCreatedAt() => clearField(6);
   @$pb.TagNumber(6)
-  $2.Timestamp ensureCreatedAt() => $_ensure(5);
+  $50.Timestamp ensureCreatedAt() => $_ensure(5);
 }
 
 /// GroupMember represents the relationship between a group and a member.
@@ -647,8 +647,8 @@ class GroupPolicyInfo extends $pb.GeneratedMessage {
     $core.String? admin,
     $core.String? metadata,
     $fixnum.Int64? version,
-    $4.Any? decisionPolicy,
-    $2.Timestamp? createdAt,
+    $46.Any? decisionPolicy,
+    $50.Timestamp? createdAt,
   }) {
     final $result = create();
     if (address != null) {
@@ -684,8 +684,8 @@ class GroupPolicyInfo extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'admin')
     ..aOS(4, _omitFieldNames ? '' : 'metadata')
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$4.Any>(6, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $4.Any.create)
-    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'createdAt', subBuilder: $2.Timestamp.create)
+    ..aOM<$46.Any>(6, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $46.Any.create)
+    ..aOM<$50.Timestamp>(7, _omitFieldNames ? '' : 'createdAt', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -765,27 +765,27 @@ class GroupPolicyInfo extends $pb.GeneratedMessage {
 
   /// decision_policy specifies the group policy's decision policy.
   @$pb.TagNumber(6)
-  $4.Any get decisionPolicy => $_getN(5);
+  $46.Any get decisionPolicy => $_getN(5);
   @$pb.TagNumber(6)
-  set decisionPolicy($4.Any v) { setField(6, v); }
+  set decisionPolicy($46.Any v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasDecisionPolicy() => $_has(5);
   @$pb.TagNumber(6)
   void clearDecisionPolicy() => clearField(6);
   @$pb.TagNumber(6)
-  $4.Any ensureDecisionPolicy() => $_ensure(5);
+  $46.Any ensureDecisionPolicy() => $_ensure(5);
 
   /// created_at is a timestamp specifying when a group policy was created.
   @$pb.TagNumber(7)
-  $2.Timestamp get createdAt => $_getN(6);
+  $50.Timestamp get createdAt => $_getN(6);
   @$pb.TagNumber(7)
-  set createdAt($2.Timestamp v) { setField(7, v); }
+  set createdAt($50.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasCreatedAt() => $_has(6);
   @$pb.TagNumber(7)
   void clearCreatedAt() => clearField(7);
   @$pb.TagNumber(7)
-  $2.Timestamp ensureCreatedAt() => $_ensure(6);
+  $50.Timestamp ensureCreatedAt() => $_ensure(6);
 }
 
 /// Proposal defines a group proposal. Any member of a group can submit a proposal
@@ -798,14 +798,14 @@ class Proposal extends $pb.GeneratedMessage {
     $core.String? groupPolicyAddress,
     $core.String? metadata,
     $core.Iterable<$core.String>? proposers,
-    $2.Timestamp? submitTime,
+    $50.Timestamp? submitTime,
     $fixnum.Int64? groupVersion,
     $fixnum.Int64? groupPolicyVersion,
     ProposalStatus? status,
     TallyResult? finalTallyResult,
-    $2.Timestamp? votingPeriodEnd,
+    $50.Timestamp? votingPeriodEnd,
     ProposalExecutorResult? executorResult,
-    $core.Iterable<$4.Any>? messages,
+    $core.Iterable<$46.Any>? messages,
     $core.String? title,
     $core.String? summary,
   }) {
@@ -863,14 +863,14 @@ class Proposal extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'groupPolicyAddress')
     ..aOS(3, _omitFieldNames ? '' : 'metadata')
     ..pPS(4, _omitFieldNames ? '' : 'proposers')
-    ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'submitTime', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'submitTime', subBuilder: $50.Timestamp.create)
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'groupVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'groupPolicyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<ProposalStatus>(8, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED, valueOf: ProposalStatus.valueOf, enumValues: ProposalStatus.values)
     ..aOM<TallyResult>(9, _omitFieldNames ? '' : 'finalTallyResult', subBuilder: TallyResult.create)
-    ..aOM<$2.Timestamp>(10, _omitFieldNames ? '' : 'votingPeriodEnd', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(10, _omitFieldNames ? '' : 'votingPeriodEnd', subBuilder: $50.Timestamp.create)
     ..e<ProposalExecutorResult>(11, _omitFieldNames ? '' : 'executorResult', $pb.PbFieldType.OE, defaultOrMaker: ProposalExecutorResult.PROPOSAL_EXECUTOR_RESULT_UNSPECIFIED, valueOf: ProposalExecutorResult.valueOf, enumValues: ProposalExecutorResult.values)
-    ..pc<$4.Any>(12, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $4.Any.create)
+    ..pc<$46.Any>(12, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
     ..aOS(13, _omitFieldNames ? '' : 'title')
     ..aOS(14, _omitFieldNames ? '' : 'summary')
     ..hasRequiredFields = false
@@ -935,15 +935,15 @@ class Proposal extends $pb.GeneratedMessage {
 
   /// submit_time is a timestamp specifying when a proposal was submitted.
   @$pb.TagNumber(5)
-  $2.Timestamp get submitTime => $_getN(4);
+  $50.Timestamp get submitTime => $_getN(4);
   @$pb.TagNumber(5)
-  set submitTime($2.Timestamp v) { setField(5, v); }
+  set submitTime($50.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasSubmitTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearSubmitTime() => clearField(5);
   @$pb.TagNumber(5)
-  $2.Timestamp ensureSubmitTime() => $_ensure(4);
+  $50.Timestamp ensureSubmitTime() => $_ensure(4);
 
   /// group_version tracks the version of the group at proposal submission.
   /// This field is here for informational purposes only.
@@ -1000,15 +1000,15 @@ class Proposal extends $pb.GeneratedMessage {
   /// at this point, and the `final_tally_result`and `status` fields will be
   /// accordingly updated.
   @$pb.TagNumber(10)
-  $2.Timestamp get votingPeriodEnd => $_getN(9);
+  $50.Timestamp get votingPeriodEnd => $_getN(9);
   @$pb.TagNumber(10)
-  set votingPeriodEnd($2.Timestamp v) { setField(10, v); }
+  set votingPeriodEnd($50.Timestamp v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasVotingPeriodEnd() => $_has(9);
   @$pb.TagNumber(10)
   void clearVotingPeriodEnd() => clearField(10);
   @$pb.TagNumber(10)
-  $2.Timestamp ensureVotingPeriodEnd() => $_ensure(9);
+  $50.Timestamp ensureVotingPeriodEnd() => $_ensure(9);
 
   /// executor_result is the final result of the proposal execution. Initial value is NotRun.
   @$pb.TagNumber(11)
@@ -1022,7 +1022,7 @@ class Proposal extends $pb.GeneratedMessage {
 
   /// messages is a list of `sdk.Msg`s that will be executed if the proposal passes.
   @$pb.TagNumber(12)
-  $core.List<$4.Any> get messages => $_getList(11);
+  $core.List<$46.Any> get messages => $_getList(11);
 
   ///  title is the title of the proposal
   ///
@@ -1153,7 +1153,7 @@ class Vote extends $pb.GeneratedMessage {
     $core.String? voter,
     VoteOption? option,
     $core.String? metadata,
-    $2.Timestamp? submitTime,
+    $50.Timestamp? submitTime,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -1182,7 +1182,7 @@ class Vote extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'voter')
     ..e<VoteOption>(3, _omitFieldNames ? '' : 'option', $pb.PbFieldType.OE, defaultOrMaker: VoteOption.VOTE_OPTION_UNSPECIFIED, valueOf: VoteOption.valueOf, enumValues: VoteOption.values)
     ..aOS(4, _omitFieldNames ? '' : 'metadata')
-    ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'submitTime', subBuilder: $2.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'submitTime', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -1250,15 +1250,15 @@ class Vote extends $pb.GeneratedMessage {
 
   /// submit_time is the timestamp when the vote was submitted.
   @$pb.TagNumber(5)
-  $2.Timestamp get submitTime => $_getN(4);
+  $50.Timestamp get submitTime => $_getN(4);
   @$pb.TagNumber(5)
-  set submitTime($2.Timestamp v) { setField(5, v); }
+  set submitTime($50.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasSubmitTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearSubmitTime() => clearField(5);
   @$pb.TagNumber(5)
-  $2.Timestamp ensureSubmitTime() => $_ensure(4);
+  $50.Timestamp ensureSubmitTime() => $_ensure(4);
 }
 
 

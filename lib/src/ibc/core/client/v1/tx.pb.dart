@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../cosmos/upgrade/v1beta1/upgrade.pb.dart' as $3;
-import '../../../../google/protobuf/any.pb.dart' as $2;
-import 'client.pb.dart' as $4;
+import '../../../../cosmos/upgrade/v1beta1/upgrade.pb.dart' as $18;
+import '../../../../google/protobuf/any.pb.dart' as $17;
+import 'client.pb.dart' as $19;
 
 /// MsgCreateClient defines a message to create an IBC client
 class MsgCreateClient extends $pb.GeneratedMessage {
   factory MsgCreateClient({
-    $2.Any? clientState,
-    $2.Any? consensusState,
+    $17.Any? clientState,
+    $17.Any? consensusState,
     $core.String? signer,
   }) {
     final $result = create();
@@ -41,8 +41,8 @@ class MsgCreateClient extends $pb.GeneratedMessage {
   factory MsgCreateClient.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCreateClient', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'clientState', subBuilder: $2.Any.create)
-    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'consensusState', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
+    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
     ..aOS(3, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -70,28 +70,28 @@ class MsgCreateClient extends $pb.GeneratedMessage {
 
   /// light client state
   @$pb.TagNumber(1)
-  $2.Any get clientState => $_getN(0);
+  $17.Any get clientState => $_getN(0);
   @$pb.TagNumber(1)
-  set clientState($2.Any v) { setField(1, v); }
+  set clientState($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClientState() => $_has(0);
   @$pb.TagNumber(1)
   void clearClientState() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Any ensureClientState() => $_ensure(0);
+  $17.Any ensureClientState() => $_ensure(0);
 
   /// consensus state associated with the client that corresponds to a given
   /// height.
   @$pb.TagNumber(2)
-  $2.Any get consensusState => $_getN(1);
+  $17.Any get consensusState => $_getN(1);
   @$pb.TagNumber(2)
-  set consensusState($2.Any v) { setField(2, v); }
+  set consensusState($17.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConsensusState() => $_has(1);
   @$pb.TagNumber(2)
   void clearConsensusState() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Any ensureConsensusState() => $_ensure(1);
+  $17.Any ensureConsensusState() => $_ensure(1);
 
   /// signer address
   @$pb.TagNumber(3)
@@ -142,7 +142,7 @@ class MsgCreateClientResponse extends $pb.GeneratedMessage {
 class MsgUpdateClient extends $pb.GeneratedMessage {
   factory MsgUpdateClient({
     $core.String? clientId,
-    $2.Any? clientMessage,
+    $17.Any? clientMessage,
     $core.String? signer,
   }) {
     final $result = create();
@@ -163,7 +163,7 @@ class MsgUpdateClient extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateClient', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'clientMessage', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'clientMessage', subBuilder: $17.Any.create)
     ..aOS(3, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -201,15 +201,15 @@ class MsgUpdateClient extends $pb.GeneratedMessage {
 
   /// client message to update the light client
   @$pb.TagNumber(2)
-  $2.Any get clientMessage => $_getN(1);
+  $17.Any get clientMessage => $_getN(1);
   @$pb.TagNumber(2)
-  set clientMessage($2.Any v) { setField(2, v); }
+  set clientMessage($17.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasClientMessage() => $_has(1);
   @$pb.TagNumber(2)
   void clearClientMessage() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Any ensureClientMessage() => $_ensure(1);
+  $17.Any ensureClientMessage() => $_ensure(1);
 
   /// signer address
   @$pb.TagNumber(3)
@@ -260,8 +260,8 @@ class MsgUpdateClientResponse extends $pb.GeneratedMessage {
 class MsgUpgradeClient extends $pb.GeneratedMessage {
   factory MsgUpgradeClient({
     $core.String? clientId,
-    $2.Any? clientState,
-    $2.Any? consensusState,
+    $17.Any? clientState,
+    $17.Any? consensusState,
     $core.List<$core.int>? proofUpgradeClient,
     $core.List<$core.int>? proofUpgradeConsensusState,
     $core.String? signer,
@@ -293,8 +293,8 @@ class MsgUpgradeClient extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpgradeClient', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'clientState', subBuilder: $2.Any.create)
-    ..aOM<$2.Any>(3, _omitFieldNames ? '' : 'consensusState', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
+    ..aOM<$17.Any>(3, _omitFieldNames ? '' : 'consensusState', subBuilder: $17.Any.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'proofUpgradeClient', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'proofUpgradeConsensusState', $pb.PbFieldType.OY)
     ..aOS(6, _omitFieldNames ? '' : 'signer')
@@ -334,28 +334,28 @@ class MsgUpgradeClient extends $pb.GeneratedMessage {
 
   /// upgraded client state
   @$pb.TagNumber(2)
-  $2.Any get clientState => $_getN(1);
+  $17.Any get clientState => $_getN(1);
   @$pb.TagNumber(2)
-  set clientState($2.Any v) { setField(2, v); }
+  set clientState($17.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasClientState() => $_has(1);
   @$pb.TagNumber(2)
   void clearClientState() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Any ensureClientState() => $_ensure(1);
+  $17.Any ensureClientState() => $_ensure(1);
 
   /// upgraded consensus state, only contains enough information to serve as a
   /// basis of trust in update logic
   @$pb.TagNumber(3)
-  $2.Any get consensusState => $_getN(2);
+  $17.Any get consensusState => $_getN(2);
   @$pb.TagNumber(3)
-  set consensusState($2.Any v) { setField(3, v); }
+  set consensusState($17.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasConsensusState() => $_has(2);
   @$pb.TagNumber(3)
   void clearConsensusState() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Any ensureConsensusState() => $_ensure(2);
+  $17.Any ensureConsensusState() => $_ensure(2);
 
   /// proof that old chain committed to new client
   @$pb.TagNumber(4)
@@ -427,7 +427,7 @@ class MsgUpgradeClientResponse extends $pb.GeneratedMessage {
 class MsgSubmitMisbehaviour extends $pb.GeneratedMessage {
   factory MsgSubmitMisbehaviour({
     $core.String? clientId,
-    $2.Any? misbehaviour,
+    $17.Any? misbehaviour,
     $core.String? signer,
   }) {
     final $result = create();
@@ -448,7 +448,7 @@ class MsgSubmitMisbehaviour extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSubmitMisbehaviour', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'misbehaviour', subBuilder: $2.Any.create)
+    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'misbehaviour', subBuilder: $17.Any.create)
     ..aOS(3, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -486,15 +486,15 @@ class MsgSubmitMisbehaviour extends $pb.GeneratedMessage {
 
   /// misbehaviour used for freezing the light client
   @$pb.TagNumber(2)
-  $2.Any get misbehaviour => $_getN(1);
+  $17.Any get misbehaviour => $_getN(1);
   @$pb.TagNumber(2)
-  set misbehaviour($2.Any v) { setField(2, v); }
+  set misbehaviour($17.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMisbehaviour() => $_has(1);
   @$pb.TagNumber(2)
   void clearMisbehaviour() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Any ensureMisbehaviour() => $_ensure(1);
+  $17.Any ensureMisbehaviour() => $_ensure(1);
 
   /// signer address
   @$pb.TagNumber(3)
@@ -660,8 +660,8 @@ class MsgRecoverClientResponse extends $pb.GeneratedMessage {
 /// MsgIBCSoftwareUpgrade defines the message used to schedule an upgrade of an IBC client using a v1 governance proposal
 class MsgIBCSoftwareUpgrade extends $pb.GeneratedMessage {
   factory MsgIBCSoftwareUpgrade({
-    $3.Plan? plan,
-    $2.Any? upgradedClientState,
+    $18.Plan? plan,
+    $17.Any? upgradedClientState,
     $core.String? signer,
   }) {
     final $result = create();
@@ -681,8 +681,8 @@ class MsgIBCSoftwareUpgrade extends $pb.GeneratedMessage {
   factory MsgIBCSoftwareUpgrade.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgIBCSoftwareUpgrade', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
-    ..aOM<$3.Plan>(1, _omitFieldNames ? '' : 'plan', subBuilder: $3.Plan.create)
-    ..aOM<$2.Any>(2, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $2.Any.create)
+    ..aOM<$18.Plan>(1, _omitFieldNames ? '' : 'plan', subBuilder: $18.Plan.create)
+    ..aOM<$17.Any>(2, _omitFieldNames ? '' : 'upgradedClientState', subBuilder: $17.Any.create)
     ..aOS(3, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -709,15 +709,15 @@ class MsgIBCSoftwareUpgrade extends $pb.GeneratedMessage {
   static MsgIBCSoftwareUpgrade? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Plan get plan => $_getN(0);
+  $18.Plan get plan => $_getN(0);
   @$pb.TagNumber(1)
-  set plan($3.Plan v) { setField(1, v); }
+  set plan($18.Plan v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPlan() => $_has(0);
   @$pb.TagNumber(1)
   void clearPlan() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Plan ensurePlan() => $_ensure(0);
+  $18.Plan ensurePlan() => $_ensure(0);
 
   /// An UpgradedClientState must be provided to perform an IBC breaking upgrade.
   /// This will make the chain commit to the correct upgraded (self) client state
@@ -728,15 +728,15 @@ class MsgIBCSoftwareUpgrade extends $pb.GeneratedMessage {
   /// deprecated in the Cosmos SDK to allow for this logic to exist solely in
   /// the 02-client module.
   @$pb.TagNumber(2)
-  $2.Any get upgradedClientState => $_getN(1);
+  $17.Any get upgradedClientState => $_getN(1);
   @$pb.TagNumber(2)
-  set upgradedClientState($2.Any v) { setField(2, v); }
+  set upgradedClientState($17.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUpgradedClientState() => $_has(1);
   @$pb.TagNumber(2)
   void clearUpgradedClientState() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Any ensureUpgradedClientState() => $_ensure(1);
+  $17.Any ensureUpgradedClientState() => $_ensure(1);
 
   /// signer address
   @$pb.TagNumber(3)
@@ -786,7 +786,7 @@ class MsgIBCSoftwareUpgradeResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? signer,
-    $4.Params? params,
+    $19.Params? params,
   }) {
     final $result = create();
     if (signer != null) {
@@ -803,7 +803,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.client.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signer')
-    ..aOM<$4.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $4.Params.create)
+    ..aOM<$19.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $19.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -842,15 +842,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $4.Params get params => $_getN(1);
+  $19.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($4.Params v) { setField(2, v); }
+  set params($19.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Params ensureParams() => $_ensure(1);
+  $19.Params ensureParams() => $_ensure(1);
 }
 
 /// MsgUpdateParamsResponse defines the MsgUpdateParams response type.

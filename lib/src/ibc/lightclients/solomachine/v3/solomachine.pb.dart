@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $0;
+import '../../../../google/protobuf/any.pb.dart' as $17;
 
 /// ClientState defines a solo machine client that tracks the current consensus
 /// state and if the client is frozen.
@@ -105,7 +105,7 @@ class ClientState extends $pb.GeneratedMessage {
 /// consensus state.
 class ConsensusState extends $pb.GeneratedMessage {
   factory ConsensusState({
-    $0.Any? publicKey,
+    $17.Any? publicKey,
     $core.String? diversifier,
     $fixnum.Int64? timestamp,
   }) {
@@ -126,7 +126,7 @@ class ConsensusState extends $pb.GeneratedMessage {
   factory ConsensusState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v3'), createEmptyInstance: create)
-    ..aOM<$0.Any>(1, _omitFieldNames ? '' : 'publicKey', subBuilder: $0.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'publicKey', subBuilder: $17.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'diversifier')
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -155,15 +155,15 @@ class ConsensusState extends $pb.GeneratedMessage {
 
   /// public key of the solo machine
   @$pb.TagNumber(1)
-  $0.Any get publicKey => $_getN(0);
+  $17.Any get publicKey => $_getN(0);
   @$pb.TagNumber(1)
-  set publicKey($0.Any v) { setField(1, v); }
+  set publicKey($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPublicKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearPublicKey() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Any ensurePublicKey() => $_ensure(0);
+  $17.Any ensurePublicKey() => $_ensure(0);
 
   /// diversifier allows the same public key to be re-used across different solo
   /// machine clients (potentially on different chains) without being considered
@@ -192,7 +192,7 @@ class Header extends $pb.GeneratedMessage {
   factory Header({
     $fixnum.Int64? timestamp,
     $core.List<$core.int>? signature,
-    $0.Any? newPublicKey,
+    $17.Any? newPublicKey,
     $core.String? newDiversifier,
   }) {
     final $result = create();
@@ -217,7 +217,7 @@ class Header extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Header', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v3'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
-    ..aOM<$0.Any>(3, _omitFieldNames ? '' : 'newPublicKey', subBuilder: $0.Any.create)
+    ..aOM<$17.Any>(3, _omitFieldNames ? '' : 'newPublicKey', subBuilder: $17.Any.create)
     ..aOS(4, _omitFieldNames ? '' : 'newDiversifier')
     ..hasRequiredFields = false
   ;
@@ -262,15 +262,15 @@ class Header extends $pb.GeneratedMessage {
   void clearSignature() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.Any get newPublicKey => $_getN(2);
+  $17.Any get newPublicKey => $_getN(2);
   @$pb.TagNumber(3)
-  set newPublicKey($0.Any v) { setField(3, v); }
+  set newPublicKey($17.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasNewPublicKey() => $_has(2);
   @$pb.TagNumber(3)
   void clearNewPublicKey() => clearField(3);
   @$pb.TagNumber(3)
-  $0.Any ensureNewPublicKey() => $_ensure(2);
+  $17.Any ensureNewPublicKey() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get newDiversifier => $_getSZ(3);
@@ -641,7 +641,7 @@ class SignBytes extends $pb.GeneratedMessage {
 /// HeaderData returns the SignBytes data for update verification.
 class HeaderData extends $pb.GeneratedMessage {
   factory HeaderData({
-    $0.Any? newPubKey,
+    $17.Any? newPubKey,
     $core.String? newDiversifier,
   }) {
     final $result = create();
@@ -658,7 +658,7 @@ class HeaderData extends $pb.GeneratedMessage {
   factory HeaderData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HeaderData', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.lightclients.solomachine.v3'), createEmptyInstance: create)
-    ..aOM<$0.Any>(1, _omitFieldNames ? '' : 'newPubKey', subBuilder: $0.Any.create)
+    ..aOM<$17.Any>(1, _omitFieldNames ? '' : 'newPubKey', subBuilder: $17.Any.create)
     ..aOS(2, _omitFieldNames ? '' : 'newDiversifier')
     ..hasRequiredFields = false
   ;
@@ -686,15 +686,15 @@ class HeaderData extends $pb.GeneratedMessage {
 
   /// header public key
   @$pb.TagNumber(1)
-  $0.Any get newPubKey => $_getN(0);
+  $17.Any get newPubKey => $_getN(0);
   @$pb.TagNumber(1)
-  set newPubKey($0.Any v) { setField(1, v); }
+  set newPubKey($17.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasNewPubKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearNewPubKey() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Any ensureNewPubKey() => $_ensure(0);
+  $17.Any ensureNewPubKey() => $_ensure(0);
 
   /// header diversifier
   @$pb.TagNumber(2)

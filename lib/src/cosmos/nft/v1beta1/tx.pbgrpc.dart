@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $1;
+import 'tx.pb.dart' as $33;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.nft.v1beta1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$send = $grpc.ClientMethod<$1.MsgSend, $1.MsgSendResponse>(
+  static final _$send = $grpc.ClientMethod<$33.MsgSend, $33.MsgSendResponse>(
       '/cosmos.nft.v1beta1.Msg/Send',
-      ($1.MsgSend value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.MsgSendResponse.fromBuffer(value));
+      ($33.MsgSend value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $33.MsgSendResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.MsgSendResponse> send($1.MsgSend request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$33.MsgSendResponse> send($33.MsgSend request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$send, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.nft.v1beta1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.MsgSend, $1.MsgSendResponse>(
+    $addMethod($grpc.ServiceMethod<$33.MsgSend, $33.MsgSendResponse>(
         'Send',
         send_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.MsgSend.fromBuffer(value),
-        ($1.MsgSendResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $33.MsgSend.fromBuffer(value),
+        ($33.MsgSendResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.MsgSendResponse> send_Pre($grpc.ServiceCall call, $async.Future<$1.MsgSend> request) async {
+  $async.Future<$33.MsgSendResponse> send_Pre($grpc.ServiceCall call, $async.Future<$33.MsgSend> request) async {
     return send(call, await request);
   }
 
-  $async.Future<$1.MsgSendResponse> send($grpc.ServiceCall call, $1.MsgSend request);
+  $async.Future<$33.MsgSendResponse> send($grpc.ServiceCall call, $33.MsgSend request);
 }

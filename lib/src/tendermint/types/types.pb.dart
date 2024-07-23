@@ -14,12 +14,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/timestamp.pb.dart' as $3;
-import '../crypto/proof.pb.dart' as $1;
-import '../version/types.pb.dart' as $2;
+import '../../google/protobuf/timestamp.pb.dart' as $50;
+import '../crypto/proof.pb.dart' as $58;
+import '../version/types.pb.dart' as $60;
 import 'types.pbenum.dart';
-import 'validator.pb.dart' as $4;
-import 'validator.pbenum.dart' as $4;
+import 'validator.pb.dart' as $59;
+import 'validator.pbenum.dart' as $59;
 
 export 'types.pbenum.dart';
 
@@ -92,7 +92,7 @@ class Part extends $pb.GeneratedMessage {
   factory Part({
     $core.int? index,
     $core.List<$core.int>? bytes,
-    $1.Proof? proof,
+    $58.Proof? proof,
   }) {
     final $result = create();
     if (index != null) {
@@ -113,7 +113,7 @@ class Part extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Part', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'bytes', $pb.PbFieldType.OY)
-    ..aOM<$1.Proof>(3, _omitFieldNames ? '' : 'proof', subBuilder: $1.Proof.create)
+    ..aOM<$58.Proof>(3, _omitFieldNames ? '' : 'proof', subBuilder: $58.Proof.create)
     ..hasRequiredFields = false
   ;
 
@@ -157,15 +157,15 @@ class Part extends $pb.GeneratedMessage {
   void clearBytes() => clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Proof get proof => $_getN(2);
+  $58.Proof get proof => $_getN(2);
   @$pb.TagNumber(3)
-  set proof($1.Proof v) { setField(3, v); }
+  set proof($58.Proof v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProof() => $_has(2);
   @$pb.TagNumber(3)
   void clearProof() => clearField(3);
   @$pb.TagNumber(3)
-  $1.Proof ensureProof() => $_ensure(2);
+  $58.Proof ensureProof() => $_ensure(2);
 }
 
 /// BlockID
@@ -238,10 +238,10 @@ class BlockID extends $pb.GeneratedMessage {
 /// Header defines the structure of a block header.
 class Header extends $pb.GeneratedMessage {
   factory Header({
-    $2.Consensus? version,
+    $60.Consensus? version,
     $core.String? chainId,
     $fixnum.Int64? height,
-    $3.Timestamp? time,
+    $50.Timestamp? time,
     BlockID? lastBlockId,
     $core.List<$core.int>? lastCommitHash,
     $core.List<$core.int>? dataHash,
@@ -303,10 +303,10 @@ class Header extends $pb.GeneratedMessage {
   factory Header.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Header', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$2.Consensus>(1, _omitFieldNames ? '' : 'version', subBuilder: $2.Consensus.create)
+    ..aOM<$60.Consensus>(1, _omitFieldNames ? '' : 'version', subBuilder: $60.Consensus.create)
     ..aOS(2, _omitFieldNames ? '' : 'chainId')
     ..aInt64(3, _omitFieldNames ? '' : 'height')
-    ..aOM<$3.Timestamp>(4, _omitFieldNames ? '' : 'time', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'time', subBuilder: $50.Timestamp.create)
     ..aOM<BlockID>(5, _omitFieldNames ? '' : 'lastBlockId', subBuilder: BlockID.create)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'lastCommitHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'dataHash', $pb.PbFieldType.OY)
@@ -343,15 +343,15 @@ class Header extends $pb.GeneratedMessage {
 
   /// basic block info
   @$pb.TagNumber(1)
-  $2.Consensus get version => $_getN(0);
+  $60.Consensus get version => $_getN(0);
   @$pb.TagNumber(1)
-  set version($2.Consensus v) { setField(1, v); }
+  set version($60.Consensus v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVersion() => $_has(0);
   @$pb.TagNumber(1)
   void clearVersion() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Consensus ensureVersion() => $_ensure(0);
+  $60.Consensus ensureVersion() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get chainId => $_getSZ(1);
@@ -372,15 +372,15 @@ class Header extends $pb.GeneratedMessage {
   void clearHeight() => clearField(3);
 
   @$pb.TagNumber(4)
-  $3.Timestamp get time => $_getN(3);
+  $50.Timestamp get time => $_getN(3);
   @$pb.TagNumber(4)
-  set time($3.Timestamp v) { setField(4, v); }
+  set time($50.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearTime() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Timestamp ensureTime() => $_ensure(3);
+  $50.Timestamp ensureTime() => $_ensure(3);
 
   /// prev block info
   @$pb.TagNumber(5)
@@ -535,7 +535,7 @@ class Vote extends $pb.GeneratedMessage {
     $fixnum.Int64? height,
     $core.int? round,
     BlockID? blockId,
-    $3.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
     $core.List<$core.int>? validatorAddress,
     $core.int? validatorIndex,
     $core.List<$core.int>? signature,
@@ -584,7 +584,7 @@ class Vote extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'height')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'round', $pb.PbFieldType.O3)
     ..aOM<BlockID>(4, _omitFieldNames ? '' : 'blockId', subBuilder: BlockID.create)
-    ..aOM<$3.Timestamp>(5, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'validatorAddress', $pb.PbFieldType.OY)
     ..a<$core.int>(7, _omitFieldNames ? '' : 'validatorIndex', $pb.PbFieldType.O3)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
@@ -653,15 +653,15 @@ class Vote extends $pb.GeneratedMessage {
   BlockID ensureBlockId() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $3.Timestamp get timestamp => $_getN(4);
+  $50.Timestamp get timestamp => $_getN(4);
   @$pb.TagNumber(5)
-  set timestamp($3.Timestamp v) { setField(5, v); }
+  set timestamp($50.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTimestamp() => $_has(4);
   @$pb.TagNumber(5)
   void clearTimestamp() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Timestamp ensureTimestamp() => $_ensure(4);
+  $50.Timestamp ensureTimestamp() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.List<$core.int> get validatorAddress => $_getN(5);
@@ -808,9 +808,9 @@ class Commit extends $pb.GeneratedMessage {
 /// CommitSig is a part of the Vote included in a Commit.
 class CommitSig extends $pb.GeneratedMessage {
   factory CommitSig({
-    $4.BlockIDFlag? blockIdFlag,
+    $59.BlockIDFlag? blockIdFlag,
     $core.List<$core.int>? validatorAddress,
-    $3.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
     $core.List<$core.int>? signature,
   }) {
     final $result = create();
@@ -833,9 +833,9 @@ class CommitSig extends $pb.GeneratedMessage {
   factory CommitSig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CommitSig', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..e<$4.BlockIDFlag>(1, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $4.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $4.BlockIDFlag.valueOf, enumValues: $4.BlockIDFlag.values)
+    ..e<$59.BlockIDFlag>(1, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $59.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $59.BlockIDFlag.valueOf, enumValues: $59.BlockIDFlag.values)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'validatorAddress', $pb.PbFieldType.OY)
-    ..aOM<$3.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
@@ -862,9 +862,9 @@ class CommitSig extends $pb.GeneratedMessage {
   static CommitSig? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.BlockIDFlag get blockIdFlag => $_getN(0);
+  $59.BlockIDFlag get blockIdFlag => $_getN(0);
   @$pb.TagNumber(1)
-  set blockIdFlag($4.BlockIDFlag v) { setField(1, v); }
+  set blockIdFlag($59.BlockIDFlag v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockIdFlag() => $_has(0);
   @$pb.TagNumber(1)
@@ -880,15 +880,15 @@ class CommitSig extends $pb.GeneratedMessage {
   void clearValidatorAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $3.Timestamp get timestamp => $_getN(2);
+  $50.Timestamp get timestamp => $_getN(2);
   @$pb.TagNumber(3)
-  set timestamp($3.Timestamp v) { setField(3, v); }
+  set timestamp($50.Timestamp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTimestamp() => $_has(2);
   @$pb.TagNumber(3)
   void clearTimestamp() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Timestamp ensureTimestamp() => $_ensure(2);
+  $50.Timestamp ensureTimestamp() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get signature => $_getN(3);
@@ -993,9 +993,9 @@ class ExtendedCommit extends $pb.GeneratedMessage {
 /// That is the digest of the original signature is still the same in prior versions
 class ExtendedCommitSig extends $pb.GeneratedMessage {
   factory ExtendedCommitSig({
-    $4.BlockIDFlag? blockIdFlag,
+    $59.BlockIDFlag? blockIdFlag,
     $core.List<$core.int>? validatorAddress,
-    $3.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
     $core.List<$core.int>? signature,
     $core.List<$core.int>? extension_5,
     $core.List<$core.int>? extensionSignature,
@@ -1026,9 +1026,9 @@ class ExtendedCommitSig extends $pb.GeneratedMessage {
   factory ExtendedCommitSig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExtendedCommitSig', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..e<$4.BlockIDFlag>(1, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $4.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $4.BlockIDFlag.valueOf, enumValues: $4.BlockIDFlag.values)
+    ..e<$59.BlockIDFlag>(1, _omitFieldNames ? '' : 'blockIdFlag', $pb.PbFieldType.OE, defaultOrMaker: $59.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN, valueOf: $59.BlockIDFlag.valueOf, enumValues: $59.BlockIDFlag.values)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'validatorAddress', $pb.PbFieldType.OY)
-    ..aOM<$3.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'extension', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'extensionSignature', $pb.PbFieldType.OY)
@@ -1057,9 +1057,9 @@ class ExtendedCommitSig extends $pb.GeneratedMessage {
   static ExtendedCommitSig? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.BlockIDFlag get blockIdFlag => $_getN(0);
+  $59.BlockIDFlag get blockIdFlag => $_getN(0);
   @$pb.TagNumber(1)
-  set blockIdFlag($4.BlockIDFlag v) { setField(1, v); }
+  set blockIdFlag($59.BlockIDFlag v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockIdFlag() => $_has(0);
   @$pb.TagNumber(1)
@@ -1075,15 +1075,15 @@ class ExtendedCommitSig extends $pb.GeneratedMessage {
   void clearValidatorAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $3.Timestamp get timestamp => $_getN(2);
+  $50.Timestamp get timestamp => $_getN(2);
   @$pb.TagNumber(3)
-  set timestamp($3.Timestamp v) { setField(3, v); }
+  set timestamp($50.Timestamp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTimestamp() => $_has(2);
   @$pb.TagNumber(3)
   void clearTimestamp() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Timestamp ensureTimestamp() => $_ensure(2);
+  $50.Timestamp ensureTimestamp() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get signature => $_getN(3);
@@ -1122,7 +1122,7 @@ class Proposal extends $pb.GeneratedMessage {
     $core.int? round,
     $core.int? polRound,
     BlockID? blockId,
-    $3.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
     $core.List<$core.int>? signature,
   }) {
     final $result = create();
@@ -1159,7 +1159,7 @@ class Proposal extends $pb.GeneratedMessage {
     ..a<$core.int>(3, _omitFieldNames ? '' : 'round', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'polRound', $pb.PbFieldType.O3)
     ..aOM<BlockID>(5, _omitFieldNames ? '' : 'blockId', subBuilder: BlockID.create)
-    ..aOM<$3.Timestamp>(6, _omitFieldNames ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$50.Timestamp>(6, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
@@ -1233,15 +1233,15 @@ class Proposal extends $pb.GeneratedMessage {
   BlockID ensureBlockId() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $3.Timestamp get timestamp => $_getN(5);
+  $50.Timestamp get timestamp => $_getN(5);
   @$pb.TagNumber(6)
-  set timestamp($3.Timestamp v) { setField(6, v); }
+  set timestamp($50.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTimestamp() => $_has(5);
   @$pb.TagNumber(6)
   void clearTimestamp() => clearField(6);
   @$pb.TagNumber(6)
-  $3.Timestamp ensureTimestamp() => $_ensure(5);
+  $50.Timestamp ensureTimestamp() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.List<$core.int> get signature => $_getN(6);
@@ -1324,7 +1324,7 @@ class SignedHeader extends $pb.GeneratedMessage {
 class LightBlock extends $pb.GeneratedMessage {
   factory LightBlock({
     SignedHeader? signedHeader,
-    $4.ValidatorSet? validatorSet,
+    $59.ValidatorSet? validatorSet,
   }) {
     final $result = create();
     if (signedHeader != null) {
@@ -1341,7 +1341,7 @@ class LightBlock extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LightBlock', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..aOM<SignedHeader>(1, _omitFieldNames ? '' : 'signedHeader', subBuilder: SignedHeader.create)
-    ..aOM<$4.ValidatorSet>(2, _omitFieldNames ? '' : 'validatorSet', subBuilder: $4.ValidatorSet.create)
+    ..aOM<$59.ValidatorSet>(2, _omitFieldNames ? '' : 'validatorSet', subBuilder: $59.ValidatorSet.create)
     ..hasRequiredFields = false
   ;
 
@@ -1378,15 +1378,15 @@ class LightBlock extends $pb.GeneratedMessage {
   SignedHeader ensureSignedHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $4.ValidatorSet get validatorSet => $_getN(1);
+  $59.ValidatorSet get validatorSet => $_getN(1);
   @$pb.TagNumber(2)
-  set validatorSet($4.ValidatorSet v) { setField(2, v); }
+  set validatorSet($59.ValidatorSet v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasValidatorSet() => $_has(1);
   @$pb.TagNumber(2)
   void clearValidatorSet() => clearField(2);
   @$pb.TagNumber(2)
-  $4.ValidatorSet ensureValidatorSet() => $_ensure(1);
+  $59.ValidatorSet ensureValidatorSet() => $_ensure(1);
 }
 
 class BlockMeta extends $pb.GeneratedMessage {
@@ -1490,7 +1490,7 @@ class TxProof extends $pb.GeneratedMessage {
   factory TxProof({
     $core.List<$core.int>? rootHash,
     $core.List<$core.int>? data,
-    $1.Proof? proof,
+    $58.Proof? proof,
   }) {
     final $result = create();
     if (rootHash != null) {
@@ -1511,7 +1511,7 @@ class TxProof extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxProof', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'rootHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
-    ..aOM<$1.Proof>(3, _omitFieldNames ? '' : 'proof', subBuilder: $1.Proof.create)
+    ..aOM<$58.Proof>(3, _omitFieldNames ? '' : 'proof', subBuilder: $58.Proof.create)
     ..hasRequiredFields = false
   ;
 
@@ -1555,15 +1555,15 @@ class TxProof extends $pb.GeneratedMessage {
   void clearData() => clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Proof get proof => $_getN(2);
+  $58.Proof get proof => $_getN(2);
   @$pb.TagNumber(3)
-  set proof($1.Proof v) { setField(3, v); }
+  set proof($58.Proof v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProof() => $_has(2);
   @$pb.TagNumber(3)
   void clearProof() => clearField(3);
   @$pb.TagNumber(3)
-  $1.Proof ensureProof() => $_ensure(2);
+  $58.Proof ensureProof() => $_ensure(2);
 }
 
 

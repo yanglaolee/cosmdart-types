@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $3;
+import '../../base/v1beta1/coin.pb.dart' as $53;
 import 'authz.pbenum.dart';
 
 export 'authz.pbenum.dart';
@@ -74,7 +74,7 @@ enum StakeAuthorization_Validators_ {
 ///  Since: cosmos-sdk 0.43
 class StakeAuthorization extends $pb.GeneratedMessage {
   factory StakeAuthorization({
-    $3.Coin? maxTokens,
+    $53.Coin? maxTokens,
     StakeAuthorization_Validators? allowList,
     StakeAuthorization_Validators? denyList,
     AuthorizationType? authorizationType,
@@ -105,7 +105,7 @@ class StakeAuthorization extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StakeAuthorization', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..aOM<$3.Coin>(1, _omitFieldNames ? '' : 'maxTokens', subBuilder: $3.Coin.create)
+    ..aOM<$53.Coin>(1, _omitFieldNames ? '' : 'maxTokens', subBuilder: $53.Coin.create)
     ..aOM<StakeAuthorization_Validators>(2, _omitFieldNames ? '' : 'allowList', subBuilder: StakeAuthorization_Validators.create)
     ..aOM<StakeAuthorization_Validators>(3, _omitFieldNames ? '' : 'denyList', subBuilder: StakeAuthorization_Validators.create)
     ..e<AuthorizationType>(4, _omitFieldNames ? '' : 'authorizationType', $pb.PbFieldType.OE, defaultOrMaker: AuthorizationType.AUTHORIZATION_TYPE_UNSPECIFIED, valueOf: AuthorizationType.valueOf, enumValues: AuthorizationType.values)
@@ -139,15 +139,15 @@ class StakeAuthorization extends $pb.GeneratedMessage {
   /// max_tokens specifies the maximum amount of tokens can be delegate to a validator. If it is
   /// empty, there is no spend limit and any amount of coins can be delegated.
   @$pb.TagNumber(1)
-  $3.Coin get maxTokens => $_getN(0);
+  $53.Coin get maxTokens => $_getN(0);
   @$pb.TagNumber(1)
-  set maxTokens($3.Coin v) { setField(1, v); }
+  set maxTokens($53.Coin v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMaxTokens() => $_has(0);
   @$pb.TagNumber(1)
   void clearMaxTokens() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Coin ensureMaxTokens() => $_ensure(0);
+  $53.Coin ensureMaxTokens() => $_ensure(0);
 
   /// allow_list specifies list of validator addresses to whom grantee can delegate tokens on behalf of granter's
   /// account.

@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $0;
-import '../../../crypto/multisig/v1beta1/multisig.pb.dart' as $1;
+import '../../../../google/protobuf/any.pb.dart' as $46;
+import '../../../crypto/multisig/v1beta1/multisig.pb.dart' as $80;
 import 'signing.pbenum.dart';
 
 export 'signing.pbenum.dart';
@@ -136,7 +136,7 @@ class SignatureDescriptor_Data_Single extends $pb.GeneratedMessage {
 /// Multi is the signature data for a multisig public key
 class SignatureDescriptor_Data_Multi extends $pb.GeneratedMessage {
   factory SignatureDescriptor_Data_Multi({
-    $1.CompactBitArray? bitarray,
+    $80.CompactBitArray? bitarray,
     $core.Iterable<SignatureDescriptor_Data>? signatures,
   }) {
     final $result = create();
@@ -153,7 +153,7 @@ class SignatureDescriptor_Data_Multi extends $pb.GeneratedMessage {
   factory SignatureDescriptor_Data_Multi.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignatureDescriptor.Data.Multi', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.signing.v1beta1'), createEmptyInstance: create)
-    ..aOM<$1.CompactBitArray>(1, _omitFieldNames ? '' : 'bitarray', subBuilder: $1.CompactBitArray.create)
+    ..aOM<$80.CompactBitArray>(1, _omitFieldNames ? '' : 'bitarray', subBuilder: $80.CompactBitArray.create)
     ..pc<SignatureDescriptor_Data>(2, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: SignatureDescriptor_Data.create)
     ..hasRequiredFields = false
   ;
@@ -181,15 +181,15 @@ class SignatureDescriptor_Data_Multi extends $pb.GeneratedMessage {
 
   /// bitarray specifies which keys within the multisig are signing
   @$pb.TagNumber(1)
-  $1.CompactBitArray get bitarray => $_getN(0);
+  $80.CompactBitArray get bitarray => $_getN(0);
   @$pb.TagNumber(1)
-  set bitarray($1.CompactBitArray v) { setField(1, v); }
+  set bitarray($80.CompactBitArray v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBitarray() => $_has(0);
   @$pb.TagNumber(1)
   void clearBitarray() => clearField(1);
   @$pb.TagNumber(1)
-  $1.CompactBitArray ensureBitarray() => $_ensure(0);
+  $80.CompactBitArray ensureBitarray() => $_ensure(0);
 
   /// signatures is the signatures of the multi-signature
   @$pb.TagNumber(2)
@@ -288,7 +288,7 @@ class SignatureDescriptor_Data extends $pb.GeneratedMessage {
 /// clients.
 class SignatureDescriptor extends $pb.GeneratedMessage {
   factory SignatureDescriptor({
-    $0.Any? publicKey,
+    $46.Any? publicKey,
     SignatureDescriptor_Data? data,
     $fixnum.Int64? sequence,
   }) {
@@ -309,7 +309,7 @@ class SignatureDescriptor extends $pb.GeneratedMessage {
   factory SignatureDescriptor.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignatureDescriptor', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.signing.v1beta1'), createEmptyInstance: create)
-    ..aOM<$0.Any>(1, _omitFieldNames ? '' : 'publicKey', subBuilder: $0.Any.create)
+    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'publicKey', subBuilder: $46.Any.create)
     ..aOM<SignatureDescriptor_Data>(2, _omitFieldNames ? '' : 'data', subBuilder: SignatureDescriptor_Data.create)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'sequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -338,15 +338,15 @@ class SignatureDescriptor extends $pb.GeneratedMessage {
 
   /// public_key is the public key of the signer
   @$pb.TagNumber(1)
-  $0.Any get publicKey => $_getN(0);
+  $46.Any get publicKey => $_getN(0);
   @$pb.TagNumber(1)
-  set publicKey($0.Any v) { setField(1, v); }
+  set publicKey($46.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPublicKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearPublicKey() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Any ensurePublicKey() => $_ensure(0);
+  $46.Any ensurePublicKey() => $_ensure(0);
 
   @$pb.TagNumber(2)
   SignatureDescriptor_Data get data => $_getN(1);

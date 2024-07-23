@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $0;
+import 'query.pb.dart' as $14;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('ibc.lightclients.wasm.v1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$checksums = $grpc.ClientMethod<$0.QueryChecksumsRequest, $0.QueryChecksumsResponse>(
+  static final _$checksums = $grpc.ClientMethod<$14.QueryChecksumsRequest, $14.QueryChecksumsResponse>(
       '/ibc.lightclients.wasm.v1.Query/Checksums',
-      ($0.QueryChecksumsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryChecksumsResponse.fromBuffer(value));
-  static final _$code = $grpc.ClientMethod<$0.QueryCodeRequest, $0.QueryCodeResponse>(
+      ($14.QueryChecksumsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $14.QueryChecksumsResponse.fromBuffer(value));
+  static final _$code = $grpc.ClientMethod<$14.QueryCodeRequest, $14.QueryCodeResponse>(
       '/ibc.lightclients.wasm.v1.Query/Code',
-      ($0.QueryCodeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryCodeResponse.fromBuffer(value));
+      ($14.QueryCodeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $14.QueryCodeResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.QueryChecksumsResponse> checksums($0.QueryChecksumsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$14.QueryChecksumsResponse> checksums($14.QueryChecksumsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$checksums, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.QueryCodeResponse> code($0.QueryCodeRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$14.QueryCodeResponse> code($14.QueryCodeRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$code, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'ibc.lightclients.wasm.v1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.QueryChecksumsRequest, $0.QueryChecksumsResponse>(
+    $addMethod($grpc.ServiceMethod<$14.QueryChecksumsRequest, $14.QueryChecksumsResponse>(
         'Checksums',
         checksums_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryChecksumsRequest.fromBuffer(value),
-        ($0.QueryChecksumsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.QueryCodeRequest, $0.QueryCodeResponse>(
+        ($core.List<$core.int> value) => $14.QueryChecksumsRequest.fromBuffer(value),
+        ($14.QueryChecksumsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$14.QueryCodeRequest, $14.QueryCodeResponse>(
         'Code',
         code_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryCodeRequest.fromBuffer(value),
-        ($0.QueryCodeResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $14.QueryCodeRequest.fromBuffer(value),
+        ($14.QueryCodeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.QueryChecksumsResponse> checksums_Pre($grpc.ServiceCall call, $async.Future<$0.QueryChecksumsRequest> request) async {
+  $async.Future<$14.QueryChecksumsResponse> checksums_Pre($grpc.ServiceCall call, $async.Future<$14.QueryChecksumsRequest> request) async {
     return checksums(call, await request);
   }
 
-  $async.Future<$0.QueryCodeResponse> code_Pre($grpc.ServiceCall call, $async.Future<$0.QueryCodeRequest> request) async {
+  $async.Future<$14.QueryCodeResponse> code_Pre($grpc.ServiceCall call, $async.Future<$14.QueryCodeRequest> request) async {
     return code(call, await request);
   }
 
-  $async.Future<$0.QueryChecksumsResponse> checksums($grpc.ServiceCall call, $0.QueryChecksumsRequest request);
-  $async.Future<$0.QueryCodeResponse> code($grpc.ServiceCall call, $0.QueryCodeRequest request);
+  $async.Future<$14.QueryChecksumsResponse> checksums($grpc.ServiceCall call, $14.QueryChecksumsRequest request);
+  $async.Future<$14.QueryCodeResponse> code($grpc.ServiceCall call, $14.QueryCodeRequest request);
 }

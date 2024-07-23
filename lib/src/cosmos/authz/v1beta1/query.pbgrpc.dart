@@ -15,24 +15,24 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $0;
+import 'query.pb.dart' as $3;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.authz.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$grants = $grpc.ClientMethod<$0.QueryGrantsRequest, $0.QueryGrantsResponse>(
+  static final _$grants = $grpc.ClientMethod<$3.QueryGrantsRequest, $3.QueryGrantsResponse>(
       '/cosmos.authz.v1beta1.Query/Grants',
-      ($0.QueryGrantsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryGrantsResponse.fromBuffer(value));
-  static final _$granterGrants = $grpc.ClientMethod<$0.QueryGranterGrantsRequest, $0.QueryGranterGrantsResponse>(
+      ($3.QueryGrantsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.QueryGrantsResponse.fromBuffer(value));
+  static final _$granterGrants = $grpc.ClientMethod<$3.QueryGranterGrantsRequest, $3.QueryGranterGrantsResponse>(
       '/cosmos.authz.v1beta1.Query/GranterGrants',
-      ($0.QueryGranterGrantsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryGranterGrantsResponse.fromBuffer(value));
-  static final _$granteeGrants = $grpc.ClientMethod<$0.QueryGranteeGrantsRequest, $0.QueryGranteeGrantsResponse>(
+      ($3.QueryGranterGrantsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.QueryGranterGrantsResponse.fromBuffer(value));
+  static final _$granteeGrants = $grpc.ClientMethod<$3.QueryGranteeGrantsRequest, $3.QueryGranteeGrantsResponse>(
       '/cosmos.authz.v1beta1.Query/GranteeGrants',
-      ($0.QueryGranteeGrantsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryGranteeGrantsResponse.fromBuffer(value));
+      ($3.QueryGranteeGrantsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.QueryGranteeGrantsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -40,15 +40,15 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.QueryGrantsResponse> grants($0.QueryGrantsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$3.QueryGrantsResponse> grants($3.QueryGrantsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$grants, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.QueryGranterGrantsResponse> granterGrants($0.QueryGranterGrantsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$3.QueryGranterGrantsResponse> granterGrants($3.QueryGranterGrantsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$granterGrants, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.QueryGranteeGrantsResponse> granteeGrants($0.QueryGranteeGrantsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$3.QueryGranteeGrantsResponse> granteeGrants($3.QueryGranteeGrantsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$granteeGrants, request, options: options);
   }
 }
@@ -58,42 +58,42 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.authz.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.QueryGrantsRequest, $0.QueryGrantsResponse>(
+    $addMethod($grpc.ServiceMethod<$3.QueryGrantsRequest, $3.QueryGrantsResponse>(
         'Grants',
         grants_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryGrantsRequest.fromBuffer(value),
-        ($0.QueryGrantsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.QueryGranterGrantsRequest, $0.QueryGranterGrantsResponse>(
+        ($core.List<$core.int> value) => $3.QueryGrantsRequest.fromBuffer(value),
+        ($3.QueryGrantsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.QueryGranterGrantsRequest, $3.QueryGranterGrantsResponse>(
         'GranterGrants',
         granterGrants_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryGranterGrantsRequest.fromBuffer(value),
-        ($0.QueryGranterGrantsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.QueryGranteeGrantsRequest, $0.QueryGranteeGrantsResponse>(
+        ($core.List<$core.int> value) => $3.QueryGranterGrantsRequest.fromBuffer(value),
+        ($3.QueryGranterGrantsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.QueryGranteeGrantsRequest, $3.QueryGranteeGrantsResponse>(
         'GranteeGrants',
         granteeGrants_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryGranteeGrantsRequest.fromBuffer(value),
-        ($0.QueryGranteeGrantsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $3.QueryGranteeGrantsRequest.fromBuffer(value),
+        ($3.QueryGranteeGrantsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.QueryGrantsResponse> grants_Pre($grpc.ServiceCall call, $async.Future<$0.QueryGrantsRequest> request) async {
+  $async.Future<$3.QueryGrantsResponse> grants_Pre($grpc.ServiceCall call, $async.Future<$3.QueryGrantsRequest> request) async {
     return grants(call, await request);
   }
 
-  $async.Future<$0.QueryGranterGrantsResponse> granterGrants_Pre($grpc.ServiceCall call, $async.Future<$0.QueryGranterGrantsRequest> request) async {
+  $async.Future<$3.QueryGranterGrantsResponse> granterGrants_Pre($grpc.ServiceCall call, $async.Future<$3.QueryGranterGrantsRequest> request) async {
     return granterGrants(call, await request);
   }
 
-  $async.Future<$0.QueryGranteeGrantsResponse> granteeGrants_Pre($grpc.ServiceCall call, $async.Future<$0.QueryGranteeGrantsRequest> request) async {
+  $async.Future<$3.QueryGranteeGrantsResponse> granteeGrants_Pre($grpc.ServiceCall call, $async.Future<$3.QueryGranteeGrantsRequest> request) async {
     return granteeGrants(call, await request);
   }
 
-  $async.Future<$0.QueryGrantsResponse> grants($grpc.ServiceCall call, $0.QueryGrantsRequest request);
-  $async.Future<$0.QueryGranterGrantsResponse> granterGrants($grpc.ServiceCall call, $0.QueryGranterGrantsRequest request);
-  $async.Future<$0.QueryGranteeGrantsResponse> granteeGrants($grpc.ServiceCall call, $0.QueryGranteeGrantsRequest request);
+  $async.Future<$3.QueryGrantsResponse> grants($grpc.ServiceCall call, $3.QueryGrantsRequest request);
+  $async.Future<$3.QueryGranterGrantsResponse> granterGrants($grpc.ServiceCall call, $3.QueryGranterGrantsRequest request);
+  $async.Future<$3.QueryGranteeGrantsResponse> granteeGrants($grpc.ServiceCall call, $3.QueryGranteeGrantsRequest request);
 }

@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/timestamp.pb.dart' as $1;
+import '../../../../google/protobuf/timestamp.pb.dart' as $50;
 
 /// ConfigRequest defines the request structure for the Config gRPC query.
 class ConfigRequest extends $pb.GeneratedMessage {
@@ -180,7 +180,7 @@ class StatusResponse extends $pb.GeneratedMessage {
   factory StatusResponse({
     $fixnum.Int64? earliestStoreHeight,
     $fixnum.Int64? height,
-    $1.Timestamp? timestamp,
+    $50.Timestamp? timestamp,
     $core.List<$core.int>? appHash,
     $core.List<$core.int>? validatorHash,
   }) {
@@ -209,7 +209,7 @@ class StatusResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StatusResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.node.v1beta1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'earliestStoreHeight', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $1.Timestamp.create)
+    ..aOM<$50.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $50.Timestamp.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'appHash', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'validatorHash', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -255,15 +255,15 @@ class StatusResponse extends $pb.GeneratedMessage {
   void clearHeight() => clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get timestamp => $_getN(2);
+  $50.Timestamp get timestamp => $_getN(2);
   @$pb.TagNumber(3)
-  set timestamp($1.Timestamp v) { setField(3, v); }
+  set timestamp($50.Timestamp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTimestamp() => $_has(2);
   @$pb.TagNumber(3)
   void clearTimestamp() => clearField(3);
   @$pb.TagNumber(3)
-  $1.Timestamp ensureTimestamp() => $_ensure(2);
+  $50.Timestamp ensureTimestamp() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get appHash => $_getN(3);

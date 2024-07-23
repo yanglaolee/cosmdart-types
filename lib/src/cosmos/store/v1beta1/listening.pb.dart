@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../tendermint/abci/types.pb.dart' as $0;
+import '../../../tendermint/abci/types.pb.dart' as $8;
 
 ///  StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and Deletes)
 ///  It optionally includes the StoreKey for the originating KVStore and a Boolean flag to distinguish between Sets and
@@ -116,9 +116,9 @@ class StoreKVPair extends $pb.GeneratedMessage {
 /// the file streamer dump them into files together with the state changes.
 class BlockMetadata extends $pb.GeneratedMessage {
   factory BlockMetadata({
-    $0.ResponseCommit? responseCommit,
-    $0.RequestFinalizeBlock? requestFinalizeBlock,
-    $0.ResponseFinalizeBlock? responseFinalizeBlock,
+    $8.ResponseCommit? responseCommit,
+    $8.RequestFinalizeBlock? requestFinalizeBlock,
+    $8.ResponseFinalizeBlock? responseFinalizeBlock,
   }) {
     final $result = create();
     if (responseCommit != null) {
@@ -137,9 +137,9 @@ class BlockMetadata extends $pb.GeneratedMessage {
   factory BlockMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockMetadata', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.store.v1beta1'), createEmptyInstance: create)
-    ..aOM<$0.ResponseCommit>(6, _omitFieldNames ? '' : 'responseCommit', subBuilder: $0.ResponseCommit.create)
-    ..aOM<$0.RequestFinalizeBlock>(7, _omitFieldNames ? '' : 'requestFinalizeBlock', subBuilder: $0.RequestFinalizeBlock.create)
-    ..aOM<$0.ResponseFinalizeBlock>(8, _omitFieldNames ? '' : 'responseFinalizeBlock', subBuilder: $0.ResponseFinalizeBlock.create)
+    ..aOM<$8.ResponseCommit>(6, _omitFieldNames ? '' : 'responseCommit', subBuilder: $8.ResponseCommit.create)
+    ..aOM<$8.RequestFinalizeBlock>(7, _omitFieldNames ? '' : 'requestFinalizeBlock', subBuilder: $8.RequestFinalizeBlock.create)
+    ..aOM<$8.ResponseFinalizeBlock>(8, _omitFieldNames ? '' : 'responseFinalizeBlock', subBuilder: $8.ResponseFinalizeBlock.create)
     ..hasRequiredFields = false
   ;
 
@@ -165,37 +165,37 @@ class BlockMetadata extends $pb.GeneratedMessage {
   static BlockMetadata? _defaultInstance;
 
   @$pb.TagNumber(6)
-  $0.ResponseCommit get responseCommit => $_getN(0);
+  $8.ResponseCommit get responseCommit => $_getN(0);
   @$pb.TagNumber(6)
-  set responseCommit($0.ResponseCommit v) { setField(6, v); }
+  set responseCommit($8.ResponseCommit v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasResponseCommit() => $_has(0);
   @$pb.TagNumber(6)
   void clearResponseCommit() => clearField(6);
   @$pb.TagNumber(6)
-  $0.ResponseCommit ensureResponseCommit() => $_ensure(0);
+  $8.ResponseCommit ensureResponseCommit() => $_ensure(0);
 
   @$pb.TagNumber(7)
-  $0.RequestFinalizeBlock get requestFinalizeBlock => $_getN(1);
+  $8.RequestFinalizeBlock get requestFinalizeBlock => $_getN(1);
   @$pb.TagNumber(7)
-  set requestFinalizeBlock($0.RequestFinalizeBlock v) { setField(7, v); }
+  set requestFinalizeBlock($8.RequestFinalizeBlock v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasRequestFinalizeBlock() => $_has(1);
   @$pb.TagNumber(7)
   void clearRequestFinalizeBlock() => clearField(7);
   @$pb.TagNumber(7)
-  $0.RequestFinalizeBlock ensureRequestFinalizeBlock() => $_ensure(1);
+  $8.RequestFinalizeBlock ensureRequestFinalizeBlock() => $_ensure(1);
 
   @$pb.TagNumber(8)
-  $0.ResponseFinalizeBlock get responseFinalizeBlock => $_getN(2);
+  $8.ResponseFinalizeBlock get responseFinalizeBlock => $_getN(2);
   @$pb.TagNumber(8)
-  set responseFinalizeBlock($0.ResponseFinalizeBlock v) { setField(8, v); }
+  set responseFinalizeBlock($8.ResponseFinalizeBlock v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasResponseFinalizeBlock() => $_has(2);
   @$pb.TagNumber(8)
   void clearResponseFinalizeBlock() => clearField(8);
   @$pb.TagNumber(8)
-  $0.ResponseFinalizeBlock ensureResponseFinalizeBlock() => $_ensure(2);
+  $8.ResponseFinalizeBlock ensureResponseFinalizeBlock() => $_ensure(2);
 }
 
 

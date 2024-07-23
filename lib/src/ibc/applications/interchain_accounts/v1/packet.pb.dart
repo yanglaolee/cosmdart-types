@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $1;
+import '../../../../google/protobuf/any.pb.dart' as $17;
 import 'packet.pbenum.dart';
 
 export 'packet.pbenum.dart';
@@ -100,7 +100,7 @@ class InterchainAccountPacketData extends $pb.GeneratedMessage {
 /// CosmosTx contains a list of sdk.Msg's. It should be used when sending transactions to an SDK host chain.
 class CosmosTx extends $pb.GeneratedMessage {
   factory CosmosTx({
-    $core.Iterable<$1.Any>? messages,
+    $core.Iterable<$17.Any>? messages,
   }) {
     final $result = create();
     if (messages != null) {
@@ -113,7 +113,7 @@ class CosmosTx extends $pb.GeneratedMessage {
   factory CosmosTx.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CosmosTx', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.v1'), createEmptyInstance: create)
-    ..pc<$1.Any>(1, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $1.Any.create)
+    ..pc<$17.Any>(1, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $17.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -139,7 +139,7 @@ class CosmosTx extends $pb.GeneratedMessage {
   static CosmosTx? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$1.Any> get messages => $_getList(0);
+  $core.List<$17.Any> get messages => $_getList(0);
 }
 
 

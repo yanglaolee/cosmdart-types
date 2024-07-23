@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $0;
+import 'query.pb.dart' as $2;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('ibc.applications.interchain_accounts.controller.v1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$interchainAccount = $grpc.ClientMethod<$0.QueryInterchainAccountRequest, $0.QueryInterchainAccountResponse>(
+  static final _$interchainAccount = $grpc.ClientMethod<$2.QueryInterchainAccountRequest, $2.QueryInterchainAccountResponse>(
       '/ibc.applications.interchain_accounts.controller.v1.Query/InterchainAccount',
-      ($0.QueryInterchainAccountRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryInterchainAccountResponse.fromBuffer(value));
-  static final _$params = $grpc.ClientMethod<$0.QueryParamsRequest, $0.QueryParamsResponse>(
+      ($2.QueryInterchainAccountRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.QueryInterchainAccountResponse.fromBuffer(value));
+  static final _$params = $grpc.ClientMethod<$2.QueryParamsRequest, $2.QueryParamsResponse>(
       '/ibc.applications.interchain_accounts.controller.v1.Query/Params',
-      ($0.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.QueryParamsResponse.fromBuffer(value));
+      ($2.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.QueryParamsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.QueryInterchainAccountResponse> interchainAccount($0.QueryInterchainAccountRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.QueryInterchainAccountResponse> interchainAccount($2.QueryInterchainAccountRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$interchainAccount, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.QueryParamsResponse> params($0.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.QueryParamsResponse> params($2.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'ibc.applications.interchain_accounts.controller.v1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.QueryInterchainAccountRequest, $0.QueryInterchainAccountResponse>(
+    $addMethod($grpc.ServiceMethod<$2.QueryInterchainAccountRequest, $2.QueryInterchainAccountResponse>(
         'InterchainAccount',
         interchainAccount_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryInterchainAccountRequest.fromBuffer(value),
-        ($0.QueryInterchainAccountResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.QueryParamsRequest, $0.QueryParamsResponse>(
+        ($core.List<$core.int> value) => $2.QueryInterchainAccountRequest.fromBuffer(value),
+        ($2.QueryInterchainAccountResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.QueryParamsRequest, $2.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.QueryParamsRequest.fromBuffer(value),
-        ($0.QueryParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $2.QueryParamsRequest.fromBuffer(value),
+        ($2.QueryParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.QueryInterchainAccountResponse> interchainAccount_Pre($grpc.ServiceCall call, $async.Future<$0.QueryInterchainAccountRequest> request) async {
+  $async.Future<$2.QueryInterchainAccountResponse> interchainAccount_Pre($grpc.ServiceCall call, $async.Future<$2.QueryInterchainAccountRequest> request) async {
     return interchainAccount(call, await request);
   }
 
-  $async.Future<$0.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$0.QueryParamsRequest> request) async {
+  $async.Future<$2.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$2.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$0.QueryInterchainAccountResponse> interchainAccount($grpc.ServiceCall call, $0.QueryInterchainAccountRequest request);
-  $async.Future<$0.QueryParamsResponse> params($grpc.ServiceCall call, $0.QueryParamsRequest request);
+  $async.Future<$2.QueryInterchainAccountResponse> interchainAccount($grpc.ServiceCall call, $2.QueryInterchainAccountRequest request);
+  $async.Future<$2.QueryParamsResponse> params($grpc.ServiceCall call, $2.QueryParamsRequest request);
 }

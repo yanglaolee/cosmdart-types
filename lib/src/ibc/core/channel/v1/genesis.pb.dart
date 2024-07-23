@@ -14,20 +14,20 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'channel.pb.dart' as $3;
+import 'channel.pb.dart' as $21;
 
 /// GenesisState defines the ibc channel submodule's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$3.IdentifiedChannel>? channels,
-    $core.Iterable<$3.PacketState>? acknowledgements,
-    $core.Iterable<$3.PacketState>? commitments,
-    $core.Iterable<$3.PacketState>? receipts,
+    $core.Iterable<$21.IdentifiedChannel>? channels,
+    $core.Iterable<$21.PacketState>? acknowledgements,
+    $core.Iterable<$21.PacketState>? commitments,
+    $core.Iterable<$21.PacketState>? receipts,
     $core.Iterable<PacketSequence>? sendSequences,
     $core.Iterable<PacketSequence>? recvSequences,
     $core.Iterable<PacketSequence>? ackSequences,
     $fixnum.Int64? nextChannelSequence,
-    $3.Params? params,
+    $21.Params? params,
   }) {
     final $result = create();
     if (channels != null) {
@@ -64,15 +64,15 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..pc<$3.IdentifiedChannel>(1, _omitFieldNames ? '' : 'channels', $pb.PbFieldType.PM, subBuilder: $3.IdentifiedChannel.create)
-    ..pc<$3.PacketState>(2, _omitFieldNames ? '' : 'acknowledgements', $pb.PbFieldType.PM, subBuilder: $3.PacketState.create)
-    ..pc<$3.PacketState>(3, _omitFieldNames ? '' : 'commitments', $pb.PbFieldType.PM, subBuilder: $3.PacketState.create)
-    ..pc<$3.PacketState>(4, _omitFieldNames ? '' : 'receipts', $pb.PbFieldType.PM, subBuilder: $3.PacketState.create)
+    ..pc<$21.IdentifiedChannel>(1, _omitFieldNames ? '' : 'channels', $pb.PbFieldType.PM, subBuilder: $21.IdentifiedChannel.create)
+    ..pc<$21.PacketState>(2, _omitFieldNames ? '' : 'acknowledgements', $pb.PbFieldType.PM, subBuilder: $21.PacketState.create)
+    ..pc<$21.PacketState>(3, _omitFieldNames ? '' : 'commitments', $pb.PbFieldType.PM, subBuilder: $21.PacketState.create)
+    ..pc<$21.PacketState>(4, _omitFieldNames ? '' : 'receipts', $pb.PbFieldType.PM, subBuilder: $21.PacketState.create)
     ..pc<PacketSequence>(5, _omitFieldNames ? '' : 'sendSequences', $pb.PbFieldType.PM, subBuilder: PacketSequence.create)
     ..pc<PacketSequence>(6, _omitFieldNames ? '' : 'recvSequences', $pb.PbFieldType.PM, subBuilder: PacketSequence.create)
     ..pc<PacketSequence>(7, _omitFieldNames ? '' : 'ackSequences', $pb.PbFieldType.PM, subBuilder: PacketSequence.create)
     ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'nextChannelSequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$3.Params>(9, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
+    ..aOM<$21.Params>(9, _omitFieldNames ? '' : 'params', subBuilder: $21.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -98,16 +98,16 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.IdentifiedChannel> get channels => $_getList(0);
+  $core.List<$21.IdentifiedChannel> get channels => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<$3.PacketState> get acknowledgements => $_getList(1);
+  $core.List<$21.PacketState> get acknowledgements => $_getList(1);
 
   @$pb.TagNumber(3)
-  $core.List<$3.PacketState> get commitments => $_getList(2);
+  $core.List<$21.PacketState> get commitments => $_getList(2);
 
   @$pb.TagNumber(4)
-  $core.List<$3.PacketState> get receipts => $_getList(3);
+  $core.List<$21.PacketState> get receipts => $_getList(3);
 
   @$pb.TagNumber(5)
   $core.List<PacketSequence> get sendSequences => $_getList(4);
@@ -129,15 +129,15 @@ class GenesisState extends $pb.GeneratedMessage {
   void clearNextChannelSequence() => clearField(8);
 
   @$pb.TagNumber(9)
-  $3.Params get params => $_getN(8);
+  $21.Params get params => $_getN(8);
   @$pb.TagNumber(9)
-  set params($3.Params v) { setField(9, v); }
+  set params($21.Params v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasParams() => $_has(8);
   @$pb.TagNumber(9)
   void clearParams() => clearField(9);
   @$pb.TagNumber(9)
-  $3.Params ensureParams() => $_ensure(8);
+  $21.Params ensureParams() => $_ensure(8);
 }
 
 /// PacketSequence defines the genesis type necessary to retrieve and store

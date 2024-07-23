@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'slashing.pb.dart' as $4;
+import 'slashing.pb.dart' as $77;
 
 /// MsgUnjail defines the Msg/Unjail request type
 class MsgUnjail extends $pb.GeneratedMessage {
@@ -105,7 +105,7 @@ class MsgUnjailResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $4.Params? params,
+    $77.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -122,7 +122,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$4.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $4.Params.create)
+    ..aOM<$77.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $77.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -161,15 +161,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $4.Params get params => $_getN(1);
+  $77.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($4.Params v) { setField(2, v); }
+  set params($77.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Params ensureParams() => $_ensure(1);
+  $77.Params ensureParams() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a

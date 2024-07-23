@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'channel.pb.dart' as $3;
-import 'channel.pbenum.dart' as $3;
+import 'channel.pb.dart' as $21;
+import 'channel.pbenum.dart' as $21;
 
 /// Upgrade is a verifiable type which contains the relevant information
 /// for an attempted upgrade. It provides the proposed changes to the channel
@@ -25,7 +25,7 @@ import 'channel.pbenum.dart' as $3;
 class Upgrade extends $pb.GeneratedMessage {
   factory Upgrade({
     UpgradeFields? fields,
-    $3.Timeout? timeout,
+    $21.Timeout? timeout,
     $fixnum.Int64? nextSequenceSend,
   }) {
     final $result = create();
@@ -46,7 +46,7 @@ class Upgrade extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Upgrade', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
     ..aOM<UpgradeFields>(1, _omitFieldNames ? '' : 'fields', subBuilder: UpgradeFields.create)
-    ..aOM<$3.Timeout>(2, _omitFieldNames ? '' : 'timeout', subBuilder: $3.Timeout.create)
+    ..aOM<$21.Timeout>(2, _omitFieldNames ? '' : 'timeout', subBuilder: $21.Timeout.create)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nextSequenceSend', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -84,15 +84,15 @@ class Upgrade extends $pb.GeneratedMessage {
   UpgradeFields ensureFields() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.Timeout get timeout => $_getN(1);
+  $21.Timeout get timeout => $_getN(1);
   @$pb.TagNumber(2)
-  set timeout($3.Timeout v) { setField(2, v); }
+  set timeout($21.Timeout v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTimeout() => $_has(1);
   @$pb.TagNumber(2)
   void clearTimeout() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Timeout ensureTimeout() => $_ensure(1);
+  $21.Timeout ensureTimeout() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get nextSequenceSend => $_getI64(2);
@@ -108,7 +108,7 @@ class Upgrade extends $pb.GeneratedMessage {
 /// during a channel upgrade.
 class UpgradeFields extends $pb.GeneratedMessage {
   factory UpgradeFields({
-    $3.Order? ordering,
+    $21.Order? ordering,
     $core.Iterable<$core.String>? connectionHops,
     $core.String? version,
   }) {
@@ -129,7 +129,7 @@ class UpgradeFields extends $pb.GeneratedMessage {
   factory UpgradeFields.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpgradeFields', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.channel.v1'), createEmptyInstance: create)
-    ..e<$3.Order>(1, _omitFieldNames ? '' : 'ordering', $pb.PbFieldType.OE, defaultOrMaker: $3.Order.ORDER_NONE_UNSPECIFIED, valueOf: $3.Order.valueOf, enumValues: $3.Order.values)
+    ..e<$21.Order>(1, _omitFieldNames ? '' : 'ordering', $pb.PbFieldType.OE, defaultOrMaker: $21.Order.ORDER_NONE_UNSPECIFIED, valueOf: $21.Order.valueOf, enumValues: $21.Order.values)
     ..pPS(2, _omitFieldNames ? '' : 'connectionHops')
     ..aOS(3, _omitFieldNames ? '' : 'version')
     ..hasRequiredFields = false
@@ -157,9 +157,9 @@ class UpgradeFields extends $pb.GeneratedMessage {
   static UpgradeFields? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Order get ordering => $_getN(0);
+  $21.Order get ordering => $_getN(0);
   @$pb.TagNumber(1)
-  set ordering($3.Order v) { setField(1, v); }
+  set ordering($21.Order v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasOrdering() => $_has(0);
   @$pb.TagNumber(1)

@@ -14,17 +14,17 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $6;
-import '../../client/v1/client.pb.dart' as $4;
-import 'connection.pb.dart' as $3;
+import '../../../../google/protobuf/any.pb.dart' as $17;
+import '../../client/v1/client.pb.dart' as $19;
+import 'connection.pb.dart' as $33;
 
 /// MsgConnectionOpenInit defines the msg sent by an account on Chain A to
 /// initialize a connection with Chain B.
 class MsgConnectionOpenInit extends $pb.GeneratedMessage {
   factory MsgConnectionOpenInit({
     $core.String? clientId,
-    $3.Counterparty? counterparty,
-    $3.Version? version,
+    $33.Counterparty? counterparty,
+    $33.Version? version,
     $fixnum.Int64? delayPeriod,
     $core.String? signer,
   }) {
@@ -52,8 +52,8 @@ class MsgConnectionOpenInit extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgConnectionOpenInit', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
-    ..aOM<$3.Counterparty>(2, _omitFieldNames ? '' : 'counterparty', subBuilder: $3.Counterparty.create)
-    ..aOM<$3.Version>(3, _omitFieldNames ? '' : 'version', subBuilder: $3.Version.create)
+    ..aOM<$33.Counterparty>(2, _omitFieldNames ? '' : 'counterparty', subBuilder: $33.Counterparty.create)
+    ..aOM<$33.Version>(3, _omitFieldNames ? '' : 'version', subBuilder: $33.Version.create)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'delayPeriod', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(5, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
@@ -90,26 +90,26 @@ class MsgConnectionOpenInit extends $pb.GeneratedMessage {
   void clearClientId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Counterparty get counterparty => $_getN(1);
+  $33.Counterparty get counterparty => $_getN(1);
   @$pb.TagNumber(2)
-  set counterparty($3.Counterparty v) { setField(2, v); }
+  set counterparty($33.Counterparty v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCounterparty() => $_has(1);
   @$pb.TagNumber(2)
   void clearCounterparty() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Counterparty ensureCounterparty() => $_ensure(1);
+  $33.Counterparty ensureCounterparty() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $3.Version get version => $_getN(2);
+  $33.Version get version => $_getN(2);
   @$pb.TagNumber(3)
-  set version($3.Version v) { setField(3, v); }
+  set version($33.Version v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasVersion() => $_has(2);
   @$pb.TagNumber(3)
   void clearVersion() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Version ensureVersion() => $_ensure(2);
+  $33.Version ensureVersion() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $fixnum.Int64 get delayPeriod => $_getI64(3);
@@ -171,15 +171,15 @@ class MsgConnectionOpenTry extends $pb.GeneratedMessage {
     $core.String? clientId,
   @$core.Deprecated('This field is deprecated.')
     $core.String? previousConnectionId,
-    $6.Any? clientState,
-    $3.Counterparty? counterparty,
+    $17.Any? clientState,
+    $33.Counterparty? counterparty,
     $fixnum.Int64? delayPeriod,
-    $core.Iterable<$3.Version>? counterpartyVersions,
-    $4.Height? proofHeight,
+    $core.Iterable<$33.Version>? counterpartyVersions,
+    $19.Height? proofHeight,
     $core.List<$core.int>? proofInit,
     $core.List<$core.int>? proofClient,
     $core.List<$core.int>? proofConsensus,
-    $4.Height? consensusHeight,
+    $19.Height? consensusHeight,
     $core.String? signer,
     $core.List<$core.int>? hostConsensusStateProof,
   }) {
@@ -233,15 +233,15 @@ class MsgConnectionOpenTry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgConnectionOpenTry', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'clientId')
     ..aOS(2, _omitFieldNames ? '' : 'previousConnectionId')
-    ..aOM<$6.Any>(3, _omitFieldNames ? '' : 'clientState', subBuilder: $6.Any.create)
-    ..aOM<$3.Counterparty>(4, _omitFieldNames ? '' : 'counterparty', subBuilder: $3.Counterparty.create)
+    ..aOM<$17.Any>(3, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
+    ..aOM<$33.Counterparty>(4, _omitFieldNames ? '' : 'counterparty', subBuilder: $33.Counterparty.create)
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'delayPeriod', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$3.Version>(6, _omitFieldNames ? '' : 'counterpartyVersions', $pb.PbFieldType.PM, subBuilder: $3.Version.create)
-    ..aOM<$4.Height>(7, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
+    ..pc<$33.Version>(6, _omitFieldNames ? '' : 'counterpartyVersions', $pb.PbFieldType.PM, subBuilder: $33.Version.create)
+    ..aOM<$19.Height>(7, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'proofInit', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(9, _omitFieldNames ? '' : 'proofClient', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(10, _omitFieldNames ? '' : 'proofConsensus', $pb.PbFieldType.OY)
-    ..aOM<$4.Height>(11, _omitFieldNames ? '' : 'consensusHeight', subBuilder: $4.Height.create)
+    ..aOM<$19.Height>(11, _omitFieldNames ? '' : 'consensusHeight', subBuilder: $19.Height.create)
     ..aOS(12, _omitFieldNames ? '' : 'signer')
     ..a<$core.List<$core.int>>(13, _omitFieldNames ? '' : 'hostConsensusStateProof', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -292,26 +292,26 @@ class MsgConnectionOpenTry extends $pb.GeneratedMessage {
   void clearPreviousConnectionId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $6.Any get clientState => $_getN(2);
+  $17.Any get clientState => $_getN(2);
   @$pb.TagNumber(3)
-  set clientState($6.Any v) { setField(3, v); }
+  set clientState($17.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasClientState() => $_has(2);
   @$pb.TagNumber(3)
   void clearClientState() => clearField(3);
   @$pb.TagNumber(3)
-  $6.Any ensureClientState() => $_ensure(2);
+  $17.Any ensureClientState() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $3.Counterparty get counterparty => $_getN(3);
+  $33.Counterparty get counterparty => $_getN(3);
   @$pb.TagNumber(4)
-  set counterparty($3.Counterparty v) { setField(4, v); }
+  set counterparty($33.Counterparty v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCounterparty() => $_has(3);
   @$pb.TagNumber(4)
   void clearCounterparty() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Counterparty ensureCounterparty() => $_ensure(3);
+  $33.Counterparty ensureCounterparty() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $fixnum.Int64 get delayPeriod => $_getI64(4);
@@ -323,18 +323,18 @@ class MsgConnectionOpenTry extends $pb.GeneratedMessage {
   void clearDelayPeriod() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.List<$3.Version> get counterpartyVersions => $_getList(5);
+  $core.List<$33.Version> get counterpartyVersions => $_getList(5);
 
   @$pb.TagNumber(7)
-  $4.Height get proofHeight => $_getN(6);
+  $19.Height get proofHeight => $_getN(6);
   @$pb.TagNumber(7)
-  set proofHeight($4.Height v) { setField(7, v); }
+  set proofHeight($19.Height v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasProofHeight() => $_has(6);
   @$pb.TagNumber(7)
   void clearProofHeight() => clearField(7);
   @$pb.TagNumber(7)
-  $4.Height ensureProofHeight() => $_ensure(6);
+  $19.Height ensureProofHeight() => $_ensure(6);
 
   /// proof of the initialization the connection on Chain A: `UNITIALIZED ->
   /// INIT`
@@ -368,15 +368,15 @@ class MsgConnectionOpenTry extends $pb.GeneratedMessage {
   void clearProofConsensus() => clearField(10);
 
   @$pb.TagNumber(11)
-  $4.Height get consensusHeight => $_getN(10);
+  $19.Height get consensusHeight => $_getN(10);
   @$pb.TagNumber(11)
-  set consensusHeight($4.Height v) { setField(11, v); }
+  set consensusHeight($19.Height v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasConsensusHeight() => $_has(10);
   @$pb.TagNumber(11)
   void clearConsensusHeight() => clearField(11);
   @$pb.TagNumber(11)
-  $4.Height ensureConsensusHeight() => $_ensure(10);
+  $19.Height ensureConsensusHeight() => $_ensure(10);
 
   @$pb.TagNumber(12)
   $core.String get signer => $_getSZ(11);
@@ -437,13 +437,13 @@ class MsgConnectionOpenAck extends $pb.GeneratedMessage {
   factory MsgConnectionOpenAck({
     $core.String? connectionId,
     $core.String? counterpartyConnectionId,
-    $3.Version? version,
-    $6.Any? clientState,
-    $4.Height? proofHeight,
+    $33.Version? version,
+    $17.Any? clientState,
+    $19.Height? proofHeight,
     $core.List<$core.int>? proofTry,
     $core.List<$core.int>? proofClient,
     $core.List<$core.int>? proofConsensus,
-    $4.Height? consensusHeight,
+    $19.Height? consensusHeight,
     $core.String? signer,
     $core.List<$core.int>? hostConsensusStateProof,
   }) {
@@ -490,13 +490,13 @@ class MsgConnectionOpenAck extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgConnectionOpenAck', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'connectionId')
     ..aOS(2, _omitFieldNames ? '' : 'counterpartyConnectionId')
-    ..aOM<$3.Version>(3, _omitFieldNames ? '' : 'version', subBuilder: $3.Version.create)
-    ..aOM<$6.Any>(4, _omitFieldNames ? '' : 'clientState', subBuilder: $6.Any.create)
-    ..aOM<$4.Height>(5, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
+    ..aOM<$33.Version>(3, _omitFieldNames ? '' : 'version', subBuilder: $33.Version.create)
+    ..aOM<$17.Any>(4, _omitFieldNames ? '' : 'clientState', subBuilder: $17.Any.create)
+    ..aOM<$19.Height>(5, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..a<$core.List<$core.int>>(6, _omitFieldNames ? '' : 'proofTry', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'proofClient', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'proofConsensus', $pb.PbFieldType.OY)
-    ..aOM<$4.Height>(9, _omitFieldNames ? '' : 'consensusHeight', subBuilder: $4.Height.create)
+    ..aOM<$19.Height>(9, _omitFieldNames ? '' : 'consensusHeight', subBuilder: $19.Height.create)
     ..aOS(10, _omitFieldNames ? '' : 'signer')
     ..a<$core.List<$core.int>>(11, _omitFieldNames ? '' : 'hostConsensusStateProof', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -542,37 +542,37 @@ class MsgConnectionOpenAck extends $pb.GeneratedMessage {
   void clearCounterpartyConnectionId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $3.Version get version => $_getN(2);
+  $33.Version get version => $_getN(2);
   @$pb.TagNumber(3)
-  set version($3.Version v) { setField(3, v); }
+  set version($33.Version v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasVersion() => $_has(2);
   @$pb.TagNumber(3)
   void clearVersion() => clearField(3);
   @$pb.TagNumber(3)
-  $3.Version ensureVersion() => $_ensure(2);
+  $33.Version ensureVersion() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $6.Any get clientState => $_getN(3);
+  $17.Any get clientState => $_getN(3);
   @$pb.TagNumber(4)
-  set clientState($6.Any v) { setField(4, v); }
+  set clientState($17.Any v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasClientState() => $_has(3);
   @$pb.TagNumber(4)
   void clearClientState() => clearField(4);
   @$pb.TagNumber(4)
-  $6.Any ensureClientState() => $_ensure(3);
+  $17.Any ensureClientState() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $4.Height get proofHeight => $_getN(4);
+  $19.Height get proofHeight => $_getN(4);
   @$pb.TagNumber(5)
-  set proofHeight($4.Height v) { setField(5, v); }
+  set proofHeight($19.Height v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasProofHeight() => $_has(4);
   @$pb.TagNumber(5)
   void clearProofHeight() => clearField(5);
   @$pb.TagNumber(5)
-  $4.Height ensureProofHeight() => $_ensure(4);
+  $19.Height ensureProofHeight() => $_ensure(4);
 
   /// proof of the initialization the connection on Chain B: `UNITIALIZED ->
   /// TRYOPEN`
@@ -606,15 +606,15 @@ class MsgConnectionOpenAck extends $pb.GeneratedMessage {
   void clearProofConsensus() => clearField(8);
 
   @$pb.TagNumber(9)
-  $4.Height get consensusHeight => $_getN(8);
+  $19.Height get consensusHeight => $_getN(8);
   @$pb.TagNumber(9)
-  set consensusHeight($4.Height v) { setField(9, v); }
+  set consensusHeight($19.Height v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasConsensusHeight() => $_has(8);
   @$pb.TagNumber(9)
   void clearConsensusHeight() => clearField(9);
   @$pb.TagNumber(9)
-  $4.Height ensureConsensusHeight() => $_ensure(8);
+  $19.Height ensureConsensusHeight() => $_ensure(8);
 
   @$pb.TagNumber(10)
   $core.String get signer => $_getSZ(9);
@@ -675,7 +675,7 @@ class MsgConnectionOpenConfirm extends $pb.GeneratedMessage {
   factory MsgConnectionOpenConfirm({
     $core.String? connectionId,
     $core.List<$core.int>? proofAck,
-    $4.Height? proofHeight,
+    $19.Height? proofHeight,
     $core.String? signer,
   }) {
     final $result = create();
@@ -700,7 +700,7 @@ class MsgConnectionOpenConfirm extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgConnectionOpenConfirm', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'connectionId')
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'proofAck', $pb.PbFieldType.OY)
-    ..aOM<$4.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $4.Height.create)
+    ..aOM<$19.Height>(3, _omitFieldNames ? '' : 'proofHeight', subBuilder: $19.Height.create)
     ..aOS(4, _omitFieldNames ? '' : 'signer')
     ..hasRequiredFields = false
   ;
@@ -746,15 +746,15 @@ class MsgConnectionOpenConfirm extends $pb.GeneratedMessage {
   void clearProofAck() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.Height get proofHeight => $_getN(2);
+  $19.Height get proofHeight => $_getN(2);
   @$pb.TagNumber(3)
-  set proofHeight($4.Height v) { setField(3, v); }
+  set proofHeight($19.Height v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasProofHeight() => $_has(2);
   @$pb.TagNumber(3)
   void clearProofHeight() => clearField(3);
   @$pb.TagNumber(3)
-  $4.Height ensureProofHeight() => $_ensure(2);
+  $19.Height ensureProofHeight() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get signer => $_getSZ(3);
@@ -804,7 +804,7 @@ class MsgConnectionOpenConfirmResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? signer,
-    $3.Params? params,
+    $33.Params? params,
   }) {
     final $result = create();
     if (signer != null) {
@@ -821,7 +821,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.core.connection.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signer')
-    ..aOM<$3.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $3.Params.create)
+    ..aOM<$33.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $33.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -860,15 +860,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $3.Params get params => $_getN(1);
+  $33.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($3.Params v) { setField(2, v); }
+  set params($33.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Params ensureParams() => $_ensure(1);
+  $33.Params ensureParams() => $_ensure(1);
 }
 
 /// MsgUpdateParamsResponse defines the MsgUpdateParams response type.

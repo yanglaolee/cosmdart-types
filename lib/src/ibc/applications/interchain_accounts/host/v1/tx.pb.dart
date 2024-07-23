@@ -14,13 +14,13 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'host.pb.dart' as $2;
+import 'host.pb.dart' as $27;
 
 /// MsgUpdateParams defines the payload for Msg/UpdateParams
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? signer,
-    $2.Params? params,
+    $27.Params? params,
   }) {
     final $result = create();
     if (signer != null) {
@@ -37,7 +37,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.host.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signer')
-    ..aOM<$2.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $2.Params.create)
+    ..aOM<$27.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $27.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -76,15 +76,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $2.Params get params => $_getN(1);
+  $27.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($2.Params v) { setField(2, v); }
+  set params($27.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $2.Params ensureParams() => $_ensure(1);
+  $27.Params ensureParams() => $_ensure(1);
 }
 
 /// MsgUpdateParamsResponse defines the response for Msg/UpdateParams
@@ -124,7 +124,7 @@ class MsgUpdateParamsResponse extends $pb.GeneratedMessage {
 class MsgModuleQuerySafe extends $pb.GeneratedMessage {
   factory MsgModuleQuerySafe({
     $core.String? signer,
-    $core.Iterable<$2.QueryRequest>? requests,
+    $core.Iterable<$27.QueryRequest>? requests,
   }) {
     final $result = create();
     if (signer != null) {
@@ -141,7 +141,7 @@ class MsgModuleQuerySafe extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgModuleQuerySafe', package: const $pb.PackageName(_omitMessageNames ? '' : 'ibc.applications.interchain_accounts.host.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signer')
-    ..pc<$2.QueryRequest>(2, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM, subBuilder: $2.QueryRequest.create)
+    ..pc<$27.QueryRequest>(2, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM, subBuilder: $27.QueryRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -178,7 +178,7 @@ class MsgModuleQuerySafe extends $pb.GeneratedMessage {
 
   /// requests defines the module safe queries to execute.
   @$pb.TagNumber(2)
-  $core.List<$2.QueryRequest> get requests => $_getList(1);
+  $core.List<$27.QueryRequest> get requests => $_getList(1);
 }
 
 /// MsgModuleQuerySafeResponse defines the response for Msg/ModuleQuerySafe

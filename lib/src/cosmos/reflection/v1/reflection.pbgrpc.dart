@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'reflection.pb.dart' as $0;
+import 'reflection.pb.dart' as $36;
 
 export 'reflection.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.reflection.v1.ReflectionService')
 class ReflectionServiceClient extends $grpc.Client {
-  static final _$fileDescriptors = $grpc.ClientMethod<$0.FileDescriptorsRequest, $0.FileDescriptorsResponse>(
+  static final _$fileDescriptors = $grpc.ClientMethod<$36.FileDescriptorsRequest, $36.FileDescriptorsResponse>(
       '/cosmos.reflection.v1.ReflectionService/FileDescriptors',
-      ($0.FileDescriptorsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.FileDescriptorsResponse.fromBuffer(value));
+      ($36.FileDescriptorsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $36.FileDescriptorsResponse.fromBuffer(value));
 
   ReflectionServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class ReflectionServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.FileDescriptorsResponse> fileDescriptors($0.FileDescriptorsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$36.FileDescriptorsResponse> fileDescriptors($36.FileDescriptorsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$fileDescriptors, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class ReflectionServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.reflection.v1.ReflectionService';
 
   ReflectionServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.FileDescriptorsRequest, $0.FileDescriptorsResponse>(
+    $addMethod($grpc.ServiceMethod<$36.FileDescriptorsRequest, $36.FileDescriptorsResponse>(
         'FileDescriptors',
         fileDescriptors_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.FileDescriptorsRequest.fromBuffer(value),
-        ($0.FileDescriptorsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $36.FileDescriptorsRequest.fromBuffer(value),
+        ($36.FileDescriptorsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.FileDescriptorsResponse> fileDescriptors_Pre($grpc.ServiceCall call, $async.Future<$0.FileDescriptorsRequest> request) async {
+  $async.Future<$36.FileDescriptorsResponse> fileDescriptors_Pre($grpc.ServiceCall call, $async.Future<$36.FileDescriptorsRequest> request) async {
     return fileDescriptors(call, await request);
   }
 
-  $async.Future<$0.FileDescriptorsResponse> fileDescriptors($grpc.ServiceCall call, $0.FileDescriptorsRequest request);
+  $async.Future<$36.FileDescriptorsResponse> fileDescriptors($grpc.ServiceCall call, $36.FileDescriptorsRequest request);
 }

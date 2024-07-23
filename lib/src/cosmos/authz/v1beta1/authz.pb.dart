@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $2;
-import '../../../google/protobuf/timestamp.pb.dart' as $3;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
 
 /// GenericAuthorization gives the grantee unrestricted permissions to execute
 /// the provided method on behalf of the granter's account.
@@ -73,8 +73,8 @@ class GenericAuthorization extends $pb.GeneratedMessage {
 /// the provide method with expiration time.
 class Grant extends $pb.GeneratedMessage {
   factory Grant({
-    $2.Any? authorization,
-    $3.Timestamp? expiration,
+    $46.Any? authorization,
+    $50.Timestamp? expiration,
   }) {
     final $result = create();
     if (authorization != null) {
@@ -90,8 +90,8 @@ class Grant extends $pb.GeneratedMessage {
   factory Grant.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Grant', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
-    ..aOM<$2.Any>(1, _omitFieldNames ? '' : 'authorization', subBuilder: $2.Any.create)
-    ..aOM<$3.Timestamp>(2, _omitFieldNames ? '' : 'expiration', subBuilder: $3.Timestamp.create)
+    ..aOM<$46.Any>(1, _omitFieldNames ? '' : 'authorization', subBuilder: $46.Any.create)
+    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'expiration', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -117,29 +117,29 @@ class Grant extends $pb.GeneratedMessage {
   static Grant? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.Any get authorization => $_getN(0);
+  $46.Any get authorization => $_getN(0);
   @$pb.TagNumber(1)
-  set authorization($2.Any v) { setField(1, v); }
+  set authorization($46.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAuthorization() => $_has(0);
   @$pb.TagNumber(1)
   void clearAuthorization() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Any ensureAuthorization() => $_ensure(0);
+  $46.Any ensureAuthorization() => $_ensure(0);
 
   /// time when the grant will expire and will be pruned. If null, then the grant
   /// doesn't have a time expiration (other conditions  in `authorization`
   /// may apply to invalidate the grant)
   @$pb.TagNumber(2)
-  $3.Timestamp get expiration => $_getN(1);
+  $50.Timestamp get expiration => $_getN(1);
   @$pb.TagNumber(2)
-  set expiration($3.Timestamp v) { setField(2, v); }
+  set expiration($50.Timestamp v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasExpiration() => $_has(1);
   @$pb.TagNumber(2)
   void clearExpiration() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Timestamp ensureExpiration() => $_ensure(1);
+  $50.Timestamp ensureExpiration() => $_ensure(1);
 }
 
 /// GrantAuthorization extends a grant with both the addresses of the grantee and granter.
@@ -148,8 +148,8 @@ class GrantAuthorization extends $pb.GeneratedMessage {
   factory GrantAuthorization({
     $core.String? granter,
     $core.String? grantee,
-    $2.Any? authorization,
-    $3.Timestamp? expiration,
+    $46.Any? authorization,
+    $50.Timestamp? expiration,
   }) {
     final $result = create();
     if (granter != null) {
@@ -173,8 +173,8 @@ class GrantAuthorization extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GrantAuthorization', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
     ..aOS(2, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$2.Any>(3, _omitFieldNames ? '' : 'authorization', subBuilder: $2.Any.create)
-    ..aOM<$3.Timestamp>(4, _omitFieldNames ? '' : 'expiration', subBuilder: $3.Timestamp.create)
+    ..aOM<$46.Any>(3, _omitFieldNames ? '' : 'authorization', subBuilder: $46.Any.create)
+    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'expiration', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -218,26 +218,26 @@ class GrantAuthorization extends $pb.GeneratedMessage {
   void clearGrantee() => clearField(2);
 
   @$pb.TagNumber(3)
-  $2.Any get authorization => $_getN(2);
+  $46.Any get authorization => $_getN(2);
   @$pb.TagNumber(3)
-  set authorization($2.Any v) { setField(3, v); }
+  set authorization($46.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasAuthorization() => $_has(2);
   @$pb.TagNumber(3)
   void clearAuthorization() => clearField(3);
   @$pb.TagNumber(3)
-  $2.Any ensureAuthorization() => $_ensure(2);
+  $46.Any ensureAuthorization() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $3.Timestamp get expiration => $_getN(3);
+  $50.Timestamp get expiration => $_getN(3);
   @$pb.TagNumber(4)
-  set expiration($3.Timestamp v) { setField(4, v); }
+  set expiration($50.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasExpiration() => $_has(3);
   @$pb.TagNumber(4)
   void clearExpiration() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Timestamp ensureExpiration() => $_ensure(3);
+  $50.Timestamp ensureExpiration() => $_ensure(3);
 }
 
 /// GrantQueueItem contains the list of TypeURL of a sdk.Msg.
