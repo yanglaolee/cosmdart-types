@@ -1,7 +1,6 @@
-// ignore_for_file: unused_import, undefined_shown_name
+// library cosmossdk;
 
-library cosmossdk;
-
+/*
 import 'src/cosmos/app/v1alpha1/query.pb.dart' as app_module_query;
 import 'src/cosmos/app/v1alpha1/query.pbgrpc.dart' as app_module_query_client;
 
@@ -159,8 +158,7 @@ import 'src/cosmwasm/wasm/v1/query.pb.dart' as wasm_module_query;
 import 'src/cosmwasm/wasm/v1/query.pbgrpc.dart' as wasm_module_query_client;
 import 'src/cosmwasm/wasm/v1/tx.pb.dart' as wasm_module_tx;
 
-
-// ---------------------------------------------------------
+// ----------------------------------------------------------------------------
 export 'src/cosmos/app/v1alpha1/query.pb.dart' show app_module_query;
 export 'src/cosmos/app/v1alpha1/query.pbgrpc.dart' show app_module_query_client;
 
@@ -317,3 +315,4 @@ export 'src/cosmwasm/wasm/v1/ibc.pb.dart' show wasm_module_ibc;
 export 'src/cosmwasm/wasm/v1/query.pb.dart' show wasm_module_query;
 export 'src/cosmwasm/wasm/v1/query.pbgrpc.dart' show wasm_module_query_client;
 export 'src/cosmwasm/wasm/v1/tx.pb.dart' show wasm_module_tx;
+*/
